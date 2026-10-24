@@ -185,7 +185,7 @@ body {
 
 .lc-body {
   padding: 4px 10px 10px;
-  max-height: 440px; overflow-y: auto;
+  max-height: 72vh; overflow-y: auto;
   transition: max-height .25s ease, opacity .2s ease, padding .25s ease;
 }
 .layer-control.collapsed .lc-body {

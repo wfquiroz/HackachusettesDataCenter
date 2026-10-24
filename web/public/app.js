@@ -451,6 +451,11 @@ function wireCollapse() {
   const btn = document.getElementById("lcCollapse");
   const control = document.getElementById("layerControl");
   if (!btn || !control) return;
+  // Stop scroll/click over the panel from zooming/panning the map underneath.
+  if (window.L && L.DomEvent) {
+    L.DomEvent.disableScrollPropagation(control);
+    L.DomEvent.disableClickPropagation(control);
+  }
   btn.addEventListener("click", () => {
     const collapsed = control.classList.toggle("collapsed");
     btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
@@ -518,7 +523,7 @@ init();
 
 // ---- Drop-a-data-center + play buildout timeline ---------------------------
 (function () {
-  let dropMode = false, dropMarker = null, ringLayers = [], playTimer = null;
+  let dropMode = false, dropMarker = null, ringLayers = [], playTimer = null, lastPlayed = false;
 
   function onReady(fn) {
     if (typeof map !== "undefined" && map) fn();
@@ -549,8 +554,22 @@ init();
 
     function placePin(lat, lng) {
       if (dropMarker) map.removeLayer(dropMarker);
-      dropMarker = L.marker([lat, lng]).addTo(map);
+      dropMarker = L.marker([lat, lng], { draggable: true }).addTo(map);
       dropMarker._ll = { lat, lng };
+      dropMarker.bindTooltip("Drag me anywhere", { permanent: false, direction: "top" });
+      // live update while dragging; recompute rings when the drag ends
+      dropMarker.on("drag", (ev) => {
+        const p = ev.target.getLatLng();
+        dropMarker._ll = { lat: p.lat, lng: p.lng };
+        // rings follow the pin live
+        ringLayers.forEach((c) => c.setLatLng(p));
+      });
+      dropMarker.on("dragend", () => {
+        const readout = document.getElementById("playReadout");
+        if (readout) readout.innerHTML = '<span class="muted">Moved — press ▶ to replay here.</span>';
+        // if a run already happened, auto-replay at the new spot
+        if (lastPlayed) document.getElementById("playBtn").click();
+      });
     }
 
     function clearRings() {
@@ -597,7 +616,7 @@ init();
           `hidden CO₂ <b>${y.hidden_co2_t.toLocaleString()}</b> t/yr<br>` +
           `<span class="muted">${r25.minority_pct}% minority in footprint · projected buildout</span>`;
         i++;
-        if (i >= data.years.length) { clearInterval(playTimer); playTimer = null; playBtn.textContent = "▶ Replay"; }
+        if (i >= data.years.length) { clearInterval(playTimer); playTimer = null; playBtn.textContent = "▶ Replay"; lastPlayed = true; }
       };
       step();
       playTimer = setInterval(step, 1100);

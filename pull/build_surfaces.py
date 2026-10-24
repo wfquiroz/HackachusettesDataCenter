@@ -189,10 +189,26 @@ surfaces.append({"id": "energy_demand", "label": "Energy — grid demand pressur
                  "source": "MassGIS EJ2020 town population (demand ∝ people)"})
 
 
-# NOTE: water & noise are NOT statewide surfaces — they are point effects at a
-# data-center site, so they live in the drop-a-data-center RINGS (pull/rings.py),
-# not here. A statewide water/noise "wave" read highest where there is NO data
-# center, which is backwards; removed deliberately.
+# ---- MODELED: data-center water + noise pressure (restored) ----------------
+# These are modeled point effects projected onto the map so they appear as
+# toggleable layers too. Clearly tagged "modeled". The authoritative per-site
+# numbers live in the drop-a-data-center rings (pull/rings.py).
+dcs = pd.read_csv(ROOT / "data" / "clean" / "datacenters.csv")
+dc_lat = dcs.lat.tolist(); dc_lon = dcs.lon.tolist()
+dc_mw = dcs.peak_mw_high.tolist()
+b = cfg["impact_benchmarks"]
+water_vals = [mw * 0.85 * 8760 * b["water_gal_per_mwh"] for mw in dc_mw]
+noise_vals = [float(mw) for mw in dc_mw]
+water_field = normalize(idw(dc_lat, dc_lon, water_vals, power=2.2, floor_km=3))
+noise_field = normalize(idw(dc_lat, dc_lon, noise_vals, power=2.6, floor_km=2))
+surfaces.append({"id": "water_stress", "label": "Water — cooling demand (modeled)",
+                 "kind": "modeled", "unit": "rel. pressure", "color": "#5aa9e6",
+                 "grid": [round(float(x), 3) for x in water_field.ravel()],
+                 "source": "data-center MW × water benchmark (modeled)"})
+surfaces.append({"id": "noise", "label": "Noise — generator/cooling (modeled)",
+                 "kind": "modeled", "unit": "rel. pressure", "color": "#b084f3",
+                 "grid": [round(float(x), 3) for x in noise_field.ravel()],
+                 "source": "data-center MW × noise benchmark (modeled)"})
 
 
 out = {"bbox": [LON0, LAT0, LON1, LAT1], "nx": NX, "ny": NY, "surfaces": surfaces}
