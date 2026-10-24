@@ -1,0 +1,1842 @@
+name,lat,lon,mw,operator,state,county_fips,egrid_subregion,grid_co2_lb_mwh,elec_price_cents_kwh,pm25_annual,fossil_co2_25km,pop_10km,pct_minority_10km,median_income_10km,cooling_deg_days,summer_tmax_avg,pop_proxy,nearest_city,nearest_city_km,cooling_proxy,dc_density_25km
+,34.8576151,-86.6221688,,,AL,,SRSO,836.0,6.6,,,,,,,,382.1,Nashville,145.5,0.507,6
+,34.851077,-86.6261726,,,AL,,SRSO,836.0,6.6,,,,,,,,379.4,Nashville,146.2,0.507,6
+Google,34.9136673,-85.7474223,,Google,AL,,SRSO,836.0,6.6,,,,,,,,0.0,Nashville,167.1,0.504,2
+Google,34.9136413,-85.7459237,,Google,AL,,SRSO,836.0,6.6,,,,,,,,0.0,Nashville,167.2,0.504,2
+Google Jackson County Data Center,34.9146647,-85.7483715,,Google LLC,AL,,SRSO,836.0,6.6,,,,,,,,0.0,Nashville,167.0,0.504,2
+Meta Huntsville Data center,34.8473235,-86.6269189,,Meta,AL,,SRSO,836.0,6.6,,,,,,,,377.9,Nashville,146.6,0.508,6
+Meta Huntsville Data center,34.8434819,-86.6288559,,Meta,AL,,SRSO,836.0,6.6,,,,,,,,376.3,Nashville,147.0,0.508,6
+Meta Huntsville Data center,34.840441,-86.6288253,,Meta,AL,,SRSO,836.0,6.6,,,,,,,,375.0,Nashville,147.4,0.508,6
+Sungard Systems International,33.4047759,-86.9115651,,,AL,,SRSO,836.0,6.6,,,,,,,,0.0,Atlanta,236.7,0.58,1
+DC Blox Data Center,33.5006749,-86.8208315,,,AL,,SRSO,836.0,6.6,,,,,,,,0.0,Atlanta,226.8,0.575,1
+AngelTrax Data Center,31.2318987,-85.455834,,AngelTrax Mobile Video Surveillance Solutions,AL,,SRSO,836.0,6.6,,,,,,,,0.0,Atlanta,297.3,0.688,0
+George C. Wallace Alabama Supercomputer Center,34.73654,-86.6731017,,Alabama Supercomputer Authority,AL,,SRSO,836.0,6.6,,,,,,,,0.0,Nashville,158.6,0.513,6
+SimpleHelix,34.745431,-86.691883,,,AL,,SRSO,836.0,6.6,,,,,,,,0.0,Nashville,157.5,0.513,6
+,33.3470334,-111.6042679,,,AZ,,AZNM,743.0,7.1,,,,,,,,11572.4,Phoenix,44.7,0.583,18
+,33.3531912,-111.6780726,,,AZ,,AZNM,743.0,7.1,,,,,,,,14705.1,Phoenix,37.9,0.582,30
+,33.3471979,-111.6324603,,,AZ,,AZNM,743.0,7.1,,,,,,,,12594.0,Phoenix,42.2,0.583,30
+,33.3463331,-111.6289144,,,AZ,,AZNM,743.0,7.1,,,,,,,,12446.7,Phoenix,42.5,0.583,22
+,33.347189,-111.6257923,,,AZ,,AZNM,743.0,7.1,,,,,,,,12339.4,Phoenix,42.8,0.583,19
+AZ Labs,33.3062801,-111.6717217,,,AZ,,AZNM,743.0,7.1,,,,,,,,13484.4,Phoenix,40.3,0.585,30
+Accelera Data Systems,33.6647455,-112.1117142,,,AZ,,AZNM,743.0,7.1,,,,,,,,28259.0,Phoenix,24.2,0.567,10
+"Alembic Computer Services, Inc.",33.4051307,-111.9773353,,,AZ,,AZNM,743.0,7.1,,,,,,,,107247.8,Phoenix,9.9,0.58,34
+DataPro USA Web Development,33.6116624,-111.9139825,,,AZ,,AZNM,743.0,7.1,,,,,,,,30338.7,Phoenix,23.1,0.569,22
+Emailage,33.302965,-111.8405386,,,AZ,,AZNM,743.0,7.1,,,,,,,,24465.0,Phoenix,26.9,0.585,43
+Iron Mountain Data Centers AZS-1,33.6446663,-111.8960985,,,AZ,,AZNM,743.0,7.1,,,,,,,,23981.5,Phoenix,27.0,0.568,14
+J-Curve Technologies,33.4131856,-111.9711539,,,AZ,,AZNM,743.0,7.1,,,,,,,,105607.6,Phoenix,10.0,0.579,37
+K-Motion Interactive,33.6344843,-111.8843457,,,AZ,,AZNM,743.0,7.1,,,,,,,,24267.1,Phoenix,26.8,0.568,15
+L3Harris Technologies Inc,33.3053366,-111.6716904,,,AZ,,AZNM,743.0,7.1,,,,,,,,13462.9,Phoenix,40.3,0.585,30
+Myndshift Technologies,33.4754208,-111.7191652,,,AZ,,AZNM,743.0,7.1,,,,,,,,18006.4,Phoenix,32.7,0.576,30
+Profit Finder Pro Software,33.6272477,-111.9020476,,,AZ,,AZNM,743.0,7.1,,,,,,,,26711.6,Phoenix,25.1,0.569,16
+QTS,33.4608806,-111.9971562,,Quality Technology Services,AZ,,AZNM,743.0,7.1,,,,,,,,186899.5,Phoenix,6.9,0.577,38
+QTS,33.4646803,-111.9975601,,Quality Technology Services,AZ,,AZNM,743.0,7.1,,,,,,,,184862.1,Phoenix,6.9,0.577,39
+StrongMind,33.3426083,-111.8409621,,,AZ,,AZNM,743.0,7.1,,,,,,,,28215.5,Phoenix,24.4,0.583,43
+VaultLogix,33.627367,-111.9017033,,,AZ,,AZNM,743.0,7.1,,,,,,,,26663.6,Phoenix,25.1,0.569,16
+,31.9726748,-110.3047517,,DirecTV,AZ,,AZNM,743.0,7.1,,,,,,,,958.5,Tucson,68.4,0.651,0
+,33.2708761,-111.8819478,,CyrusOne,AZ,,AZNM,743.0,7.1,,,,,,,,24970.2,Phoenix,26.5,0.586,38
+,33.2676353,-111.8824933,,CyrusOne,AZ,,AZNM,743.0,7.1,,,,,,,,24640.8,Phoenix,26.7,0.587,36
+,33.2663809,-111.8818702,,CyrusOne,AZ,,AZNM,743.0,7.1,,,,,,,,24446.5,Phoenix,26.9,0.587,36
+,33.268778,-111.8825216,,CyrusOne,AZ,,AZNM,743.0,7.1,,,,,,,,24775.0,Phoenix,26.6,0.587,37
+,33.2697268,-111.8815437,,CyrusOne,AZ,,AZNM,743.0,7.1,,,,,,,,24802.7,Phoenix,26.6,0.587,38
+,33.266349,-111.883301,,CyrusOne,AZ,,AZNM,743.0,7.1,,,,,,,,24559.2,Phoenix,26.8,0.587,36
+,33.271917,-111.8816145,,CyrusOne,AZ,,AZNM,743.0,7.1,,,,,,,,25063.1,Phoenix,26.4,0.586,38
+,33.2718119,-111.8832479,,CyrusOne,AZ,,AZNM,743.0,7.1,,,,,,,,25191.8,Phoenix,26.3,0.586,37
+All About Serving Process Server,33.3199157,-111.809686,,,AZ,,AZNM,743.0,7.1,,,,,,,,22799.4,Phoenix,28.2,0.584,43
+Digital Realty Phoenix PHX15,33.2749228,-111.8866379,,Digital Realty,AZ,,AZNM,743.0,7.1,,,,,,,,25868.4,Phoenix,25.9,0.586,36
+H5 Phoenix,33.2769993,-111.8858906,,H5,AZ,,AZNM,743.0,7.1,,,,,,,,26058.0,Phoenix,25.7,0.586,37
+GoDaddy - Gilbert,33.3619309,-111.8392899,,,AZ,,AZNM,743.0,7.1,,,,,,,,29420.8,Phoenix,23.5,0.582,43
+,33.4393768,-112.377048,,,AZ,,AZNM,743.0,7.1,,,,,,,,22081.3,Phoenix,28.5,0.578,7
+PHX-10,33.4079462,-112.3648297,,Microsoft,AZ,,AZNM,743.0,7.1,,,,,,,,22990.0,Phoenix,27.8,0.58,7
+PHX-11,33.4090306,-112.3648272,,Microsoft,AZ,,AZNM,743.0,7.1,,,,,,,,23015.5,Phoenix,27.7,0.58,7
+PHX-12,33.4102344,-112.3648662,,Microsoft,AZ,,AZNM,743.0,7.1,,,,,,,,23038.3,Phoenix,27.7,0.579,7
+PHX-13,33.4115438,-112.3648536,,Microsoft,AZ,,AZNM,743.0,7.1,,,,,,,,23068.5,Phoenix,27.7,0.579,7
+PHX-14,33.4127955,-112.3648636,,Microsoft,AZ,,AZNM,743.0,7.1,,,,,,,,23094.0,Phoenix,27.7,0.579,7
+Stream Data Centers PHX-1,33.4194907,-112.3599883,,,AZ,,AZNM,743.0,7.1,,,,,,,,23801.9,Phoenix,27.1,0.579,7
+Vantage Data Centers,33.4463027,-112.3738867,,Vantage Data Centers,AZ,,AZNM,743.0,7.1,,,,,,,,22453.4,Phoenix,28.2,0.578,7
+Alliance Technology,33.3799862,-111.728405,,,AZ,,AZNM,743.0,7.1,,,,,,,,18327.1,Phoenix,32.6,0.581,36
+Apple Data Center,33.3470334,-111.6041418,,Apple Inc.,AZ,,AZNM,743.0,7.1,,,,,,,,11568.1,Phoenix,44.7,0.583,18
+Centersquare: Phoenix - (PHX1 - Mesa),33.4212542,-111.8590191,,Centersquare,AZ,,AZNM,743.0,7.1,,,,,,,,38053.2,Phoenix,19.8,0.579,47
+Comarch,33.3566787,-111.6352356,,,AZ,,AZNM,743.0,7.1,,,,,,,,12822.9,Phoenix,41.7,0.582,26
+EdgeConneX PHX02 Data Center,33.3520091,-111.6475291,,EdgeConneX,AZ,,AZNM,743.0,7.1,,,,,,,,13270.8,Phoenix,40.7,0.582,30
+EdgeCore,33.3441489,-111.619588,,,AZ,,AZNM,743.0,7.1,,,,,,,,12074.3,Phoenix,43.4,0.583,19
+OptimumHQ,33.3804149,-111.7526684,,,AZ,,AZNM,743.0,7.1,,,,,,,,20306.5,Phoenix,30.5,0.581,40
+The Chatfield Group,33.380601,-111.7528888,,,AZ,,AZNM,743.0,7.1,,,,,,,,20331.2,Phoenix,30.4,0.581,40
+,33.4933506,-112.0705502,,,AZ,,AZNM,743.0,7.1,,,,,,,,300705.0,Phoenix,4.8,0.575,24
+1GServers,33.3965617,-112.0001645,,,AZ,,AZNM,743.0,7.1,,,,,,,,128944.9,Phoenix,8.8,0.58,32
+Aligned Energy Data Center,33.6590546,-112.1111595,,,AZ,,AZNM,743.0,7.1,,,,,,,,29405.3,Phoenix,23.6,0.567,11
+Cogent Data Center,33.4002195,-112.0478786,,"Cogent Communications, Inc.",AZ,,AZNM,743.0,7.1,,,,,,,,234369.2,Phoenix,5.9,0.58,30
+Data Storage Centers,33.4216928,-112.0343031,,,AZ,,AZNM,743.0,7.1,,,,,,,,300705.0,Phoenix,4.6,0.579,31
+Flexential Phoenix - Deer Valley,33.6846775,-112.0983398,,Flexential,AZ,,AZNM,743.0,7.1,,,,,,,,25031.1,Phoenix,26.2,0.566,9
+Iron Mountain AZP-1,33.4547261,-111.9762182,,Iron Mountain,AZ,,AZNM,743.0,7.1,,,,,,,,130643.0,Phoenix,8.7,0.577,39
+Iron Mountain AZP-2,33.4521575,-111.9772945,,Iron Mountain,AZ,,AZNM,743.0,7.1,,,,,,,,133207.6,Phoenix,8.6,0.577,39
+Iron Mountain Records Storage,33.42038,-112.0413257,,Iron Mountain,AZ,,AZNM,743.0,7.1,,,,,,,,300705.0,Phoenix,4.2,0.579,31
+Lumen,33.494309,-112.0707916,,Lumen Technologies,AZ,,AZNM,743.0,7.1,,,,,,,,300705.0,Phoenix,4.9,0.575,24
+PhoenixNAP,33.416077,-112.0094718,,,AZ,,AZNM,743.0,7.1,,,,,,,,191035.9,Phoenix,6.8,0.579,33
+Digital Realty Data Center,33.3446197,-111.8992189,,Digital Realty,AZ,,AZNM,743.0,7.1,,,,,,,,38407.5,Phoenix,19.7,0.583,40
+EdgeConneX,33.3955466,-111.9700881,,EdgeConneX,AZ,,AZNM,743.0,7.1,,,,,,,,91226.0,Phoenix,11.1,0.58,35
+Omnis Network,33.3944358,-111.9525168,,,AZ,,AZNM,743.0,7.1,,,,,,,,75780.5,Phoenix,12.5,0.58,35
+,32.0927065,-110.7874236,,DirecTV,AZ,,AZNM,743.0,7.1,,,,,,,,5164.8,Tucson,22.3,0.645,0
+TierPoint Little Rock,34.7562396,-92.4447234,,,AR,,SRMW,1476.0,6.9,,,,,,,,0.0,Dallas,458.6,0.512,0
+Searcy Information Technologies,35.2492161,-91.7409058,,City of Searcy,AR,,SRMW,1476.0,6.9,,,,,,,,0.0,Nashville,459.2,0.488,0
+,37.7796531,-122.3940005,,Ntirety,CA,,CAMX,494.0,18.4,,,,,,,,81146.9,San Francisco,2.5,0.361,5
+,37.3733075,-121.9727778,,Vantage,CA,,CAMX,494.0,18.4,,,,,,,,45757.7,San Jose,8.2,0.381,77
+,37.3717787,-121.9725052,,Vantage,CA,,CAMX,494.0,18.4,,,,,,,,46533.6,San Jose,8.1,0.381,77
+,34.1998691,-118.3437888,,Centurylink,CA,,CAMX,494.0,18.4,,,,,,,,47269.5,Los Angeles,19.2,0.54,5
+,39.56711,-119.5485335,,,CA,,CAMX,494.0,18.4,,,,,,,,2427.3,Reno,22.8,0.272,15
+,34.0594667,-117.2021665,,,CA,,CAMX,494.0,18.4,,,,,,,,5039.3,Los Angeles,95.6,0.547,0
+,39.5677144,-119.5423627,,,CA,,CAMX,494.0,18.4,,,,,,,,2344.6,Reno,23.3,0.272,15
+,39.567501,-119.5432095,,,CA,,CAMX,494.0,18.4,,,,,,,,2356.1,Reno,23.3,0.272,15
+,39.5671605,-119.5443883,,,CA,,CAMX,494.0,18.4,,,,,,,,2372.3,Reno,23.1,0.272,15
+,39.5669208,-119.5452269,,,CA,,CAMX,494.0,18.4,,,,,,,,2384.0,Reno,23.1,0.272,15
+,39.5657583,-119.5479741,,,CA,,CAMX,494.0,18.4,,,,,,,,2424.0,Reno,22.8,0.272,15
+,39.5651062,-119.5476898,,,CA,,CAMX,494.0,18.4,,,,,,,,2422.1,Reno,22.8,0.272,15
+,33.1536001,-117.2388464,,,CA,,CAMX,494.0,18.4,,,,,,,,6685.8,San Diego,48.8,0.592,0
+,39.5697107,-119.5378592,,,CA,,CAMX,494.0,18.4,,,,,,,,2282.7,Reno,23.7,0.272,15
+,39.5700526,-119.5370915,,,CA,,CAMX,494.0,18.4,,,,,,,,2272.4,Reno,23.8,0.271,15
+,39.5705918,-119.5360339,,,CA,,CAMX,494.0,18.4,,,,,,,,2258.2,Reno,23.9,0.271,15
+,39.5709863,-119.5353174,,,CA,,CAMX,494.0,18.4,,,,,,,,2248.5,Reno,24.0,0.271,15
+Amazon,37.3899287,-121.9659908,,Amazon Web Services,CA,,CAMX,494.0,18.4,,,,,,,,42026.3,San Jose,8.7,0.381,77
+CenturyLink,36.1437196,-115.0833851,,Lumen Technologies,CA,,CAMX,494.0,18.4,,,,,,,,45878.9,Las Vegas,5.9,0.443,22
+CenturyLink,36.1829977,-115.0626696,,,CA,,CAMX,494.0,18.4,,,,,,,,34501.8,Las Vegas,7.1,0.441,22
+Cologix Santa Clara SV1 Data Center,37.3654018,-121.9616726,,Cologix,CA,,CAMX,494.0,18.4,,,,,,,,58114.2,San Jose,6.9,0.382,77
+Colovore,37.3767228,-121.9531439,,,CA,,CAMX,494.0,18.4,,,,,,,,58394.6,San Jose,6.9,0.381,77
+CoreSite SV4,37.3762614,-121.9706851,,CoreSite,CA,,CAMX,494.0,18.4,,,,,,,,45829.8,San Jose,8.2,0.381,77
+CoreSite SV5,37.3751959,-121.9706889,,CoreSite,CA,,CAMX,494.0,18.4,,,,,,,,46286.4,San Jose,8.1,0.381,77
+CoreSite SV6,37.3763019,-121.9720837,,CoreSite,CA,,CAMX,494.0,18.4,,,,,,,,44970.6,San Jose,8.3,0.381,77
+CoreSite SV7,37.3760788,-121.9730567,,CoreSite,CA,,CAMX,494.0,18.4,,,,,,,,44488.2,San Jose,8.4,0.381,77
+CoreSite SV8,37.3773827,-121.97184,,CoreSite,CA,,CAMX,494.0,18.4,,,,,,,,44665.1,San Jose,8.3,0.381,77
+CoreSite SV9,37.3755551,-121.9696049,,CoreSite,CA,,CAMX,494.0,18.4,,,,,,,,46813.0,San Jose,8.1,0.381,77
+Digital Realty,37.7990205,-122.2825386,,Digital Realty,CA,,CAMX,494.0,18.4,,,,,,,,22487.5,San Francisco,12.5,0.36,5
+Digital Realty Silicon Valley SJC30,37.3782874,-121.9581107,,Digital Realty,CA,,CAMX,494.0,18.4,,,,,,,,53262.7,San Jose,7.4,0.381,77
+Digital Realty Silicon Valley SJC34,37.3724077,-121.973647,,Digital Realty,CA,,CAMX,494.0,18.4,,,,,,,,45563.2,San Jose,8.2,0.381,77
+Digital West Data Center,35.2553162,-120.6415128,,,CA,,CAMX,494.0,18.4,,,,,,,,0.0,Los Angeles,257.3,0.487,0
+EdgeCore Silicon Valley,37.3837192,-121.9654044,,,CA,,CAMX,494.0,18.4,,,,,,,,45399.4,San Jose,8.2,0.381,77
+Evocative Santa Clara SJC11,37.3895364,-121.9619398,,,CA,,CAMX,494.0,18.4,,,,,,,,44166.9,San Jose,8.4,0.381,77
+IT,33.9102899,-117.5030207,,,CA,,CAMX,494.0,18.4,,,,,,,,7734.3,Los Angeles,69.7,0.554,0
+Kaiser Data Center,38.254065,-122.2730918,,,CA,,CAMX,494.0,18.4,,,,,,,,3819.9,San Francisco,55.3,0.337,1
+Lumen,37.3775848,-121.9506821,,Lumen Technologies,CA,,CAMX,494.0,18.4,,,,,,,,59834.3,San Jose,6.8,0.381,77
+Lumen Santa Clara,37.3770332,-121.952059,,Lumen Technologies,CA,,CAMX,494.0,18.4,,,,,,,,59088.5,San Jose,6.9,0.381,77
+Modesto Junior College West Data Center,37.6651447,-121.0400334,,Yosemite Community College District,CA,,CAMX,494.0,18.4,,,,,,,,2451.0,San Jose,83.2,0.367,0
+Open Computing Facility,37.8698521,-122.2598231,,,CA,,CAMX,494.0,18.4,,,,,,,,13954.1,San Francisco,17.9,0.357,6
+Petadata,37.5529209,-121.9808321,,,CA,,CAMX,494.0,18.4,,,,,,,,11422.2,San Jose,25.0,0.372,71
+Prime SANTA CLARA DATA CENTER,37.3750292,-121.9548775,,Prime,CA,,CAMX,494.0,18.4,,,,,,,,58188.7,San Jose,6.9,0.381,77
+Prime Santa Clara,37.3666621,-121.9628653,,Prime,CA,,CAMX,494.0,18.4,,,,,,,,56312.4,San Jose,7.1,0.382,77
+Prime Santa Clara,37.3750172,-121.9532497,,Prime,CA,,CAMX,494.0,18.4,,,,,,,,59661.1,San Jose,6.8,0.381,77
+QES Computers,37.6994753,-121.9037995,,,CA,,CAMX,494.0,18.4,,,,,,,,7341.6,San Jose,40.0,0.365,3
+QTS Santa Clara 2,37.3927307,-121.9784277,,Quality Technology Services,CA,,CAMX,494.0,18.4,,,,,,,,35811.5,San Jose,9.8,0.38,77
+SDSU Computer Room,32.7750252,-117.070888,,,CA,,CAMX,494.0,18.4,,,,,,,,42831.2,San Diego,10.3,0.611,3
+STACK SVY02,37.3619343,-121.9537306,,Stack Infrastructure,CA,,CAMX,494.0,18.4,,,,,,,,69328.3,San Jose,6.1,0.382,77
+Santa Clara Data Center (SJC3),37.3780374,-121.9541277,,Evocative,CA,,CAMX,494.0,18.4,,,,,,,,56545.0,San Jose,7.1,0.381,77
+Stack Infrastructure,37.4025598,-121.893391,,Stack Infrastructure,CA,,CAMX,494.0,18.4,,,,,,,,57753.3,San Jose,7.0,0.38,76
+Stack Infrastructure,37.4022094,-121.8923868,,Stack Infrastructure,CA,,CAMX,494.0,18.4,,,,,,,,58258.6,San Jose,6.9,0.38,76
+Switch Edge 1,36.0591345,-115.213688,,,CA,,CAMX,494.0,18.4,,,,,,,,12443.9,Las Vegas,14.0,0.447,22
+Switch Las Vegas 10,36.0555857,-115.2230608,,,CA,,CAMX,494.0,18.4,,,,,,,,11498.9,Las Vegas,14.7,0.447,22
+Switch Las Vegas 11,36.0558853,-115.2141369,,Switch,CA,,CAMX,494.0,18.4,,,,,,,,12006.2,Las Vegas,14.3,0.447,22
+Switch Las Vegas 12,36.0579919,-115.2103279,,,CA,,CAMX,494.0,18.4,,,,,,,,12480.1,Las Vegas,14.0,0.447,22
+Switch Las Vegas 14,36.0652076,-115.222045,,Switch,CA,,CAMX,494.0,18.4,,,,,,,,12722.6,Las Vegas,13.8,0.447,22
+Switch Las Vegas 15,36.0640206,-115.221109,,Switch,CA,,CAMX,494.0,18.4,,,,,,,,12629.9,Las Vegas,13.9,0.447,22
+Switch Las Vegas 16,36.0658822,-115.218789,,Switch,CA,,CAMX,494.0,18.4,,,,,,,,13030.6,Las Vegas,13.6,0.447,22
+Switch Las Vegas 8,36.057834,-115.214258,,Switch,CA,,CAMX,494.0,18.4,,,,,,,,12244.3,Las Vegas,14.1,0.447,22
+Switch Las Vegas 9,36.0557074,-115.2196277,,Switch,CA,,CAMX,494.0,18.4,,,,,,,,11695.1,Las Vegas,14.6,0.447,22
+Switch12,36.0617389,-115.2132922,,Switch,CA,,CAMX,494.0,18.4,,,,,,,,12815.3,Las Vegas,13.7,0.447,22
+Verizon,36.1447332,-115.0779284,,,CA,,CAMX,494.0,18.4,,,,,,,,41775.8,Las Vegas,6.2,0.443,22
+Verizon North Las Vegas,36.2218945,-115.1470466,,Verizon,CA,,CAMX,494.0,18.4,,,,,,,,46568.9,Las Vegas,5.8,0.439,22
+XO Fremont,37.4753251,-121.9221068,,XO,CA,,CAMX,494.0,18.4,,,,,,,,19582.1,San Jose,15.3,0.376,74
+e360,37.9710809,-122.0437382,,,CA,,CAMX,494.0,18.4,,,,,,,,5868.0,San Francisco,39.9,0.351,1
+,33.9177276,-118.3862234,,Centurylink,CA,,CAMX,494.0,18.4,,,,,,,,44652.7,Los Angeles,20.0,0.554,8
+DRT LAX12,33.9156593,-118.3846186,,Digital Realty,CA,,CAMX,494.0,18.4,,,,,,,,44414.1,Los Angeles,20.0,0.554,8
+Serverfarm - LAX1,33.9217415,-118.3864588,,Serverfarm LLC.,CA,,CAMX,494.0,18.4,,,,,,,,45720.9,Los Angeles,19.6,0.554,8
+PG&E Datacenter,38.2462382,-122.0671844,,,CA,,CAMX,494.0,18.4,,,,,,,,3867.9,San Francisco,61.3,0.338,1
+Hurricane Electric Fremont 1,37.4898848,-121.9310239,,Hurricane Electric,CA,,CAMX,494.0,18.4,,,,,,,,17139.7,San Jose,17.1,0.376,74
+Hurricane Electric Fremont 2,37.471834,-121.9202907,,Hurricane Electric,CA,,CAMX,494.0,18.4,,,,,,,,20269.6,San Jose,14.9,0.376,73
+,34.0479149,-118.2555689,,,CA,,CAMX,494.0,18.4,,,,,,,,355944.1,Los Angeles,1.5,0.548,9
+CoreSite - LA2,34.0584789,-118.2359144,,CoreSite,CA,,CAMX,494.0,18.4,,,,,,,,355944.1,Los Angeles,1.0,0.547,9
+DRT LAX10,34.0473304,-118.25751,,,CA,,CAMX,494.0,18.4,,,,,,,,355944.1,Los Angeles,1.6,0.548,9
+One Wilshire,34.0478876,-118.2555409,,,CA,,CAMX,494.0,18.4,,,,,,,,355944.1,Los Angeles,1.5,0.548,9
+USPO Terminal Annex,34.0581039,-118.2353939,,United States Postal Service,CA,,CAMX,494.0,18.4,,,,,,,,355944.1,Los Angeles,1.0,0.547,9
+CoreSite SV2,37.4056857,-121.9162604,,"CoreSite Real Estate 1656 McCarthy, L.P.",CA,,CAMX,494.0,18.4,,,,,,,,50379.2,San Jose,7.7,0.38,77
+AT&T,34.5799784,-118.1140073,,,CA,,CAMX,494.0,18.4,,,,,,,,8550.7,Los Angeles,60.1,0.521,0
+Equinix SV8,37.4458951,-122.160786,,Equinix,CA,,CAMX,494.0,18.4,,,,,,,,10898.1,San Jose,26.7,0.378,71
+Edgeconnex Data Center,38.5922987,-121.27744,,EdgeConneX,CA,,CAMX,494.0,18.4,,,,,,,,7561.3,Sacramento,18.5,0.32,4
+QTS Sacramento,38.6463763,-121.4862686,,Quality Technology Services,CA,,CAMX,494.0,18.4,,,,,,,,26752.5,Sacramento,7.4,0.318,4
+RagingWire CA1,38.6504319,-121.4891868,,NTT,CA,,CAMX,494.0,18.4,,,,,,,,24604.3,Sacramento,7.8,0.317,4
+RagingWire CA2,38.6504002,-121.4919461,,NTT,CA,,CAMX,494.0,18.4,,,,,,,,24614.8,Sacramento,7.8,0.317,4
+RagingWire CA3,38.6442393,-121.4987627,,NTT,CA,,CAMX,494.0,18.4,,,,,,,,27860.4,Sacramento,7.2,0.318,4
+AT&T Center,32.7476543,-117.1589538,,American Telephone & Telegraph,CA,,CAMX,494.0,18.4,,,,,,,,127353.1,San Diego,3.1,0.613,3
+EdgeConneX San Diego,32.8423554,-117.1694226,,EdgeConneX,CA,,CAMX,494.0,18.4,,,,,,,,28283.9,San Diego,13.6,0.608,3
+LightEdge SAN1,32.8278941,-117.1299275,,,CA,,CAMX,494.0,18.4,,,,,,,,32917.4,San Diego,12.3,0.609,3
+360 Spear Street Data Center,37.7889916,-122.3901367,,Digital Realty,CA,,CAMX,494.0,18.4,,,,,,,,81128.7,San Francisco,3.4,0.361,5
+365 Main Street Data Center,37.788731,-122.390469,,Digital Realty,CA,,CAMX,494.0,18.4,,,,,,,,81128.6,San Francisco,3.3,0.361,5
+Digital Realty San Francisco SFO10,37.7236272,-122.3979543,,Digital Realty,CA,,CAMX,494.0,18.4,,,,,,,,70654.8,San Francisco,5.5,0.364,5
+,37.3336326,-121.8879639,,,CA,,CAMX,494.0,18.4,,,,,,,,93282.9,San Jose,0.7,0.383,74
+,37.4039641,-121.8892308,,NTT Limited,CA,,CAMX,494.0,18.4,,,,,,,,55996.4,San Jose,7.1,0.38,76
+Dell 350 Holger Way,37.418381,-121.9431173,,,CA,,CAMX,494.0,18.4,,,,,,,,35162.5,San Jose,9.9,0.379,77
+Equinix SV1,37.2415975,-121.7833277,,Equinix,CA,,CAMX,494.0,18.4,,,,,,,,19807.1,San Jose,14.4,0.388,69
+Equinix SV10,37.2412288,-121.7847536,,Equinix,CA,,CAMX,494.0,18.4,,,,,,,,19906.9,San Jose,14.4,0.388,69
+Equinix SV11,37.242615,-121.7840216,,Equinix,CA,,CAMX,494.0,18.4,,,,,,,,20055.4,San Jose,14.3,0.388,69
+Equinix SV5,37.2420719,-121.7817852,,Equinix,CA,,CAMX,494.0,18.4,,,,,,,,19710.1,San Jose,14.5,0.388,69
+Equinix San Jose SV3,37.388274,-121.8884463,,Equinix,CA,,CAMX,494.0,18.4,,,,,,,,84195.0,San Jose,5.4,0.381,76
+"Forescout Technologies, Inc.",37.3228675,-121.9474176,,,CA,,CAMX,494.0,18.4,,,,,,,,82906.6,San Jose,5.4,0.384,76
+STACK Infrastructure,37.4027449,-121.891051,,"Stack Infrastructure, Incorporated",CA,,CAMX,494.0,18.4,,,,,,,,57571.1,San Jose,7.0,0.38,76
+STACK Infrastructure,37.4026341,-121.891057,,"Stack Infrastructure, Incorporated",CA,,CAMX,494.0,18.4,,,,,,,,57717.8,San Jose,7.0,0.38,76
+San Jose Colocation Center,37.3341181,-121.891646,,CoreSite,CA,,CAMX,494.0,18.4,,,,,,,,93292.2,San Jose,0.7,0.383,74
+TPx Colocation Datacenter,33.7075065,-117.8441042,,TPx Communications,CA,,CAMX,494.0,18.4,,,,,,,,11373.4,Los Angeles,52.8,0.565,2
+Xo Communications Colocation Data Center,33.7035942,-117.8501424,,,CA,,CAMX,494.0,18.4,,,,,,,,11394.2,Los Angeles,52.7,0.565,2
+,37.3797897,-121.9499034,,,CA,,CAMX,494.0,18.4,,,,,,,,58588.3,San Jose,6.9,0.381,77
+,37.3611541,-121.9423402,,,CA,,CAMX,494.0,18.4,,,,,,,,88529.6,San Jose,5.2,0.382,77
+,37.3706431,-121.9744825,,,CA,,CAMX,494.0,18.4,,,,,,,,45691.2,San Jose,8.2,0.381,77
+CoreSite SV3,37.3751575,-121.9717141,,CoreSite,CA,,CAMX,494.0,18.4,,,,,,,,45667.1,San Jose,8.2,0.381,77
+Csquare SFO1,37.3714713,-121.9696826,,Csquare,CA,,CAMX,494.0,18.4,,,,,,,,48559.1,San Jose,7.9,0.381,77
+Csquare SFO1,37.37045,-121.9698252,,Csquare,CA,,CAMX,494.0,18.4,,,,,,,,48897.0,San Jose,7.8,0.381,77
+Csquare SFO2,37.397572,-121.980963,,Csquare,CA,,CAMX,494.0,18.4,,,,,,,,33400.1,San Jose,10.3,0.38,77
+Csquare SFO2,37.3986381,-121.9811563,,Csquare,CA,,CAMX,494.0,18.4,,,,,,,,33013.9,San Jose,10.4,0.38,77
+Csquare SFO4,37.3757986,-121.9551844,,Csquare,CA,,CAMX,494.0,18.4,,,,,,,,57347.0,San Jose,7.0,0.381,77
+Csquare SFO4,37.3757651,-121.9562701,,Csquare,CA,,CAMX,494.0,18.4,,,,,,,,56452.0,San Jose,7.1,0.381,77
+DataBank Santa Clara SFO1,37.4073026,-121.9659803,,DataBank,CA,,CAMX,494.0,18.4,,,,,,,,34431.3,San Jose,10.1,0.38,77
+Digital Realty Silicon Valley SC1,37.3616469,-121.9439784,,Digital Realty,CA,,CAMX,494.0,18.4,,,,,,,,84829.2,San Jose,5.3,0.382,77
+Digital Realty Silicon Valley SJC10,37.375822,-121.9533359,,Digital Realty,CA,,CAMX,494.0,18.4,,,,,,,,58942.1,San Jose,6.9,0.381,77
+Digital Realty Silicon Valley SJC11,37.3763668,-121.9485649,,Digital Realty,CA,,CAMX,494.0,18.4,,,,,,,,62887.6,San Jose,6.6,0.381,77
+Digital Realty Silicon Valley SJC15,37.3749966,-121.9540769,,Digital Realty,CA,,CAMX,494.0,18.4,,,,,,,,58927.0,San Jose,6.9,0.381,77
+Digital Realty Silicon Valley SJC16,37.3749324,-121.9559987,,Digital Realty,CA,,CAMX,494.0,18.4,,,,,,,,57280.5,San Jose,7.0,0.381,77
+Digital Realty Silicon Valley SJC29,37.3750223,-121.9581,,Digital Realty,CA,,CAMX,494.0,18.4,,,,,,,,55444.7,San Jose,7.2,0.381,77
+Digital Realty Silicon Valley SJC37,37.3709193,-121.9472166,,Digital Realty,CA,,CAMX,494.0,18.4,,,,,,,,69734.1,San Jose,6.1,0.381,77
+Equinix SV14,37.3749843,-121.9884742,,Equinix,CA,,CAMX,494.0,18.4,,,,,,,,37010.5,San Jose,9.5,0.381,77
+Equinix SV15,37.3754952,-121.9884063,,Equinix,CA,,CAMX,494.0,18.4,,,,,,,,36915.5,San Jose,9.6,0.381,77
+Equinix SV16,37.3761243,-121.9886718,,Equinix,CA,,CAMX,494.0,18.4,,,,,,,,36647.1,San Jose,9.6,0.381,77
+Equinix SV17,37.3765309,-121.9885825,,Equinix,CA,,CAMX,494.0,18.4,,,,,,,,36585.4,San Jose,9.6,0.381,77
+Equinix Santa Clara SV2,37.3784704,-121.9549839,,Equinix,CA,,CAMX,494.0,18.4,,,,,,,,55534.6,San Jose,7.2,0.381,77
+Microsoft,37.3621026,-121.9464586,,Microsoft,CA,,CAMX,494.0,18.4,,,,,,,,80005.9,San Jose,5.6,0.382,77
+NTT Silicon Valley SV1 Data Center,37.3690532,-121.9553378,,NTT,CA,,CAMX,494.0,18.4,,,,,,,,62206.0,San Jose,6.6,0.382,77
+OpenColo,37.3788292,-121.9559257,,,CA,,CAMX,494.0,18.4,,,,,,,,54542.8,San Jose,7.3,0.381,77
+QTS Santa Clara 1,37.3939862,-121.9783207,,Quality Technology Services,CA,,CAMX,494.0,18.4,,,,,,,,35426.0,San Jose,9.8,0.38,77
+SV Colo,37.3642804,-121.9587878,,SV Colo,CA,,CAMX,494.0,18.4,,,,,,,,61716.5,San Jose,6.7,0.382,77
+Silicon Valley SJC31,37.3722213,-121.9482625,,Digital Realty,CA,,CAMX,494.0,18.4,,,,,,,,67202.9,San Jose,6.3,0.381,77
+Vantage Santa Clara CA2,37.3640012,-121.94689,,Vantage Data Centers,CA,,CAMX,494.0,18.4,,,,,,,,77361.5,San Jose,5.7,0.382,77
+Northwest Data Center and Communications Hub,37.4334128,-122.1807076,,,CA,,CAMX,494.0,18.4,,,,,,,,10444.5,San Jose,27.7,0.378,65
+Csquare SFO3,37.3720542,-121.9860407,,Csquare,CA,,CAMX,494.0,18.4,,,,,,,,38854.3,San Jose,9.2,0.381,77
+Equinix SV4,37.4145109,-122.0145563,,Equinix,CA,,CAMX,494.0,18.4,,,,,,,,22569.3,San Jose,13.8,0.379,73
+Equinix SV6,37.3996265,-122.0145584,,Equinix,CA,,CAMX,494.0,18.4,,,,,,,,24685.8,San Jose,12.8,0.38,73
+Lumen Sunnyvale 1,37.3734695,-121.9878002,,Lumen Technologies,CA,,CAMX,494.0,18.4,,,,,,,,37679.5,San Jose,9.4,0.381,77
+Equinix,33.8507525,-118.3040815,,Equinix,CA,,CAMX,494.0,18.4,,,,,,,,36243.0,Los Angeles,22.9,0.557,8
+Lumen Technologies,33.7167763,-117.8057759,,,CA,,CAMX,494.0,18.4,,,,,,,,10873.7,Los Angeles,54.6,0.564,2
+,38.8026713,-104.5219809,,,CO,,RMPA,1112.0,7.5,,,,,,,,615.7,Denver,111.7,0.31,1
+,41.0642874,-104.7856438,,,CO,,RMPA,1112.0,7.5,,,,,,,,2856.9,Cheyenne,8.9,0.197,20
+,41.0620601,-104.7802188,,,CO,,RMPA,1112.0,7.5,,,,,,,,2705.5,Cheyenne,9.3,0.197,20
+,41.0631317,-104.7801966,,,CO,,RMPA,1112.0,7.5,,,,,,,,2746.7,Cheyenne,9.2,0.197,20
+,41.0631576,-104.7856016,,,CO,,RMPA,1112.0,7.5,,,,,,,,2808.6,Cheyenne,9.0,0.197,20
+,41.0768345,-104.826572,,,CO,,RMPA,1112.0,7.5,,,,,,,,3881.6,Cheyenne,7.0,0.196,20
+,41.0770569,-104.8233001,,,CO,,RMPA,1112.0,7.5,,,,,,,,3911.9,Cheyenne,7.0,0.196,20
+DataBank - DEN1,39.5643099,-104.8665927,,DataBank,CO,,RMPA,1112.0,7.5,,,,,,,,6947.8,Denver,22.2,0.272,19
+EdgeConnex - DEN02,39.5629073,-104.8291031,,EdgeConneX,CO,,RMPA,1112.0,7.5,,,,,,,,6172.9,Denver,24.0,0.272,19
+QTS,39.7340621,-104.7079372,,Quality Technology Services,CO,,RMPA,1112.0,7.5,,,,,,,,6136.1,Denver,24.1,0.263,19
+QTS,39.7336543,-104.712334,,Quality Technology Services,CO,,RMPA,1112.0,7.5,,,,,,,,6281.8,Denver,23.8,0.263,19
+SAP COS02,38.9889158,-104.7863291,,SAP,CO,,RMPA,1112.0,7.5,,,,,,,,922.6,Denver,85.3,0.301,2
+Verizon,39.589248,-104.877933,,Verizon,CO,,RMPA,1112.0,7.5,,,,,,,,8567.8,Denver,19.3,0.271,19
+Walmart Colorado Data Center,38.9857326,-104.787263,,Walmart,CO,,RMPA,1112.0,7.5,,,,,,,,917.2,Denver,85.7,0.301,2
+,39.7295585,-104.7127829,,,CO,,RMPA,1112.0,7.5,,,,,,,,6289.6,Denver,23.7,0.264,19
+Flexential - Denver - Aurora,39.6610488,-104.8488321,,Flexential,CO,,RMPA,1112.0,7.5,,,,,,,,12604.7,Denver,14.9,0.267,19
+JPMorgan Chase,39.9891579,-105.0207261,,JPMorgan Chase,CO,,RMPA,1112.0,7.5,,,,,,,,4997.9,Denver,27.8,0.251,2
+DataBank - DEN2,39.5913398,-104.8470655,,DataBank,CO,,RMPA,1112.0,7.5,,,,,,,,7797.5,Denver,20.6,0.27,19
+DataBank - DEN5,39.5901315,-104.8469632,,DataBank,CO,,RMPA,1112.0,7.5,,,,,,,,7733.5,Denver,20.7,0.27,19
+Flexential - DEN5,39.5941551,-104.8431517,,Flexential,CO,,RMPA,1112.0,7.5,,,,,,,,7824.6,Denver,20.5,0.27,19
+Time Warner Datacenter,39.5989606,-104.8603785,,,CO,,RMPA,1112.0,7.5,,,,,,,,8636.9,Denver,19.2,0.27,19
+Time Warner Datacenter,39.5999328,-104.86017,,,CO,,RMPA,1112.0,7.5,,,,,,,,8689.6,Denver,19.1,0.27,19
+Xfinity/Comcast Data Center,39.5883237,-104.8324181,,,CO,,RMPA,1112.0,7.5,,,,,,,,7246.0,Denver,21.6,0.271,19
+T5@Colorado Springs,38.7861601,-104.7885828,,,CO,,RMPA,1112.0,7.5,,,,,,,,652.7,Denver,107.5,0.311,3
+Flexential Denver - Downtown,39.7459702,-104.9941589,,Flexential,CO,,RMPA,1112.0,7.5,,,,,,,,65043.7,Denver,0.8,0.263,21
+Insurance Exchange Building,39.745572,-104.9956909,,,CO,,RMPA,1112.0,7.5,,,,,,,,65043.7,Denver,0.8,0.263,20
+Pearl Plaza Office Building,39.7452303,-104.9793322,,,CO,,RMPA,1112.0,7.5,,,,,,,,65043.7,Denver,1.1,0.263,21
+CSquare - DEN2,39.5608686,-104.8307237,,,CO,,RMPA,1112.0,7.5,,,,,,,,6131.7,Denver,24.1,0.272,19
+EdgeConneX - DEN01,39.5613132,-104.8275726,,EdgeConneX,CO,,RMPA,1112.0,7.5,,,,,,,,6088.9,Denver,24.3,0.272,18
+Flexential Denver - Englewood,39.558994,-104.8375559,,Flexential,CO,,RMPA,1112.0,7.5,,,,,,,,6189.6,Denver,24.0,0.272,19
+US Signal - CO01,39.5590684,-104.8335336,,US Signal,CO,,RMPA,1112.0,7.5,,,,,,,,6119.7,Denver,24.2,0.272,19
+Google - Thornton,39.922465,-104.9834252,,Google,CO,,RMPA,1112.0,7.5,,,,,,,,7993.7,Denver,20.3,0.254,5
+DataBank - DEN4,39.8845187,-105.0801488,,DataBank,CO,,RMPA,1112.0,7.5,,,,,,,,9706.5,Denver,17.8,0.256,5
+Ergonomic Group,41.7070776,-72.5898636,,,CT,,NEWE,528.0,16.8,,,,,,,,393.7,Boston,145.7,0.165,0
+,41.1130924,-73.3886495,,CyrusOne,CT,,NEWE,528.0,16.8,,,,,,,,14604.8,New York,68.8,0.194,2
+amnet Data Center,41.0917847,-73.5166728,,,CT,,NEWE,528.0,16.8,,,,,,,,18237.8,New York,59.3,0.195,1
+Digital Realty New York HVN10,41.2407307,-73.1472668,,Digital Realty,CT,,NEWE,528.0,16.8,,,,,,,,9232.2,New York,93.4,0.188,1
+,41.4788147,-72.8010139,,,CT,,NEWE,528.0,16.8,,,,,,,,5462.5,New York,132.6,0.176,0
+,39.8309301,-75.1953233,,,DE,,RFCE,737.0,9.3,,,,,,,,37258.9,Philadelphia,13.4,0.258,1
+DataOne Vineland,39.4275129,-75.0168617,,Nebius,DE,,RFCE,737.0,9.3,,,,,,,,3446.4,Philadelphia,59.6,0.279,0
+CoreSite DC1,38.9028879,-77.0291491,,CoreSite,DC,,RFCE,737.0,11.0,,,,,,,,63124.1,Washington,1.2,0.305,12
+,28.6174494,-81.3934606,,,FL,,FRCC,846.0,8.5,,,,,,,,0.0,Jacksonville,192.2,0.819,3
+Atlantic.net,28.6180744,-81.3932588,,Atlantic.net,FL,,FRCC,846.0,8.5,,,,,,,,0.0,Jacksonville,192.1,0.819,3
+Cologix Jacksonville JAX1,30.3314298,-81.6624257,,,FL,,FRCC,846.0,8.5,,,,,,,,81527.7,Jacksonville,0.3,0.733,1
+HiPerGator,29.6728187,-82.2997617,,University of Florida,FL,,FRCC,846.0,8.5,,,,,,,,975.5,Jacksonville,95.6,0.766,1
+HostDime,28.6172557,-81.3938175,,HostDime,FL,,FRCC,846.0,8.5,,,,,,,,0.0,Jacksonville,192.2,0.819,3
+NocRoom Miami IT Services,25.7915453,-80.3177484,,,FL,,FRCC,846.0,8.5,,,,,,,,9687.4,Miami,13.3,0.96,3
+NocRoom Miami IT Services,25.6465617,-80.4234346,,,FL,,FRCC,846.0,8.5,,,,,,,,3416.3,Miami,26.6,0.968,1
+Flexential Fort Lauderdale,26.1900857,-80.1932967,,Flexential,FL,,FRCC,846.0,8.5,,,,,,,,1414.9,Miami,47.8,0.94,1
+UF Research Computing Center,29.6725909,-82.2999288,,University of Florida,FL,,FRCC,846.0,8.5,,,,,,,,975.0,Jacksonville,95.6,0.766,1
+Flexential Jacksonville,30.2457482,-81.5817226,,Flexential,FL,,FRCC,846.0,8.5,,,,,,,,21898.2,Jacksonville,12.0,0.738,1
+,25.7975445,-80.2300338,,,FL,,FRCC,846.0,8.5,,,,,,,,33609.1,Miami,5.8,0.96,2
+NAP of the Americas,25.7823886,-80.1930798,,,FL,,FRCC,846.0,8.5,,,,,,,,41855.9,Miami,2.5,0.961,2
+,28.2940687,-81.8348651,,,FL,,FRCC,846.0,8.5,,,,,,,,0.0,Jacksonville,227.0,0.835,0
+T-Mobile Everglades MSO Data Center,26.1849937,-80.2868773,,,FL,,FRCC,846.0,8.5,,,,,,,,1396.7,Miami,48.2,0.941,1
+Cyxtera Tampa TP1,27.9455353,-82.351102,,Cyxtera,FL,,FRCC,846.0,8.5,,,,,,,,0.0,Jacksonville,273.5,0.853,2
+Flexential Tampa - North,28.0738698,-82.3683619,,Flexential,FL,,FRCC,846.0,8.5,,,,,,,,0.0,Jacksonville,260.1,0.846,2
+Flexential Tampa - West,28.0372991,-82.5399781,,Flexential,FL,,FRCC,846.0,8.5,,,,,,,,0.0,Jacksonville,268.9,0.848,2
+E-Foam,28.5779418,-81.5645492,,,FL,,FRCC,846.0,8.5,,,,,,,,0.0,Jacksonville,195.0,0.821,3
+,34.060998,-84.2740266,,,GA,,SRSO,836.0,6.4,,,,,,,,2327.0,Atlanta,36.2,0.547,14
+,33.6013861,-83.7054258,,Meta,GA,,SRSO,836.0,6.4,,,,,,,,956.8,Atlanta,65.5,0.57,3
+,33.6000742,-83.6968472,,Meta,GA,,SRSO,836.0,6.4,,,,,,,,939.4,Atlanta,66.3,0.57,3
+,33.5980717,-83.6950212,,Meta,GA,,SRSO,836.0,6.4,,,,,,,,934.7,Atlanta,66.5,0.57,3
+,33.7825376,-84.4220352,,,GA,,SRSO,836.0,6.4,,,,,,,,45330.6,Atlanta,4.7,0.561,31
+,33.7821829,-84.4201824,,,GA,,SRSO,836.0,6.4,,,,,,,,45330.6,Atlanta,4.5,0.561,31
+Ascent - Atlanta Data Center,34.0570922,-84.273003,,Ascent,GA,,SRSO,836.0,6.4,,,,,,,,2364.7,Atlanta,35.8,0.547,14
+CenturyLink,33.7651394,-84.3837393,,,GA,,SRSO,836.0,6.4,,,,,,,,45330.6,Atlanta,1.8,0.562,31
+CoreSite AT2 - Marietta Data Center,33.9255145,-84.4816338,,CoreSite,GA,,SRSO,836.0,6.4,,,,,,,,5165.6,Atlanta,21.3,0.554,30
+Cox Data Center,34.0362568,-84.3195121,,,GA,,SRSO,836.0,6.4,,,,,,,,2736.9,Atlanta,32.5,0.548,14
+DC Blox Chattanooga,35.0315499,-85.2972523,,,GA,,SRSO,836.0,6.4,,,,,,,,0.0,Atlanta,165.0,0.498,0
+Google,33.7497273,-84.58482,,Google,GA,,SRSO,836.0,6.4,,,,,,,,6629.7,Atlanta,18.0,0.563,31
+Google,33.7520844,-84.5868134,,Google,GA,,SRSO,836.0,6.4,,,,,,,,6528.6,Atlanta,18.2,0.562,31
+Google Fiber,33.7715677,-84.3668585,,Google,GA,,SRSO,836.0,6.4,,,,,,,,45330.6,Atlanta,3.2,0.561,31
+Hewlett-Packard,34.0820578,-84.2672921,,,GA,,SRSO,836.0,6.4,,,,,,,,2111.7,Atlanta,38.6,0.546,13
+Microsoft,33.6392624,-84.5170239,,Microsoft,GA,,SRSO,836.0,6.4,,,,,,,,7217.1,Atlanta,17.0,0.568,34
+QTS,33.448403,-84.5224887,,Quality Technology Services,GA,,SRSO,836.0,6.4,,,,,,,,2374.9,Atlanta,35.7,0.578,4
+QTS,33.4508851,-84.5236253,,Quality Technology Services,GA,,SRSO,836.0,6.4,,,,,,,,2397.3,Atlanta,35.5,0.577,4
+QTS,33.462293,-84.5236765,,Quality Technology Services,GA,,SRSO,836.0,6.4,,,,,,,,2522.6,Atlanta,34.3,0.577,5
+QTS,33.4639934,-84.5291838,,Quality Technology Services,GA,,SRSO,836.0,6.4,,,,,,,,2521.2,Atlanta,34.3,0.577,5
+QTS Suwanee,34.0361545,-84.0593468,,Quality Technology Services,GA,,SRSO,836.0,6.4,,,,,,,,1731.2,Atlanta,44.1,0.548,13
+QTS Suwanee Data Center 1,34.0353956,-84.0611057,,Quality Technology Services,GA,,SRSO,836.0,6.4,,,,,,,,1741.4,Atlanta,43.9,0.548,13
+QTS Suwanee Data Center 2,34.0370622,-84.0576958,,Quality Technology Services,GA,,SRSO,836.0,6.4,,,,,,,,1720.7,Atlanta,44.3,0.548,13
+Secure Data Center,34.0937104,-84.2508748,,,GA,,SRSO,836.0,6.4,,,,,,,,1979.8,Atlanta,40.3,0.545,13
+,34.0707004,-84.6759032,,,GA,,SRSO,836.0,6.4,,,,,,,,1715.4,Atlanta,44.4,0.546,1
+Flexential Atlanta - Alpharetta Data Center,34.0869864,-84.2518183,,Flexential,GA,,SRSO,836.0,6.4,,,,,,,,2035.2,Atlanta,39.6,0.546,13
+Mapletree Industrial,34.096708,-84.2374791,,,GA,,SRSO,836.0,6.4,,,,,,,,1927.7,Atlanta,41.0,0.545,13
+Strategic Datasphere,34.0948126,-84.2357244,,,GA,,SRSO,836.0,6.4,,,,,,,,1937.7,Atlanta,40.9,0.545,13
+T5 Data Center,34.0757915,-84.264267,,,GA,,SRSO,836.0,6.4,,,,,,,,2160.2,Atlanta,38.0,0.546,13
+UPS Data Center,34.1033836,-84.2149701,,,GA,,SRSO,836.0,6.4,,,,,,,,1830.3,Atlanta,42.5,0.545,13
+Atlanta ATL13,33.7555186,-84.3914814,,Digital Realty,GA,,SRSO,836.0,6.4,,,,,,,,45330.6,Atlanta,0.6,0.562,31
+CoreSite AT1,33.7559857,-84.3911712,,CoreSite,GA,,SRSO,836.0,6.4,,,,,,,,45330.6,Atlanta,0.7,0.562,31
+Digital Realty Data Center,33.6570094,-84.4152194,,Digital Realty,GA,,SRSO,836.0,6.4,,,,,,,,14685.5,Atlanta,10.6,0.567,32
+Microsoft,33.7182023,-84.5847806,,Microsoft,GA,,SRSO,836.0,6.4,,,,,,,,6444.6,Atlanta,18.4,0.564,31
+QTS Atlanta Data Center 1,33.7776897,-84.4211544,,Quality Technology Services,GA,,SRSO,836.0,6.4,,,,,,,,45330.6,Atlanta,4.2,0.561,31
+QTS Atlanta Data Center 2,33.7776109,-84.4194579,,Quality Technology Services,GA,,SRSO,836.0,6.4,,,,,,,,45330.6,Atlanta,4.1,0.561,31
+Digital Realty Atlanta ATL11,33.7465605,-84.5797407,,Digital Realty,GA,,SRSO,836.0,6.4,,,,,,,,6895.1,Atlanta,17.5,0.563,31
+Douglasville 1,33.7310574,-84.6160809,,Flexential,GA,,SRSO,836.0,6.4,,,,,,,,5262.5,Atlanta,21.0,0.563,31
+Douglasville 2,33.7307027,-84.6112398,,Flexential,GA,,SRSO,836.0,6.4,,,,,,,,5432.7,Atlanta,20.6,0.563,31
+Aligned Data Centers,33.7259582,-84.6195747,,Aligned Data Centers,GA,,SRSO,836.0,6.4,,,,,,,,5120.9,Atlanta,21.4,0.564,30
+Atlanta III,33.7632897,-84.6046613,,T5 Data Centers,GA,,SRSO,836.0,6.4,,,,,,,,5709.1,Atlanta,19.9,0.562,31
+Atlanta III,33.7605628,-84.6075819,,T5 Data Centers,GA,,SRSO,836.0,6.4,,,,,,,,5603.3,Atlanta,20.1,0.562,31
+Atlanta III,33.7605491,-84.6059431,,T5 Data Centers,GA,,SRSO,836.0,6.4,,,,,,,,5667.1,Atlanta,20.0,0.562,31
+Atlanta III,33.7588903,-84.6068256,,T5 Data Centers,GA,,SRSO,836.0,6.4,,,,,,,,5636.7,Atlanta,20.1,0.562,31
+"Atlanta, GA",33.7420393,-84.5965614,,Data Canopy,GA,,SRSO,836.0,6.4,,,,,,,,6062.4,Atlanta,19.1,0.563,31
+Centersquare Atlanta ATL1,33.7442251,-84.5812077,,Centersquare,GA,,SRSO,836.0,6.4,,,,,,,,6811.5,Atlanta,17.7,0.563,31
+Douglasville,33.7299455,-84.6233391,,Microsoft,GA,,SRSO,836.0,6.4,,,,,,,,5016.8,Atlanta,21.7,0.564,30
+Douglasville,33.7309353,-84.6229397,,Microsoft,GA,,SRSO,836.0,6.4,,,,,,,,5033.5,Atlanta,21.6,0.563,30
+Stack Infrastructure,33.7627446,-84.6024573,,Stack Infrastructure,GA,,SRSO,836.0,6.4,,,,,,,,5799.6,Atlanta,19.7,0.562,31
+Stack Infrastructure,33.7626731,-84.6006822,,Stack Infrastructure,GA,,SRSO,836.0,6.4,,,,,,,,5872.9,Atlanta,19.5,0.562,31
+The Keep,33.7550251,-84.5872685,,Switch,GA,,SRSO,836.0,6.4,,,,,,,,6502.4,Atlanta,18.2,0.562,31
+The Keep,33.7622598,-84.5934463,,Switch,GA,,SRSO,836.0,6.4,,,,,,,,6188.9,Atlanta,18.9,0.562,31
+The Keep,33.7603776,-84.5913033,,Switch,GA,,SRSO,836.0,6.4,,,,,,,,6294.5,Atlanta,18.6,0.562,31
+The Keep,33.7571883,-84.5890964,,Switch,GA,,SRSO,836.0,6.4,,,,,,,,6408.7,Atlanta,18.4,0.562,31
+Flexential Atlanta - Norcross,33.9547396,-84.1985246,,Flexential,GA,,SRSO,836.0,6.4,,,,,,,,3274.7,Atlanta,28.8,0.552,13
+Meta Stanton Springs Data Center,33.6004683,-83.7003581,,Meta,GA,,SRSO,836.0,6.4,,,,,,,,946.4,Atlanta,65.9,0.57,3
+,32.4982544,-84.8835911,,,GA,,SRSO,836.0,6.4,,,,,,,,285.6,Atlanta,146.6,0.625,1
+DLI ONE,32.4982046,-84.8836237,,DLI ONE,GA,,SRSO,836.0,6.4,,,,,,,,285.6,Atlanta,146.6,0.625,1
+,46.3321316,-113.2926719,,,ID,,NWPP,614.0,6.6,,,,,,,,0.0,Salt Lake City,629.8,0.0,0
+,43.4631415,-116.2682325,,,ID,,NWPP,614.0,6.6,,,,,,,,0.0,Salt Lake City,469.8,0.077,1
+,43.4633361,-116.2720949,,,ID,,NWPP,614.0,6.6,,,,,,,,0.0,Salt Lake City,470.0,0.077,1
+Family History Center,42.3172742,-111.304246,,The Church of Jesus Christ of Latter-day Saints,ID,,NWPP,614.0,6.6,,,,,,,,0.0,Salt Lake City,179.9,0.134,0
+TierPoint,47.6719149,-117.0959323,,,ID,,NWPP,614.0,6.6,,,,,,,,0.0,Seattle,392.1,0.0,1
+VentureData,43.8252286,-111.7820703,,,ID,,NWPP,614.0,6.6,,,,,,,,0.0,Salt Lake City,341.0,0.059,0
+,38.8105602,-89.9487033,,,IL,,SRMW,1476.0,7.7,,,,,,,,0.0,Indianapolis,343.0,0.309,0
+,41.8885461,-88.7218341,,Meta,IL,,SRMW,1476.0,7.7,,,,,,,,3134.8,Chicago,90.4,0.156,2
+,41.8892995,-88.7310298,,Meta,IL,,SRMW,1476.0,7.7,,,,,,,,3095.6,Chicago,91.2,0.156,2
+,41.890305,-88.7266276,,Meta,IL,,SRMW,1476.0,7.7,,,,,,,,3114.2,Chicago,90.8,0.155,2
+,42.0230765,-87.961467,,,IL,,SRMW,1476.0,7.7,,,,,,,,15098.6,Chicago,31.7,0.149,27
+,41.7953769,-88.2469648,,CyrusOne,IL,,SRMW,1476.0,7.7,,,,,,,,7190.4,Chicago,52.0,0.16,10
+,41.7966043,-88.2429853,,CyrusOne,IL,,SRMW,1476.0,7.7,,,,,,,,7263.5,Chicago,51.6,0.16,10
+,41.9773625,-87.9630149,,,IL,,SRMW,1476.0,7.7,,,,,,,,16728.5,Chicago,29.6,0.151,28
+,42.0344483,-87.9831631,,,IL,,SRMW,1476.0,7.7,,,,,,,,13661.8,Chicago,33.9,0.148,28
+Datacenter (386),41.7071342,-87.9759559,,UChicago Argonne LLC,IL,,SRMW,1476.0,7.7,,,,,,,,13279.4,Chicago,34.5,0.165,12
+Dynamics Mining,37.3629981,-87.5471512,,,IL,,SRMW,1476.0,7.7,,,,,,,,0.0,Nashville,150.2,0.382,0
+Edged Chicago ORD01,41.8069309,-88.2410968,,Edged,IL,,SRMW,1476.0,7.7,,,,,,,,7338.5,Chicago,51.3,0.16,10
+Equinix Chicago Data CH7,41.8125627,-87.9728504,,Equinix,IL,,SRMW,1476.0,7.7,,,,,,,,16923.0,Chicago,29.4,0.159,36
+ForceAmp.com,41.7039984,-91.5870781,,,IL,,SRMW,1476.0,7.7,,,,,,,,0.0,Des Moines,167.7,0.165,0
+Geneseo Communications Inc,41.5502695,-90.4824093,,,IL,,SRMW,1476.0,7.7,,,,,,,,0.0,Chicago,239.6,0.172,0
+Lincoln Rackhouse,41.7721034,-88.2170821,,,IL,,SRMW,1476.0,7.7,,,,,,,,7596.3,Chicago,50.1,0.161,10
+STACK Chicago CHI01,42.0068512,-87.9651853,,Stack Infrastructure,IL,,SRMW,1476.0,7.7,,,,,,,,15529.7,Chicago,31.1,0.15,28
+West Monroe,41.8805271,-87.6359383,,,IL,,SRMW,1476.0,7.7,,,,,,,,240956.5,Chicago,0.5,0.156,16
+,41.796856,-88.2444947,,CyrusOne,IL,,SRMW,1476.0,7.7,,,,,,,,7238.7,Chicago,51.7,0.16,10
+CyrusOne CHI3,41.8028612,-88.2467523,,CyrusOne,IL,,SRMW,1476.0,7.7,,,,,,,,7224.7,Chicago,51.8,0.16,10
+NCSA Petascale Computing Facility,40.0952591,-88.2420314,,,IL,,SRMW,1476.0,7.7,,,,,,,,0.0,Indianapolis,181.2,0.245,0
+Centersquare Chicago Data Center - ORD1,41.8533827,-87.6186071,,Centersquare,IL,,SRMW,1476.0,7.7,,,,,,,,240956.5,Chicago,3.1,0.157,13
+CoreSite Chicago Data Center (CH1),41.8759405,-87.6314655,,CoreSite,IL,,SRMW,1476.0,7.7,,,,,,,,240956.5,Chicago,0.5,0.156,16
+CoreSite Chicago Data Center (CH2),41.8627972,-87.6413012,,CoreSite,IL,,SRMW,1476.0,7.7,,,,,,,,240956.5,Chicago,2.1,0.157,16
+Digital Realty ORD10,41.8533507,-87.6183067,,Digital Realty,IL,,SRMW,1476.0,7.7,,,,,,,,240956.5,Chicago,3.1,0.157,13
+Digital Realty ORD11,41.8743036,-87.6299404,,Digital Realty,IL,,SRMW,1476.0,7.7,,,,,,,,240956.5,Chicago,0.6,0.156,16
+Equinix Chicago Data Center - CH1,41.8535578,-87.6180475,,Equinix,IL,,SRMW,1476.0,7.7,,,,,,,,240956.5,Chicago,3.1,0.157,13
+Iron Mountain Data & Record Storage,41.8487049,-87.6454577,,Iron Mountain,IL,,SRMW,1476.0,7.7,,,,,,,,240956.5,Chicago,3.7,0.158,16
+Lakeside Technology Center,41.8536916,-87.6182716,,,IL,,SRMW,1476.0,7.7,,,,,,,,240956.5,Chicago,3.1,0.157,13
+Netrality,41.8728811,-87.63344,,Netrality,IL,,SRMW,1476.0,7.7,,,,,,,,240956.5,Chicago,0.8,0.156,16
+QTS Chicago,41.8421621,-87.6689315,,Quality Technology Services,IL,,SRMW,1476.0,7.7,,,,,,,,220750.6,Chicago,5.3,0.158,16
+Serverfarm CH1,41.8709439,-87.6401413,,Serverfarm,IL,,SRMW,1476.0,7.7,,,,,,,,240956.5,Chicago,1.3,0.156,16
+Centersquare Elk Grove Village Data Center Campus ORD2,41.9920884,-87.9580136,,Centersquare,IL,,SRMW,1476.0,7.7,,,,,,,,16512.1,Chicago,29.9,0.15,29
+Digital Realty CH1,41.9942501,-87.9619545,,Digital Realty,IL,,SRMW,1476.0,7.7,,,,,,,,16188.8,Chicago,30.3,0.15,29
+Digital Realty CH2,41.9945332,-87.9577513,,Digital Realty,IL,,SRMW,1476.0,7.7,,,,,,,,16434.1,Chicago,30.0,0.15,29
+Digital Realty CH3,41.9943531,-87.9649422,,Digital Realty,IL,,SRMW,1476.0,7.7,,,,,,,,16006.5,Chicago,30.5,0.15,29
+EdgeConneX CHI01,42.0007751,-87.9507686,,EdgeConneX,IL,,SRMW,1476.0,7.7,,,,,,,,16613.5,Chicago,29.7,0.15,28
+EdgeConneX CHI02,42.0014952,-87.9525624,,EdgeConneX,IL,,SRMW,1476.0,7.7,,,,,,,,16473.3,Chicago,29.9,0.15,28
+Equinix Chicago CH3,42.001221,-87.9551997,,Equinix,IL,,SRMW,1476.0,7.7,,,,,,,,16324.8,Chicago,30.1,0.15,29
+Microsoft CHI11,42.0231434,-87.9721861,,Microsoft,IL,,SRMW,1476.0,7.7,,,,,,,,14562.4,Chicago,32.5,0.149,28
+Skybox Chicago I,41.9936612,-87.973521,,Skybox,IL,,SRMW,1476.0,7.7,,,,,,,,15534.0,Chicago,31.1,0.15,29
+Stream Chicago I,42.0026304,-87.9511119,,Stream,IL,,SRMW,1476.0,7.7,,,,,,,,16514.5,Chicago,29.9,0.15,28
+Stream Chicago II,41.9991249,-87.9577434,,Stream,IL,,SRMW,1476.0,7.7,,,,,,,,16255.4,Chicago,30.2,0.15,29
+T5 Chicago II,42.0230424,-87.9755567,,T5 Data Centers,IL,,SRMW,1476.0,7.7,,,,,,,,14403.8,Chicago,32.7,0.149,28
+Digital Realty Chicago ORD12,41.9283557,-87.8592545,,Digital Realty,IL,,SRMW,1476.0,7.7,,,,,,,,30763.6,Chicago,19.7,0.154,39
+NTT Chicago CH1,41.9879619,-88.0072217,,NTT,IL,,SRMW,1476.0,7.7,,,,,,,,13935.6,Chicago,33.4,0.151,28
+NTT Chicago CH2,41.9890149,-88.0072131,,NTT,IL,,SRMW,1476.0,7.7,,,,,,,,13909.8,Chicago,33.5,0.151,28
+NTT Chicago CH3,41.9869408,-88.0079846,,NTT,IL,,SRMW,1476.0,7.7,,,,,,,,13924.0,Chicago,33.5,0.151,29
+NTT Chicago CH4,41.9891013,-88.0047584,,NTT,IL,,SRMW,1476.0,7.7,,,,,,,,14026.4,Chicago,33.3,0.151,28
+Centersquare Lisle ORD4 Data Center,41.8023406,-88.0948856,,Centersquare,IL,,SRMW,1476.0,7.7,,,,,,,,10865.2,Chicago,39.5,0.16,28
+"NetSource Communications, Inc",41.8109573,-88.1952275,,NetSource,IL,,SRMW,1476.0,7.7,,,,,,,,8243.3,Chicago,47.4,0.159,11
+Aligned Data Center - Chicago ORD-01,41.9140034,-87.9175163,,Aligned,IL,,SRMW,1476.0,7.7,,,,,,,,22776.6,Chicago,24.1,0.154,36
+Aligned Data Center - Chicago ORD-02,41.9129628,-87.9175895,,Aligned,IL,,SRMW,1476.0,7.7,,,,,,,,22793.2,Chicago,24.1,0.154,37
+Microsoft - Azure Datacenter,41.9229565,-87.9182633,,Microsoft,IL,,SRMW,1476.0,7.7,,,,,,,,22447.3,Chicago,24.3,0.154,36
+VISA,42.2167763,-87.9529303,,VISA,IL,,SRMW,1476.0,7.7,,,,,,,,8643.1,Chicago,46.0,0.139,15
+,41.9053402,-88.2195062,,,IL,,SRMW,1476.0,7.7,,,,,,,,7883.9,Chicago,48.9,0.155,31
+Element Critical CH1,41.9757324,-87.9646913,,Element Critical,IL,,SRMW,1476.0,7.7,,,,,,,,16674.4,Chicago,29.7,0.151,28
+Element Critical CH2,41.9742269,-87.9671756,,Element Critical,IL,,SRMW,1476.0,7.7,,,,,,,,16562.9,Chicago,29.8,0.151,28
+,39.185856,-85.8870717,,,IN,,RFCW,1012.0,7.2,,,,,,,,1527.4,Indianapolis,69.0,0.291,1
+,41.6885485,-86.4730506,,,IN,,RFCW,1012.0,7.2,,,,,,,,2765.9,Chicago,98.3,0.166,7
+,41.6885306,-86.4698642,,,IN,,RFCW,1012.0,7.2,,,,,,,,2755.0,Chicago,98.5,0.166,7
+,41.692058,-86.4648908,,,IN,,RFCW,1012.0,7.2,,,,,,,,2741.8,Chicago,98.8,0.165,7
+,41.6885384,-86.4718825,,,IN,,RFCW,1012.0,7.2,,,,,,,,2761.9,Chicago,98.4,0.166,7
+,41.6885566,-86.475061,,,IN,,RFCW,1012.0,7.2,,,,,,,,2772.8,Chicago,98.1,0.166,7
+,41.692058,-86.466884,,,IN,,RFCW,1012.0,7.2,,,,,,,,2748.5,Chicago,98.7,0.165,7
+,41.6920458,-86.4637145,,,IN,,RFCW,1012.0,7.2,,,,,,,,2737.8,Chicago,98.9,0.165,7
+Agricultural and Biological Engineering,40.4218543,-86.9165454,,,IN,,RFCW,1012.0,7.2,,,,,,,,918.4,Indianapolis,96.9,0.229,1
+Amazon AWS Data Center,41.6677641,-86.4730555,,,IN,,RFCW,1012.0,7.2,,,,,,,,2743.2,Chicago,98.8,0.167,7
+Learning GIS!,40.42179,-86.9141546,,,IN,,RFCW,1012.0,7.2,,,,,,,,920.4,Indianapolis,96.8,0.229,1
+IU Data Center,39.1744228,-86.5006878,,Indiana University,IN,,RFCW,1012.0,7.2,,,,,,,,1422.8,Indianapolis,72.4,0.291,0
+DartPoints Columbus,39.1826345,-85.8967042,,DartPoints,IN,,RFCW,1012.0,7.2,,,,,,,,1525.4,Indianapolis,69.1,0.291,1
+Digital Crossroad,41.7074166,-87.5202329,,Digital Crossroad,IN,,RFCW,1012.0,7.2,,,,,,,,27523.6,Chicago,21.2,0.165,12
+,39.7171971,-85.941411,,Verizon Wireless,IN,,RFCW,1012.0,7.2,,,,,,,,10107.7,Indianapolis,19.6,0.264,0
+,41.2214856,-95.863822,,,IA,,MROW,962.0,6.5,,,,,,,,26261.1,Omaha,7.0,0.189,33
+,41.2519538,-95.9258479,,,IA,,MROW,962.0,6.5,,,,,,,,43473.7,Omaha,1.0,0.187,43
+,41.5580811,-93.5276562,,,IA,,MROW,962.0,6.5,,,,,,,,11595.5,Des Moines,7.0,0.172,30
+,41.5581522,-93.528225,,,IA,,MROW,962.0,6.5,,,,,,,,11707.8,Des Moines,6.9,0.172,30
+,41.5158641,-93.7203124,,,IA,,MROW,962.0,6.5,,,,,,,,4585.0,Des Moines,13.0,0.174,34
+,41.5168636,-93.7197673,,,IA,,MROW,962.0,6.5,,,,,,,,4641.6,Des Moines,12.9,0.174,34
+,41.514853,-93.7208856,,,IA,,MROW,962.0,6.5,,,,,,,,4528.1,Des Moines,13.1,0.174,33
+,41.5138877,-93.7214096,,,IA,,MROW,962.0,6.5,,,,,,,,4475.5,Des Moines,13.2,0.174,33
+Apple,41.6168519,-93.9243968,,Apple,IA,,MROW,962.0,6.5,,,,,,,,1514.7,Des Moines,27.1,0.169,26
+Facebook Altoona Data Center 1,41.6642482,-93.5147581,,Meta,IA,,MROW,962.0,6.5,,,,,,,,5967.4,Des Moines,10.9,0.167,23
+Facebook Altoona Data Center 2,41.6655118,-93.5082089,,Meta,IA,,MROW,962.0,6.5,,,,,,,,5603.8,Des Moines,11.3,0.167,23
+Facebook Altoona Data Center 3,41.6670521,-93.5065646,,Meta,IA,,MROW,962.0,6.5,,,,,,,,5445.6,Des Moines,11.6,0.167,23
+Facebook Altoona Data Center 4,41.6677428,-93.5164071,,Meta,IA,,MROW,962.0,6.5,,,,,,,,5797.7,Des Moines,11.1,0.167,23
+Facebook Altoona Data Center 5,41.6711866,-93.5165942,,Meta,IA,,MROW,962.0,6.5,,,,,,,,5576.4,Des Moines,11.4,0.166,23
+Fidelity,41.1655243,-96.0833669,,Fidelity,IA,,MROW,962.0,6.5,,,,,,,,7198.7,Omaha,16.6,0.192,43
+First National Technical Center,41.2614219,-95.9364982,,First National of Nebraska,IA,,MROW,962.0,6.5,,,,,,,,43473.7,Omaha,0.6,0.187,43
+Google,41.134992,-96.1467112,,Google,IA,,MROW,962.0,6.5,,,,,,,,4450.8,Omaha,22.8,0.193,24
+Google,41.1773457,-95.8048567,,Google,IA,,MROW,962.0,6.5,,,,,,,,9349.3,Omaha,13.9,0.191,26
+Google,41.1772395,-95.8063182,,Google,IA,,MROW,962.0,6.5,,,,,,,,9434.3,Omaha,13.8,0.191,26
+Google,41.1774831,-95.8031865,,Google,IA,,MROW,962.0,6.5,,,,,,,,9254.2,Omaha,14.0,0.191,26
+Google,41.1774894,-95.8009224,,Google,IA,,MROW,962.0,6.5,,,,,,,,9114.2,Omaha,14.2,0.191,26
+Google,41.1755233,-95.8067784,,Google,IA,,MROW,962.0,6.5,,,,,,,,9333.8,Omaha,13.9,0.191,26
+Google,41.1755246,-95.8056388,,Google,IA,,MROW,962.0,6.5,,,,,,,,9263.5,Omaha,14.0,0.191,26
+Google,41.1755259,-95.804509,,Google,IA,,MROW,962.0,6.5,,,,,,,,9194.3,Omaha,14.1,0.191,26
+Google,41.1755278,-95.803375,,Google,IA,,MROW,962.0,6.5,,,,,,,,9125.6,Omaha,14.2,0.191,26
+Google,41.1755307,-95.8022395,,Google,IA,,MROW,962.0,6.5,,,,,,,,9057.4,Omaha,14.2,0.191,26
+Google,41.1755301,-95.8011057,,Google,IA,,MROW,962.0,6.5,,,,,,,,8989.6,Omaha,14.3,0.191,26
+Google,41.1755366,-95.7999641,,Google,IA,,MROW,962.0,6.5,,,,,,,,8922.4,Omaha,14.4,0.191,26
+Google,41.1726404,-95.8040298,,Google,IA,,MROW,962.0,6.5,,,,,,,,8959.0,Omaha,14.3,0.191,26
+Google,41.1726458,-95.8025278,,Google,IA,,MROW,962.0,6.5,,,,,,,,8873.3,Omaha,14.4,0.191,26
+Google,41.1725558,-95.8011273,,Google,IA,,MROW,962.0,6.5,,,,,,,,8787.6,Omaha,14.5,0.191,26
+Google,41.1349194,-96.1440824,,Google,IA,,MROW,962.0,6.5,,,,,,,,4500.8,Omaha,22.7,0.193,24
+Google,41.1343926,-96.1559041,,Google,IA,,MROW,962.0,6.5,,,,,,,,4266.2,Omaha,23.5,0.193,22
+Google,41.1736261,-95.7921884,,Google,IA,,MROW,962.0,6.5,,,,,,,,8363.3,Omaha,15.0,0.191,26
+Google,41.1736283,-95.7886606,,Google,IA,,MROW,962.0,6.5,,,,,,,,8176.5,Omaha,15.2,0.191,26
+Google,41.1379084,-96.1514321,,Google,IA,,MROW,962.0,6.5,,,,,,,,4415.7,Omaha,23.0,0.193,24
+Google,41.3391392,-96.0846572,,Google,IA,,MROW,962.0,6.5,,,,,,,,7864.4,Omaha,15.6,0.183,23
+Google,41.3419347,-96.0877015,,Google,IA,,MROW,962.0,6.5,,,,,,,,7582.3,Omaha,16.0,0.183,22
+Google,41.3455008,-96.093655,,Google,IA,,MROW,962.0,6.5,,,,,,,,7153.2,Omaha,16.7,0.183,21
+Google,41.1704749,-95.7895824,,Google,IA,,MROW,962.0,6.5,,,,,,,,8045.5,Omaha,15.4,0.191,26
+Google,41.171118,-95.7924753,,Google,IA,,MROW,962.0,6.5,,,,,,,,8229.7,Omaha,15.2,0.191,26
+Meta,41.6757843,-93.5098305,,Meta,IA,,MROW,962.0,6.5,,,,,,,,5068.4,Des Moines,12.1,0.166,21
+Meta,41.675801,-93.5060373,,Meta,IA,,MROW,962.0,6.5,,,,,,,,4946.4,Des Moines,12.3,0.166,19
+Meta Sarpy Data center,41.1235289,-96.1442004,,Meta,IA,,MROW,962.0,6.5,,,,,,,,4270.8,Omaha,23.5,0.194,21
+Meta Sarpy Data center,41.1205515,-96.1445325,,Meta,IA,,MROW,962.0,6.5,,,,,,,,4207.1,Omaha,23.7,0.194,20
+Meta Sarpy Data center,41.1235744,-96.1328883,,Meta,IA,,MROW,962.0,6.5,,,,,,,,4474.3,Omaha,22.8,0.194,22
+Meta Sarpy Data center,41.1143501,-96.1428055,,Meta,IA,,MROW,962.0,6.5,,,,,,,,4115.7,Omaha,24.1,0.194,19
+Meta Sarpy Data center,41.1122489,-96.1416248,,Meta,IA,,MROW,962.0,6.5,,,,,,,,4093.8,Omaha,24.2,0.194,19
+Microsoft,41.5406093,-93.8248434,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,2487.6,Des Moines,19.5,0.173,28
+Microsoft,41.5167412,-93.7025134,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,5286.1,Des Moines,11.8,0.174,35
+Microsoft,41.5158346,-93.702492,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,5240.3,Des Moines,11.9,0.174,35
+Microsoft,41.5158177,-93.7063005,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,5090.8,Des Moines,12.1,0.174,35
+Microsoft,41.5167061,-93.7063257,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,5132.6,Des Moines,12.0,0.174,35
+Microsoft,41.5185012,-93.7063325,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,5219.5,Des Moines,11.9,0.174,35
+Microsoft,41.5176108,-93.7063243,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,5176.4,Des Moines,12.0,0.174,35
+Microsoft,41.5176423,-93.7024991,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,5333.4,Des Moines,11.7,0.174,35
+Microsoft,41.5185369,-93.7025209,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,5379.3,Des Moines,11.7,0.174,35
+Microsoft,41.4978557,-93.7870593,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,2661.5,Des Moines,18.6,0.175,28
+Microsoft,41.4989008,-93.7870702,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,2675.0,Des Moines,18.6,0.175,28
+Microsoft,41.5406505,-93.8278773,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,2442.2,Des Moines,19.7,0.173,26
+Microsoft,41.4968303,-93.7869962,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,2649.0,Des Moines,18.7,0.175,28
+Microsoft,41.539814,-93.8263137,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,2460.6,Des Moines,19.6,0.173,28
+Microsoft,41.5396705,-93.8286654,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,2424.9,Des Moines,19.8,0.173,26
+Microsoft,41.5349901,-93.8634444,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,1972.6,Des Moines,22.8,0.173,26
+Microsoft,41.495806,-93.7870549,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,2634.7,Des Moines,18.8,0.175,28
+Microsoft,41.4947497,-93.7870201,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,2621.4,Des Moines,18.8,0.175,28
+Microsoft,41.5339161,-93.863439,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,1968.4,Des Moines,22.8,0.173,26
+Microsoft,41.5328375,-93.8634622,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,1963.9,Des Moines,22.8,0.173,26
+Microsoft,41.531814,-93.8634426,,Microsoft,IA,,MROW,962.0,6.5,,,,,,,,1960.0,Des Moines,22.9,0.173,26
+Travelers Insurance,41.1278718,-96.1450714,,Travelers Insurance,IA,,MROW,962.0,6.5,,,,,,,,4340.8,Omaha,23.2,0.194,22
+Yahoo,41.1804987,-96.0849058,,Yahoo,IA,,MROW,962.0,6.5,,,,,,,,7824.7,Omaha,15.7,0.191,43
+Lightedge Des Moines 1,41.6676628,-93.4554841,,,IA,,MROW,962.0,6.5,,,,,,,,3763.4,Des Moines,14.8,0.167,11
+Lightedge Des Moines 2,41.666814,-93.4559432,,,IA,,MROW,962.0,6.5,,,,,,,,3796.4,Des Moines,14.7,0.167,11
+,41.2121073,-95.8778947,,CyrusOne,IA,,MROW,962.0,6.5,,,,,,,,26930.1,Omaha,6.9,0.189,43
+Aureon,41.5879926,-93.6310139,,,IA,,MROW,962.0,6.5,,,,,,,,19152.6,Des Moines,2.6,0.171,37
+,39.1011816,-94.5788209,,,KS,,SPNO,1013.0,7.6,,,,,,,,45445.0,Kansas City,0.2,0.295,15
+,39.2906383,-94.6759163,,,KS,,SPNO,1013.0,7.6,,,,,,,,4681.6,Kansas City,22.8,0.285,14
+,39.2955554,-94.6734862,,,KS,,SPNO,1013.0,7.6,,,,,,,,4550.0,Kansas City,23.2,0.285,14
+,39.3024057,-94.6847918,,,KS,,SPNO,1013.0,7.6,,,,,,,,4254.7,Kansas City,24.3,0.285,14
+,38.9406295,-94.7552326,,TierPoint,KS,,SPNO,1013.0,7.6,,,,,,,,4515.6,Kansas City,23.3,0.303,7
+,39.3226269,-94.5947862,,,KS,,SPNO,1013.0,7.6,,,,,,,,4117.0,Kansas City,24.8,0.284,13
+,39.3223761,-94.5907026,,,KS,,SPNO,1013.0,7.6,,,,,,,,4127.9,Kansas City,24.7,0.284,13
+,39.3223632,-94.5897898,,,KS,,SPNO,1013.0,7.6,,,,,,,,4129.0,Kansas City,24.7,0.284,13
+,39.3163852,-94.5773319,,,KS,,SPNO,1013.0,7.6,,,,,,,,4304.7,Kansas City,24.1,0.284,14
+,39.3230149,-94.5728687,,,KS,,SPNO,1013.0,7.6,,,,,,,,4112.6,Kansas City,24.8,0.284,13
+,39.3205851,-94.5772863,,,KS,,SPNO,1013.0,7.6,,,,,,,,4182.3,Kansas City,24.5,0.284,13
+Meta Data Center,39.3226309,-94.5980872,,Meta,KS,,SPNO,1013.0,7.6,,,,,,,,4112.9,Kansas City,24.8,0.284,13
+Cloud Storage Corp,38.8721322,-99.3001874,,,KS,,SPNO,1013.0,7.6,,,,,,,,0.0,Omaha,390.8,0.306,0
+,38.926806,-94.7683728,,,KS,,SPNO,1013.0,7.6,,,,,,,,4013.0,Kansas City,25.2,0.304,5
+Data Center Lenexa,38.9251636,-94.7703163,,,KS,,SPNO,1013.0,7.6,,,,,,,,3954.5,Kansas City,25.5,0.304,4
+,37.2784058,-98.5884618,,SC,KS,,SPNO,1013.0,7.6,,,,,,,,0.0,Kansas City,404.6,0.386,0
+,38.9391997,-94.8601851,,,KS,,SPNO,1013.0,7.6,,,,,,,,3077.8,Kansas City,30.1,0.303,4
+U.S. Bank National Data Process Center,38.9355851,-94.8645047,,,KS,,SPNO,1013.0,7.6,,,,,,,,2996.8,Kansas City,30.6,0.303,4
+Gallatin Data Center,36.4084957,-86.3716203,,Meta,KY,,SRTV,884.0,6.5,,,,,,,,2159.8,Nashville,45.9,0.43,3
+Google,36.62459,-87.2612916,,Google,KY,,SRTV,884.0,6.5,,,,,,,,1216.0,Nashville,67.3,0.419,4
+Google,36.6248386,-87.2635099,,Google,KY,,SRTV,884.0,6.5,,,,,,,,1211.9,Nashville,67.4,0.419,4
+Meta Gallatin Data Center,36.4118929,-86.3696526,,Meta,KY,,SRTV,884.0,6.5,,,,,,,,2134.1,Nashville,46.2,0.429,3
+Meta Gallatin Data Center,36.4113782,-86.3660037,,Meta,KY,,SRTV,884.0,6.5,,,,,,,,2118.5,Nashville,46.5,0.429,3
+Meta Gallatin Data Center,36.4060645,-86.3666284,,Meta,KY,,SRTV,884.0,6.5,,,,,,,,2146.0,Nashville,46.1,0.43,3
+SPC3A,36.6243111,-87.2590216,,Google,KY,,SRTV,884.0,6.5,,,,,,,,1220.1,Nashville,67.1,0.419,4
+SPC4A,36.6240634,-87.2569125,,Google,KY,,SRTV,884.0,6.5,,,,,,,,1224.0,Nashville,67.0,0.419,4
+,38.9813135,-84.6187219,,CyrusOne,KY,,SRTV,884.0,6.5,,,,,,,,0.0,Indianapolis,158.9,0.301,2
+East Kentucky Network Datacenter,37.6001856,-82.6787687,,,KY,,SRTV,884.0,6.5,,,,,,,,0.0,Columbus,263.8,0.37,0
+Flexential Louisville - Downtown,38.242501,-85.733336,,Flexential,KY,,SRTV,884.0,6.5,,,,,,,,0.0,Indianapolis,173.8,0.338,1
+Flexential Louisville - East,38.2771906,-85.5072402,,Flexential,KY,,SRTV,884.0,6.5,,,,,,,,0.0,Indianapolis,175.3,0.336,1
+,32.5963048,-90.089258,,,LA,,SRMW,1476.0,6.0,,,,,,,,0.0,Nashville,499.2,0.62,8
+,32.5944619,-90.0980012,,,LA,,SRMW,1476.0,6.0,,,,,,,,0.0,Nashville,499.8,0.62,8
+,32.5944763,-90.0944115,,,LA,,SRMW,1476.0,6.0,,,,,,,,0.0,Nashville,499.6,0.62,8
+,32.5960505,-90.0944274,,,LA,,SRMW,1476.0,6.0,,,,,,,,0.0,Nashville,499.5,0.62,8
+,32.5960391,-90.0980115,,,LA,,SRMW,1476.0,6.0,,,,,,,,0.0,Nashville,499.7,0.62,8
+Amazon Web Services,32.4119338,-90.1878388,,Amazon Web Services,LA,,SRMW,1476.0,6.0,,,,,,,,0.0,Nashville,521.2,0.629,8
+Amazon Web Services,32.4119331,-90.1895198,,Amazon Web Services,LA,,SRMW,1476.0,6.0,,,,,,,,0.0,Nashville,521.3,0.629,8
+Amazon Web Services,32.4119506,-90.1905464,,Amazon Web Services,LA,,SRMW,1476.0,6.0,,,,,,,,0.0,Nashville,521.3,0.629,8
+Amazon Web Services,32.4119345,-90.1922336,,Amazon Web Services,LA,,SRMW,1476.0,6.0,,,,,,,,0.0,Nashville,521.4,0.629,8
+Center for Computation & Technology (CCT),30.407446,-91.1725454,,,LA,,SRMW,1476.0,6.0,,,,,,,,0.0,Houston,410.2,0.73,2
+DartPoints Baton Rouge 1,30.4538251,-91.1160531,,DartPoints,LA,,SRMW,1476.0,6.0,,,,,,,,0.0,Houston,416.4,0.727,2
+DartPoints Baton Rouge 2,30.4539942,-91.115481,,DartPoints,LA,,SRMW,1476.0,6.0,,,,,,,,0.0,Houston,416.4,0.727,2
+DartPoints Shreveport,32.5110171,-93.7498076,,DartPoints,LA,,SRMW,1476.0,6.0,,,,,,,,0.0,Dallas,287.1,0.624,0
+Datacenter,46.9399928,-67.9055877,,,ME,,NEWE,528.0,11.8,,,,,,,,0.0,Boston,567.0,0.0,0
+Information Technology Data Center,42.9820886,-70.9505947,,Phillips Exeter Academy,ME,,NEWE,528.0,11.8,,,,,,,,1189.0,Boston,69.7,0.101,2
+Oxford Networks,43.8951573,-69.9234342,,FirstLight,ME,,NEWE,528.0,11.8,,,,,,,,0.0,Boston,194.0,0.055,0
+FirstLight Data Center,43.6578388,-70.2613785,,FirstLight,ME,,NEWE,528.0,11.8,,,,,,,,0.0,Boston,158.2,0.067,0
+,38.913702,-77.2258342,,,MD,,RFCE,737.0,10.2,,,,,,,,10941.0,Washington,16.1,0.304,233
+,39.3777781,-77.4115448,,,MD,,RFCE,737.0,10.2,,,,,,,,1478.0,Washington,61.1,0.281,0
+,38.9059013,-77.4689724,,,MD,,RFCE,737.0,10.2,,,,,,,,3120.5,Washington,37.1,0.305,349
+,38.908136,-77.4752182,,,MD,,RFCE,737.0,10.2,,,,,,,,3054.0,Washington,37.7,0.305,350
+,38.750815,-77.1962716,,,MD,,RFCE,737.0,10.2,,,,,,,,6854.1,Washington,22.3,0.312,13
+,38.9865152,-77.4422565,,,MD,,RFCE,737.0,10.2,,,,,,,,3293.2,Washington,35.8,0.301,292
+,39.0120268,-77.4715605,,,MD,,RFCE,737.0,10.2,,,,,,,,2897.7,Washington,39.0,0.299,275
+,38.9995402,-77.4498559,,,MD,,RFCE,737.0,10.2,,,,,,,,3159.8,Washington,36.8,0.3,283
+,38.7908136,-77.5484173,,,MD,,RFCE,737.0,10.2,,,,,,,,2403.7,Washington,46.0,0.31,217
+,38.8159745,-77.6525395,,Amazon,MD,,RFCE,737.0,10.2,,,,,,,,1910.4,Washington,54.1,0.309,140
+,38.9848368,-77.4259111,,,MD,,RFCE,737.0,10.2,,,,,,,,3498.7,Washington,34.4,0.301,288
+,38.9572529,-77.4978409,,,MD,,RFCE,737.0,10.2,,,,,,,,2795.1,Washington,39.9,0.302,344
+,38.737208,-77.8262798,,,MD,,RFCE,737.0,10.2,,,,,,,,1328.5,Washington,70.8,0.313,33
+,38.7382145,-77.8258682,,,MD,,RFCE,737.0,10.2,,,,,,,,1330.0,Washington,70.7,0.313,36
+,38.7771313,-77.5561679,,,MD,,RFCE,737.0,10.2,,,,,,,,2326.9,Washington,47.1,0.311,142
+,38.76138,-77.5392522,,,MD,,RFCE,737.0,10.2,,,,,,,,2385.8,Washington,46.3,0.312,139
+,38.7344794,-77.1528961,,,MD,,RFCE,737.0,10.2,,,,,,,,7065.8,Washington,21.8,0.313,10
+,38.7351981,-77.1528853,,,MD,,RFCE,737.0,10.2,,,,,,,,7100.0,Washington,21.8,0.313,10
+,38.7632492,-77.5392727,,,MD,,RFCE,737.0,10.2,,,,,,,,2390.8,Washington,46.2,0.312,138
+,38.9206107,-77.4837387,,,MD,,RFCE,737.0,10.2,,,,,,,,2964.8,Washington,38.4,0.304,349
+,38.9219162,-77.4836647,,,MD,,RFCE,737.0,10.2,,,,,,,,2965.0,Washington,38.4,0.304,349
+8100 Boone Boulevard,38.9137236,-77.2258825,,Digital Realty,MD,,RFCE,737.0,10.2,,,,,,,,10936.7,Washington,16.1,0.304,233
+AWS,38.789376,-77.5819732,,Amazon Web Services,MD,,RFCE,737.0,10.2,,,,,,,,2209.3,Washington,48.8,0.311,145
+AWS,38.7466335,-77.4972555,,Amazon Web Services,MD,,RFCE,737.0,10.2,,,,,,,,2601.6,Washington,43.6,0.313,138
+AWS,38.7476409,-77.4947856,,Amazon Web Services,MD,,RFCE,737.0,10.2,,,,,,,,2621.9,Washington,43.3,0.313,138
+AWS,38.7495466,-77.4930098,,Amazon Web Services,MD,,RFCE,737.0,10.2,,,,,,,,2641.3,Washington,43.1,0.313,139
+AiNET,39.0528404,-76.9259248,,,MD,,RFCE,737.0,10.2,,,,,,,,8731.0,Washington,18.7,0.297,3
+Amazon IAD-104,38.7483699,-77.5207001,,Amazon Web Services,MD,,RFCE,737.0,10.2,,,,,,,,2458.4,Washington,45.4,0.313,137
+Amazon IAD-106,38.7469789,-77.518524,,Amazon Web Services,MD,,RFCE,737.0,10.2,,,,,,,,2467.1,Washington,45.2,0.313,137
+Amazon IAD-180,38.9811304,-77.4942439,,Amazon Web Services,MD,,RFCE,737.0,10.2,,,,,,,,2782.2,Washington,40.1,0.301,318
+Amazon IAD-667,39.0577971,-77.546734,,Amazon Web Services,MD,,RFCE,737.0,10.2,,,,,,,,2205.7,Washington,46.8,0.297,266
+Amazon Web Services,39.0288072,-77.4588379,,Amazon Web Services,MD,,RFCE,737.0,10.2,,,,,,,,2949.3,Washington,38.5,0.299,272
+Amazon Web Services,38.7894558,-77.5796864,,Amazon Web Services,MD,,RFCE,737.0,10.2,,,,,,,,2221.7,Washington,48.6,0.311,152
+Amazon Web Services Datacenter Complex,39.0263311,-77.4516315,,Amazon Web Services,MD,,RFCE,737.0,10.2,,,,,,,,3029.0,Washington,37.9,0.299,272
+Arcola Tech Park,38.9492681,-77.5556264,,,MD,,RFCE,737.0,10.2,,,,,,,,2352.4,Washington,44.8,0.303,341
+BlackChamber Tech Park at Brambleton,38.9573857,-77.5357398,,BlackChamber Group,MD,,RFCE,737.0,10.2,,,,,,,,2485.4,Washington,43.2,0.302,340
+CloudHQ LC14,39.0060646,-77.4753841,,CloudHQ,MD,,RFCE,737.0,10.2,,,,,,,,2883.1,Washington,39.1,0.3,284
+CloudHQ LC5,39.0098775,-77.477021,,CloudHQ,MD,,RFCE,737.0,10.2,,,,,,,,2855.4,Washington,39.4,0.3,277
+CyberNAP Glen Burnie,39.1402303,-76.6064303,,AiNET,MD,,RFCE,737.0,10.2,,,,,,,,2309.6,Washington,45.4,0.293,8
+CyrusOne NVA9,38.9588464,-77.5026145,,CyrusOne,MD,,RFCE,737.0,10.2,,,,,,,,2750.4,Washington,40.4,0.302,342
+DBT Data - Harrisonburg Center,38.4626027,-78.8567247,,,MD,,RFCE,737.0,10.2,,,,,,,,0.0,Richmond,161.0,0.327,0
+Digital Loudoun Plaza,39.0048431,-77.4851266,,,MD,,RFCE,737.0,10.2,,,,,,,,2799.4,Washington,39.9,0.3,280
+Digital Loudoun Plaza,39.0016288,-77.4823625,,,MD,,RFCE,737.0,10.2,,,,,,,,2833.8,Washington,39.6,0.3,283
+Digital Realty IAD53,38.7403853,-77.5039772,,Digital Realty,MD,,RFCE,737.0,10.2,,,,,,,,2534.9,Washington,44.4,0.313,137
+Digital Realty VA3,38.9482752,-77.3276787,,Digital Realty,MD,,RFCE,737.0,10.2,,,,,,,,5563.7,Washington,25.2,0.303,274
+Expedient Tidepoint,39.2746554,-76.5916709,,Expedient,MD,,RFCE,737.0,10.2,,,,,,,,2607.7,Washington,56.0,0.286,7
+Google Data Center,38.943321,-77.5261637,,Google,MD,,RFCE,737.0,10.2,,,,,,,,2572.8,Washington,42.2,0.303,341
+Google Mango Farm,38.7744375,-77.5856183,,Google,MD,,RFCE,737.0,10.2,,,,,,,,2162.7,Washington,49.6,0.311,140
+Iron Mountain VA-7,38.7751744,-77.5399654,,Iron Mountain,MD,,RFCE,737.0,10.2,,,,,,,,2418.0,Washington,45.8,0.311,147
+Johns Hopkins Data Center,39.2935593,-76.5517314,,,MD,,RFCE,737.0,10.2,,,,,,,,2486.5,Washington,60.0,0.285,7
+Lumen Baltimore,39.2917592,-76.6204024,,Lumen Technologies,MD,,RFCE,737.0,10.2,,,,,,,,2608.4,Washington,55.8,0.285,8
+Menlo Digital MD-DC1,38.9271191,-77.4240727,,,MD,,RFCE,737.0,10.2,,,,,,,,3675.6,Washington,33.3,0.304,349
+NTT VA10,38.800094,-77.6102003,,NTT,MD,,RFCE,737.0,10.2,,,,,,,,2083.3,Washington,50.9,0.31,150
+OVH US East Vint Hill,38.7474201,-77.6744649,,,MD,,RFCE,737.0,10.2,,,,,,,,1749.3,Washington,57.9,0.313,96
+PowerHouse Pacific Building 1,39.0052424,-77.4464282,,PowerHouse Data Centers,MD,,RFCE,737.0,10.2,,,,,,,,3173.9,Washington,36.7,0.3,275
+QTS Ashburn Lockridge,38.9959297,-77.4562445,,Quality Technology Services,MD,,RFCE,737.0,10.2,,,,,,,,3105.5,Washington,37.2,0.3,284
+QTS Ashburn Moran,38.9942215,-77.4482013,,Quality Technology Services,MD,,RFCE,737.0,10.2,,,,,,,,3197.9,Washington,36.5,0.3,284
+QTS Manassas DC5,38.7547679,-77.5173876,,Quality Technology Services,MD,,RFCE,737.0,10.2,,,,,,,,2499.4,Washington,44.8,0.312,138
+STACK NVA06,39.0821895,-77.5651208,,Stack Infrastructure,MD,,RFCE,737.0,10.2,,,,,,,,2041.7,Washington,49.3,0.296,263
+STACK NVA06,39.0801856,-77.5649427,,Stack Infrastructure,MD,,RFCE,737.0,10.2,,,,,,,,2047.9,Washington,49.2,0.296,263
+Tech Park at Brambleton,38.9566351,-77.5331919,,BlackChamber Group,MD,,RFCE,737.0,10.2,,,,,,,,2505.3,Washington,43.0,0.302,340
+True North Data Centers,39.0436134,-77.5372623,,True North Data Solutions,MD,,RFCE,737.0,10.2,,,,,,,,2301.0,Washington,45.5,0.298,266
+Yondr Allegro South,38.9492572,-77.5498011,,Yondr,MD,,RFCE,737.0,10.2,,,,,,,,2392.5,Washington,44.3,0.303,341
+Equinix Ashburn DC18,39.025458,-77.4542815,,Equinix,MD,,RFCE,737.0,10.2,,,,,,,,3007.2,Washington,38.0,0.299,272
+AiNET One Market Center,39.2917583,-76.6203737,,AiNET,MD,,RFCE,737.0,10.2,,,,,,,,2608.3,Washington,55.8,0.285,8
+Baltimore Technology Park,39.275367,-76.62551,,,MD,,RFCE,737.0,10.2,,,,,,,,2674.6,Washington,54.1,0.286,8
+Crown Castle Baltimore,39.2877017,-76.6064893,,Crown Castle Fiber,MD,,RFCE,737.0,10.2,,,,,,,,2595.7,Washington,56.2,0.286,8
+,39.133687,-76.8514344,,,MD,,RFCE,737.0,10.2,,,,,,,,4353.2,Washington,29.7,0.293,4
+TierPoint Baltimore BWI,39.213455,-76.682834,,,MD,,RFCE,737.0,10.2,,,,,,,,2283.6,Washington,45.7,0.289,8
+Digital Realty IAD50,38.7379978,-77.5085914,,Digital Realty,MD,,RFCE,737.0,10.2,,,,,,,,2497.5,Washington,44.9,0.313,136
+Digital Realty IAD51,38.7372648,-77.5078242,,Digital Realty,MD,,RFCE,737.0,10.2,,,,,,,,2499.6,Washington,44.8,0.313,136
+Expedient Owings Mills,39.4273178,-76.8115503,,Expedient,MD,,RFCE,737.0,10.2,,,,,,,,1488.6,Washington,60.8,0.279,4
+Lincoln Rackhouse Maryland,39.0586081,-76.964467,,Lincoln Rackhouse,MD,,RFCE,737.0,10.2,,,,,,,,9423.5,Washington,17.8,0.297,3
+EdgeCore AS02,38.9950727,-77.4459839,,EdgeCore,MD,,RFCE,737.0,10.2,,,,,,,,3219.1,Washington,36.4,0.3,284
+Markley Data Center,42.6302832,-71.3045615,,Markley Group,MA,,NEWE,528.0,17.5,,,,,,,,3189.3,Boston,36.1,0.118,1
+,42.6857078,-71.2086024,,TierPoint,MA,,NEWE,528.0,17.5,,,,,,,,2932.4,Boston,38.2,0.116,1
+CoreSite BO1,42.3767059,-71.0797577,,,MA,,NEWE,528.0,17.5,,,,,,,,61948.0,Boston,2.5,0.131,0
+,41.8072817,-83.6276287,,,MI,,RFCM,1108.0,8.0,,,,,,,,1027.9,Detroit,75.2,0.16,0
+,44.2044349,-88.3449304,,Involta,MI,,RFCM,1108.0,8.0,,,,,,,,0.0,Chicago,264.9,0.04,0
+,42.2353267,-83.4441406,,US Signal,MI,,RFCM,1108.0,8.0,,,,,,,,3366.3,Detroit,34.1,0.138,1
+,42.675665,-87.9184055,,,MI,,RFCM,1108.0,8.0,,,,,,,,3072.9,Chicago,91.6,0.116,2
+,43.6383333,-89.7214027,,,MI,,RFCM,1108.0,8.0,,,,,,,,0.0,Chicago,259.6,0.068,1
+,42.6733205,-87.8968464,,,MI,,RFCM,1108.0,8.0,,,,,,,,3108.3,Chicago,90.9,0.116,2
+,41.9929788,-86.0984691,,,MI,,RFCM,1108.0,8.0,,,,,,,,1875.6,Chicago,127.3,0.15,0
+Chick-fil-A Hiring Center,42.6279424,-82.9883939,,Dennis Sampier,MI,,RFCM,1108.0,8.0,,,,,,,,3453.7,Detroit,33.5,0.119,1
+Liquid Web,42.6879527,-84.6430423,,,MI,,RFCM,1108.0,8.0,,,,,,,,420.1,Detroit,136.5,0.116,1
+Lumen Madison 1 Data Center,43.0677161,-89.3922794,,Lumen Technologies,MI,,RFCM,1108.0,8.0,,,,,,,,0.0,Chicago,195.8,0.097,1
+Marquette-Adams Telephone Coop,43.7821763,-89.5748406,,,MI,,RFCM,1108.0,8.0,,,,,,,,0.0,Chicago,264.3,0.061,1
+,42.3262876,-83.0769768,,Verizon Wireless,MI,,RFCM,1108.0,8.0,,,,,,,,59929.4,Detroit,2.3,0.134,4
+,42.3261779,-83.0697687,,Quicken Loans,MI,,RFCM,1108.0,8.0,,,,,,,,59929.4,Detroit,1.7,0.134,4
+,42.9687271,-83.779585,,,MI,,RFCM,1108.0,8.0,,,,,,,,750.0,Detroit,92.8,0.102,0
+"Liquid Web, Inc",42.7053904,-84.6660891,,,MI,,RFCM,1108.0,8.0,,,,,,,,409.4,Detroit,138.9,0.115,1
+Liberty Center One,42.5334813,-83.1774894,,,MI,,RFCM,1108.0,8.0,,,,,,,,5383.4,Detroit,24.9,0.123,4
+EdgeConneX Detroit DET01,42.4476693,-83.2626336,,EdgeConneX,MI,,RFCM,1108.0,8.0,,,,,,,,6573.3,Detroit,21.8,0.128,3
+Comcast,42.213902,-83.198214,,Comcast,MI,,RFCM,1108.0,8.0,,,,,,,,8953.1,Detroit,17.8,0.139,3
+,44.7347591,-93.0618605,,,MN,,MROW,962.0,7.8,,,,,,,,2392.9,Minneapolis,31.8,0.013,1
+,44.7345345,-93.0648906,,,MN,,MROW,962.0,7.8,,,,,,,,2404.4,Minneapolis,31.7,0.013,1
+ADP South Dakota,43.5999139,-96.7947573,,,MN,,MROW,962.0,7.8,,,,,,,,0.0,Omaha,269.7,0.07,1
+Advanced Operations Center,44.9793795,-93.2263894,,University of Minnesota,MN,,MROW,962.0,7.8,,,,,,,,38425.1,Minneapolis,3.4,0.001,7
+Ark Duluth Data Center,46.8274678,-92.1304819,,,MN,,MROW,962.0,7.8,,,,,,,,0.0,Minneapolis,223.5,0.0,0
+Dakota Carrier Network,46.8151017,-96.8443142,,,MN,,MROW,962.0,7.8,,,,,,,,0.0,Minneapolis,343.7,0.0,1
+Verizon - Bloomington Network,44.8072109,-93.375385,,Verizon,MN,,MROW,962.0,7.8,,,,,,,,4486.6,Minneapolis,20.9,0.01,8
+DataBank,45.1436925,-93.3871189,,,MN,,MROW,962.0,7.8,,,,,,,,4664.6,Minneapolis,20.4,0.0,5
+Flexential Minneapolis - Chaska,44.8516116,-93.5988964,,Flexential,MN,,MROW,962.0,7.8,,,,,,,,2671.4,Minneapolis,29.6,0.007,4
+Lightedge Data Center,44.8084755,-93.6376348,,,MN,,MROW,962.0,7.8,,,,,,,,2103.9,Minneapolis,34.7,0.01,4
+StreamData Center,44.8073344,-93.6370189,,,MN,,MROW,962.0,7.8,,,,,,,,2101.2,Minneapolis,34.7,0.01,4
+UHG Data Center,44.8083314,-93.6343039,,,MN,,MROW,962.0,7.8,,,,,,,,2123.2,Minneapolis,34.5,0.01,4
+Encompass Minneapolis Facility,45.1321573,-93.0956156,,Encompass,MN,,MROW,962.0,7.8,,,,,,,,4229.7,Minneapolis,21.8,0.0,6
+,44.9914423,-93.2803397,,Verizon,MN,,MROW,962.0,7.8,,,,,,,,38425.1,Minneapolis,1.5,0.0,7
+Lumen Minneapolis 3,44.9887662,-93.2766103,,Lumen Technologies,MN,,MROW,962.0,7.8,,,,,,,,38425.1,Minneapolis,1.1,0.001,7
+Minnesota Gateway Data Center,44.9712882,-93.2546974,,,MN,,MROW,962.0,7.8,,,,,,,,38425.1,Minneapolis,1.5,0.001,7
+Epic / Mayo Data Center,44.0707955,-92.5221323,,,MN,,MROW,962.0,7.8,,,,,,,,338.6,Minneapolis,117.2,0.046,0
+H5 Minneapolis,44.972195,-93.1474731,,H5,MN,,MROW,962.0,7.8,,,,,,,,14271.4,Minneapolis,9.7,0.001,5
+Carfax,38.9235166,-92.2886061,,,MO,,SRMW,1476.0,6.7,,,,,,,,0.0,Kansas City,198.9,0.304,0
+CenturyLink,39.7440482,-93.997376,,,MO,,SRMW,1476.0,6.7,,,,,,,,622.2,Kansas City,87.4,0.263,0
+TulsaConnect DC3,36.0994735,-95.8382826,,,MO,,SRMW,1476.0,6.7,,,,,,,,0.0,Kansas City,351.6,0.445,7
+,39.0944683,-94.5794418,,"Patmos Hosting, Inc.",MO,,SRMW,1476.0,6.7,,,,,,,,45445.0,Kansas City,0.6,0.295,10
+,39.2901345,-94.6850641,,,MO,,SRMW,1476.0,6.7,,,,,,,,4606.5,Kansas City,23.0,0.285,14
+Black Rock Financial Management,39.2954814,-94.6780114,,,MO,,SRMW,1476.0,6.7,,,,,,,,4511.9,Kansas City,23.3,0.285,14
+Netrality Data Centers,39.1009071,-94.5811452,,,MO,,SRMW,1476.0,6.7,,,,,,,,45445.0,Kansas City,0.1,0.295,15
+,40.1944836,-92.5812336,,AT&T,MO,,SRMW,1476.0,6.7,,,,,,,,0.0,Des Moines,177.2,0.24,0
+Genome Data Center,38.6365522,-90.2554356,,Washington University in St. Louis,MO,,SRMW,1476.0,6.7,,,,,,,,0.0,Indianapolis,374.7,0.318,2
+Netrality Data Centers,38.6292617,-90.1971749,,,MO,,SRMW,1476.0,6.7,,,,,,,,0.0,Indianapolis,370.2,0.319,2
+TierPoint,38.6297601,-90.1964208,,,MO,,SRMW,1476.0,6.7,,,,,,,,0.0,Indianapolis,370.2,0.319,2
+Parsec Data Management,45.7430786,-108.6030144,,,MT,,NWPP,614.0,6.4,,,,,,,,0.0,Cheyenne,595.9,0.0,0
+State of Montana Data Center,46.4068846,-105.8206969,,State of Montana,MT,,NWPP,614.0,6.4,,,,,,,,0.0,Cheyenne,591.1,0.0,0
+Compute North,40.7259269,-99.038336,,,NE,,MROW,962.0,7.1,,,,,,,,0.0,Omaha,267.5,0.214,0
+Scott Data Center,41.2428892,-96.0164591,,,NE,,MROW,962.0,7.1,,,,,,,,23787.1,Omaha,7.5,0.188,43
+,41.2204018,-96.1476408,,Verizon Wireless,NE,,MROW,962.0,7.1,,,,,,,,5999.7,Omaha,18.7,0.189,25
+1623 Farnam,41.257291,-95.9378494,,News-Press & Gazette Company,NE,,MROW,962.0,7.1,,,,,,,,43473.7,Omaha,0.7,0.187,43
+Omaha Switch,41.2517478,-95.9259644,,Cogent Communications,NE,,MROW,962.0,7.1,,,,,,,,43473.7,Omaha,1.0,0.187,43
+"Union Pacific Jack Koraleski Technology, Research & Development Center",41.3179864,-96.0503485,,Union Pacific Railroad,NE,,MROW,962.0,7.1,,,,,,,,11773.5,Omaha,11.9,0.184,25
+Verizon,41.338343,-96.0278024,,,NE,,MROW,962.0,7.1,,,,,,,,11776.1,Omaha,11.9,0.183,18
+Verizon,41.3384444,-96.0286183,,,NE,,MROW,962.0,7.1,,,,,,,,11695.3,Omaha,12.0,0.183,18
+Switch Las Vegas 7,36.0599191,-115.210197,,Switch,NV,,NWPP,614.0,6.9,,,,,,,,12747.8,Las Vegas,13.8,0.447,22
+Google,36.0562713,-115.0085752,,Google,NV,,NWPP,614.0,6.9,,,,,,,,9051.4,Las Vegas,17.3,0.447,22
+Google,36.0588155,-115.0088018,,Google,NV,,NWPP,614.0,6.9,,,,,,,,9226.7,Las Vegas,17.1,0.447,22
+DataBank Las Vegas LAS1,36.059754,-115.1471723,,DataBank,NV,,NWPP,614.0,6.9,,,,,,,,15143.4,Las Vegas,12.3,0.447,22
+Fiberhub LAS1,36.065929,-115.13856,,Fiberhub,NV,,NWPP,614.0,6.9,,,,,,,,16543.6,Las Vegas,11.6,0.447,22
+Flexential Las Vegas - Downtown,36.1686438,-115.1431445,,Flexential,NV,,NWPP,614.0,6.9,,,,,,,,58255.7,Las Vegas,0.3,0.442,22
+Switch Las Vegas 4,36.143646,-115.076779,,Switch,NV,,NWPP,614.0,6.9,,,,,,,,40343.1,Las Vegas,6.4,0.443,22
+Switch Las Vegas 5,36.1427635,-115.0766965,,Switch,NV,,NWPP,614.0,6.9,,,,,,,,39853.8,Las Vegas,6.4,0.443,22
+Tahoe Reno 1,39.5140681,-119.4755145,,Switch,NV,,NWPP,614.0,6.9,,,,,,,,1714.1,Reno,28.7,0.274,15
+Tahoe Reno 2,39.5138706,-119.4848531,,Switch,NV,,NWPP,614.0,6.9,,,,,,,,1788.1,Reno,27.9,0.274,15
+Tahoe Reno 3,39.5115198,-119.4833058,,Switch,NV,,NWPP,614.0,6.9,,,,,,,,1773.7,Reno,28.1,0.274,15
+Tahoe Reno 4,39.509868,-119.4830413,,Switch,NV,,NWPP,614.0,6.9,,,,,,,,1770.2,Reno,28.1,0.275,15
+Tahoe Reno 5,39.5080827,-119.4832371,,Switch,NV,,NWPP,614.0,6.9,,,,,,,,1770.2,Reno,28.1,0.275,15
+Flexential Las Vegas - North,36.2481633,-115.1012553,,Flexential,NV,,NWPP,614.0,6.9,,,,,,,,22742.0,Las Vegas,9.4,0.438,22
+,43.1436204,-70.9524471,,University of New Hampshire,NH,,NEWE,528.0,14.9,,,,,,,,845.1,Boston,87.6,0.093,2
+,42.9876268,-72.5517562,,The Putney School,NH,,NEWE,528.0,14.9,,,,,,,,415.8,Boston,140.5,0.101,0
+,43.0761287,-70.8080395,,FirstLight,NH,,NEWE,528.0,14.9,,,,,,,,928.5,Boston,82.2,0.096,2
+,40.5528396,-74.4566865,,,NJ,,RFCE,737.0,11.2,,,,,,,,32974.6,New York,41.5,0.222,27
+,40.7847354,-74.0643545,,,NJ,,RFCE,737.0,11.2,,,,,,,,286296.8,New York,9.5,0.211,30
+,40.7841733,-74.0655505,,,NJ,,RFCE,737.0,11.2,,,,,,,,286540.6,New York,9.5,0.211,30
+,40.5375265,-74.5555236,,Digital Realty,NJ,,RFCE,737.0,11.2,,,,,,,,25741.3,New York,49.9,0.223,23
+,40.5242776,-74.547881,,,NJ,,RFCE,737.0,11.2,,,,,,,,25768.0,New York,49.9,0.224,23
+,40.9056205,-74.2301845,,JPMorgan Chase,NJ,,RFCE,737.0,11.2,,,,,,,,55612.3,New York,28.6,0.205,22
+,40.5433323,-74.5383736,,,NJ,,RFCE,737.0,11.2,,,,,,,,26865.4,New York,48.3,0.223,24
+,40.2084622,-74.119242,,,NJ,,RFCE,737.0,11.2,,,,,,,,21355.9,New York,56.5,0.24,6
+,40.0427054,-74.2793066,,,NJ,,RFCE,737.0,11.2,,,,,,,,14553.5,Philadelphia,76.6,0.248,6
+,40.0462732,-74.278956,,,NJ,,RFCE,737.0,11.2,,,,,,,,14641.7,Philadelphia,76.7,0.248,6
+32 Avenue of the Americas,40.719994,-74.0045683,,,NJ,,RFCE,737.0,11.2,,,,,,,,746727.4,New York,1.2,0.214,26
+BNY Mellon Somerset,40.535869,-74.5534315,,,NJ,,RFCE,737.0,11.2,,,,,,,,25807.4,New York,49.8,0.223,23
+BT Radianz: 492 River Road,40.8214542,-74.1341867,,bt,NJ,,RFCE,737.0,11.2,,,,,,,,128723.2,New York,16.2,0.209,30
+Barclays Datacenter,40.5472443,-74.4597373,,Barclays,NJ,,RFCE,737.0,11.2,,,,,,,,32441.5,New York,42.0,0.223,26
+Barclays Datacenter,40.6437889,-74.2854476,,Barclays,NJ,,RFCE,737.0,11.2,,,,,,,,70728.0,New York,24.4,0.218,40
+Chirisa Technology Parks - Piscataway,40.5442554,-74.4965213,,Chirisa Technology Parks,NJ,,RFCE,737.0,11.2,,,,,,,,29552.0,New York,45.0,0.223,25
+CoreSite Secaucus Campus,40.7842844,-74.0652426,,CoreSite,NJ,,RFCE,737.0,11.2,,,,,,,,286631.2,New York,9.5,0.211,30
+Credit Suisse: Clifton Data Center,40.83345,-74.1402187,,,NJ,,RFCE,737.0,11.2,,,,,,,,114258.8,New York,17.6,0.208,28
+DataBank Piscataway EWR2,40.5492135,-74.4582096,,,NJ,,RFCE,737.0,11.2,,,,,,,,32665.2,New York,41.8,0.223,27
+Equinix,40.5449158,-74.4953594,,Equinix,NJ,,RFCE,737.0,11.2,,,,,,,,29658.6,New York,44.9,0.223,25
+Equinix Secaucus NY6,40.7775486,-74.0726876,,Equinix,NJ,,RFCE,737.0,11.2,,,,,,,,300702.3,New York,9.2,0.211,30
+Evocative Secaucus,40.787552,-74.0680502,,Evocative,NJ,,RFCE,737.0,11.2,,,,,,,,268140.9,New York,9.9,0.211,30
+H5 Secaucus,40.7853948,-74.0750122,,H5,NJ,,RFCE,737.0,11.2,,,,,,,,264140.0,New York,10.0,0.211,30
+Lumen Norristown,40.127067,-75.4086586,,Lumen Technologies,NJ,,RFCE,737.0,11.2,,,,,,,,15842.1,Philadelphia,28.3,0.244,3
+Manasquan Cable Landing Station (Apollo),40.1570435,-74.101582,,Vodafone,NJ,,RFCE,737.0,11.2,,,,,,,,18831.9,New York,62.0,0.242,6
+Merrill Lynch Data Center,40.6073795,-74.1731669,,Merrill Lynch,NJ,,RFCE,737.0,11.2,,,,,,,,111621.1,New York,17.9,0.22,31
+NYSE Data Center,41.0783165,-74.152912,,nyse,NJ,,RFCE,737.0,11.2,,,,,,,,29899.2,New York,42.7,0.196,6
+Open Data Centers Piscataway,40.5503501,-74.4568563,,,NJ,,RFCE,737.0,11.2,,,,,,,,32834.7,New York,41.7,0.222,27
+Optimum,40.5468223,-74.4919771,,,NJ,,RFCE,737.0,11.2,,,,,,,,29972.3,New York,44.5,0.223,25
+PSE&G Delivery Emergency Response Center,40.5798956,-74.5194023,,PSE&G,NJ,,RFCE,737.0,11.2,,,,,,,,29181.1,New York,45.3,0.221,25
+Rackspace Belmont NYC2,40.540843,-74.5374915,,,NJ,,RFCE,737.0,11.2,,,,,,,,26841.3,New York,48.3,0.223,24
+Rackspace Somerset NYC1,40.5445265,-74.5377876,,,NJ,,RFCE,737.0,11.2,,,,,,,,26935.6,New York,48.2,0.223,24
+TierPoint Valley Forge,40.1218812,-75.4208776,,TierPoint,NJ,,RFCE,737.0,11.2,,,,,,,,15570.1,Philadelphia,28.7,0.244,3
+Verizon Branchburg NEC Datacenter,40.5995576,-74.7099684,,Verizon,NJ,,RFCE,737.0,11.2,,,,,,,,19928.8,New York,60.3,0.22,22
+Verizon Freehold Data Center,40.2392258,-74.3195376,,Verizon,NJ,,RFCE,737.0,11.2,,,,,,,,20866.7,New York,58.5,0.238,5
+Vital Records,40.5280718,-74.6828163,,,NJ,,RFCE,737.0,11.2,,,,,,,,20182.4,New York,60.3,0.224,22
+Wall Township Cable Landing Station,40.160755,-74.0530625,,Tata,NJ,,RFCE,737.0,11.2,,,,,,,,19055.8,New York,61.2,0.242,6
+365 Bridgewater NJ,40.581484,-74.5738875,,,NJ,,RFCE,737.0,11.2,,,,,,,,25779.9,New York,49.7,0.221,23
+Goldman Sachs,40.5703722,-74.6703296,,,NJ,,RFCE,737.0,11.2,,,,,,,,21126.8,New York,57.8,0.221,22
+,40.5843719,-74.2433813,,,NJ,,RFCE,737.0,11.2,,,,,,,,71741.5,New York,24.1,0.221,19
+Digital Realty New Jersey EWR20,40.8299279,-74.1267496,,Digital Realty,NJ,,RFCE,737.0,11.2,,,,,,,,124669.6,New York,16.6,0.209,28
+Digital Realty New Jersey EWR21,40.8305858,-74.1245144,,Digital Realty,NJ,,RFCE,737.0,11.2,,,,,,,,125248.3,New York,16.5,0.208,28
+IO Datacenter,40.5208169,-74.3472226,,,NJ,,RFCE,737.0,11.2,,,,,,,,41319.8,New York,35.4,0.224,24
+Manasquan Cable Landing Station (TAT-14),40.1295611,-74.0427733,,Sprint,NJ,,RFCE,737.0,11.2,,,,,,,,17688.4,New York,64.6,0.244,5
+165 Halsey / Equinix NY1 / Databank EWR1,40.7367304,-74.1738875,,Tishman,NJ,,RFCE,737.0,11.2,,,,,,,,158187.8,New York,14.1,0.213,30
+Equinix NY7 Data Center,40.7968626,-74.0311403,,Equinix,NJ,,RFCE,737.0,11.2,,,,,,,,271866.7,New York,9.8,0.21,29
+QTS Piscataway Data Center,40.5569431,-74.4839173,,Quality Technology Services,NJ,,RFCE,737.0,11.2,,,,,,,,30978.4,New York,43.5,0.222,25
+Digital Realty New York EWR11,40.5537931,-74.4571024,,Digital Realty,NJ,,RFCE,737.0,11.2,,,,,,,,32987.3,New York,41.5,0.222,27
+Digital Realty New York EWR12,40.5529283,-74.4592038,,Digital Realty,NJ,,RFCE,737.0,11.2,,,,,,,,32767.9,New York,41.7,0.222,27
+Centersquare NYC3 Data Center,40.786164,-74.0691645,,Centersquare,NJ,,RFCE,737.0,11.2,,,,,,,,271683.9,New York,9.8,0.211,30
+CoreSite NY3,40.7849038,-74.0653573,,CoreSite,NJ,,RFCE,737.0,11.2,,,,,,,,283728.9,New York,9.5,0.211,30
+Equinix NY3,40.7749028,-74.0689687,,Equinix,NJ,,RFCE,737.0,11.2,,,,,,,,322524.1,New York,8.8,0.211,30
+Equinix New York Secaucus NY2,40.7772907,-74.0759403,,Equinix,NJ,,RFCE,737.0,11.2,,,,,,,,294109.0,New York,9.3,0.211,30
+Equinix New York Secaucus NY4,40.7764281,-74.0697759,,Equinix,NJ,,RFCE,737.0,11.2,,,,,,,,312953.0,New York,8.9,0.211,30
+Equinix New York Secaucus NY5,40.7785845,-74.0723242,,Equinix,NJ,,RFCE,737.0,11.2,,,,,,,,296968.8,New York,9.3,0.211,30
+,40.5379663,-74.5457274,,CyrusOne,NJ,,RFCE,737.0,11.2,,,,,,,,26288.0,New York,49.1,0.223,24
+,40.5398674,-74.5421659,,,NJ,,RFCE,737.0,11.2,,,,,,,,26543.9,New York,48.7,0.223,24
+,40.9072322,-74.242222,,CyrusOne,NJ,,RFCE,737.0,11.2,,,,,,,,53402.0,New York,29.4,0.205,22
+AT&T Tuckerton Cable Landing Station (TAT-14),39.6150668,-74.3288069,,AT&T,NJ,,RFCE,737.0,11.2,,,,,,,,8159.6,Philadelphia,81.0,0.269,1
+GlobeNet Tuckerton Cable Landing Station,39.6098738,-74.3261398,,GlobeNet,NJ,,RFCE,737.0,11.2,,,,,,,,8103.8,Philadelphia,81.4,0.27,1
+Cyxtera (Digital Realty Trust) Citibank Data Center,40.7607798,-74.0257417,,Cyxtera,NJ,,RFCE,737.0,11.2,,,,,,,,597858.8,New York,5.8,0.212,29
+Digital Realty New Jersey EWR10,40.7618178,-74.0250281,,Digital Realty,NJ,,RFCE,737.0,11.2,,,,,,,,582863.8,New York,5.9,0.212,29
+,35.0896825,-106.6190669,,UNMH,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Tucson,513.7,0.496,8
+,35.0483475,-106.5421546,,,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Tucson,516.6,0.498,8
+,32.3096657,-106.7291929,,CenturyLink,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Tucson,398.8,0.635,1
+,31.5327486,-103.8062715,,,NM,,AZNM,743.0,6.8,,,,,,,,0.0,San Antonio,560.9,0.673,3
+,31.5327486,-103.8052292,,,NM,,AZNM,743.0,6.8,,,,,,,,0.0,San Antonio,560.8,0.673,3
+,31.5327607,-103.8041922,,,NM,,AZNM,743.0,6.8,,,,,,,,0.0,San Antonio,560.7,0.673,3
+,31.5333451,-103.800415,,,NM,,AZNM,743.0,6.8,,,,,,,,0.0,San Antonio,560.4,0.673,3
+,31.5134322,-103.4491235,,,NM,,AZNM,743.0,6.8,,,,,,,,0.0,San Antonio,529.1,0.674,2
+,31.5138793,-103.4486671,,,NM,,AZNM,743.0,6.8,,,,,,,,0.0,San Antonio,529.1,0.674,2
+HPC,35.0499451,-106.542801,,Sandia National Laboratories,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Tucson,516.6,0.498,8
+IONIC Digital Cedarvale,31.5134473,-103.4485396,,IONIC Digital,NM,,AZNM,743.0,6.8,,,,,,,,0.0,San Antonio,529.1,0.674,2
+123 Central,35.0844494,-106.6489853,,bigbyte.cc,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Tucson,511.2,0.496,8
+505 Marquette,35.0886289,-106.6526456,,,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Tucson,511.2,0.496,8
+Molina Healthcare,34.9954515,-106.6180334,,Molina Healthcare,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Tucson,507.5,0.5,13
+Oso Grande,35.0925015,-106.6536712,,Oso Grande,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Tucson,511.4,0.495,8
+Southwest Cyberport,35.1032925,-106.5893487,,,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Tucson,516.8,0.495,8
+UNM Data Center,35.0867385,-106.6153476,,UNM,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Tucson,513.8,0.496,8
+Meta,34.8302421,-106.7838124,,Meta,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Tucson,484.5,0.508,5
+Meta,34.8302786,-106.7801283,,Meta,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Tucson,484.8,0.508,5
+Meta,34.83028,-106.7764607,,Meta,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Tucson,485.0,0.508,5
+Meta,34.825868,-106.7788983,,Meta,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Tucson,484.6,0.509,5
+Meta,34.8258417,-106.7824883,,Meta,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Tucson,484.3,0.509,5
+John F. Simms Building,35.6724585,-105.9565798,,SONM,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Denver,460.2,0.466,0
+Information Systems Facility,32.3805057,-106.4810659,,WSMR,NM,,AZNM,743.0,6.8,,,,,,,,0.0,Tucson,422.3,0.631,1
+,40.9512698,-73.897901,,,NY,,NYUP,243.0,7.9,,,,,,,,54974.7,New York,28.4,0.202,23
+,43.0821786,-79.0307777,,US Bitcoin,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Detroit,338.9,0.096,14
+Allentown-TekPark,40.544252,-75.6543772,,,NY,,NYUP,243.0,7.9,,,,,,,,7340.7,Philadelphia,77.8,0.223,1
+Greenidge Power Plant and Data Center,42.6793587,-76.9485811,,Greenidge Generation Holdings Inc.,NY,,NYUP,243.0,7.9,,,,,,,,0.0,New York,327.8,0.116,0
+NYGC Chateaugay,44.8930062,-74.0728813,,2CRSi,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Boston,371.6,0.005,0
+Nautilus Cryptomine,41.0826255,-76.1514194,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Philadelphia,150.8,0.196,2
+Nautilus Cryptomine,41.0833385,-76.1514461,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Philadelphia,150.9,0.196,2
+Old Main,44.6681065,-74.980582,,Clarkson University,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Boston,407.1,0.017,0
+SES - Hawley Earth Station,41.4648153,-75.1294195,,SES,NY,,NYUP,243.0,7.9,,,,,,,,5902.9,New York,125.9,0.177,0
+,42.6492566,-73.7528179,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,New York,216.7,0.118,2
+Lumen Albany 4,42.7356308,-73.818665,,Lumen Technologies,NY,,NYUP,243.0,7.9,,,,,,,,0.0,New York,225.8,0.113,2
+Frontier Science,42.9902011,-78.8123836,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Detroit,354.2,0.1,14
+Dataverge,40.6576957,-74.0048163,,Dataverge,NY,,NYUP,243.0,7.9,,,,,,,,592993.8,New York,5.8,0.217,28
+,43.0449439,-78.7492033,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Detroit,360.4,0.098,14
+Turnkey Internet,42.7454447,-73.7592013,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Boston,225.2,0.113,2
+33 Thomas Street,40.7165207,-74.0059017,,,NY,,NYUP,243.0,7.9,,,,,,,,746731.5,New York,0.8,0.214,28
+Digital Realty New York JFK12,40.7176766,-74.0084414,,Digital Realty,NY,,NYUP,243.0,7.9,,,,,,,,746732.5,New York,0.9,0.214,28
+Digital Realty New York JFK13,40.719928,-74.0044583,,Digital Realty,NY,,NYUP,243.0,7.9,,,,,,,,746727.4,New York,1.2,0.214,26
+Telehouse Teleport,40.6070367,-74.1749048,,Telehouse,NY,,NYUP,243.0,7.9,,,,,,,,110365.1,New York,18.0,0.22,32
+,43.074831,-78.944809,,Blockfusion,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Detroit,345.5,0.096,14
+Blockfusion Niagra Falls,43.0834925,-79.0029405,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Detroit,341.1,0.096,14
+Blockfusion Niagra Falls,43.083258,-79.003061,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Detroit,341.1,0.096,14
+Blockfusion Niagra Falls,43.0830315,-79.003982,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Detroit,341.0,0.096,14
+Blockfusion Niagra Falls,43.0820287,-79.0034174,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Detroit,341.0,0.096,14
+Blockfusion Niagra Falls,43.0821783,-79.0035091,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Detroit,341.0,0.096,14
+Blockfusion Niagra Falls,43.0828078,-79.0032805,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Detroit,341.1,0.096,14
+Blockfusion Niagra Falls,43.08313,-79.0031111,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Detroit,341.1,0.096,14
+Blockfusion Niagra Falls,43.0832048,-79.0033421,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Detroit,341.1,0.096,14
+Blockfusion Niagra Falls,43.0831645,-79.003903,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Detroit,341.0,0.096,14
+Blockfusion Niagra Falls,43.0832839,-79.0039047,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Detroit,341.0,0.096,14
+Blockfusion Niagra Falls,43.0824049,-79.003228,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,Detroit,341.0,0.096,14
+SU Green Data Center,43.0120761,-76.1159253,,Syracuse University,NY,,NYUP,243.0,7.9,,,,,,,,0.0,New York,309.7,0.099,0
+,41.0523325,-73.9717745,,,NY,,NYUP,243.0,7.9,,,,,,,,35309.2,New York,38.2,0.197,5
+Bloomberg Data Center,41.0361943,-73.9876261,,Bloomberg,NY,,NYUP,243.0,7.9,,,,,,,,38087.6,New York,36.3,0.198,5
+Databank LGA3,41.0399506,-73.9895725,,Databank,NY,,NYUP,243.0,7.9,,,,,,,,37453.0,New York,36.7,0.198,5
+fifteenfortyseven CSR ORNY1,41.0344926,-73.9757865,,fifteenfortyseven Critical Systems Realty,NY,,NYUP,243.0,7.9,,,,,,,,38282.6,New York,36.2,0.198,5
+"Landmax Data Systems, Inc",42.9972167,-77.6458295,,,NY,,NYUP,243.0,7.9,,,,,,,,0.0,New York,394.1,0.1,0
+Cable & Wireless Cable Landing Station,40.8436519,-72.8833757,,,NY,,NYUP,243.0,7.9,,,,,,,,8860.2,New York,96.0,0.208,0
+,41.5990376,-73.8821955,,CyrusOne,NY,,NYUP,243.0,7.9,,,,,,,,8408.1,New York,99.4,0.17,0
+,35.5881079,-81.2625753,,,NC,,SRVC,630.0,6.9,,,,,,,,2156.9,Charlotte,55.2,0.471,2
+,35.8983268,-81.547464,,,NC,,SRVC,630.0,6.9,,,,,,,,912.0,Charlotte,98.1,0.455,1
+,35.5870542,-81.2602838,,,NC,,SRVC,630.0,6.9,,,,,,,,2170.3,Charlotte,55.0,0.471,2
+,35.8926759,-81.546755,,,NC,,SRVC,630.0,6.9,,,,,,,,919.2,Charlotte,97.6,0.455,1
+,35.5903924,-81.2645696,,,NC,,SRVC,630.0,6.9,,,,,,,,2139.0,Charlotte,55.6,0.47,2
+,36.3280739,-83.3767035,,,NC,,SRVC,630.0,6.9,,,,,,,,0.0,Charlotte,259.4,0.434,0
+,35.1794881,-80.5701825,,,NC,,SRVC,630.0,6.9,,,,,,,,7022.4,Charlotte,25.2,0.491,1
+BB&T Data Center,35.8393357,-78.3281352,,,NC,,SRVC,630.0,6.9,,,,,,,,3012.3,Raleigh,28.9,0.458,0
+Brandaleone Lab for Data and Visualization,36.0030993,-78.9385323,,Duke Libraries,NC,,SRVC,630.0,6.9,,,,,,,,2113.2,Raleigh,36.6,0.45,5
+Frontier (supercomputer),35.9295133,-84.310567,,Oak Ridge National Laboratory,NC,,SRVC,630.0,6.9,,,,,,,,0.0,Nashville,223.5,0.454,0
+Meta,35.3142602,-81.8220553,,Meta,NC,,SRVC,630.0,6.9,,,,,,,,1043.6,Charlotte,89.6,0.484,3
+Meta,35.317368,-81.82624,,Meta,NC,,SRVC,630.0,6.9,,,,,,,,1036.4,Charlotte,90.1,0.484,3
+Meta,35.3166121,-81.8251761,,Meta,NC,,SRVC,630.0,6.9,,,,,,,,1038.2,Charlotte,90.0,0.484,3
+Meta,35.3156695,-81.8221092,,Meta,NC,,SRVC,630.0,6.9,,,,,,,,1043.2,Charlotte,89.7,0.484,3
+TierPoint - Charlotte Data Center,35.1731955,-80.928121,,TierPoint,NC,,SRVC,630.0,6.9,,,,,,,,27195.8,Charlotte,10.2,0.491,4
+DartPoints Asheville,35.4883165,-82.5575361,,,NC,,SRVC,630.0,6.9,,,,,,,,0.0,Charlotte,158.4,0.476,0
+iGLASS Networks,35.766751,-78.7839874,,,NC,,SRVC,630.0,6.9,,,,,,,,9893.7,Raleigh,13.1,0.462,6
+Flexential Charlotte - North,35.329773,-80.7657588,,Flexential,NC,,SRVC,630.0,6.9,,,,,,,,18938.5,Charlotte,13.0,0.484,4
+Flexential Charlotte - South,35.1354147,-80.9368313,,Flexential,NC,,SRVC,630.0,6.9,,,,,,,,17440.9,Charlotte,13.7,0.493,3
+SEGRA,35.1800507,-80.9263597,,,NC,,SRVC,630.0,6.9,,,,,,,,29715.9,Charlotte,9.6,0.491,4
+Spectrum Charlotte National Data Center,35.1428083,-80.9162228,,,NC,,SRVC,630.0,6.9,,,,,,,,21533.7,Charlotte,11.9,0.493,4
+,35.9356302,-78.8806869,,CyrusOne,NC,,SRVC,630.0,6.9,,,,,,,,3199.5,Raleigh,27.7,0.453,6
+,35.9338893,-78.8809505,,CyrusOne,NC,,SRVC,630.0,6.9,,,,,,,,3217.1,Raleigh,27.6,0.453,6
+Level 3 Communications,35.881364,-78.8515726,,,NC,,SRVC,630.0,6.9,,,,,,,,4484.7,Raleigh,22.2,0.456,7
+Windstream Communications,35.881397,-78.851552,,,NC,,SRVC,630.0,6.9,,,,,,,,4484.6,Raleigh,22.2,0.456,7
+T5 Charlotte Campus,35.2504249,-81.395039,,,NC,,SRVC,630.0,6.9,,,,,,,,2471.1,Charlotte,50.5,0.487,0
+Flexential Raleigh,35.8505281,-78.8291431,,Flexential,NC,,SRVC,630.0,6.9,,,,,,,,5750.2,Raleigh,18.8,0.457,7
+Segra Data Center,35.7249921,-78.6623632,,,NC,,SRVC,630.0,6.9,,,,,,,,28609.7,Raleigh,6.4,0.464,4
+,46.0123214,-98.5730984,,,ND,,MROW,962.0,7.3,,,,,,,,0.0,Minneapolis,428.9,0.0,9
+,46.0123988,-98.5737419,,,ND,,MROW,962.0,7.3,,,,,,,,0.0,Minneapolis,428.9,0.0,9
+,46.0135016,-98.5716711,,,ND,,MROW,962.0,7.3,,,,,,,,0.0,Minneapolis,428.8,0.0,9
+,46.0134892,-98.5711056,,,ND,,MROW,962.0,7.3,,,,,,,,0.0,Minneapolis,428.8,0.0,9
+,46.0135084,-98.5722994,,,ND,,MROW,962.0,7.3,,,,,,,,0.0,Minneapolis,428.9,0.0,9
+,46.0135225,-98.5729003,,,ND,,MROW,962.0,7.3,,,,,,,,0.0,Minneapolis,428.9,0.0,9
+,46.0135308,-98.574046,,,ND,,MROW,962.0,7.3,,,,,,,,0.0,Minneapolis,429.0,0.0,9
+,46.0135163,-98.5734901,,,ND,,MROW,962.0,7.3,,,,,,,,0.0,Minneapolis,428.9,0.0,9
+,46.0123953,-98.5726175,,,ND,,MROW,962.0,7.3,,,,,,,,0.0,Minneapolis,428.9,0.0,9
+,46.0126411,-98.5744629,,,ND,,MROW,962.0,7.3,,,,,,,,0.0,Minneapolis,429.0,0.0,9
+Atlas Powr Williston Datacenter,48.1462599,-103.7727866,,Atlas Power Holdings (ND) LLC,ND,,MROW,962.0,7.3,,,,,,,,0.0,Cheyenne,783.4,0.0,0
+Applied Digital,46.9741721,-96.8739403,,,ND,,MROW,962.0,7.3,,,,,,,,0.0,Minneapolis,355.9,0.0,1
+,39.2940482,-84.4121132,,,OH,,RFCW,1012.0,6.8,,,,,,,,1056.0,Columbus,142.5,0.285,7
+,40.1173912,-83.2020737,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,14253.1,Columbus,25.1,0.244,33
+,40.0592384,-82.7626774,,,OH,,RFCW,1012.0,6.8,,,,,,,,17083.1,Columbus,22.3,0.247,39
+,40.0526729,-83.1274235,,Oppidan,OH,,RFCW,1012.0,6.8,,,,,,,,29182.2,Columbus,15.6,0.247,33
+,40.0207739,-83.1241809,,,OH,,RFCW,1012.0,6.8,,,,,,,,37137.5,Columbus,13.3,0.249,35
+,40.021203,-83.1231884,,,OH,,RFCW,1012.0,6.8,,,,,,,,37340.9,Columbus,13.2,0.249,35
+Aligned Data Centers,41.4321977,-82.7189574,,Aligned Data Centers,OH,,RFCW,1012.0,6.8,,,,,,,,636.1,Detroit,103.5,0.178,0
+Amazon AWS: Hilliard Data Center,40.0598657,-83.1342839,,Amazon Web Services us-east-2 datacenter,OH,,RFCW,1012.0,6.8,,,,,,,,26661.6,Columbus,16.6,0.247,33
+Amazon Web Services,40.0611521,-83.1351729,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,26298.6,Columbus,16.7,0.247,33
+Amazon Web Services,40.1025733,-83.1996982,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,15403.3,Columbus,23.9,0.245,33
+Amazon Web Services,40.1035866,-83.199764,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,15327.1,Columbus,24.0,0.245,33
+Amazon Web Services,40.0601472,-83.1349074,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,26516.5,Columbus,16.6,0.247,33
+Amazon Web Services,40.0593252,-83.1346064,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,26709.4,Columbus,16.5,0.247,33
+Amazon Web Services,40.0583089,-83.1340906,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,26973.1,Columbus,16.4,0.247,33
+Amazon Web Services,40.0607795,-83.1327529,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,26729.1,Columbus,16.5,0.247,33
+Amazon Web Services,40.1017666,-83.1995833,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,15468.1,Columbus,23.8,0.245,33
+Amazon Web Services,40.1007676,-83.1994749,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,15546.6,Columbus,23.7,0.245,33
+Amazon Web Services,40.0997864,-83.1992645,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,15630.7,Columbus,23.6,0.245,33
+Amazon Web Services,40.0934344,-82.7321669,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,13175.6,Columbus,26.5,0.245,39
+Amazon Web Services,40.0921679,-82.7275475,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,12991.8,Columbus,26.7,0.245,39
+Amazon Web Services,40.0929609,-82.7265106,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,12903.4,Columbus,26.9,0.245,39
+Amazon Web Services,40.1162611,-83.2013887,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,14363.7,Columbus,25.0,0.244,33
+Amazon Web Services,40.1190307,-83.2002438,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,14239.5,Columbus,25.2,0.244,33
+Amazon Web Services,40.0493536,-83.175465,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,22291.9,Columbus,18.7,0.248,33
+Amazon Web Services,40.0481384,-83.1752938,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,22443.0,Columbus,18.6,0.248,33
+Amazon Web Services,40.0478979,-83.1775485,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,22174.9,Columbus,18.7,0.248,33
+Amazon Web Services,40.1341815,-83.2158409,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,12606.5,Columbus,27.3,0.243,33
+Amazon Web Services,40.102426,-82.7501414,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,13679.1,Columbus,25.8,0.245,39
+Amazon Web Services,40.1019552,-82.7519122,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,13800.0,Columbus,25.7,0.245,39
+Amazon Web Services,40.0942258,-82.732111,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,13136.0,Columbus,26.6,0.245,39
+Amazon Web Services,40.0943973,-82.7292787,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,12981.4,Columbus,26.8,0.245,39
+Amazon Web Services,40.0954948,-82.7320052,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,13071.9,Columbus,26.6,0.245,39
+Amazon Web Services,40.1357888,-83.212641,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,12650.5,Columbus,27.2,0.243,33
+Amazon Web Services,40.1200638,-83.1993191,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,14218.3,Columbus,25.2,0.244,33
+Amazon Web Services,40.1192992,-83.203226,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,14069.7,Columbus,25.4,0.244,33
+Amazon Web Services,40.1181177,-83.202522,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,14182.4,Columbus,25.2,0.244,33
+Amazon Web Services,40.0501797,-83.1755155,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,22198.0,Columbus,18.7,0.247,33
+Amazon Web Services,40.0515221,-83.1757154,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,22030.7,Columbus,18.8,0.247,33
+Amazon Web Services,40.0164194,-83.1258518,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,37622.8,Columbus,13.2,0.249,35
+Amazon Web Services,40.0210134,-83.1260205,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,36522.9,Columbus,13.4,0.249,35
+Amazon Web Services  CMH50,40.0946297,-82.7513394,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,14172.4,Columbus,25.2,0.245,39
+Amazon Web Services  CMH53,40.0936164,-82.7514553,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,14235.4,Columbus,25.2,0.245,39
+Amazon Web Services  CMH59,40.0940462,-82.7474911,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,13983.7,Columbus,25.5,0.245,39
+Amazon Web Services CMH56,40.0965342,-82.7520513,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,14107.5,Columbus,25.3,0.245,39
+Amazon Web Services CMH62,40.0929864,-82.7476276,,Amazon Web Services,OH,,RFCW,1012.0,6.8,,,,,,,,14048.3,Columbus,25.4,0.245,39
+Compugen New Albany,40.1045986,-82.8049123,,,OH,,RFCW,1012.0,6.8,,,,,,,,16823.5,Columbus,22.5,0.245,40
+Compugen New Albany,40.1037135,-82.8089026,,,OH,,RFCW,1012.0,6.8,,,,,,,,17173.9,Columbus,22.2,0.245,40
+CyrusOne Cincinnati-Hamilton CIN4,39.3852721,-84.5662844,,CyrusOne,OH,,RFCW,1012.0,6.8,,,,,,,,1497.1,Indianapolis,143.1,0.281,3
+CyrusOne Cincinnati-Mason CIN3,39.3038941,-84.3116127,,CyrusOne,OH,,RFCW,1012.0,6.8,,,,,,,,1150.1,Columbus,134.7,0.285,5
+Google,39.8520765,-82.9948358,,Google,OH,,RFCW,1012.0,6.8,,,,,,,,43190.4,Columbus,12.0,0.257,5
+Google,39.7240422,-82.6911124,,Google,OH,,RFCW,1012.0,6.8,,,,,,,,8116.2,Columbus,36.6,0.264,1
+Google,39.7241139,-82.687551,,Google,OH,,RFCW,1012.0,6.8,,,,,,,,8047.8,Columbus,36.8,0.264,1
+"Google Lockbourne, OH",39.8484523,-82.9963927,,Google,OH,,RFCW,1012.0,6.8,,,,,,,,41079.6,Columbus,12.4,0.258,5
+Google NBY-1,40.0611606,-82.7643286,,Google,OH,,RFCW,1012.0,6.8,,,,,,,,17100.5,Columbus,22.3,0.247,39
+Google NBY-2,40.0596182,-82.7644645,,Google,OH,,RFCW,1012.0,6.8,,,,,,,,17211.7,Columbus,22.2,0.247,39
+Google NBY-3,40.0579063,-82.7653279,,Google,OH,,RFCW,1012.0,6.8,,,,,,,,17397.5,Columbus,22.0,0.247,39
+Google NBY-4,40.0593527,-82.7717447,,Google,OH,,RFCW,1012.0,6.8,,,,,,,,17872.5,Columbus,21.6,0.247,39
+Google NBY-5,40.0565112,-82.7720067,,Google,OH,,RFCW,1012.0,6.8,,,,,,,,18096.3,Columbus,21.4,0.247,39
+Google NBY-6,40.0539595,-82.7675946,,Google,OH,,RFCW,1012.0,6.8,,,,,,,,17860.9,Columbus,21.6,0.247,39
+Google NBY-7,40.0539392,-82.7639185,,Google,OH,,RFCW,1012.0,6.8,,,,,,,,17527.3,Columbus,21.9,0.247,39
+Involta Independence,41.361071,-81.6327814,,,OH,,RFCW,1012.0,6.8,,,,,,,,0.0,Detroit,159.3,0.182,4
+Involta-Akron,41.0573837,-81.5219276,,,OH,,RFCW,1012.0,6.8,,,,,,,,0.0,Columbus,174.0,0.197,0
+LCO 1,40.0614927,-82.7405524,,Meta,OH,,RFCW,1012.0,6.8,,,,,,,,15231.2,Columbus,24.1,0.247,39
+LCO 2,40.0652296,-82.7411681,,Meta,OH,,RFCW,1012.0,6.8,,,,,,,,15088.7,Columbus,24.2,0.247,39
+Lumen Cleveland,41.5050658,-81.6577764,,,OH,,RFCW,1012.0,6.8,,,,,,,,375.0,Detroit,147.3,0.175,4
+NAO 1/NAO 2,40.0684176,-82.7503131,,Meta,OH,,RFCW,1012.0,6.8,,,,,,,,15569.4,Columbus,23.7,0.247,39
+NAO 3,40.0657248,-82.7491176,,Meta,OH,,RFCW,1012.0,6.8,,,,,,,,15630.9,Columbus,23.6,0.247,39
+NAO 5/NAO 6,40.0603757,-82.7509948,,Meta,OH,,RFCW,1012.0,6.8,,,,,,,,16066.9,Columbus,23.2,0.247,39
+STACK New Albany,40.1063006,-82.8007623,,,OH,,RFCW,1012.0,6.8,,,,,,,,16403.5,Columbus,22.9,0.245,40
+T5@Cleveland,41.4430567,-81.803445,,T5 Data Centers,OH,,RFCW,1012.0,6.8,,,,,,,,392.9,Detroit,142.7,0.178,4
+T5@Cleveland,41.4426221,-81.8022998,,T5 Data Centers,OH,,RFCW,1012.0,6.8,,,,,,,,392.5,Detroit,142.8,0.178,4
+TJX Corporate Techno,40.1038888,-82.8106146,,,OH,,RFCW,1012.0,6.8,,,,,,,,17275.2,Columbus,22.1,0.245,40
+DartPoints Dublin,40.0933004,-83.133975,,DartPoints,OH,,RFCW,1012.0,6.8,,,,,,,,21302.7,Columbus,19.2,0.245,33
+Carrier Services Group,41.041059,-80.633078,,,OH,,RFCW,1012.0,6.8,,,,,,,,0.0,Columbus,232.7,0.198,0
+CyrusOne CIN2,39.1026943,-84.5178996,,CyrusOne,OH,,RFCW,1012.0,6.8,,,,,,,,0.0,Indianapolis,159.3,0.295,4
+DartPoints Cincinnati,39.098101,-84.5178496,,DartPoints,OH,,RFCW,1012.0,6.8,,,,,,,,0.0,Indianapolis,159.6,0.295,4
+H5 Data Center,41.5063555,-81.683589,,,OH,,RFCW,1012.0,6.8,,,,,,,,381.8,Detroit,145.5,0.175,4
+Cologix COL1,40.1157427,-83.0025794,,Cologix,OH,,RFCW,1012.0,6.8,,,,,,,,24865.2,Columbus,17.4,0.244,70
+Cologix COL2,40.1158246,-83.0014877,,Cologix,OH,,RFCW,1012.0,6.8,,,,,,,,24857.4,Columbus,17.4,0.244,70
+Cologix COL4,40.1183484,-82.9992922,,Cologix,OH,,RFCW,1012.0,6.8,,,,,,,,24286.7,Columbus,17.6,0.244,70
+,40.2245343,-83.0457923,,,OH,,RFCW,1012.0,6.8,,,,,,,,11049.7,Columbus,29.8,0.239,37
+,39.3889671,-84.2218063,,CyrusOne,OH,,RFCW,1012.0,6.8,,,,,,,,1316.3,Columbus,123.1,0.281,4
+,39.387105,-84.2213987,,CyrusOne,OH,,RFCW,1012.0,6.8,,,,,,,,1315.1,Columbus,123.1,0.281,4
+QTS NAL 2 DC1,40.0557362,-82.7565006,,Quality Technology Services,OH,,RFCW,1012.0,6.8,,,,,,,,16774.4,Columbus,22.6,0.247,39
+QTS NAL 2 DC2,40.053078,-82.7566343,,Quality Technology Services,OH,,RFCW,1012.0,6.8,,,,,,,,16940.5,Columbus,22.4,0.247,39
+QTS NAL1 DC1,40.0650012,-82.7581306,,Quality Technology Services,OH,,RFCW,1012.0,6.8,,,,,,,,16355.7,Columbus,22.9,0.247,39
+QTS NAL1 DC2,40.0636133,-82.7582273,,Quality Technology Services,OH,,RFCW,1012.0,6.8,,,,,,,,16447.1,Columbus,22.9,0.247,39
+Vantage Building 1,40.1024981,-82.7469519,,Vantage,OH,,RFCW,1012.0,6.8,,,,,,,,13506.3,Columbus,26.1,0.245,39
+Vantage Building 2,40.1005303,-82.7471193,,Vantage,OH,,RFCW,1012.0,6.8,,,,,,,,13618.7,Columbus,25.9,0.245,39
+Vantage Building 3,40.0987619,-82.7472449,,Vantage,OH,,RFCW,1012.0,6.8,,,,,,,,13718.9,Columbus,25.8,0.245,39
+LexisNexus Springfield,39.912797,-83.7236638,,,OH,,RFCW,1012.0,6.8,,,,,,,,3613.5,Columbus,62.8,0.254,0
+Flexential Cincinnati,39.3159313,-84.4494638,,Flexential,OH,,RFCW,1012.0,6.8,,,,,,,,1039.6,Columbus,144.0,0.284,7
+,35.5681349,-95.5124166,,,OK,,SPSO,1001.0,5.9,,,,,,,,0.0,Dallas,331.9,0.472,0
+Argo Data Center,33.777264,-100.8689012,,,OK,,SPSO,1001.0,5.9,,,,,,,,0.0,Fort Worth,347.9,0.561,0
+OCOSA,36.153287,-95.989191,,,OK,,SPSO,1001.0,5.9,,,,,,,,0.0,Kansas City,350.4,0.442,7
+TulsaConnect,36.153294,-95.989193,,,OK,,SPSO,1001.0,5.9,,,,,,,,0.0,Kansas City,350.4,0.442,7
+TulsaConnect,36.1484524,-95.9908198,,,OK,,SPSO,1001.0,5.9,,,,,,,,0.0,Kansas City,350.9,0.443,7
+Windstream,36.1485011,-95.990514,,,OK,,SPSO,1001.0,5.9,,,,,,,,0.0,Kansas City,350.9,0.443,7
+Choctaw Nation of Oklahoma Data Center,33.9716849,-96.4028488,,Choctaw Nation of oklahoma,OK,,SPSO,1001.0,5.9,,,,,,,,832.9,Dallas,137.5,0.551,0
+Rack59 Data Center,35.4672049,-97.6497453,,,OK,,SPSO,1001.0,5.9,,,,,,,,0.0,Fort Worth,302.5,0.477,0
+,36.0812515,-95.8541492,,,OK,,SPSO,1001.0,5.9,,,,,,,,0.0,Kansas City,353.9,0.446,7
+Cherokee Data Center,36.2625496,-95.9100413,,,OK,,SPSO,1001.0,5.9,,,,,,,,0.0,Kansas City,336.5,0.437,7
+TierPoint,36.1585898,-95.9886293,,,OK,,SPSO,1001.0,5.9,,,,,,,,0.0,Kansas City,349.8,0.442,7
+,45.8098277,-119.8589037,,amazon web services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,221.6,0.0,36
+Apple,44.2894155,-120.8750774,,Apple Inc.,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,197.3,0.036,10
+Apple,44.2889355,-120.870177,,Apple Inc.,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,197.6,0.036,10
+Apple,44.2872771,-120.8702162,,Apple Inc.,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,197.7,0.036,10
+Apple,44.2857556,-120.8699219,,Apple Inc.,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,197.9,0.036,10
+CenturyLink,44.9380753,-123.0337222,,CenturyLink,OR,,NWPP,614.0,7.3,,,,,,,,1108.7,Portland,70.4,0.003,1
+Data Center,45.5266839,-122.8755048,,Oregon Health & Science University,OR,,NWPP,614.0,7.3,,,,,,,,10995.3,Portland,15.2,0.0,40
+Google,45.6231678,-121.206664,,Google,OR,,NWPP,614.0,7.3,,,,,,,,529.2,Portland,115.3,0.0,3
+Google,45.6247767,-121.208428,,Google,OR,,NWPP,614.0,7.3,,,,,,,,530.0,Portland,115.1,0.0,3
+Google Data Center The Dalles Oregon,45.6320147,-121.2012021,,Google,OR,,NWPP,614.0,7.3,,,,,,,,525.6,Portland,115.8,0.0,3
+Google Taylor Lake Data Center,45.6385144,-121.2020627,,Google,OR,,NWPP,614.0,7.3,,,,,,,,525.6,Portland,115.8,0.0,3
+Meta,44.2959422,-120.8872741,,Meta,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,196.1,0.035,10
+Meta,44.2949725,-120.8839727,,Meta,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,196.4,0.035,10
+Meta,44.2936872,-120.8815985,,Meta,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,196.6,0.035,10
+Meta,44.2990903,-120.8794444,,Meta,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,196.3,0.035,10
+Meta,44.3012584,-120.889891,,Meta,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,195.5,0.035,10
+Meta,44.3016719,-120.8945866,,Meta,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,195.2,0.035,10
+Meta,44.299218,-120.8945819,,Meta,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,195.4,0.035,10
+PTC,44.7752235,-122.6159312,,Stayton Cooperative Telephone Company,OR,,NWPP,614.0,7.3,,,,,,,,866.4,Portland,83.0,0.011,0
+Percheron DC,45.7113177,-119.8262349,,Rowan Green Data LLC,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,223.0,0.0,36
+Percheron DC,45.7119338,-119.8247642,,Rowan Green Data LLC,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,223.1,0.0,36
+Percheron DC,45.7082722,-119.8222729,,Rowan Green Data LLC,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,223.2,0.0,36
+Percheron DC,45.7093209,-119.8212121,,Rowan Green Data LLC,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,223.3,0.0,36
+Digital Fortress - Portland 2,45.4762137,-122.7760868,,"Digital Fortress, Inc",OR,,NWPP,614.0,7.3,,,,,,,,24524.8,Portland,8.9,0.0,40
+Digital Fortress - Portland 3,45.475634,-122.7764098,,"Digital Fortress, Inc",OR,,NWPP,614.0,7.3,,,,,,,,24294.5,Portland,9.0,0.0,40
+Fort Rock DC,44.0474074,-121.3285496,,Fort Rock Data Center,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,195.4,0.048,1
+US Signal - OR01 Bend,44.0861049,-121.2830411,,US Signal,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,193.8,0.046,1
+Amazon Web Services,45.8410032,-119.6527688,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,237.9,0.0,45
+Amazon Web Services,45.8522387,-119.6299007,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,239.8,0.0,49
+Amazon Web Services,45.8508808,-119.6305237,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,239.7,0.0,49
+Amazon Web Services,45.8404436,-119.6549794,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,237.7,0.0,45
+Amazon Web Services,45.841373,-119.6579323,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,237.5,0.0,44
+Amazon Web Services,45.8398258,-119.653894,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,237.8,0.0,45
+Amazon Web Services,45.8411742,-119.6554491,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,237.7,0.0,45
+Amazon Web Services,45.853786,-119.6300361,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,239.8,0.0,49
+Amazon Web Services,45.8466554,-119.6037093,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,241.7,0.0,49
+Amazon Web Services,45.8379238,-119.6883543,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,235.1,0.0,36
+Amazon Web Services,45.8375401,-119.6931286,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,234.7,0.0,36
+Amazon Web Services,45.846655,-119.6056452,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,241.6,0.0,49
+Amazon Web Services,45.8466681,-119.6070387,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,241.4,0.0,49
+Amazon Web Services,45.8467537,-119.6090617,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,241.3,0.0,49
+Amazon Web Services,45.8365499,-119.6898735,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,234.9,0.0,36
+Amazon Web Services,45.8476081,-119.6027748,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,241.8,0.0,49
+Amazon Web Services,45.8361921,-119.6940549,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,234.6,0.0,36
+Amazon Web Services,45.8587472,-119.6050828,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,241.8,0.0,49
+Amazon Web Services,45.860076,-119.6051229,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,241.8,0.0,49
+Amazon Web Services,45.8609677,-119.6051401,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,241.8,0.0,49
+Amazon Web Services,45.8414702,-119.6517858,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,237.9,0.0,45
+Amazon Web Services,45.8622482,-119.6051279,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,241.8,0.0,49
+Amazon Web Services,45.8580437,-119.604851,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,241.8,0.0,49
+Amazon Web Services,45.8406847,-119.6513096,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,238.0,0.0,45
+Amazon Web Services,45.8199301,-119.6320855,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,239.2,0.0,45
+Amazon Web Services,45.8517309,-119.6196613,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,240.6,0.0,49
+Amazon Web Services,45.8530947,-119.61968,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,240.6,0.0,49
+Amazon Web Services,45.8187105,-119.6320082,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,239.1,0.0,45
+Amazon Web Services,45.8187019,-119.6362631,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,238.8,0.0,45
+Amazon Web Services,45.8199495,-119.6362723,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,238.8,0.0,45
+Amazon Web Services,45.8538757,-119.6197258,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,240.6,0.0,49
+Amazon Web Services,45.8552336,-119.6197272,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,240.6,0.0,49
+Date Center West - Eugene,44.0506071,-123.0929782,,"Data Center West, Inc.",OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,166.6,0.047,0
+Crane DC - Portland,45.5147872,-123.078828,,Crane Data Centers Inc.,OR,,NWPP,614.0,7.3,,,,,,,,3778.8,Portland,31.1,0.0,35
+Amazon Web Services,45.797809,-119.3666157,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,259.3,0.0,61
+Amazon Web Services,45.9014505,-119.3205224,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,264.3,0.0,50
+Amazon Web Services,45.9027657,-119.3204918,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,264.3,0.0,50
+Amazon Web Services,45.9038538,-119.3204774,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,264.3,0.0,50
+Amazon Web Services,45.9050998,-119.3201446,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,264.3,0.0,50
+Amazon Web Services,45.7977753,-119.3619683,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,259.7,0.0,61
+Amazon Web Services,45.799157,-119.3666613,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,259.3,0.0,61
+Amazon Web Services,45.8096338,-119.268611,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,267.0,0.0,33
+Amazon Web Services,45.8082769,-119.2686163,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,267.0,0.0,33
+Amazon Web Services,45.799015,-119.3617268,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,259.7,0.0,61
+Amazon Web Services,45.7996834,-119.3584242,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,260.0,0.0,61
+Amazon Web Services,45.7977517,-119.3589245,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,259.9,0.0,61
+Amazon Web Services,45.8117453,-119.268665,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,267.0,0.0,33
+Amazon Web Services,45.8103812,-119.2686687,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,267.0,0.0,33
+Amazon Web Services,45.8112095,-119.2782469,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,266.3,0.0,33
+Adobe Data Center,45.5501967,-122.9316727,,,OR,,NWPP,614.0,7.3,,,,,,,,7382.1,Portland,19.9,0.0,39
+Aligned DC - PDX-01,45.5540594,-122.9492507,,Aligned Data Centers,OR,,NWPP,614.0,7.3,,,,,,,,6655.6,Portland,21.3,0.0,39
+Digital Realty PDX10 Data Center,45.5476065,-122.8919518,,Digital Realty,OR,,NWPP,614.0,7.3,,,,,,,,9515.1,Portland,16.8,0.0,39
+Digital Realty PDX11 Data Center,45.5679542,-122.9167725,,Digital Realty,OR,,NWPP,614.0,7.3,,,,,,,,7785.8,Portland,19.2,0.0,39
+Digital Realty PDX11 Data Center,45.5685099,-122.9198976,,Digital Realty,OR,,NWPP,614.0,7.3,,,,,,,,7635.6,Portland,19.4,0.0,39
+EdgeConneX - Portland POR03,45.5564226,-122.9122077,,EdgeConneX,OR,,NWPP,614.0,7.3,,,,,,,,8206.1,Portland,18.5,0.0,39
+Flexential Portland - Hillsboro 1,45.5498253,-122.8908454,,Flexential,OR,,NWPP,614.0,7.3,,,,,,,,9547.5,Portland,16.8,0.0,39
+Flexential Portland - Hillsboro 1,45.550371,-122.892151,,Flexential,OR,,NWPP,614.0,7.3,,,,,,,,9452.8,Portland,16.9,0.0,39
+Flexential Portland - Hillsboro 2,45.558302,-122.9171647,,Flexential,OR,,NWPP,614.0,7.3,,,,,,,,7933.3,Portland,19.0,0.0,39
+Flexential Portland - Hillsboro 3,45.5594805,-122.9382011,,Flexential,OR,,NWPP,614.0,7.3,,,,,,,,7011.5,Portland,20.6,0.0,39
+Flexential Portland - Hillsboro 4,45.5553133,-122.9401317,,Flexential,OR,,NWPP,614.0,7.3,,,,,,,,6983.7,Portland,20.6,0.0,39
+Flexential Portland - Hillsboro 4 Expansion,45.5553909,-122.941087,,Flexential,OR,,NWPP,614.0,7.3,,,,,,,,6946.0,Portland,20.7,0.0,39
+Flexential Portland - Hillsboro 5,45.5563407,-122.9394067,,Flexential,OR,,NWPP,614.0,7.3,,,,,,,,7000.7,Portland,20.6,0.0,39
+NTT RagingWire DC - Hillsboro,45.5496803,-122.9373872,,NTT,OR,,NWPP,614.0,7.3,,,,,,,,7149.3,Portland,20.3,0.0,39
+NTT RagingWire DC - Hillsboro,45.5480793,-122.9377875,,NTT,OR,,NWPP,614.0,7.3,,,,,,,,7147.7,Portland,20.3,0.0,39
+OVHcloud - Hillsboro,45.5340587,-122.9558975,,OVHcloud,OR,,NWPP,614.0,7.3,,,,,,,,6545.2,Portland,21.5,0.0,39
+Oracle,45.5439148,-122.896479,,,OR,,NWPP,614.0,7.3,,,,,,,,9283.1,Portland,17.1,0.0,39
+QTS Data Center - Hillsboro 1,45.5588149,-122.9277661,,Quality Technology Services,OR,,NWPP,614.0,7.3,,,,,,,,7446.3,Portland,19.8,0.0,39
+QTS Data Center - Hillsboro 2,45.5587993,-122.9297741,,Quality Technology Services,OR,,NWPP,614.0,7.3,,,,,,,,7361.1,Portland,19.9,0.0,39
+QTS Data Center - Hillsboro 2,45.5587842,-122.9318143,,Quality Technology Services,OR,,NWPP,614.0,7.3,,,,,,,,7276.2,Portland,20.1,0.0,39
+QTS Data Center - Hillsboro 2,45.5588073,-122.9351544,,Quality Technology Services,OR,,NWPP,614.0,7.3,,,,,,,,7139.9,Portland,20.3,0.0,39
+QTS Data Center - Hillsboro 2,45.5587955,-122.9330017,,Quality Technology Services,OR,,NWPP,614.0,7.3,,,,,,,,7227.2,Portland,20.2,0.0,39
+QTS Data Center - Hillsboro 3,45.5719248,-122.918438,,Quality Technology Services,OR,,NWPP,614.0,7.3,,,,,,,,7635.8,Portland,19.4,0.0,39
+QTS Data Center - Hillsboro 3,45.5701912,-122.9198333,,Quality Technology Services,OR,,NWPP,614.0,7.3,,,,,,,,7607.6,Portland,19.5,0.0,39
+Stack Infrastructure - POR01,45.5493273,-122.9278183,,Stack Infrastructure,OR,,NWPP,614.0,7.3,,,,,,,,7559.3,Portland,19.6,0.0,39
+Stack Infrastructure - POR02,45.5473758,-122.8973869,,Stack Infrastructure,OR,,NWPP,614.0,7.3,,,,,,,,9175.5,Portland,17.2,0.0,39
+Stack Infrastructure - POR03,45.5541322,-122.9379069,,Stack Infrastructure,OR,,NWPP,614.0,7.3,,,,,,,,7083.7,Portland,20.4,0.0,39
+Stack Infrastructure - POR03,45.5541515,-122.939406,,Stack Infrastructure,OR,,NWPP,614.0,7.3,,,,,,,,7024.3,Portland,20.6,0.0,39
+Stack Infrastructure - POR03,45.5541944,-122.9409256,,Stack Infrastructure,OR,,NWPP,614.0,7.3,,,,,,,,6964.6,Portland,20.7,0.0,39
+Stack Infrastructure - POR03,45.5528982,-122.9379804,,Stack Infrastructure,OR,,NWPP,614.0,7.3,,,,,,,,7093.7,Portland,20.4,0.0,39
+TGN Hillsboro,45.5465136,-122.893791,,Tata Communications,OR,,NWPP,614.0,7.3,,,,,,,,9414.5,Portland,16.9,0.0,39
+Verizon Hillsboro (Tanasbourne) Data Center,45.5446185,-122.882338,,Verizon Business,OR,,NWPP,614.0,7.3,,,,,,,,10233.6,Portland,16.0,0.0,39
+Date Center West - Eugene,42.3324601,-122.880426,,"Data Center West, Inc.",OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,354.8,0.133,0
+Digital Fortress - Portland 1,45.5212569,-122.6817537,,"Digital Fortress, Inc",OR,,NWPP,614.0,7.3,,,,,,,,58561.8,Portland,0.2,0.0,39
+H5 DC - Portland,45.5316902,-122.6837652,,H5 Data Centers,OR,,NWPP,614.0,7.3,,,,,,,,58561.8,Portland,1.3,0.0,39
+Pittock Block,45.5215436,-122.6807041,,,OR,,NWPP,614.0,7.3,,,,,,,,58561.8,Portland,0.2,0.0,39
+The Pittock Internet Exchange,45.5214248,-122.680562,,Alco Properties,OR,,NWPP,614.0,7.3,,,,,,,,58561.8,Portland,0.2,0.0,39
+Oregon State Data Center,44.9265658,-123.001847,,State of Oregon,OR,,NWPP,614.0,7.3,,,,,,,,1102.9,Portland,70.6,0.004,1
+Amazon Web Services,45.9158356,-119.2663235,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,268.6,0.0,33
+Amazon Web Services,45.9158356,-119.2665274,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,268.6,0.0,33
+Amazon Web Services,45.9158356,-119.2667259,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,268.6,0.0,33
+Amazon Web Services,45.9158356,-119.2671122,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,268.6,0.0,33
+Amazon Web Services,45.9158431,-119.2673159,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,268.6,0.0,33
+Amazon Web Services,45.9158319,-119.2675117,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,268.5,0.0,33
+Amazon Web Services,45.9158356,-119.2677169,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,268.5,0.0,33
+Amazon Web Services,45.916359,-119.2677512,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,268.5,0.0,33
+Amazon Web Services,45.9174478,-119.2677339,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,268.5,0.0,33
+Amazon Web Services,45.9138823,-119.2676514,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,268.5,0.0,33
+Amazon Web Services,45.9157234,-119.2699703,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,268.3,0.0,33
+Amazon Web Services,45.9206089,-119.2318204,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,271.3,0.0,33
+Amazon Web Services,45.9205886,-119.2300024,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,271.5,0.0,33
+Amazon Web Services,45.9205877,-119.228851,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,271.6,0.0,33
+Amazon Web Services,45.9205816,-119.2270106,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,271.7,0.0,33
+Amazon Web Services,45.919529,-119.2261389,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,271.8,0.0,33
+Amazon Web Services,45.8825252,-119.3416566,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,262.3,0.0,61
+Amazon Web Services,45.8795272,-119.3416256,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,262.3,0.0,61
+Amazon Web Services,45.8825302,-119.3396948,,Amazon Web Services,OR,,NWPP,614.0,7.3,,,,,,,,0.0,Portland,262.5,0.0,60
+Siemens EDA - HDC / Data Center,45.3187166,-122.7658797,,Siemens Digital Industries Software,OR,,NWPP,614.0,7.3,,,,,,,,5797.7,Portland,23.4,0.0,7
+,41.2709381,-79.814126,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2709402,-79.8139541,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2710448,-79.814129,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2710484,-79.81396,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2711682,-79.8139616,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2711652,-79.8141313,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2712757,-79.8141382,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2712784,-79.8139656,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2718516,-79.8135521,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2718547,-79.8133829,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2717406,-79.8133802,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2717371,-79.8135507,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.271625,-79.8135452,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2716275,-79.8133749,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2715114,-79.8135443,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2715144,-79.8133721,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2714007,-79.8133677,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,293.0,0.186,31
+,41.2713976,-79.8135403,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2712852,-79.8135339,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.2712882,-79.8133648,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,293.0,0.186,31
+,41.2711721,-79.8135321,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,293.0,0.186,31
+,41.2711751,-79.8133633,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,293.0,0.186,31
+,41.2710584,-79.8135282,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,293.0,0.186,31
+,41.2710611,-79.8133608,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,293.0,0.186,31
+,41.2719946,-79.8128361,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,293.0,0.186,31
+,41.2720961,-79.8128389,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,293.0,0.186,31
+,41.2721272,-79.8125003,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,293.0,0.186,31
+,41.2721624,-79.812359,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,293.0,0.186,31
+,41.2723167,-79.8125218,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,293.0,0.186,31
+,41.2723189,-79.8123536,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,293.0,0.186,31
+,41.2723889,-79.8128449,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,292.9,0.186,31
+,41.272284,-79.8128455,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Detroit,293.0,0.186,31
+Flexential Allentown Data Center,40.6356953,-75.4575733,,Flexential,PA,,RFCE,737.0,8.1,,,,,,,,8371.2,Philadelphia,80.1,0.218,1
+Amazon AWS PHL,41.0839907,-76.1433749,,Amazon Web Services,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Philadelphia,150.6,0.196,2
+Flexential Philadelphia - Collegeville,40.1522366,-75.4776181,,Flexential,PA,,RFCE,737.0,8.1,,,,,,,,12908.1,Philadelphia,34.5,0.242,3
+Iron City No. 1 Power Generator and Compute Center,41.1410436,-78.0974055,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Washington,263.9,0.193,0
+DāStor: 3400 Horizon Drive,40.0879189,-75.3397205,,,PA,,RFCE,737.0,8.1,,,,,,,,21862.9,Philadelphia,21.1,0.246,4
+Terminal Commerce Building,39.9598116,-75.1608332,,,PA,,RFCE,737.0,8.1,,,,,,,,147416.5,Philadelphia,1.3,0.252,2
+DataBank Pittsburgh PIT2,40.4513704,-80.1901663,,,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Columbus,244.0,0.227,2
+Expedient Pittsburgh Nova Place,40.4506391,-80.0059623,,Expedient,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Columbus,259.2,0.227,2
+Expedient Pittsburgh South,40.427371,-80.0425212,,Expedient,PA,,RFCE,737.0,8.1,,,,,,,,0.0,Columbus,255.7,0.229,2
+,33.061987,-80.0382932,,Google,SC,,SRVC,630.0,6.7,,,,,,,,0.0,Charlotte,252.1,0.597,10
+Google,33.0642722,-80.0414534,,Google,SC,,SRVC,630.0,6.7,,,,,,,,0.0,Charlotte,251.8,0.597,10
+Google,33.0621835,-80.0396508,,Google,SC,,SRVC,630.0,6.7,,,,,,,,0.0,Charlotte,252.0,0.597,10
+Google,33.0620982,-80.0411281,,Google,SC,,SRVC,630.0,6.7,,,,,,,,0.0,Charlotte,252.0,0.597,10
+Google,33.0643114,-80.03845,,Google,SC,,SRVC,630.0,6.7,,,,,,,,0.0,Charlotte,251.9,0.597,10
+Google,33.0663558,-80.0385236,,Google,SC,,SRVC,630.0,6.7,,,,,,,,0.0,Charlotte,251.6,0.597,10
+Google,33.0641647,-80.0436036,,Google,SC,,SRVC,630.0,6.7,,,,,,,,0.0,Charlotte,251.7,0.597,10
+Google,33.0620387,-80.0449828,,Google,SC,,SRVC,630.0,6.7,,,,,,,,0.0,Charlotte,251.9,0.597,10
+Google,33.0644422,-80.0460576,,Google,SC,,SRVC,630.0,6.7,,,,,,,,0.0,Charlotte,251.6,0.597,10
+Google Berkeley County Data Center,33.0640078,-80.0423742,,Google,SC,,SRVC,630.0,6.7,,,,,,,,0.0,Charlotte,251.8,0.597,10
+DartPoints Columbia,33.9873119,-81.0308106,,DartPoints,SC,,SRVC,630.0,6.7,,,,,,,,538.8,Charlotte,139.3,0.551,0
+DartPoints Greenville,34.8075277,-82.3434922,,DartPoints,SC,,SRVC,630.0,6.7,,,,,,,,508.6,Charlotte,144.7,0.51,0
+DartPoints Charleston,32.9648939,-80.1012147,,DartPoints,SC,,SRVC,630.0,6.7,,,,,,,,0.0,Charlotte,260.9,0.602,10
+DC BLOX Myrtle Beach Cable Landing Station,33.6746067,-78.9438847,,,SC,,SRVC,630.0,6.7,,,,,,,,0.0,Raleigh,235.8,0.566,0
+DartPoints Spartanburg,34.9965845,-82.034841,,DartPoints,SC,,SRVC,630.0,6.7,,,,,,,,749.9,Charlotte,111.7,0.5,0
+TierPoint Sioux Falls West Data Center,43.6069708,-96.8091949,,,SD,,MROW,962.0,7.4,,,,,,,,0.0,Omaha,270.8,0.07,1
+,36.1405001,-86.7641364,,,TN,,SRTV,884.0,6.3,,,,,,,,60000.0,Nashville,2.6,0.443,10
+,36.0327164,-86.637789,,,TN,,SRTV,884.0,6.3,,,,,,,,8056.7,Nashville,19.1,0.448,11
+,36.0234892,-86.7916196,,,TN,,SRTV,884.0,6.3,,,,,,,,11302.9,Nashville,15.2,0.449,10
+,36.2153921,-86.7836293,,BNYM,TN,,SRTV,884.0,6.3,,,,,,,,43792.2,Nashville,6.2,0.439,6
+Flexential Brentwood Data Center,35.9725623,-86.8080418,,,TN,,SRTV,884.0,6.3,,,,,,,,6973.7,Nashville,21.0,0.451,8
+HCA Information Technology & Services Data Center,36.0326354,-86.6377169,,,TN,,SRTV,884.0,6.3,,,,,,,,8049.7,Nashville,19.1,0.448,11
+Newrays Two LLC Mining,36.3270316,-88.3200731,,,TN,,SRTV,884.0,6.3,,,,,,,,407.8,Nashville,139.4,0.434,0
+Tennessee Processing Center LLC,36.2156443,-86.7840012,,,TN,,SRTV,884.0,6.3,,,,,,,,43476.3,Nashville,6.2,0.439,6
+Tennessee South Data Center,35.9934295,-86.4958261,,State of Tennessee,TN,,SRTV,884.0,6.3,,,,,,,,3785.7,Nashville,31.5,0.45,2
+TierPoint,35.9245097,-86.8556872,,,TN,,SRTV,884.0,6.3,,,,,,,,4766.9,Nashville,27.1,0.454,7
+Verizon Wireless,36.2821754,-86.7971366,,,TN,,SRTV,884.0,6.3,,,,,,,,13269.6,Nashville,13.7,0.436,3
+Flexential Nashville - Brentwood,35.9727294,-86.8084949,,Flexential,TN,,SRTV,884.0,6.3,,,,,,,,6980.5,Nashville,21.0,0.451,8
+Google Montgomery Data Center,36.6282547,-87.2601021,,Google LLC,TN,,SRTV,884.0,6.3,,,,,,,,1209.3,Nashville,67.5,0.419,4
+Flexential Nashville - Cool Springs,35.951045,-86.833406,,Flexential,TN,,SRTV,884.0,6.3,,,,,,,,5804.7,Nashville,23.7,0.452,8
+Flexential Nashville - Franklin,35.9204203,-86.8155401,,Flexential,TN,,SRTV,884.0,6.3,,,,,,,,4826.7,Nashville,26.8,0.454,8
+xAI Colossus,35.0599052,-90.1563229,,xAI,TN,,SRTV,884.0,6.3,,,,,,,,0.0,Nashville,328.8,0.497,2
+xAI Macrohard Colossus 2,34.997983,-90.0348672,,xAI,TN,,SRTV,884.0,6.3,,,,,,,,0.0,Nashville,321.4,0.5,2
+xAI Macrohardrr,34.9934882,-90.0341701,,xAI,TN,,SRTV,884.0,6.3,,,,,,,,0.0,Nashville,321.6,0.5,2
+,29.4466626,-98.6405797,,,TX,,ERCT,793.0,6.2,,,,,,,,27644.3,San Antonio,14.9,0.778,62
+,29.4478888,-98.6411006,,,TX,,ERCT,793.0,6.2,,,,,,,,27436.9,San Antonio,15.0,0.778,62
+,29.4472024,-98.6409962,,,TX,,ERCT,793.0,6.2,,,,,,,,27505.0,San Antonio,14.9,0.778,62
+,30.0187,-95.8637474,,DXC Technology,TX,,ERCT,793.0,6.2,,,,,,,,5594.1,Houston,55.6,0.749,0
+,29.4703276,-98.6861914,,CHRISTUS Health,TX,,ERCT,793.0,6.2,,,,,,,,18236.2,San Antonio,19.8,0.776,62
+,29.4702125,-98.6876674,,Frost Bank,TX,,ERCT,793.0,6.2,,,,,,,,18059.2,San Antonio,19.9,0.776,62
+,29.9951976,-95.5633335,,DXC Technology,TX,,ERCT,793.0,6.2,,,,,,,,12748.4,Houston,32.1,0.75,5
+,29.9973349,-95.5640398,,DXC Technology,TX,,ERCT,793.0,6.2,,,,,,,,12610.9,Houston,32.3,0.75,5
+,29.8215755,-95.5708004,,,TX,,ERCT,793.0,6.2,,,,,,,,24904.5,Houston,20.6,0.759,5
+,30.1777082,-95.486593,,,TX,,ERCT,793.0,6.2,,,,,,,,7024.1,Houston,47.8,0.741,3
+,29.4190024,-98.7874813,,,TX,,ERCT,793.0,6.2,,,,,,,,10605.2,San Antonio,28.8,0.779,59
+,32.8947608,-96.9819377,,,TX,,ERCT,793.0,6.2,,,,,,,,17956.0,Dallas,21.3,0.605,18
+,29.418466,-98.788796,,,TX,,ERCT,793.0,6.2,,,,,,,,10538.2,San Antonio,28.9,0.779,59
+,29.44968,-98.7144036,,,TX,,ERCT,793.0,6.2,,,,,,,,15667.3,San Antonio,22.0,0.778,62
+,29.4509306,-98.7139083,,,TX,,ERCT,793.0,6.2,,,,,,,,15695.2,San Antonio,22.0,0.777,62
+,29.4522303,-98.7140639,,,TX,,ERCT,793.0,6.2,,,,,,,,15657.0,San Antonio,22.0,0.777,62
+,31.1941757,-94.7967665,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Houston,168.7,0.69,1
+,31.131912,-97.3721266,,,TX,,ERCT,793.0,6.2,,,,,,,,949.0,Austin,102.1,0.693,2
+,31.130797,-97.3690216,,,TX,,ERCT,793.0,6.2,,,,,,,,949.2,Austin,102.1,0.693,2
+,32.5041907,-99.7777236,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.0,0.625,39
+,32.5041755,-99.7788227,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.1,0.625,39
+,32.505118,-99.778185,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.0,0.625,39
+,32.5060537,-99.7777594,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,230.9,0.625,39
+,32.5060407,-99.7788638,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.0,0.625,39
+,32.505086,-99.7811392,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.3,0.625,39
+,32.5041519,-99.7815703,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.3,0.625,39
+,32.5060148,-99.7815952,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.3,0.625,39
+,32.5060257,-99.7804961,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.2,0.625,39
+,32.5041605,-99.7804657,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.2,0.625,39
+,31.0575233,-97.2982979,,,TX,,ERCT,793.0,6.2,,,,,,,,1021.1,Austin,97.2,0.697,2
+,32.4999884,-99.7762463,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,230.9,0.625,39
+,32.4999753,-99.7773508,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.0,0.625,39
+,32.4990526,-99.7766719,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,230.9,0.625,39
+,32.4981252,-99.7762105,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,230.9,0.625,39
+,32.4981101,-99.7773096,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.0,0.625,39
+,32.498095,-99.7793114,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.2,0.625,39
+,32.4980864,-99.7804159,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.3,0.625,39
+,32.4990206,-99.7799848,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.3,0.625,39
+,32.4999495,-99.7804408,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.3,0.625,39
+,32.4999604,-99.7793416,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.2,0.625,39
+,32.4999555,-99.7824649,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.5,0.625,39
+,32.4999424,-99.7835693,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.6,0.625,39
+,32.4990197,-99.7828905,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.5,0.625,39
+,32.4980923,-99.7824291,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.5,0.625,39
+,32.4980772,-99.7835282,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.6,0.625,39
+,32.4980495,-99.7855074,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.8,0.625,39
+,32.4980409,-99.786612,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.9,0.625,39
+,32.498975,-99.7861809,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.8,0.625,39
+,32.499904,-99.7866369,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.9,0.625,39
+,32.4999148,-99.7855378,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,231.8,0.625,39
+,32.4984632,-99.7911682,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,232.3,0.625,39
+,32.4984502,-99.7922727,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,232.4,0.625,39
+,32.4975274,-99.7915938,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,232.4,0.625,39
+,32.4966,-99.7911324,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,232.3,0.625,39
+,32.4965849,-99.7922315,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,232.4,0.625,39
+,32.4965635,-99.7944574,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,232.6,0.625,39
+,32.4965549,-99.795562,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,232.7,0.625,39
+,32.4974891,-99.7951309,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,232.7,0.625,39
+,32.498418,-99.7955869,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,232.7,0.625,39
+,32.4984289,-99.7944878,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,232.6,0.625,39
+,29.4157967,-98.7864239,,,TX,,ERCT,793.0,6.2,,,,,,,,10655.5,San Antonio,28.7,0.779,59
+,29.4452464,-98.6440866,,,TX,,ERCT,793.0,6.2,,,,,,,,26838.2,San Antonio,15.2,0.778,62
+,29.4450409,-98.644251,,,TX,,ERCT,793.0,6.2,,,,,,,,26808.4,San Antonio,15.2,0.778,62
+,29.4448506,-98.644404,,,TX,,ERCT,793.0,6.2,,,,,,,,26780.6,San Antonio,15.2,0.778,62
+,29.4446618,-98.6445562,,,TX,,ERCT,793.0,6.2,,,,,,,,26752.9,San Antonio,15.2,0.778,62
+,29.4444746,-98.6447102,,,TX,,ERCT,793.0,6.2,,,,,,,,26724.5,San Antonio,15.2,0.778,62
+,29.4442858,-98.6448606,,,TX,,ERCT,793.0,6.2,,,,,,,,26697.2,San Antonio,15.2,0.778,62
+,29.4449076,-98.6435458,,,TX,,ERCT,793.0,6.2,,,,,,,,26989.9,San Antonio,15.1,0.778,62
+,29.4447004,-98.6437103,,,TX,,ERCT,793.0,6.2,,,,,,,,26959.7,San Antonio,15.1,0.778,62
+,29.4445131,-98.6438625,,,TX,,ERCT,793.0,6.2,,,,,,,,26931.6,San Antonio,15.1,0.778,62
+,29.4443274,-98.6440147,,,TX,,ERCT,793.0,6.2,,,,,,,,26903.3,San Antonio,15.2,0.778,62
+,29.4441379,-98.6441678,,,TX,,ERCT,793.0,6.2,,,,,,,,26874.9,San Antonio,15.2,0.778,62
+,29.4439499,-98.6443182,,,TX,,ERCT,793.0,6.2,,,,,,,,26847.1,San Antonio,15.2,0.778,62
+,29.4450699,-98.643813,,,TX,,ERCT,793.0,6.2,,,,,,,,26915.1,San Antonio,15.2,0.778,62
+,29.4448641,-98.643979,,,TX,,ERCT,793.0,6.2,,,,,,,,26884.7,San Antonio,15.2,0.778,62
+,29.4446797,-98.6441308,,,TX,,ERCT,793.0,6.2,,,,,,,,26856.6,San Antonio,15.2,0.778,62
+,29.4444885,-98.6442824,,,TX,,ERCT,793.0,6.2,,,,,,,,26829.0,San Antonio,15.2,0.778,62
+,29.444302,-98.6444342,,,TX,,ERCT,793.0,6.2,,,,,,,,26801.0,San Antonio,15.2,0.778,62
+,29.4441148,-98.6445852,,,TX,,ERCT,793.0,6.2,,,,,,,,26773.2,San Antonio,15.2,0.778,62
+,31.1034739,-103.2385493,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,San Antonio,492.9,0.695,1
+,31.1036646,-103.2383757,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,San Antonio,492.9,0.695,1
+,32.5806805,-96.7335677,,,TX,,ERCT,793.0,6.2,,,,,,,,14158.4,Dallas,23.0,0.621,17
+Amazon,29.4506766,-98.6387042,,,TX,,ERCT,793.0,6.2,,,,,,,,27871.6,San Antonio,14.8,0.777,62
+Amazon AWS SAT - 12807 Donop,29.2930099,-98.3915987,,Amazon Web Services,TX,,ERCT,793.0,6.2,,,,,,,,22693.9,San Antonio,17.0,0.785,2
+Amazon Web Services,32.8504831,-97.0702974,,Amazon Web Services,TX,,ERCT,793.0,6.2,,,,,,,,16632.0,Fort Worth,26.3,0.607,19
+CITIGROUP TECHNOLOGY INC,33.0063815,-97.2452902,,,TX,,ERCT,793.0,6.2,,,,,,,,9938.7,Fort Worth,28.5,0.6,8
+Charles Schwab Data Center,33.0045123,-97.2461412,,,TX,,ERCT,793.0,6.2,,,,,,,,10013.8,Fort Worth,28.3,0.6,8
+Cisco Allen,33.1359616,-96.6609921,,,TX,,ERCT,793.0,6.2,,,,,,,,6394.9,Dallas,41.7,0.593,29
+Compass Data Center,32.5455044,-96.802207,,,TX,,ERCT,793.0,6.2,,,,,,,,12328.5,Dallas,26.1,0.623,13
+Compass Data Center,32.5441919,-96.802189,,,TX,,ERCT,793.0,6.2,,,,,,,,12240.4,Dallas,26.2,0.623,13
+Compass Data Center,32.5428991,-96.8021938,,,TX,,ERCT,793.0,6.2,,,,,,,,12154.8,Dallas,26.4,0.623,13
+Compass Data Center,32.5415885,-96.8022074,,,TX,,ERCT,793.0,6.2,,,,,,,,12069.3,Dallas,26.5,0.623,13
+Compass Data Center,32.5402764,-96.8022204,,,TX,,ERCT,793.0,6.2,,,,,,,,11984.7,Dallas,26.7,0.623,13
+Compass Data Center,32.5426759,-96.793719,,,TX,,ERCT,793.0,6.2,,,,,,,,12094.2,Dallas,26.4,0.623,13
+Compass Data Center,32.5439941,-96.7937194,,,TX,,ERCT,793.0,6.2,,,,,,,,12181.1,Dallas,26.2,0.623,13
+Compass Data Center,32.5452986,-96.7937562,,,TX,,ERCT,793.0,6.2,,,,,,,,12268.4,Dallas,26.1,0.623,13
+Compass Data Center,32.5439608,-96.7883983,,,TX,,ERCT,793.0,6.2,,,,,,,,12143.5,Dallas,26.3,0.623,13
+Compass Data Center,32.5452921,-96.7883821,,,TX,,ERCT,793.0,6.2,,,,,,,,12232.0,Dallas,26.1,0.623,13
+Cortex supercomputer,30.2156192,-97.6189387,,,TX,,ERCT,793.0,6.2,,,,,,,,21776.3,Austin,13.1,0.739,13
+CyrusOne SAT10 & SAT11,29.4182209,-98.7878367,,CyrusOne,TX,,ERCT,793.0,6.2,,,,,,,,10586.4,San Antonio,28.8,0.779,59
+CyrusOne San Antonio II,29.4708878,-98.6730474,,CyrusOne,TX,,ERCT,793.0,6.2,,,,,,,,19967.3,San Antonio,18.6,0.776,62
+CyrusOne San Antonio III,29.4700573,-98.6721062,,CyrusOne,TX,,ERCT,793.0,6.2,,,,,,,,20147.0,San Antonio,18.5,0.776,62
+CyrusOne San Antonio IV,29.47076,-98.670723,,,TX,,ERCT,793.0,6.2,,,,,,,,20313.4,San Antonio,18.4,0.776,62
+Cyxtera Dallas-Fort Worth Data Center,32.8327103,-97.0410284,,Cyxtera,TX,,ERCT,793.0,6.2,,,,,,,,18039.9,Dallas,23.3,0.608,17
+Data Foundry,29.9451277,-95.4241979,,,TX,,ERCT,793.0,6.2,,,,,,,,23705.7,Houston,21.2,0.753,3
+Data Foundry Austin 1 Data Center,30.215504,-97.696074,,,TX,,ERCT,793.0,6.2,,,,,,,,50008.7,Austin,7.4,0.739,13
+Digital Realty,32.9744297,-96.6501581,,Digital Realty,TX,,ERCT,793.0,6.2,,,,,,,,11909.1,Dallas,25.8,0.601,32
+Digital Realty,32.9764379,-96.6501233,,Digital Realty,TX,,ERCT,793.0,6.2,,,,,,,,11793.8,Dallas,25.9,0.601,30
+Element Critical,30.3428035,-97.6961735,,,TX,,ERCT,793.0,6.2,,,,,,,,36591.1,Austin,9.1,0.733,14
+Experian McKinney Data Center,33.1717958,-96.725505,,,TX,,ERCT,793.0,6.2,,,,,,,,6054.3,Dallas,44.1,0.591,29
+Facebook Fort Worth Datacenter,32.9837829,-97.259335,,Meta,TX,,ERCT,793.0,6.2,,,,,,,,10940.2,Fort Worth,25.7,0.601,8
+Facebook Fort Worth Datacenter,32.9849203,-97.2550451,,Meta,TX,,ERCT,793.0,6.2,,,,,,,,10885.4,Fort Worth,26.0,0.601,8
+Facebook Fort Worth Datacenter,32.9883157,-97.255111,,Meta,TX,,ERCT,793.0,6.2,,,,,,,,10721.3,Fort Worth,26.3,0.601,8
+GVTC,29.686403,-98.4626475,,GVTC,TX,,ERCT,793.0,6.2,,,,,,,,10594.3,San Antonio,29.7,0.766,1
+Google,32.4421391,-97.0624648,,Google,TX,,ERCT,793.0,6.2,,,,,,,,7655.4,Fort Worth,43.3,0.628,3
+Google,32.4435639,-97.0633095,,Google,TX,,ERCT,793.0,6.2,,,,,,,,7688.2,Fort Worth,43.2,0.628,3
+Google,32.5390042,-96.7932072,,Google,TX,,ERCT,793.0,6.2,,,,,,,,11855.2,Dallas,26.8,0.623,13
+Google,32.4401038,-97.0609199,,Google,TX,,ERCT,793.0,6.2,,,,,,,,7609.5,Fort Worth,43.6,0.628,3
+LightEdge Austin I,30.2142972,-97.7126675,,,TX,,ERCT,793.0,6.2,,,,,,,,57341.7,Austin,6.7,0.739,12
+Lowe's Data Center,29.4730082,-98.6895043,,Lowe's,TX,,ERCT,793.0,6.2,,,,,,,,17726.6,San Antonio,20.2,0.776,62
+Lumen Austin 1,30.1965,-97.7124025,,,TX,,ERCT,793.0,6.2,,,,,,,,40132.7,Austin,8.6,0.74,12
+Lumen Austin 3,30.261396,-97.7235975,,Lumen Technologies,TX,,ERCT,793.0,6.2,,,,,,,,88744.6,Austin,1.8,0.737,13
+Lumen Dallas 6,32.827998,-96.8843787,,Lumen Technologies,TX,,ERCT,793.0,6.2,,,,,,,,49025.3,Dallas,9.5,0.609,25
+Lumen San Antonio 2,29.4382791,-98.5065217,,Lumen Technologies,TX,,ERCT,793.0,6.2,,,,,,,,139150.4,San Antonio,2.6,0.778,45
+Microsoft,29.4157967,-98.803316,,Microsoft,TX,,ERCT,793.0,6.2,,,,,,,,9845.9,San Antonio,30.4,0.779,59
+Microsoft,29.4157956,-98.8045148,,Microsoft,TX,,ERCT,793.0,6.2,,,,,,,,9792.5,San Antonio,30.5,0.779,59
+Microsoft,29.4702203,-98.698835,,Microsoft,TX,,ERCT,793.0,6.2,,,,,,,,16776.3,San Antonio,21.0,0.776,62
+Microsoft,29.4189602,-98.802904,,Microsoft,TX,,ERCT,793.0,6.2,,,,,,,,9867.7,San Antonio,30.3,0.779,59
+Microsoft TRP1,29.4120123,-98.8027302,,Microsoft,TX,,ERCT,793.0,6.2,,,,,,,,9865.8,San Antonio,30.3,0.779,59
+Microsoft TRP2,29.411987,-98.8039948,,Microsoft,TX,,ERCT,793.0,6.2,,,,,,,,9809.2,San Antonio,30.4,0.779,59
+Microsoft TRP3 (SAT46),29.412977,-98.8063744,,Microsoft,TX,,ERCT,793.0,6.2,,,,,,,,9706.3,San Antonio,30.7,0.779,59
+Microsoft Texas Research Park Campus,29.4155971,-98.8037856,,Microsoft,TX,,ERCT,793.0,6.2,,,,,,,,9824.7,San Antonio,30.4,0.779,59
+NTT,32.9810371,-96.6563775,,NTT,TX,,ERCT,793.0,6.2,,,,,,,,11732.9,Dallas,26.1,0.601,29
+NTT,32.9809339,-96.6594653,,NTT,TX,,ERCT,793.0,6.2,,,,,,,,11834.8,Dallas,25.9,0.601,31
+NTT,32.980928,-96.6579435,,NTT,TX,,ERCT,793.0,6.2,,,,,,,,11787.9,Dallas,26.0,0.601,30
+NTT,32.9795313,-96.6583794,,NTT,TX,,ERCT,793.0,6.2,,,,,,,,11882.3,Dallas,25.8,0.601,32
+Novartis,32.6512011,-97.3196729,,,TX,,ERCT,793.0,6.2,,,,,,,,25236.9,Fort Worth,12.1,0.617,0
+Precision Prints Lufkin Datacenter,31.2861659,-94.7215806,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Houston,180.7,0.686,1
+QTS Data Center,32.9889133,-97.2592738,,Quality Technology Services,TX,,ERCT,793.0,6.2,,,,,,,,10689.5,Fort Worth,26.3,0.601,8
+Skybox Houston One,29.802893,-95.7553386,,Skybox,TX,,ERCT,793.0,6.2,,,,,,,,10106.7,Houston,37.5,0.76,1
+Stream San Antonio II,29.472003,-98.6717199,,,TX,,ERCT,793.0,6.2,,,,,,,,20100.3,San Antonio,18.5,0.776,62
+Switch: The Rock,30.4880189,-97.6725256,,Switch,TX,,ERCT,793.0,6.2,,,,,,,,8697.9,Austin,25.1,0.726,2
+Texas Cryptologic Center,29.4473786,-98.6407158,,National Security Agency,TX,,ERCT,793.0,6.2,,,,,,,,27566.3,San Antonio,14.9,0.778,62
+Valero Wiserman,29.4742368,-98.6800789,,Valero,TX,,ERCT,793.0,6.2,,,,,,,,18838.8,San Antonio,19.4,0.776,62
+Vantage San Antonio I,29.4161404,-98.7892449,,Vantage Data Centers,TX,,ERCT,793.0,6.2,,,,,,,,10512.9,San Antonio,29.0,0.779,59
+Verizon Wireless Mew Building,32.9720407,-97.1567144,,,TX,,ERCT,793.0,6.2,,,,,,,,11345.5,Fort Worth,28.6,0.601,11
+,33.096018,-96.6815422,,,TX,,ERCT,793.0,6.2,,,,,,,,7525.7,Dallas,36.8,0.595,29
+,33.1379231,-96.6574002,,TierPoint,TX,,ERCT,793.0,6.2,,,,,,,,6328.2,Dallas,42.0,0.593,29
+,33.1378315,-96.6559451,,ScaleMatrix,TX,,ERCT,793.0,6.2,,,,,,,,6319.3,Dallas,42.0,0.593,29
+,33.138581,-96.6600205,,CyrusOne,TX,,ERCT,793.0,6.2,,,,,,,,6333.9,Dallas,42.0,0.593,29
+,33.1406542,-96.6595498,,CyrusOne,TX,,ERCT,793.0,6.2,,,,,,,,6288.6,Dallas,42.2,0.593,29
+Evoque Allen DA1,33.095083,-96.6837876,,Centersquare,TX,,ERCT,793.0,6.2,,,,,,,,7573.0,Dallas,36.7,0.595,29
+,30.2059267,-97.6979254,,CyrusOne,TX,,ERCT,793.0,6.2,,,,,,,,42992.3,Austin,8.2,0.74,12
+,30.2070079,-97.7010123,,CyrusOne,TX,,ERCT,793.0,6.2,,,,,,,,44968.2,Austin,7.9,0.74,12
+Alpheus DataCenter,30.2610525,-97.722122,,Alpheus,TX,,ERCT,793.0,6.2,,,,,,,,88743.7,Austin,2.0,0.737,13
+Data Foundry - Texas 1,30.198907,-97.7137835,,,TX,,ERCT,793.0,6.2,,,,,,,,42225.1,Austin,8.3,0.74,12
+Data Foundry - Texas 2,30.1995736,-97.71307,,,TX,,ERCT,793.0,6.2,,,,,,,,42591.7,Austin,8.2,0.74,12
+Digital Realty Austin AUS11,30.212156,-97.6957555,,,TX,,ERCT,793.0,6.2,,,,,,,,46957.7,Austin,7.7,0.739,12
+LightEdge Austin II,30.2006765,-97.707046,,,TX,,ERCT,793.0,6.2,,,,,,,,41946.8,Austin,8.3,0.74,12
+CoreSpace Dallas,32.8175508,-96.873071,,CoreSpace,TX,,ERCT,793.0,6.2,,,,,,,,62526.6,Dallas,8.0,0.609,25
+DataBank,32.7783107,-96.7984357,,,TX,,ERCT,793.0,6.2,,,,,,,,122765.5,Dallas,0.2,0.611,26
+DataBank Dallas Empire Central Data Center,32.8217503,-96.873553,,DataBank,TX,,ERCT,793.0,6.2,,,,,,,,59436.6,Dallas,8.3,0.609,25
+Equinix Infomart,32.8009535,-96.8195234,,Equinix,TX,,ERCT,793.0,6.2,,,,,,,,122913.1,Dallas,3.0,0.61,28
+Flexential Dallas - Downtown Dallas,32.8004101,-96.8193707,,Flexential,TX,,ERCT,793.0,6.2,,,,,,,,122912.4,Dallas,2.9,0.61,27
+Live Oak Data Center,32.7837489,-96.7946364,,,TX,,ERCT,793.0,6.2,,,,,,,,122736.0,Dallas,0.7,0.611,26
+Lumen Dallas - 3180 Irving Blvd.,32.8069549,-96.8685888,,Lumen Technologies,TX,,ERCT,793.0,6.2,,,,,,,,74537.4,Dallas,7.1,0.61,25
+Prime DFW01-01,32.8379581,-96.8784007,,Prime,TX,,ERCT,793.0,6.2,,,,,,,,47292.9,Dallas,9.8,0.608,25
+Prime DFW01-01,32.8378141,-96.8798458,,Prime,TX,,ERCT,793.0,6.2,,,,,,,,46696.3,Dallas,9.8,0.608,25
+Rad Web Hosting,32.7784469,-96.798496,,,TX,,ERCT,793.0,6.2,,,,,,,,122765.9,Dallas,0.2,0.611,26
+TierPoint Dallas Data Center,32.8079818,-96.8573889,,TierPoint,TX,,ERCT,793.0,6.2,,,,,,,,90066.1,Dallas,6.2,0.61,25
+VIRTBIZ,32.7825463,-96.7828145,,,TX,,ERCT,793.0,6.2,,,,,,,,122654.0,Dallas,1.6,0.611,31
+MDC,31.7500067,-106.3099264,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Tucson,442.6,0.662,0
+,32.8991167,-97.3889496,,CyrusOne,TX,,ERCT,793.0,6.2,,,,,,,,16825.7,Fort Worth,16.4,0.605,7
+Stream Data Centers DFWA,32.9836243,-96.6542632,,Stream Data Centers,TX,,ERCT,793.0,6.2,,,,,,,,11523.6,Dallas,26.4,0.601,29
+MARA Data Center,32.3413407,-97.7316918,,Marathon Digital Holdings,TX,,ERCT,793.0,6.2,,,,,,,,3306.7,Fort Worth,59.9,0.633,0
+Rice Data Center,29.6581451,-95.4433121,,,TX,,ERCT,793.0,6.2,,,,,,,,47531.8,Houston,13.4,0.767,1
+QTS Irving - Dallas Data Center Campus,32.8972479,-96.9826475,,Quality Technology Services,TX,,ERCT,793.0,6.2,,,,,,,,17736.3,Dallas,21.5,0.605,18
+Alinged Data Center DFW-03,32.5498227,-97.0748553,,"Aligned Data Centers, LLC",TX,,ERCT,793.0,6.2,,,,,,,,10854.0,Fort Worth,33.4,0.623,3
+Thin-nology,30.4211412,-97.591603,,,TX,,ERCT,793.0,6.2,,,,,,,,10392.3,Austin,22.0,0.729,6
+Aligned  DFW-01,33.0093142,-96.6765617,,Aligned,TX,,ERCT,793.0,6.2,,,,,,,,10734.8,Dallas,28.0,0.6,29
+Aligned  DFW-02,33.0090025,-96.6751351,,Aligned,TX,,ERCT,793.0,6.2,,,,,,,,10719.3,Dallas,28.0,0.6,29
+Aligned Data Centers DFW-04,33.0060071,-96.6570922,,Aligned Data Centers,TX,,ERCT,793.0,6.2,,,,,,,,10455.6,Dallas,28.5,0.6,29
+DataBank Plano Data Center,33.0872472,-96.8156779,,DataBank,TX,,ERCT,793.0,6.2,,,,,,,,8664.6,Dallas,34.2,0.596,29
+Flexential Dallas - Plano,33.007033,-96.6663507,,Flexential,TX,,ERCT,793.0,6.2,,,,,,,,10620.6,Dallas,28.2,0.6,29
+Compass Data Center,32.5387671,-96.8044586,,,TX,,ERCT,793.0,6.2,,,,,,,,11898.7,Dallas,26.8,0.623,13
+,32.9662442,-96.7112265,,,TX,,ERCT,793.0,6.2,,,,,,,,14607.6,Dallas,22.3,0.602,42
+Digital Realty Dallas DFW16,32.9660428,-96.715592,,Digital Realty,TX,,ERCT,793.0,6.2,,,,,,,,14771.6,Dallas,22.1,0.602,42
+Digital Realty Dallas DFW17,32.9662804,-96.7132121,,Digital Realty,TX,,ERCT,793.0,6.2,,,,,,,,14670.8,Dallas,22.2,0.602,42
+Digital Realty Dallas DFW18,32.9652584,-96.7126115,,Digital Realty,TX,,ERCT,793.0,6.2,,,,,,,,14744.3,Dallas,22.2,0.602,42
+Digital Realty Dallas DFW28,32.9672823,-96.7133223,,Digital Realty,TX,,ERCT,793.0,6.2,,,,,,,,14583.5,Dallas,22.3,0.602,42
+Digital Realty Dallas DFW29,32.9672759,-96.7105291,,Digital Realty,TX,,ERCT,793.0,6.2,,,,,,,,14491.8,Dallas,22.4,0.602,42
+Digital Realty Dallas DFW35,32.9650496,-96.7102551,,Digital Realty,TX,,ERCT,793.0,6.2,,,,,,,,14682.9,Dallas,22.2,0.602,42
+Flexential Dallas - Richardson,32.9948122,-96.7524974,,Flexential,TX,,ERCT,793.0,6.2,,,,,,,,13181.4,Dallas,24.3,0.6,44
+Rackspace Richardson DFW3,32.9647813,-96.7158554,,Rackspace,TX,,ERCT,793.0,6.2,,,,,,,,14898.1,Dallas,22.0,0.602,42
+Stream DFW IV,33.0001441,-96.6616465,,Stream,TX,,ERCT,793.0,6.2,,,,,,,,10853.0,Dallas,27.7,0.6,29
+,29.5801522,-98.5413037,,HEB,TX,,ERCT,793.0,6.2,,,,,,,,20326.9,San Antonio,18.5,0.771,45
+CyrusOne San Antonio I,29.4666098,-98.6880869,,CyrusOne,TX,,ERCT,793.0,6.2,,,,,,,,18147.3,San Antonio,19.9,0.777,62
+H5 Data Centers San Antonio,29.4293706,-98.4869057,,H5 Data Centers,TX,,ERCT,793.0,6.2,,,,,,,,139154.1,San Antonio,1.1,0.779,45
+Microsoft,29.47827,-98.6906853,,Microsoft,TX,,ERCT,793.0,6.2,,,,,,,,17373.0,San Antonio,20.5,0.776,62
+Microsoft,29.4810535,-98.6965704,,Microsoft,TX,,ERCT,793.0,6.2,,,,,,,,16620.4,San Antonio,21.1,0.776,62
+Microsoft SAT 80,29.4291907,-98.8766548,,Microsoft,TX,,ERCT,793.0,6.2,,,,,,,,7314.1,San Antonio,37.5,0.779,59
+Microsoft SAT 81,29.427998,-98.8766526,,Microsoft,TX,,ERCT,793.0,6.2,,,,,,,,7314.5,San Antonio,37.5,0.779,59
+Microsoft SAT 82,29.4266541,-98.8766379,,Microsoft,TX,,ERCT,793.0,6.2,,,,,,,,7315.1,San Antonio,37.5,0.779,59
+Microsoft San Antonio,29.479881,-98.6925337,,Microsoft,TX,,ERCT,793.0,6.2,,,,,,,,17099.8,San Antonio,20.7,0.776,62
+QTS San Antonio II,29.4491574,-98.6531261,,Quality Technology Services,TX,,ERCT,793.0,6.2,,,,,,,,24577.0,San Antonio,16.1,0.778,62
+Vantage Data Centers TX21,29.4775403,-98.697766,,Vantage Data Centers,TX,,ERCT,793.0,6.2,,,,,,,,16630.7,San Antonio,21.1,0.776,62
+Vantage Data Centers TX22,29.4790852,-98.6977011,,Vantage Data Centers,TX,,ERCT,793.0,6.2,,,,,,,,16579.1,San Antonio,21.2,0.776,62
+Vantage TX11,29.416857,-98.7901874,,Vantage Data Centers,TX,,ERCT,793.0,6.2,,,,,,,,10466.8,San Antonio,29.1,0.779,59
+Vantage TX12,29.4155984,-98.7888658,,Vantage Data Centers,TX,,ERCT,793.0,6.2,,,,,,,,10531.2,San Antonio,29.0,0.779,59
+Vantage TX12,29.4151667,-98.7897506,,Vantage Data Centers,TX,,ERCT,793.0,6.2,,,,,,,,10486.1,San Antonio,29.0,0.779,59
+Stream Data Centers Houston,30.1781365,-95.4860464,,,TX,,ERCT,793.0,6.2,,,,,,,,7016.6,Houston,47.8,0.741,3
+,33.9533733,-98.5247859,,,TX,,ERCT,793.0,6.2,,,,,,,,0.0,Fort Worth,173.0,0.552,0
+DFW2-DC1 Project,32.5821969,-96.695588,,,TX,,ERCT,793.0,6.2,,,,,,,,13216.1,Dallas,24.1,0.621,17
+,18.446827,-66.0516873,,Claro,,,,,,,,,,,,,0.0,Miami,1666.4,1.0,1
+Microsoft,18.4174359,-66.1089895,,Microsoft,,,,,,,,,,,,,0.0,Miami,1663.0,1.0,1
+Ebay,40.5641125,-112.050635,,,UT,,NWPP,614.0,6.3,,,,,,,,1543.7,Salt Lake City,25.7,0.222,11
+FiberState Datacenter,40.5114517,-111.8882555,,,UT,,NWPP,614.0,6.3,,,,,,,,1380.4,Salt Lake City,27.6,0.224,11
+Lumen,37.062799,-113.5447485,,Lumen Technologies,UT,,NWPP,614.0,6.3,,,,,,,,0.0,Las Vegas,173.6,0.397,1
+Meta,40.2685879,-112.015101,,Meta,UT,,NWPP,614.0,6.3,,,,,,,,483.0,Salt Lake City,55.7,0.237,4
+Meta,40.2655638,-112.0151297,,Meta,UT,,NWPP,614.0,6.3,,,,,,,,478.8,Salt Lake City,56.0,0.237,4
+Meta,40.2723307,-112.0150579,,Meta,UT,,NWPP,614.0,6.3,,,,,,,,488.4,Salt Lake City,55.2,0.236,7
+Meta,40.2658623,-112.0194332,,Meta,UT,,NWPP,614.0,6.3,,,,,,,,478.3,Salt Lake City,56.0,0.237,4
+Meta,40.2698591,-112.0194563,,Meta,UT,,NWPP,614.0,6.3,,,,,,,,483.9,Salt Lake City,55.6,0.237,4
+ValorC3,37.0814992,-113.6071292,,ValorC3,UT,,NWPP,614.0,6.3,,,,,,,,0.0,Las Vegas,170.2,0.396,1
+eBay,40.563602,-112.0478049,,,UT,,NWPP,614.0,6.3,,,,,,,,1550.7,Salt Lake City,25.6,0.222,11
+DataBank SLC2,40.4797749,-111.9047692,,DataBank,UT,,NWPP,614.0,6.3,,,,,,,,1151.7,Salt Lake City,31.2,0.226,12
+DataBank SLC3,40.4797937,-111.9059228,,DataBank,UT,,NWPP,614.0,6.3,,,,,,,,1151.6,Salt Lake City,31.2,0.226,12
+DataBank SLC4,40.4813166,-111.9050026,,DataBank,UT,,NWPP,614.0,6.3,,,,,,,,1161.2,Salt Lake City,31.0,0.226,11
+DataBank SLC5,40.4811374,-111.9039534,,DataBank,UT,,NWPP,614.0,6.3,,,,,,,,1160.3,Salt Lake City,31.0,0.226,11
+DataBank SLC6,40.4806176,-111.9063611,,DataBank,UT,,NWPP,614.0,6.3,,,,,,,,1156.6,Salt Lake City,31.1,0.226,12
+Flexential Salt Lake City - Lindon,40.332648,-111.7278754,,Flexential,UT,,NWPP,614.0,6.3,,,,,,,,576.7,Salt Lake City,49.5,0.233,6
+Flexential Salt Lake City - Downtown,40.7563065,-111.9548375,,Flexential,UT,,NWPP,614.0,6.3,,,,,,,,15649.7,Salt Lake City,5.5,0.212,6
+Flexential Salt Lake City - Fair Park,40.7667963,-111.9202947,,Flexential,UT,,NWPP,614.0,6.3,,,,,,,,17939.3,Salt Lake City,2.7,0.212,4
+Flexential Salt Lake City - Millcreek,40.685569,-111.8850505,,Flexential,UT,,NWPP,614.0,6.3,,,,,,,,8407.7,Salt Lake City,8.3,0.216,12
+Verizon,40.5908144,-111.9037856,,,UT,,NWPP,614.0,6.3,,,,,,,,2451.0,Salt Lake City,18.8,0.22,12
+Strata Networks,40.4565951,-109.5290169,,,UT,,NWPP,614.0,6.3,,,,,,,,0.0,Salt Lake City,202.1,0.227,0
+Flexential Salt Lake City - South Valley,40.6203519,-111.986047,,Flexential,UT,,NWPP,614.0,6.3,,,,,,,,2736.7,Salt Lake City,17.5,0.219,12
+,37.4943952,-77.2374867,,Bank of America,VA,,SRVC,630.0,7.6,,,,,,,,2880.3,Richmond,18.6,0.375,23
+,36.6799052,-78.3739846,,,VA,,SRVC,630.0,7.6,,,,,,,,610.2,Raleigh,102.9,0.416,17
+,36.6792788,-78.3741652,,,VA,,SRVC,630.0,7.6,,,,,,,,610.5,Raleigh,102.8,0.416,17
+,36.677864,-78.3746914,,,VA,,SRVC,630.0,7.6,,,,,,,,611.3,Raleigh,102.6,0.416,17
+,36.6774709,-78.3770074,,,VA,,SRVC,630.0,7.6,,,,,,,,611.6,Raleigh,102.5,0.416,17
+,36.6780067,-78.3768491,,,VA,,SRVC,630.0,7.6,,,,,,,,611.3,Raleigh,102.6,0.416,17
+,36.6785383,-78.3766873,,,VA,,SRVC,630.0,7.6,,,,,,,,611.0,Raleigh,102.7,0.416,17
+,36.6791786,-78.3764937,,,VA,,SRVC,630.0,7.6,,,,,,,,610.6,Raleigh,102.7,0.416,17
+,36.6797142,-78.3763292,,,VA,,SRVC,630.0,7.6,,,,,,,,610.3,Raleigh,102.8,0.416,17
+,36.6829223,-78.3768678,,,VA,,SRVC,630.0,7.6,,,,,,,,608.6,Raleigh,103.1,0.416,17
+,36.6830008,-78.3757514,,,VA,,SRVC,630.0,7.6,,,,,,,,608.5,Raleigh,103.2,0.416,17
+,36.6860613,-78.3772195,,,VA,,SRVC,630.0,7.6,,,,,,,,606.9,Raleigh,103.5,0.416,17
+,36.6861451,-78.3761048,,,VA,,SRVC,630.0,7.6,,,,,,,,606.8,Raleigh,103.5,0.416,17
+,36.6894978,-78.3775931,,,VA,,SRVC,630.0,7.6,,,,,,,,605.1,Raleigh,103.8,0.416,17
+,36.6895764,-78.3764851,,,VA,,SRVC,630.0,7.6,,,,,,,,605.0,Raleigh,103.9,0.416,17
+,36.692492,-78.3767715,,,VA,,SRVC,630.0,7.6,,,,,,,,603.5,Raleigh,104.2,0.415,17
+,36.6924575,-78.3779683,,,VA,,SRVC,630.0,7.6,,,,,,,,603.5,Raleigh,104.1,0.415,17
+,36.6949343,-78.3763578,,,VA,,SRVC,630.0,7.6,,,,,,,,602.2,Raleigh,104.4,0.415,17
+,36.6756936,-78.3739103,,,VA,,SRVC,630.0,7.6,,,,,,,,612.5,Raleigh,102.4,0.416,17
+Digital Fortress: Richmond,37.3600608,-77.327038,,Digital Fortress,VA,,SRVC,630.0,7.6,,,,,,,,2180.1,Richmond,22.4,0.382,22
+Lumos Networks,37.415688,-79.1427063,,,VA,,SRVC,630.0,7.6,,,,,,,,0.0,Richmond,150.9,0.379,0
+Meta Henrico Data Center,37.4839132,-77.2373305,,Meta,VA,,SRVC,630.0,7.6,,,,,,,,2797.3,Richmond,18.9,0.376,22
+Meta Henrico Data Center,37.4819534,-77.2337115,,Meta,VA,,SRVC,630.0,7.6,,,,,,,,2716.4,Richmond,19.3,0.376,22
+Meta Henrico Data Center,37.4778562,-77.2264818,,Meta,VA,,SRVC,630.0,7.6,,,,,,,,2564.6,Richmond,20.1,0.376,22
+PowerHouse CTP-02,37.360586,-77.3256869,,PowerHouse,VA,,SRVC,630.0,7.6,,,,,,,,2179.9,Richmond,22.4,0.382,22
+RIC1 DC1,37.4892338,-77.2474761,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,3044.3,Richmond,17.9,0.376,23
+RIC1 DC2,37.4886164,-77.2462097,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,3011.9,Richmond,18.0,0.376,23
+RIC1 DC3,37.4878581,-77.2448256,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,2976.5,Richmond,18.2,0.376,23
+Virginia Information Technologies Agency,37.3607028,-77.3318065,,,VA,,SRVC,630.0,7.6,,,,,,,,2217.0,Richmond,22.1,0.382,22
+Amazon IAD-124,38.9498954,-77.5604517,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2319.6,Washington,45.2,0.303,341
+Amazon IAD-125,38.9480895,-77.5605449,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2320.4,Washington,45.2,0.303,341
+Amazon IAD-126,38.9500822,-77.5588677,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2329.9,Washington,45.1,0.302,341
+Amazon IAD-127,38.9480346,-77.5589842,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2330.8,Washington,45.1,0.303,341
+Microsoft,38.9495184,-77.5594451,,Microsoft,VA,,SRVC,630.0,7.6,,,,,,,,2326.6,Washington,45.1,0.303,341
+Microsoft IAD11,38.9482582,-77.5559109,,Microsoft,VA,,SRVC,630.0,7.6,,,,,,,,2351.3,Washington,44.8,0.303,341
+Microsoft IAD11,38.9497902,-77.5543019,,Microsoft,VA,,SRVC,630.0,7.6,,,,,,,,2361.0,Washington,44.7,0.303,341
+Microsoft IAD11,38.9510645,-77.5555499,,Microsoft,VA,,SRVC,630.0,7.6,,,,,,,,2351.4,Washington,44.8,0.302,341
+Aligned IAD-01,39.0136079,-77.4705563,,Aligned,VA,,SRVC,630.0,7.6,,,,,,,,2901.2,Washington,39.0,0.299,275
+Aligned IAD-02,39.0104171,-77.4751585,,Aligned,VA,,SRVC,630.0,7.6,,,,,,,,2870.4,Washington,39.2,0.299,277
+Amazon IAD-114,39.035494,-77.4506986,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2995.3,Washington,38.1,0.298,272
+Amazon IAD-115,39.0362941,-77.4497948,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3000.1,Washington,38.1,0.298,272
+Amazon IAD-13,39.0050516,-77.4856124,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2794.6,Washington,40.0,0.3,280
+Amazon IAD-161,38.9966044,-77.4732601,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2933.4,Washington,38.7,0.3,291
+Amazon IAD-162,38.9958502,-77.4712939,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2954.7,Washington,38.5,0.3,291
+Amazon IAD-169,39.0167452,-77.4520059,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3067.5,Washington,37.5,0.299,275
+Amazon IAD-179,39.015885,-77.4531399,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3059.8,Washington,37.6,0.299,275
+Amazon IAD-50,39.0295615,-77.4596546,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2938.4,Washington,38.6,0.299,272
+Amazon IAD-6,39.0027516,-77.4854486,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2803.0,Washington,39.9,0.3,281
+Amazon IAD-60,39.0287737,-77.4582461,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2954.9,Washington,38.5,0.299,272
+Amazon IAD-606,38.9950569,-77.4710738,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2959.3,Washington,38.5,0.3,291
+Amazon IAD-71,39.0279064,-77.4574998,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2965.7,Washington,38.4,0.299,272
+Amazon IAD-78,39.0263681,-77.4495202,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3049.5,Washington,37.7,0.299,272
+Amazon IAD-79,39.0263574,-77.4508704,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3036.3,Washington,37.8,0.299,272
+Amazon IAD-80,39.0271087,-77.4528289,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3013.8,Washington,38.0,0.299,272
+Centersquare IAD4-A,39.0217816,-77.4527978,,Centersquare,VA,,SRVC,630.0,7.6,,,,,,,,3037.8,Washington,37.8,0.299,275
+Centersquare IAD4-B,39.0221679,-77.4535946,,Centersquare,VA,,SRVC,630.0,7.6,,,,,,,,3028.3,Washington,37.9,0.299,275
+CloudHQ LC1,39.0102471,-77.4626713,,CloudHQ,VA,,SRVC,630.0,7.6,,,,,,,,2988.3,Washington,38.2,0.299,275
+CloudHQ LC11,39.0066448,-77.4776407,,CloudHQ,VA,,SRVC,630.0,7.6,,,,,,,,2860.5,Washington,39.3,0.3,284
+CloudHQ LC12,39.0054086,-77.4784366,,CloudHQ,VA,,SRVC,630.0,7.6,,,,,,,,2857.3,Washington,39.4,0.3,284
+CloudHQ LC2,39.0117541,-77.4624624,,CloudHQ,VA,,SRVC,630.0,7.6,,,,,,,,2984.6,Washington,38.2,0.299,275
+CloudHQ LC3,39.0112011,-77.4603947,,CloudHQ,VA,,SRVC,630.0,7.6,,,,,,,,3006.8,Washington,38.1,0.299,275
+CloudHQ LC4,39.0023088,-77.4718933,,CloudHQ,VA,,SRVC,630.0,7.6,,,,,,,,2928.1,Washington,38.7,0.3,284
+CloudHQ LC8,39.0019963,-77.468439,,CloudHQ,VA,,SRVC,630.0,7.6,,,,,,,,2962.1,Washington,38.4,0.3,284
+Cologix ASH1,39.0179257,-77.4595164,,Cologix,VA,,SRVC,630.0,7.6,,,,,,,,2988.7,Washington,38.2,0.299,275
+Cologix ASH2,39.0196443,-77.4581097,,Cologix,VA,,SRVC,630.0,7.6,,,,,,,,2995.2,Washington,38.1,0.299,275
+CyrusOne NVA14,39.0195992,-77.4504568,,PowerHouse,VA,,SRVC,630.0,7.6,,,,,,,,3070.7,Washington,37.5,0.299,275
+DataBank IAD1,39.0154881,-77.4821555,,DataBank,VA,,SRVC,630.0,7.6,,,,,,,,2791.0,Washington,40.0,0.299,271
+DataBank IAD3,39.0179043,-77.4818188,,DataBank,VA,,SRVC,630.0,7.6,,,,,,,,2785.6,Washington,40.0,0.299,271
+DataBank IAD4,39.0154867,-77.4833483,,DataBank,VA,,SRVC,630.0,7.6,,,,,,,,2780.7,Washington,40.1,0.299,271
+Digital Realty ACC10,39.0126563,-77.4656035,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2951.1,Washington,38.5,0.299,275
+Digital Realty ACC2,39.0215698,-77.4592649,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2976.1,Washington,38.3,0.299,275
+Digital Realty ACC3,39.01988,-77.4598033,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2977.9,Washington,38.3,0.299,275
+Digital Realty ACC4,39.0178592,-77.4624708,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2960.7,Washington,38.4,0.299,275
+Digital Realty ACC5,39.0201584,-77.4631033,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2945.5,Washington,38.6,0.299,275
+Digital Realty ACC6,39.0210261,-77.4635509,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2937.8,Washington,38.6,0.299,275
+Digital Realty ACC7,39.017472,-77.4656752,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2932.0,Washington,38.7,0.299,275
+Digital Realty ACC9,39.0154331,-77.4673732,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2924.0,Washington,38.8,0.299,275
+Digital Realty Devin Shafron Building A,39.0027477,-77.4819519,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2834.0,Washington,39.6,0.3,282
+Digital Realty IAD12,39.0020229,-77.4833469,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2823.8,Washington,39.7,0.3,282
+Digital Realty IAD14,39.0033364,-77.4870935,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2786.8,Washington,40.0,0.3,281
+Digital Realty IAD24,39.0043186,-77.484415,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2807.3,Washington,39.8,0.3,280
+Digital Realty IAD35,39.0005331,-77.4805775,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2853.3,Washington,39.4,0.3,286
+Digital Realty IAD36,39.0015493,-77.4793749,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2861.1,Washington,39.3,0.3,284
+Digital Realty IAD37,39.000032,-77.4780146,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2878.2,Washington,39.2,0.3,284
+Digital Realty IAD38,39.0010841,-77.4772014,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2882.4,Washington,39.1,0.3,284
+Digital Realty IAD39,39.0076143,-77.4676305,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2950.3,Washington,38.5,0.3,280
+Digital Realty IAD40,39.0062702,-77.4683054,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2948.6,Washington,38.5,0.3,282
+Digital Realty IAD41,39.0088059,-77.4582358,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,3037.4,Washington,37.8,0.3,275
+Digital Realty IAD73,39.0066187,-77.4664074,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2965.5,Washington,38.4,0.3,281
+Equinix DC1,39.0155577,-77.4603281,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,2990.4,Washington,38.2,0.299,275
+Equinix DC10,39.0210047,-77.4514888,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,3054.2,Washington,37.7,0.299,275
+Equinix DC11,39.0148911,-77.4587995,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,3007.9,Washington,38.0,0.299,275
+Equinix DC12,39.0230155,-77.4497875,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,3062.1,Washington,37.6,0.299,275
+Equinix DC13,39.0125623,-77.4754047,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,2860.7,Washington,39.3,0.299,274
+Equinix DC15,39.0225001,-77.4502558,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,3059.8,Washington,37.6,0.299,275
+Equinix DC16,39.0242346,-77.4522875,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,3032.0,Washington,37.8,0.299,273
+Equinix DC17,39.0248907,-77.4534187,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,3018.0,Washington,38.0,0.299,273
+Equinix DC2,39.0163894,-77.4590691,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,2999.2,Washington,38.1,0.299,275
+Equinix DC21,39.0118055,-77.45451,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,3062.9,Washington,37.6,0.299,275
+Equinix DC22,39.0133911,-77.4537722,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,3063.8,Washington,37.6,0.299,275
+Equinix DC3,39.0223584,-77.4610917,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,2955.5,Washington,38.5,0.299,275
+Equinix DC4,39.0164403,-77.4619542,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,2971.2,Washington,38.4,0.299,275
+Equinix DC5,39.0159646,-77.4612225,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,2980.1,Washington,38.3,0.299,275
+Equinix DC6,39.0151965,-77.4595343,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,2999.5,Washington,38.1,0.299,275
+H5 Ashburn,39.0136782,-77.4517194,,H5 Data Centers,VA,,SRVC,630.0,7.6,,,,,,,,3083.4,Washington,37.4,0.299,275
+IAD,39.0130484,-77.4730942,,Aligned,VA,,SRVC,630.0,7.6,,,,,,,,2880.0,Washington,39.2,0.299,275
+Lumen Ashburn,39.022182,-77.4576094,,Lumen Technologies,VA,,SRVC,630.0,7.6,,,,,,,,2989.3,Washington,38.2,0.299,275
+NTT VA1,39.0227436,-77.4548911,,NTT,VA,,SRVC,630.0,7.6,,,,,,,,3013.1,Washington,38.0,0.299,275
+NTT VA2,39.0250127,-77.4576402,,NTT,VA,,SRVC,630.0,7.6,,,,,,,,2977.0,Washington,38.3,0.299,273
+NTT VA3,39.017225,-77.4703718,,NTT,VA,,SRVC,630.0,7.6,,,,,,,,2889.6,Washington,39.1,0.299,275
+NTT VA4,39.0198684,-77.4725917,,NTT,VA,,SRVC,630.0,7.6,,,,,,,,2859.6,Washington,39.3,0.299,272
+NTT VA5,39.0183033,-77.472611,,NTT,VA,,SRVC,630.0,7.6,,,,,,,,2865.3,Washington,39.3,0.299,273
+NTT VA6,39.017043,-77.4733379,,NTT,VA,,SRVC,630.0,7.6,,,,,,,,2863.4,Washington,39.3,0.299,273
+NTT VA7,39.0158263,-77.4719884,,NTT,VA,,SRVC,630.0,7.6,,,,,,,,2880.0,Washington,39.2,0.299,275
+NTT VA8,39.0187472,-77.4755556,,NTT,VA,,SRVC,630.0,7.6,,,,,,,,2837.3,Washington,39.6,0.299,271
+NTT VA9,39.0201893,-77.475509,,NTT,VA,,SRVC,630.0,7.6,,,,,,,,2832.5,Washington,39.6,0.299,271
+QTS Ashburn 3 DC1,38.9980776,-77.4754706,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,2908.0,Washington,38.9,0.3,289
+QTS Ashburn 3 DC2,38.9987099,-77.4743264,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,2916.7,Washington,38.8,0.3,286
+Sabey Ashburn Building A,39.0137942,-77.4769259,,Sabey Data Centers,VA,,SRVC,630.0,7.6,,,,,,,,2842.8,Washington,39.5,0.299,271
+Sabey Ashburn Building B,39.0144996,-77.4799874,,Sabey Data Centers,VA,,SRVC,630.0,7.6,,,,,,,,2813.2,Washington,39.8,0.299,271
+Sabey Ashburn Building C,39.0154219,-77.4782699,,Sabey Data Centers,VA,,SRVC,630.0,7.6,,,,,,,,2825.2,Washington,39.7,0.299,271
+Vantage VA3,39.0775071,-77.5052057,,Vantage Data Centers,VA,,SRVC,630.0,7.6,,,,,,,,2392.8,Washington,44.3,0.296,266
+Visa Operations Center East,39.0487658,-77.4453971,,Visa,VA,,SRVC,630.0,7.6,,,,,,,,2978.8,Washington,38.3,0.298,272
+Digital Realty VA4,38.7779794,-77.5949629,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2122.7,Washington,50.3,0.311,140
+Google Mango Farm Building 1,38.7761446,-77.5825144,,Google,VA,,SRVC,630.0,7.6,,,,,,,,2181.8,Washington,49.3,0.311,140
+Google Mango Farm Building 3,38.7793049,-77.5863352,,Google,VA,,SRVC,630.0,7.6,,,,,,,,2168.2,Washington,49.5,0.311,140
+AWS,38.9149908,-77.4909743,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2895.2,Washington,39.0,0.304,350
+Amazon IAD-1,38.8978637,-77.4540825,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3287.0,Washington,35.9,0.305,349
+Amazon IAD-134,38.9043442,-77.4524692,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3309.2,Washington,35.7,0.305,349
+Amazon IAD-135,38.9048369,-77.4547504,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3282.1,Washington,35.9,0.305,349
+Amazon IAD-150,38.9160727,-77.4772491,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3032.3,Washington,37.8,0.304,349
+Amazon IAD-151,38.9161469,-77.4786956,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3017.3,Washington,38.0,0.304,349
+Amazon IAD-152,38.9165716,-77.479733,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3006.6,Washington,38.1,0.304,349
+Amazon IAD-155,38.9159035,-77.4905509,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2899.1,Washington,39.0,0.304,350
+Amazon IAD-156,38.9213052,-77.4858007,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2944.0,Washington,38.6,0.304,349
+Amazon IAD-22,38.8979047,-77.4551032,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3274.9,Washington,35.9,0.305,349
+Amazon IAD-61,38.9158051,-77.4919869,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2885.3,Washington,39.1,0.304,350
+Amazon IAD-63,38.9168847,-77.4932514,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2873.0,Washington,39.2,0.304,350
+Amazon IAD-65,38.9170108,-77.4943665,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2862.4,Washington,39.3,0.304,350
+Amazon IAD-86,38.9172562,-77.4956744,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2850.1,Washington,39.4,0.304,350
+Amazon IAD-9,38.8997236,-77.4534439,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3295.6,Washington,35.8,0.305,349
+Digital Realty IAD30,38.9101164,-77.4725921,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,3081.9,Washington,37.4,0.304,349
+H5 IAD31,38.9092366,-77.4722656,,,VA,,SRVC,630.0,7.6,,,,,,,,3085.4,Washington,37.4,0.305,349
+H5 IAD32,38.9097961,-77.4734544,,,VA,,SRVC,630.0,7.6,,,,,,,,3072.7,Washington,37.5,0.305,349
+Equinix CU2,38.4548439,-77.9781318,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,945.9,Washington,95.9,0.327,0
+Amazon IAD-163,39.0323054,-77.4297021,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3222.8,Washington,36.3,0.298,272
+Amazon IAD-164,39.0304712,-77.4289455,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3241.0,Washington,36.2,0.298,272
+Amazon IAD-174,39.0289143,-77.4274784,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3265.5,Washington,36.0,0.299,272
+Centersquare IAD3,38.9809293,-77.4443786,,Centersquare,VA,,SRVC,630.0,7.6,,,,,,,,3288.0,Washington,35.8,0.301,301
+VeriSign Incorporated,38.9977791,-77.4438607,,,VA,,SRVC,630.0,7.6,,,,,,,,3232.2,Washington,36.3,0.3,283
+Amazon IAD-195,38.8028836,-77.6221217,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2030.5,Washington,51.8,0.31,140
+Amazon IAD-196,38.801862,-77.621212,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2033.4,Washington,51.7,0.31,140
+Amazon IAD-197,38.8012504,-77.6204762,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2036.1,Washington,51.7,0.31,140
+Amazon IAD-198,38.7999149,-77.6200436,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2036.4,Washington,51.7,0.31,140
+Microsoft Data Center 1,38.8023704,-77.5823062,,Microsoft,VA,,SRVC,630.0,7.6,,,,,,,,2229.9,Washington,48.5,0.31,213
+Microsoft Data Center 2,38.7999718,-77.5833485,,Microsoft,VA,,SRVC,630.0,7.6,,,,,,,,2220.3,Washington,48.6,0.31,203
+AWS,38.8145928,-77.6543195,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,1901.7,Washington,54.2,0.309,140
+Amazon IAD-55,38.815021,-77.64868,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,1925.8,Washington,53.7,0.309,140
+Amazon IAD-64,38.8151324,-77.6529193,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,1908.0,Washington,54.1,0.309,140
+Amazon IAD-84,38.8161031,-77.6524994,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,1910.7,Washington,54.0,0.309,140
+Amazon IAD-94,38.8169707,-77.6521528,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,1913.0,Washington,54.0,0.309,140
+,38.935591,-77.4267117,,,VA,,SRVC,630.0,7.6,,,,,,,,3627.7,Washington,33.6,0.303,347
+,38.9374816,-77.4258057,,,VA,,SRVC,630.0,7.6,,,,,,,,3637.4,Washington,33.5,0.303,347
+Amazon IAD-165,38.9227671,-77.4278721,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3625.6,Washington,33.6,0.304,349
+Amazon IAD-166,38.9211238,-77.4265432,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3645.4,Washington,33.5,0.304,349
+Amazon IAD-167,38.9227105,-77.4263036,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3647.8,Washington,33.5,0.304,349
+Amazon IAD-168,38.9231403,-77.4249774,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3666.3,Washington,33.3,0.304,349
+Amazon IAD-500,38.9364643,-77.4246803,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3654.9,Washington,33.4,0.303,347
+Equinix DC97,38.9615728,-77.3774178,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,4351.0,Washington,29.7,0.302,286
+,39.050601,-77.5400225,,,VA,,SRVC,630.0,7.6,,,,,,,,2264.9,Washington,46.0,0.297,266
+42254 THUNDERBALL DR,39.0434964,-77.5408399,,True North Data Solutions,VA,,SRVC,630.0,7.6,,,,,,,,2279.3,Washington,45.8,0.298,266
+42255 THUNDERBALL DR,39.0416534,-77.539212,,True North Data Solutions,VA,,SRVC,630.0,7.6,,,,,,,,2294.3,Washington,45.6,0.298,266
+42310 THUNDERBALL DR,39.0441027,-77.5397106,,True North Data Solutions,VA,,SRVC,630.0,7.6,,,,,,,,2284.6,Washington,45.7,0.298,266
+42311 THUNDERBALL DR,39.0425196,-77.5382898,,True North Data Solutions,VA,,SRVC,630.0,7.6,,,,,,,,2297.6,Washington,45.5,0.298,266
+AWS,39.0540969,-77.545995,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2220.1,Washington,46.6,0.297,266
+Amazon IAD-668,39.0559766,-77.5473343,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2207.2,Washington,46.8,0.297,266
+Amazon IAD-669,39.0552634,-77.5447851,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2223.9,Washington,46.5,0.297,266
+Compass IAD IE,39.0442544,-77.5379583,,Compass Datacenters,VA,,SRVC,630.0,7.6,,,,,,,,2295.0,Washington,45.6,0.298,266
+Google Leesburg Building 1,39.0526328,-77.5395732,,Google,VA,,SRVC,630.0,7.6,,,,,,,,2261.9,Washington,46.0,0.297,266
+Google Leesburg Building 3,39.0510366,-77.534801,,,VA,,SRVC,630.0,7.6,,,,,,,,2295.4,Washington,45.6,0.297,266
+Microsoft Leesburg Building 1,39.0747869,-77.564129,,Microsoft,VA,,SRVC,630.0,7.6,,,,,,,,2066.2,Washington,48.9,0.296,266
+Microsoft Leesburg Building 2,39.0755079,-77.5630354,,Microsoft,VA,,SRVC,630.0,7.6,,,,,,,,2069.9,Washington,48.8,0.296,266
+Microsoft Leesburg Building 3,39.0696487,-77.5607711,,,VA,,SRVC,630.0,7.6,,,,,,,,2097.1,Washington,48.4,0.297,266
+Microsoft Leesburg Building 4,39.069656,-77.5594332,,,VA,,SRVC,630.0,7.6,,,,,,,,2104.1,Washington,48.3,0.297,266
+Microsoft Leesburg Building 5,39.0660153,-77.5585694,,,VA,,SRVC,630.0,7.6,,,,,,,,2118.3,Washington,48.1,0.297,266
+Stonewall Creek Business Park,39.051467,-77.5394376,,Google,VA,,SRVC,630.0,7.6,,,,,,,,2266.0,Washington,45.9,0.297,266
+,38.8048453,-77.5124065,,,VA,,SRVC,630.0,7.6,,,,,,,,2681.3,Washington,42.5,0.31,294
+AWS,38.7430518,-77.5333746,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2367.3,Washington,46.6,0.313,137
+AWS,38.7442865,-77.5333323,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2371.3,Washington,46.5,0.313,137
+AWS,38.7461526,-77.5172227,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2472.4,Washington,45.2,0.313,137
+AWS,38.745134,-77.5331012,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2375.1,Washington,46.5,0.313,137
+Amazon IAD-100,38.7345976,-77.5066419,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2497.2,Washington,44.9,0.313,135
+Amazon IAD-101,38.7354375,-77.5057008,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2506.1,Washington,44.8,0.313,135
+Amazon IAD-102,38.7359728,-77.5048957,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2513.0,Washington,44.7,0.313,135
+Amazon IAD-103,38.7369848,-77.5040881,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2521.7,Washington,44.6,0.313,136
+Amazon IAD-105,38.7475999,-77.51948,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2463.3,Washington,45.3,0.313,137
+Amazon IAD-11,38.7904948,-77.5411095,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2448.5,Washington,45.4,0.31,219
+Amazon IAD-130,38.7603606,-77.5193019,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2505.0,Washington,44.7,0.312,139
+Amazon IAD-131,38.7611048,-77.518221,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2514.2,Washington,44.6,0.312,140
+Amazon IAD-132,38.7438863,-77.5306249,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2385.6,Washington,46.3,0.313,137
+Amazon IAD-133,38.7440549,-77.5291961,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2394.4,Washington,46.2,0.313,137
+Amazon IAD-14,38.7898846,-77.5482287,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2402.8,Washington,46.0,0.311,213
+Amazon IAD-24,38.7903463,-77.5400098,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2455.1,Washington,45.3,0.31,220
+Amazon IAD-52,38.7911185,-77.5483863,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2404.5,Washington,46.0,0.31,218
+Amazon IAD-59,38.7921874,-77.5484673,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2406.4,Washington,45.9,0.31,220
+Amazon IAD-7,38.7911993,-77.5382664,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2468.2,Washington,45.1,0.31,225
+Amazon IAD-73,38.7779795,-77.5590992,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2312.1,Washington,47.3,0.311,142
+Amazon IAD-74,38.7774374,-77.5578909,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2317.7,Washington,47.2,0.311,142
+Amazon IAD-75,38.7793815,-77.5417245,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2417.9,Washington,45.8,0.311,168
+Amazon IAD-85,38.7793425,-77.542896,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2410.6,Washington,45.9,0.311,166
+Amazon IAD-95,38.7784509,-77.539427,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2429.7,Washington,45.7,0.311,166
+Amazon IAD-96,38.7801515,-77.5398838,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2431.1,Washington,45.6,0.311,176
+Amazon IAD601,38.7788593,-77.5571158,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2325.4,Washington,47.1,0.311,142
+COPT DC-6,38.7473099,-77.5318265,,,VA,,SRVC,630.0,7.6,,,,,,,,2389.0,Washington,46.3,0.313,137
+CloudHQ MCC1,38.7170622,-77.4999396,,CloudHQ,VA,,SRVC,630.0,7.6,,,,,,,,2471.7,Washington,45.3,0.314,104
+CloudHQ MCC2,38.7231919,-77.4989708,,CloudHQ,VA,,SRVC,630.0,7.6,,,,,,,,2501.2,Washington,44.9,0.314,112
+CloudHQ MCC3,38.7150171,-77.4951199,,CloudHQ,VA,,SRVC,630.0,7.6,,,,,,,,2492.0,Washington,45.0,0.314,104
+Equinix DC14,38.8034341,-77.5105821,,,VA,,SRVC,630.0,7.6,,,,,,,,2691.2,Washington,42.4,0.31,290
+Equinix DC14,38.8033786,-77.5105458,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,2691.4,Washington,42.4,0.31,290
+Iron Mountain VA-1,38.777963,-77.5471012,,Iron Mountain,VA,,SRVC,630.0,7.6,,,,,,,,2381.9,Washington,46.3,0.311,152
+Iron Mountain VA-2,38.7772373,-77.5459965,,Iron Mountain,VA,,SRVC,630.0,7.6,,,,,,,,2386.7,Washington,46.2,0.311,150
+Iron Mountain VA-3,38.7755471,-77.5451498,,Iron Mountain,VA,,SRVC,630.0,7.6,,,,,,,,2387.6,Washington,46.2,0.311,144
+Iron Mountain VA-4,38.7744146,-77.54223,,Iron Mountain,VA,,SRVC,630.0,7.6,,,,,,,,2402.3,Washington,46.0,0.311,144
+Iron Mountain VA-5,38.773028,-77.5411854,,Iron Mountain,VA,,SRVC,630.0,7.6,,,,,,,,2405.1,Washington,46.0,0.311,142
+Iron Mountain VA-6,38.7681429,-77.5386481,,Iron Mountain,VA,,SRVC,630.0,7.6,,,,,,,,2407.6,Washington,46.0,0.312,139
+QTS Manassas DC1,38.7525433,-77.513108,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,2519.3,Washington,44.6,0.312,138
+QTS Manassas DC2,38.7525454,-77.5124598,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,2523.4,Washington,44.5,0.312,138
+QTS Manassas DC3,38.7531664,-77.5108824,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,2535.6,Washington,44.4,0.312,138
+STACK,38.7459908,-77.5375488,,Stack Infrastructure,VA,,SRVC,630.0,7.6,,,,,,,,2352.3,Washington,46.8,0.313,137
+STACK NVA05A,38.7589306,-77.5166938,,,VA,,SRVC,630.0,7.6,,,,,,,,2517.2,Washington,44.6,0.312,139
+DataBank IAD2,38.9199052,-77.213585,,DataBank,VA,,SRVC,630.0,7.6,,,,,,,,12077.4,Washington,15.1,0.304,216
+Lumen McLean,38.9208538,-77.2115713,,Lumen Technologies,VA,,SRVC,630.0,7.6,,,,,,,,12279.4,Washington,14.9,0.304,207
+Lumen McLean 1,38.9200207,-77.2116187,,Lumen Technologies,VA,,SRVC,630.0,7.6,,,,,,,,12283.2,Washington,14.9,0.304,205
+Middletown Data Center,39.0176781,-78.2909424,,,VA,,SRVC,630.0,7.6,,,,,,,,621.8,Washington,108.8,0.299,0
+CoreSite VA1,38.9506059,-77.3645496,,CoreSite,VA,,SRVC,630.0,7.6,,,,,,,,4654.7,Washington,28.4,0.302,294
+CoreSite VA2,38.9514551,-77.363999,,CoreSite,VA,,SRVC,630.0,7.6,,,,,,,,4662.5,Washington,28.4,0.302,289
+CoreSite VA3,38.9483343,-77.3724298,,CoreSite,VA,,SRVC,630.0,7.6,,,,,,,,4502.9,Washington,29.1,0.303,309
+Digital Realty VA3,38.9484845,-77.3272138,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,5575.5,Washington,25.2,0.303,274
+Evocative IAD1,38.9488037,-77.3294224,,Evocative,VA,,SRVC,630.0,7.6,,,,,,,,5511.7,Washington,25.4,0.303,274
+Flexential - Richmond,37.6468902,-77.4386952,,Flexential,VA,,SRVC,630.0,7.6,,,,,,,,6028.7,Richmond,11.9,0.368,15
+DC4,37.4839184,-77.2478145,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,3002.0,Richmond,18.1,0.376,23
+DC5,37.4847788,-77.2491092,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,3037.3,Richmond,17.9,0.376,23
+DC6,37.4852894,-77.2501822,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,3065.0,Richmond,17.8,0.376,23
+RIC2 DC1,37.4881735,-77.2400618,,,VA,,SRVC,630.0,7.6,,,,,,,,2883.7,Richmond,18.6,0.376,23
+RIC2 DC2,37.4870918,-77.2409826,,,VA,,SRVC,630.0,7.6,,,,,,,,2892.9,Richmond,18.5,0.376,23
+RIC2 DC3,37.4860655,-77.2418909,,,VA,,SRVC,630.0,7.6,,,,,,,,2902.1,Richmond,18.5,0.376,23
+RIC2 DC5,37.4848483,-77.2429836,,,VA,,SRVC,630.0,7.6,,,,,,,,2913.0,Richmond,18.4,0.376,23
+RIC2 DC6,37.4839006,-77.2437642,,,VA,,SRVC,630.0,7.6,,,,,,,,2920.0,Richmond,18.4,0.376,23
+RIC3 DC1,37.4805039,-77.2516217,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,3046.7,Richmond,17.9,0.376,23
+RIC3 DC2,37.4797266,-77.2522103,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,3050.8,Richmond,17.9,0.376,23
+RIC3 DC3,37.4785097,-77.2529958,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,3054.1,Richmond,17.9,0.376,23
+RIC3 DC4,37.4779175,-77.2489773,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,2965.7,Richmond,18.2,0.376,22
+RIC3 DC5,37.4770151,-77.2496926,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,2970.6,Richmond,18.2,0.376,22
+Amazon DCA-64,38.7419821,-77.1861732,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,6728.3,Washington,22.6,0.313,10
+AWS,38.9465392,-77.5221879,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2601.4,Washington,41.9,0.303,341
+AWS,38.9491488,-77.5235942,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2587.6,Washington,42.1,0.303,340
+AWS,38.9473737,-77.5202381,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2616.3,Washington,41.7,0.303,341
+Aligned IAD-03,38.9884665,-77.4409278,,Aligned,VA,,SRVC,630.0,7.6,,,,,,,,3301.4,Washington,35.8,0.301,288
+Amazon IAD-10,39.0216753,-77.4329728,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3243.9,Washington,36.2,0.299,272
+Amazon IAD-116,39.0243461,-77.4204393,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3370.4,Washington,35.3,0.299,272
+Amazon IAD-117,39.0236982,-77.4190947,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3389.7,Washington,35.1,0.299,272
+Amazon IAD-118,39.0185086,-77.4388362,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3196.2,Washington,36.5,0.299,275
+Amazon IAD-119,39.0169314,-77.4393886,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3197.7,Washington,36.5,0.299,275
+Amazon IAD-12,38.988724,-77.447671,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3223.7,Washington,36.3,0.301,290
+Amazon IAD-120,38.9579165,-77.4980579,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2792.2,Washington,40.0,0.302,344
+Amazon IAD-121,38.9567768,-77.4977837,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2796.4,Washington,39.9,0.302,344
+Amazon IAD-122,38.9558707,-77.4971865,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2803.1,Washington,39.9,0.302,344
+Amazon IAD-128,39.0229636,-77.4167126,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3422.0,Washington,34.9,0.299,272
+Amazon IAD-129,39.0160803,-77.4383818,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3212.6,Washington,36.4,0.299,275
+Amazon IAD-140,38.9814552,-77.4175501,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3623.0,Washington,33.6,0.301,288
+Amazon IAD-141,38.9823877,-77.4167858,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3629.4,Washington,33.6,0.301,285
+Amazon IAD-142,38.979147,-77.419905,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3600.6,Washington,33.7,0.301,291
+Amazon IAD-143,38.9795634,-77.4174915,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3631.7,Washington,33.6,0.301,288
+Amazon IAD-144,38.981635,-77.4274289,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3492.0,Washington,34.4,0.301,291
+Amazon IAD-145,38.9825519,-77.4246299,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3524.5,Washington,34.2,0.301,288
+Amazon IAD-146,38.9967211,-77.4355972,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3330.8,Washington,35.5,0.3,282
+Amazon IAD-147,38.9950101,-77.4353604,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3340.8,Washington,35.5,0.3,283
+Amazon IAD-15,38.991708,-77.4485641,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3203.1,Washington,36.5,0.3,288
+Amazon IAD-16,38.9906864,-77.4488397,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3203.7,Washington,36.5,0.3,288
+Amazon IAD-175,38.9798678,-77.425476,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3524.0,Washington,34.2,0.301,293
+Amazon IAD-192,38.98956,-77.4348017,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3369.5,Washington,35.3,0.301,285
+Amazon IAD-214,38.9865317,-77.4351775,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3376.8,Washington,35.2,0.301,288
+Amazon IAD-230,38.989461,-77.4497423,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3198.1,Washington,36.5,0.301,290
+Amazon IAD-285,38.9991321,-77.4607873,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3047.5,Washington,37.7,0.3,284
+Amazon IAD-286,39.0004483,-77.4607956,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3042.8,Washington,37.8,0.3,284
+Amazon IAD-32,39.0215693,-77.4347944,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3224.7,Washington,36.3,0.299,272
+Amazon IAD-51,38.9914123,-77.4365107,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3341.8,Washington,35.5,0.3,284
+Amazon IAD-56,38.9905701,-77.4370586,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3338.7,Washington,35.5,0.3,284
+Amazon IAD-57,38.9869931,-77.4426325,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3287.1,Washington,35.9,0.301,291
+Amazon IAD-58,38.9863003,-77.4418855,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3298.3,Washington,35.8,0.301,292
+Amazon IAD-601,39.0152596,-77.4377755,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3223.1,Washington,36.3,0.299,275
+Amazon IAD-603,38.9815474,-77.4193688,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3598.0,Washington,33.8,0.301,288
+Amazon IAD-608,38.9835278,-77.4175076,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3614.7,Washington,33.7,0.301,285
+Amazon IAD-62,38.9493217,-77.5198747,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2617.2,Washington,41.7,0.303,340
+Amazon IAD-68,38.9486869,-77.5209516,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2609.2,Washington,41.8,0.303,340
+Amazon IAD-76,38.9937936,-77.450509,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3174.3,Washington,36.7,0.3,285
+Amazon IAD-81,38.9483877,-77.5218303,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2602.4,Washington,41.9,0.303,340
+Amazon IAD-83,38.9479489,-77.5230989,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,2592.7,Washington,42.0,0.303,340
+Amazon IAD-88,38.9918083,-77.441172,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3286.0,Washington,35.9,0.3,284
+Amazon IAD-89,38.9909679,-77.4418679,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3281.2,Washington,35.9,0.3,285
+Amazon IAD-90,38.9886031,-77.4116516,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3671.6,Washington,33.3,0.301,281
+Amazon IAD-91,38.9878471,-77.4111191,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3682.6,Washington,33.2,0.301,281
+Amazon IAD-92,38.9869426,-77.4104754,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3695.9,Washington,33.2,0.301,282
+Amazon IAD-98,39.0202249,-77.4338857,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3241.3,Washington,36.2,0.299,273
+Amazon IAD-99,39.0191689,-77.4340299,,Amazon Web Services,VA,,SRVC,630.0,7.6,,,,,,,,3245.0,Washington,36.2,0.299,275
+Centersquare IAD1-A,39.0232978,-77.4132123,,Centersquare,VA,,SRVC,630.0,7.6,,,,,,,,3461.9,Washington,34.6,0.299,272
+Centersquare IAD1-B,39.0238679,-77.4152091,,Centersquare,VA,,SRVC,630.0,7.6,,,,,,,,3434.5,Washington,34.8,0.299,272
+Centersquare IAD1-C,39.024754,-77.4122043,,Centersquare,VA,,SRVC,630.0,7.6,,,,,,,,3465.2,Washington,34.6,0.299,272
+Centersquare IAD2-A,38.9844198,-77.4238096,,Centersquare,VA,,SRVC,630.0,7.6,,,,,,,,3527.5,Washington,34.2,0.301,287
+Centersquare IAD2-B,38.9836138,-77.4240848,,Centersquare,VA,,SRVC,630.0,7.6,,,,,,,,3527.2,Washington,34.2,0.301,288
+CyrusOne NVA1/NVA2/NVA3,39.0259023,-77.4144697,,CyrusOne,VA,,SRVC,630.0,7.6,,,,,,,,3431.1,Washington,34.8,0.299,272
+CyrusOne NVA4,38.9848664,-77.4256702,,CyrusOne,VA,,SRVC,630.0,7.6,,,,,,,,3501.7,Washington,34.4,0.301,287
+CyrusOne NVA5,39.024356,-77.4341,,CyrusOne,VA,,SRVC,630.0,7.6,,,,,,,,3218.0,Washington,36.4,0.299,272
+CyrusOne NVA7,39.0263152,-77.4340194,,CyrusOne,VA,,SRVC,630.0,7.6,,,,,,,,3208.7,Washington,36.4,0.299,272
+CyrusOne NVA8,39.0211789,-77.4132443,,CyrusOne,VA,,SRVC,630.0,7.6,,,,,,,,3474.2,Washington,34.6,0.299,272
+CyrusOne Sterling IX,38.9583294,-77.50573,,CyrusOne,VA,,SRVC,630.0,7.6,,,,,,,,2724.1,Washington,40.6,0.302,342
+Digital Realty IAD42,39.0056891,-77.4494637,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,3139.7,Washington,37.0,0.3,275
+Digital Realty IAD43,39.0018258,-77.4527034,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,3120.9,Washington,37.1,0.3,283
+Digital Realty IAD44,38.9608537,-77.4913983,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2848.2,Washington,39.5,0.302,343
+Digital Realty IAD45,38.9626248,-77.4900109,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,2858.0,Washington,39.4,0.302,340
+Digital Realty IAD55,38.9921869,-77.4339379,,Digital Realty,VA,,SRVC,630.0,7.6,,,,,,,,3369.3,Washington,35.3,0.3,284
+EdgeCore AS01,39.0217895,-77.4147034,,EdgeCore,VA,,SRVC,630.0,7.6,,,,,,,,3452.9,Washington,34.7,0.299,272
+Google Arcola Building 1,38.9432045,-77.5243301,,Google,VA,,SRVC,630.0,7.6,,,,,,,,2587.4,Washington,42.1,0.303,341
+Google Arcola Building 2,38.9418116,-77.5274514,,Google,VA,,SRVC,630.0,7.6,,,,,,,,2563.9,Washington,42.3,0.303,341
+PowerHouse Pacific Building 2,39.0034856,-77.4485787,,,VA,,SRVC,630.0,7.6,,,,,,,,3158.0,Washington,36.8,0.3,277
+PowerHouse Pacific Building 3,39.0035927,-77.4467729,,,VA,,SRVC,630.0,7.6,,,,,,,,3176.9,Washington,36.7,0.3,276
+QTS Ashburn 1 DC1,38.9995277,-77.4501109,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,3157.1,Washington,36.8,0.3,283
+QTS Ashburn 1 DC2,38.998138,-77.4489928,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,3174.5,Washington,36.7,0.3,284
+QTS Ashburn 2 DC1,38.9953067,-77.455264,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,3118.0,Washington,37.1,0.3,284
+QTS Ashburn 2 DC2,38.9951808,-77.4568191,,Quality Technology Services,VA,,SRVC,630.0,7.6,,,,,,,,3102.1,Washington,37.3,0.3,285
+STACK NVA01A,39.0046933,-77.4417399,,Stack Infrastructure,VA,,SRVC,630.0,7.6,,,,,,,,3227.2,Washington,36.3,0.3,275
+Sentinel Ashburn - Building 1,38.9959832,-77.4597423,,Sentinel Data Centers,VA,,SRVC,630.0,7.6,,,,,,,,3069.1,Washington,37.5,0.3,285
+Sentinel Ashburn - Building 2,38.9950971,-77.4619617,,Sentinel Data Centers,VA,,SRVC,630.0,7.6,,,,,,,,3049.5,Washington,37.7,0.3,287
+Sentinel Cloud Plaza,39.0006465,-77.4398077,,GI Partners,VA,,SRVC,630.0,7.6,,,,,,,,3265.9,Washington,36.0,0.3,278
+Vantage VA11,39.0023794,-77.4376878,,Vantage Data Centers,VA,,SRVC,630.0,7.6,,,,,,,,3282.6,Washington,35.9,0.3,275
+Vantage VA12,39.001791,-77.438057,,Vantage Data Centers,VA,,SRVC,630.0,7.6,,,,,,,,3280.9,Washington,35.9,0.3,276
+Vantage VA13,39.0032126,-77.440175,,Vantage Data Centers,VA,,SRVC,630.0,7.6,,,,,,,,3250.9,Washington,36.1,0.3,275
+Vantage VA14,39.0028892,-77.4393845,,Vantage Data Centers,VA,,SRVC,630.0,7.6,,,,,,,,3261.2,Washington,36.0,0.3,275
+Vantage VA15,39.0007125,-77.4366571,,Vantage Data Centers,VA,,SRVC,630.0,7.6,,,,,,,,3301.5,Washington,35.8,0.3,276
+Vantage VA16,38.9993359,-77.4418377,,Vantage Data Centers,VA,,SRVC,630.0,7.6,,,,,,,,3248.5,Washington,36.1,0.3,281
+Vantage VA2,38.997949,-77.4302306,,Vantage Data Centers,VA,,SRVC,630.0,7.6,,,,,,,,3389.2,Washington,35.1,0.3,278
+Equinix DC7,38.9091392,-77.2205568,,Equinix,VA,,SRVC,630.0,7.6,,,,,,,,11428.9,Washington,15.6,0.305,217
+,47.6933236,-122.3173172,,Comcast,WA,,NWPP,614.0,6.0,,,,,,,,26515.4,Seattle,9.3,0.0,17
+,47.2462099,-119.8132256,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,193.6,0.0,32
+,47.2476702,-119.8130808,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,193.6,0.0,32
+,47.246168,-119.815756,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,193.4,0.0,32
+,47.2525738,-119.8196649,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,193.0,0.0,32
+,47.2467356,-119.8288659,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,192.4,0.0,32
+,47.2459914,-119.8297912,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,192.4,0.0,32
+,47.2459894,-119.8291703,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,192.4,0.0,32
+,47.2459893,-119.8281588,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,192.5,0.0,32
+,47.2460033,-119.8275415,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,192.5,0.0,32
+,47.2460663,-119.8286631,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,192.5,0.0,32
+,47.2388186,-119.8593592,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,190.4,0.0,32
+,47.2382623,-119.8593664,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,190.4,0.0,32
+,47.2376691,-119.8646264,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,190.0,0.0,32
+,47.2394877,-119.8594059,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,190.4,0.0,32
+,47.2385929,-119.864537,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,190.0,0.0,32
+,47.2475452,-119.8255073,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,192.7,0.0,32
+,47.2370973,-119.895155,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,187.8,0.0,32
+,47.3921494,-120.2174624,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,160.5,0.0,12
+,47.3917941,-120.2178774,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,160.5,0.0,12
+,47.3917569,-120.2175143,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,160.5,0.0,12
+,47.391759,-120.2169013,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,160.6,0.0,12
+,47.2448126,-119.8180948,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,193.3,0.0,32
+,47.2442897,-119.8148063,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,193.5,0.0,32
+,47.2436449,-119.8690512,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,189.5,0.0,32
+,47.2401708,-119.8632652,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,190.1,0.0,32
+4421.io,47.9587538,-122.1915603,,4421.io,WA,,NWPP,614.0,6.0,,,,,,,,2964.1,Seattle,40.1,0.0,3
+Actapio,47.4075084,-120.2140106,,Actapio,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,160.5,0.0,12
+CSSNW Bellingham,48.75726,-122.4805485,,CSS Communications,WA,,NWPP,614.0,6.0,,,,,,,,520.1,Seattle,128.1,0.0,0
+Centeris,47.1590698,-122.2795641,,,WA,,NWPP,614.0,6.0,,,,,,,,2113.6,Seattle,50.3,0.0,2
+Digital Fortress Lynnwood,47.8224039,-122.2896138,,,WA,,NWPP,614.0,6.0,,,,,,,,6486.7,Seattle,23.8,0.0,10
+Intergate Columbia,47.4080112,-120.1917998,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,162.2,0.0,12
+Intergate Columbia D,47.4075849,-120.1915785,,Sabey Data Centers,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,162.2,0.0,12
+Intergate Seattle East Building 1,47.4948597,-122.2881943,,Sabey Data Centers,WA,,NWPP,614.0,6.0,,,,,,,,15747.8,Seattle,13.2,0.0,14
+Iron Mountain,47.5946162,-117.5371477,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,359.3,0.0,1
+Microsoft,47.2394776,-119.8830092,,Microsoft,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,188.6,0.0,32
+Microsoft,47.2385754,-119.8830801,,Microsoft,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,188.7,0.0,32
+Microsoft,47.2394872,-119.88741,,Microsoft,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,188.3,0.0,32
+Microsoft,47.2376618,-119.8875314,,Microsoft,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,188.3,0.0,32
+Microsoft,47.2376316,-119.8832191,,Microsoft,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,188.7,0.0,32
+Microsoft,47.2367215,-119.8833349,,Microsoft,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,188.7,0.0,32
+Microsoft,47.2367372,-119.8874324,,Microsoft,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,188.4,0.0,32
+Microsoft,47.2385928,-119.8874148,,Microsoft,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,188.3,0.0,32
+Microsoft EAT02,47.416868,-120.2076878,,Microsoft,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,160.8,0.0,12
+Microsoft EAT04,47.4196379,-120.2138134,,Microsoft,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,160.3,0.0,12
+NTT Data Quincy,47.2435798,-119.8657481,,NTT,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,189.8,0.0,32
+Vantage WA11,47.2501646,-119.8144903,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,193.4,0.0,32
+Vantage WA12,47.2539697,-119.8136985,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,193.4,0.0,32
+Vantage WA13,47.2524814,-119.8136392,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,193.4,0.0,32
+,47.4072423,-120.213935,,,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,160.5,0.0,12
+Intergate Columbia A,47.4086205,-120.1893981,,Sabey Data Centers,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,162.3,0.0,12
+Intergate Columbia B,47.407164,-120.1875239,,Sabey Data Centers,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,162.5,0.0,12
+Microsoft EAT03,47.4183239,-120.20771,,Microsoft,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,160.8,0.0,12
+Centersquare Lynnwood SE1,47.841809,-122.3016653,,Centersquare,WA,,NWPP,614.0,6.0,,,,,,,,5730.2,Seattle,25.9,0.0,6
+Norma Beach Cable Landing Station,47.8646928,-122.2841532,,Unity Cable System,WA,,NWPP,614.0,6.0,,,,,,,,4946.4,Seattle,28.5,0.0,4
+Centeris SH1 Colocation,47.1608506,-122.2792463,,,WA,,NWPP,614.0,6.0,,,,,,,,2126.0,Seattle,50.1,0.0,2
+Centeris SH2 Build-to-Suit,47.1589163,-122.2798634,,,WA,,NWPP,614.0,6.0,,,,,,,,2112.7,Seattle,50.3,0.0,2
+CTI Biopharma,47.6177873,-122.356694,,,WA,,NWPP,614.0,6.0,,,,,,,,67410.7,Seattle,2.2,0.0,15
+Equinix SE3 Data Center,47.6144229,-122.3397427,,Equinix,WA,,NWPP,614.0,6.0,,,,,,,,67410.7,Seattle,0.9,0.0,15
+KOMO Plaza East,47.6192326,-122.3482873,,,WA,,NWPP,614.0,6.0,,,,,,,,67410.7,Seattle,1.7,0.0,16
+KOMO Plaza West,47.6189596,-122.3485259,,,WA,,NWPP,614.0,6.0,,,,,,,,67410.7,Seattle,1.7,0.0,15
+The Seattle Times,47.6189539,-122.3365314,,H5 Data Centers,WA,,NWPP,614.0,6.0,,,,,,,,67410.7,Seattle,1.1,0.0,16
+Westin Building,47.6143555,-122.3388637,,Digital Realty,WA,,NWPP,614.0,6.0,,,,,,,,67410.7,Seattle,0.8,0.0,15
+Lumen,47.6542257,-117.4200007,,Lumen Technologies,WA,,NWPP,614.0,6.0,,,,,,,,0.0,Seattle,367.9,0.0,2
+Intergate Seattle East Building 2,47.4950309,-122.2905696,,,WA,,NWPP,614.0,6.0,,,,,,,,15855.7,Seattle,13.1,0.0,14
+Intergate Seattle East Building 3,47.4934798,-122.2904647,,Sabey Data Centers,WA,,NWPP,614.0,6.0,,,,,,,,15552.7,Seattle,13.3,0.0,14
+Intergate Seattle East Building 4,47.4934032,-122.2888803,,Digital Realty,WA,,NWPP,614.0,6.0,,,,,,,,15490.9,Seattle,13.3,0.0,14
+Intergate Seattle East Building 5,47.491986,-122.2896655,,Sabey Data Centers,WA,,NWPP,614.0,6.0,,,,,,,,15250.0,Seattle,13.5,0.0,14
+Intergate Seattle West Building A,47.4921833,-122.2933176,,Sabey Data Centers,WA,,NWPP,614.0,6.0,,,,,,,,15387.6,Seattle,13.4,0.0,14
+Intergate Seattle West Building B,47.4930744,-122.2936837,,Sabey Data Centers,WA,,NWPP,614.0,6.0,,,,,,,,15566.3,Seattle,13.3,0.0,14
+Intergate Seattle West Building C,47.494123,-122.2943972,,Sabey Data Centers,WA,,NWPP,614.0,6.0,,,,,,,,15788.7,Seattle,13.2,0.0,14
+Morgan Wireless,39.6309851,-78.2253196,,,WV,,RFCW,1012.0,7.2,,,,,,,,477.5,Washington,129.8,0.268,0
+Alpha Federal,38.3531768,-81.6961822,,Alpha Innovations,WV,,RFCW,1012.0,7.2,,,,,,,,0.0,Columbus,210.6,0.332,0
+Expedient Milwaukee,42.8631424,-87.9778759,,,WI,,MROE,1310.0,7.9,,,,,,,,2242.9,Chicago,113.0,0.107,4
+,43.0672971,-89.436704,,,WI,,MROE,1310.0,7.9,,,,,,,,0.0,Chicago,198.5,0.097,1
+,44.8771653,-91.9199989,,West Wisconsin Telcom,WI,,MROE,1310.0,7.9,,,,,,,,388.7,Minneapolis,106.9,0.006,0
+Data Holdings Data Center,43.0439408,-87.9539794,,,WI,,MROE,1310.0,7.9,,,,,,,,1773.9,Chicago,132.1,0.098,3
+TierPoint Milwaukee,43.0097937,-87.9610932,,,WI,,MROE,1310.0,7.9,,,,,,,,1848.8,Chicago,128.5,0.1,3
+Pewaukee Data Center,43.0513735,-88.216698,,WE Energies,WI,,MROE,1310.0,7.9,,,,,,,,1646.4,Chicago,138.9,0.097,2
+,41.1262938,-104.9018528,,,WY,,RMPA,1112.0,7.0,,,,,,,,3499.9,Cheyenne,7.0,0.194,20
+,41.124033,-104.8980886,,,WY,,RMPA,1112.0,7.0,,,,,,,,3692.0,Cheyenne,6.8,0.194,20
+,41.1240368,-104.8992688,,,WY,,RMPA,1112.0,7.0,,,,,,,,3615.4,Cheyenne,6.9,0.194,20
+,41.1252836,-104.8992715,,,WY,,RMPA,1112.0,7.0,,,,,,,,3642.7,Cheyenne,6.8,0.194,20
+,41.1252868,-104.8980833,,,WY,,RMPA,1112.0,7.0,,,,,,,,3721.3,Cheyenne,6.7,0.194,20
+,41.1254028,-104.9075519,,,WY,,RMPA,1112.0,7.0,,,,,,,,3164.7,Cheyenne,7.5,0.194,20
+,41.1264379,-104.8995158,,,WY,,RMPA,1112.0,7.0,,,,,,,,3650.5,Cheyenne,6.8,0.194,20
+,41.125411,-104.9019777,,,WY,,RMPA,1112.0,7.0,,,,,,,,3475.9,Cheyenne,7.1,0.194,20
+,41.122266,-104.9081423,,,WY,,RMPA,1112.0,7.0,,,,,,,,3083.7,Cheyenne,7.6,0.194,20
+,41.1222462,-104.9095169,,,WY,,RMPA,1112.0,7.0,,,,,,,,3017.2,Cheyenne,7.8,0.194,20
+,41.141335,-104.7167599,,,WY,,RMPA,1112.0,7.0,,,,,,,,2561.7,Cheyenne,8.6,0.193,20
+,44.1892369,-105.6104802,,,WY,,RMPA,1112.0,7.0,,,,,,,,0.0,Cheyenne,345.2,0.041,0
+,41.1422965,-104.7176504,,,WY,,RMPA,1112.0,7.0,,,,,,,,2594.0,Cheyenne,8.6,0.193,20
+CYS41 Datacenter,41.1244025,-104.8970154,,Microsoft,WY,,RMPA,1112.0,7.0,,,,,,,,3773.1,Cheyenne,6.7,0.194,20
+CYS42 Datacenter,41.1253822,-104.9088889,,Microsoft,WY,,RMPA,1112.0,7.0,,,,,,,,3096.5,Cheyenne,7.6,0.194,20
+NCAR-Wyoming Supercomputing Center,41.1287467,-104.8974315,,University Corporation for Atmospheric Research,WY,,RMPA,1112.0,7.0,,,,,,,,3837.5,Cheyenne,6.6,0.194,20
+Windbreak Cable,41.1826012,-104.0684983,,,WY,,RMPA,1112.0,7.0,,,,,,,,130.0,Cheyenne,63.1,0.191,0

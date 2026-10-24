@@ -10,6 +10,8 @@ RUN npm install --omit=dev
 # Copy the rest of the app
 COPY server.js ./
 COPY facilities.json ./
+COPY layers.json ./
+COPY surfaces.json ./
 COPY public ./public
 
 ENV PORT=5173

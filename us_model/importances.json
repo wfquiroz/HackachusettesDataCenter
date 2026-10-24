@@ -1,0 +1,15 @@
+{
+  "source": "REAL US data",
+  "n_rows": 1839,
+  "target": "dc_density_25km",
+  "cv_mae": 8.9,
+  "cv_r2": 0.975,
+  "placebo_r2": -0.048,
+  "importances": {
+    "elec_price_cents_kwh": 0.457,
+    "cooling_proxy": 0.341,
+    "grid_co2_lb_mwh": 0.092,
+    "nearest_city_km": 0.089,
+    "pop_proxy": 0.021
+  }
+}
