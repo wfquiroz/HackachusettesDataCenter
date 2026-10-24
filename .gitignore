@@ -1,0 +1,15 @@
+# Kiro Crew local tooling — not part of the project
+.kiro/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets
+.env
+
+# Large raw data (keep cleaned CSVs, ignore bulky raw pulls)
+data/raw/*
+!data/raw/.gitkeep
