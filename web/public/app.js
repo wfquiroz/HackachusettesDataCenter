@@ -199,16 +199,20 @@ window.applyDataCenterBloom = function (lat, lng, frac) {
   if (!SURF) return;
   const { nx, ny, bbox } = SURF;
   const [lon0, lat0, lon1, lat1] = bbox;
-  // which surfaces a data center actually pushes on, and how hard
-  const push = { air_fossil: 1.6, energy_demand: 1.8, water_stress: 1.6, noise: 1.6, ej_burden: 0 };
+  // A data center's contribution: clearly VISIBLE growth over the years, but
+  // bounded so rural-west-plus-DC stays below a dense city's baseline.
+  // Peak add ~0.55 at full buildout (city baselines sit near 1.0).
+  const push = { air_fossil: 0.60, energy_demand: 0.65, water_stress: 0.55, noise: 0.50, ej_burden: 0 };
   // site position in grid coords
   const gx = ((lng - lon0) / (lon1 - lon0)) * (nx - 1);
   const gy = ((lat - lat0) / (lat1 - lat0)) * (ny - 1);
-  const sigma = 3 + 7 * frac;          // tighter, punchier bloom that widens as it ramps
+  // wider bloom + grows with ramp, so the footprint visibly spreads each year
+  const sigma = 5 + 9 * frac;
   SURF.surfaces.forEach((s) => {
     if (!surfBase[s.id]) surfBase[s.id] = s.grid.slice();
     const base = surfBase[s.id];
-    const amp = (push[s.id] ?? 0) * frac;
+    // a visible floor at year 1 (0.25) rising to full push by year 5
+    const amp = (push[s.id] ?? 0) * (0.4 + 0.6 * frac);
     const g = base.slice();
     if (amp > 0) {
       for (let y = 0; y < ny; y++) {
@@ -222,9 +226,38 @@ window.applyDataCenterBloom = function (lat, lng, frac) {
     }
     s.grid = g;
     if (surfOn[s.id] && surfOverlays[s.id]) {
-      surfOverlays[s.id].setUrl(surfaceDataUrl(s));
+      const ov = surfOverlays[s.id];
+      ov.setUrl(surfaceDataUrl(s));
+      // soft "breathe" each repaint so the year change reads as motion
+      const el = ov.getElement && ov.getElement();
+      if (el) {
+        el.style.transition = "opacity .25s ease";
+        el.style.opacity = "0.45";
+        setTimeout(() => { el.style.opacity = "0.82"; }, 120);
+      }
     }
   });
+  // a pulse ring at the site marks that a new year landed (visual tick)
+  if (window._yearPulse) window._yearPulse(lat, lng);
+};
+
+// a brief expanding pulse ring at the site — the "a new year landed" cue
+let _pulseEl = null;
+window._yearPulse = function (lat, lng) {
+  try {
+    if (_pulseEl) { map.removeLayer(_pulseEl); _pulseEl = null; }
+    const ring = L.circleMarker([lat, lng], {
+      radius: 8, color: "#2EF2C4", weight: 2, fill: false, className: "year-pulse",
+    }).addTo(map);
+    _pulseEl = ring;
+    let r = 8;
+    const grow = setInterval(() => {
+      r += 6; ring.setRadius(r);
+      const el = ring.getElement && ring.getElement();
+      if (el) el.style.opacity = String(Math.max(0, 1 - r / 60));
+      if (r > 60) { clearInterval(grow); if (ring === _pulseEl) { map.removeLayer(ring); _pulseEl = null; } }
+    }, 40);
+  } catch (e) {}
 };
 
 // Reset surfaces to their pristine state (remove any data-center bloom).
@@ -668,6 +701,7 @@ setTimeout(() => { try { if (window.lucide) lucide.createIcons(); } catch (e) {}
       if (dropMarker) { map.removeLayer(dropMarker); dropMarker = null; }
       clearRings();                                  // removes bloom + any rings
       lastData = null; lastPlayed = false;
+      window._factorBands = {};
       controls.style.display = "none";
       removeBtn.style.display = "none";
       if (readout) readout.innerHTML = "";
@@ -741,15 +775,26 @@ setTimeout(() => { try { if (window.lucide) lucide.createIcons(); } catch (e) {}
       };
       // severity color on OUR palette only (teal ok, amber watch, red high)
       const sev = (p) => p >= 66 ? "var(--bad)" : p >= 33 ? "var(--warn)" : "var(--clean)";
-      const F = (icon, label, fac, finFac) => {
+      const band = (p) => p >= 66 ? "bad" : p >= 33 ? "warn" : "clean";
+      const bandName = { clean: "Low", warn: "Medium", bad: "High" };
+      const bandRank = { clean: 0, warn: 1, bad: 2 };
+      window._factorBands = window._factorBands || {};
+      const F = (icon, label, key, fac, finFac) => {
         if (!fac) return "";
         const p = bar(fac.value, finFac ? finFac.value : fac.value);
         const c = sev(p);
-        const [num, ...rest] = String(fac.value.toLocaleString()).split(" ");
-        return `<div class="factor-card">
+        const b = band(p);
+        // did this factor cross into a WORSE band since the last render?
+        const prev = window._factorBands[key];
+        const crossedUp = prev !== undefined && bandRank[b] > bandRank[prev];
+        window._factorBands[key] = b;
+        const flashCls = crossedUp ? " factor-crossed crossed-" + b : "";
+        const chip = crossedUp
+          ? `<span class="cross-chip cross-${b}">→ ${bandName[b]}</span>` : "";
+        return `<div class="factor-card${flashCls}">
            <div class="factor-row">
              <span class="factor-ico">${icon}</span>
-             <span class="factor-name">${label}</span>
+             <span class="factor-name">${label}</span>${chip}
              <span class="factor-val"><b style="color:${c}">${fac.value.toLocaleString()}</b> <span class="factor-unit">${fac.unit}</span></span>
            </div>
            <div class="grow-bar"><div style="width:${Math.max(4,p)}%;background:${c}"></div></div>
@@ -763,10 +808,10 @@ setTimeout(() => { try { if (window.lucide) lucide.createIcons(); } catch (e) {}
         `<span class="meter-arrow">→</span><span class="meter-hourly">${y.hourly_match_pct}%<small>hourly</small></span></div>` +
         `<div class="meter-bar"><div class="meter-fill" style="width:${y.hourly_match_pct}%"></div></div></div>` +
         `<div class="factor-head">Impact by factor</div>` +
-        F("<span data-lucide=\"factory\"></span>", "Air · CO₂", f.air, fin.air) +
-        F("<span data-lucide=\"zap\"></span>", "Energy", f.energy, fin.energy) +
-        F("<span data-lucide=\"droplet\"></span>", "Water", f.water, fin.water) +
-        F("<span data-lucide=\"volume-2\"></span>", "Noise", f.noise, fin.noise) +
+        F("<span data-lucide=\"factory\"></span>", "Air · CO₂", "air", f.air, fin.air) +
+        F("<span data-lucide=\"zap\"></span>", "Energy", "energy", f.energy, fin.energy) +
+        F("<span data-lucide=\"droplet\"></span>", "Water", "water", f.water, fin.water) +
+        F("<span data-lucide=\"volume-2\"></span>", "Noise", "noise", f.noise, fin.noise) +
         `<div class="impact-stat" style="margin-top:8px"><span data-lucide="users"></span> <b>${r25.pop_within.toLocaleString()}</b> people within 25 km · ${r25.minority_pct}% minority</div>` +
         `<p class="muted" style="margin-top:6px">Predicted — shapes are real physics, coefficients modeled. Not measured.</p>`
       );
@@ -817,6 +862,7 @@ setTimeout(() => { try { if (window.lucide) lucide.createIcons(); } catch (e) {}
       const impBtn = document.querySelector('.tab-btn[data-tab="impact"]');
       if (impBtn) impBtn.click();
       playBtn.textContent = "Stop";
+      window._factorBands = {};   // reset so year 1 doesn't false-flash
       let i = 0;
       const step = () => {
         const y = data.years[i];

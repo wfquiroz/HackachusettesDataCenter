@@ -244,13 +244,16 @@ def four_factor_impact(res: MatchResult, cfg: dict, peak_mw: float,
     co2_proxy = res.hidden_co2_t_peaker_proxy
     superlinear = (co2_proxy - co2) / co2 * 100 if co2 > 0 else 0
 
-    # ENERGY: % of the LOCAL grid node (what actually strains a grid), not MW
+    # ENERGY: real electricity consumed per year (GWh), the concrete measure.
+    energy_gwh = mwh / 1000.0
     energy_pct = 100.0 * peak_mw / max(local_grid_mw, 1)
+    homes_equiv = round(mwh / 10.5)   # avg US home ~10.5 MWh/yr
 
-    # WATER: ~linear with energy, shown as % of town supply
+    # WATER: ~linear with energy, shown as M gal/day
     water_gal_yr = mwh * b["water_gal_per_mwh"]
     town_gal_yr = town_water_mgd * 1e6 * 365
     water_pct = 100.0 * water_gal_yr / max(town_gal_yr, 1)
+    water_mgd = water_gal_yr / 365 / 1e6
 
     # NOISE: logarithmic dB, audible radius grows ~sqrt(MW)
     noise_db = 55.0 + 10.0 * math.log10(max(peak_mw, 1) / 10.0)
@@ -259,16 +262,16 @@ def four_factor_impact(res: MatchResult, cfg: dict, peak_mw: float,
     return {
         "air": {"value": round(co2), "unit": "t CO\u2082/yr", "pct": 100,
                 "scaling": "super-linear (peak hours dirtier)",
-                "note": f"+{round(superlinear)}% worse at peak vs average"},
-        "energy": {"value": round(energy_pct, 1), "unit": "% of local grid",
-                   "pct": round(energy_pct, 1), "scaling": "% of local capacity",
-                   "note": f"{peak_mw:.0f} MW on a ~{local_grid_mw:.0f} MW node"},
-        "water": {"value": round(water_gal_yr / 1e6, 1), "unit": "M gal/yr",
-                  "pct": round(water_pct, 1), "scaling": "linear with energy",
-                  "note": f"{round(water_pct,1)}% of a {town_water_mgd:.0f} MGD town supply"},
+                "note": f"peak hours ~{round(superlinear)}% dirtier than average"},
+        "energy": {"value": round(energy_gwh), "unit": "GWh/yr",
+                   "pct": round(energy_pct, 1), "scaling": "electricity consumed",
+                   "note": f"\u2248 {homes_equiv:,} homes \u00b7 {round(energy_pct,1)}% of a local grid node"},
+        "water": {"value": round(water_mgd, 1), "unit": "M gal/day",
+                  "pct": round(water_pct, 1), "scaling": "cooling water",
+                  "note": f"{round(water_gal_yr/1e6):,} M gal/yr"},
         "noise": {"value": round(noise_db), "unit": "dB at source",
-                  "pct": round(noise_radius_m), "scaling": "logarithmic dB, radius \u221d \u221aMW",
-                  "note": f"~{round(noise_radius_m)} m audible radius"},
+                  "pct": round(noise_radius_m), "scaling": "logarithmic",
+                  "note": f"audible to ~{round(noise_radius_m):,} m"},
     }
 
 

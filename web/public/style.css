@@ -538,3 +538,25 @@ input[type="number"] { background: var(--panel); border: 1px solid var(--border)
   color: var(--bg); font-weight: 700; display: flex; align-items: center; justify-content: center;
   font-family: "IBM Plex Mono", monospace; font-size: 11px; flex: none; }
 .best-score { margin-left: auto; color: var(--clean); font-family: "IBM Plex Mono", monospace; }
+
+/* year-change motion cues */
+.year-pulse { pointer-events: none; transition: opacity .1s linear; }
+.year-badge { animation: yearpop .5s ease; }
+@keyframes yearpop { 0% { transform: scale(.85); opacity: .4; } 60% { transform: scale(1.06); } 100% { transform: scale(1); opacity: 1; } }
+.surf-overlay { transition: opacity .25s ease; }
+
+/* factor crossed into a worse severity band — outline flash + chip */
+.factor-crossed { animation: crossflash 1.4s ease; }
+@keyframes crossflash {
+  0%   { box-shadow: 0 0 0 0 transparent; }
+  25%  { box-shadow: 0 0 0 2px var(--flash, var(--warn)); }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+.factor-crossed.crossed-warn { --flash: var(--warn); border-color: var(--warn); }
+.factor-crossed.crossed-bad  { --flash: var(--bad);  border-color: var(--bad); }
+.cross-chip {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+  padding: 1px 6px; border-radius: 3px; margin-left: 6px;
+}
+.cross-chip.cross-warn { background: var(--warn); color: #1a1a1a; }
+.cross-chip.cross-bad  { background: var(--bad);  color: #fff; }
