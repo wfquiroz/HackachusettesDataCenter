@@ -560,3 +560,26 @@ input[type="number"] { background: var(--panel); border: 1px solid var(--border)
 }
 .cross-chip.cross-warn { background: var(--warn); color: #1a1a1a; }
 .cross-chip.cross-bad  { background: var(--bad);  color: #fff; }
+
+/* warning toast when a pin is dropped/dragged outside Massachusetts */
+.outside-ma-toast {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translate(-50%, -12px);
+  z-index: 1200;
+  background: rgba(228, 87, 46, .96);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 9px 16px;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.outside-ma-toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
