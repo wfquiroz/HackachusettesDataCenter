@@ -329,14 +329,21 @@ function surfaceDataUrl(surf) {
   cv.width = nx; cv.height = ny;
   const ctx = cv.getContext("2d");
   const img = ctx.createImageData(nx, ny);
+  // Edge feather: fade alpha to 0 toward the rectangle border so the overlay
+  // has no visible straight edge — it dissolves into the map instead.
+  const featherX = nx * 0.14, featherY = ny * 0.14;
   for (let y = 0; y < ny; y++) {
     for (let x = 0; x < nx; x++) {
       const v = surf.grid[(ny - 1 - y) * nx + x];
       const [r, g, b] = rampColor(surf.id, v);
       const i = (y * nx + x) * 4;
       img.data[i] = r; img.data[i + 1] = g; img.data[i + 2] = b;
+      // distance from nearest edge, normalized 0 (edge) .. 1 (interior)
+      const ex = Math.min(x, nx - 1 - x) / featherX;
+      const ey = Math.min(y, ny - 1 - y) / featherY;
+      const edge = Math.min(1, ex) * Math.min(1, ey);
       // steep alpha curve: low values stay faint, mid/high separate strongly
-      img.data[i + 3] = Math.round(Math.pow(v, 0.5) * 225);
+      img.data[i + 3] = Math.round(Math.pow(v, 0.5) * 225 * edge);
     }
   }
   ctx.putImageData(img, 0, 0);
@@ -352,7 +359,11 @@ function surfaceDataUrl(surf) {
 
 function buildSurface(surf) {
   const [lon0, lat0, lon1, lat1] = SURF.bbox;
-  const bounds = [[lat0, lon0], [lat1, lon1]];
+  // Bleed the overlay beyond the data bbox so the gradient's rectangular edge
+  // sits off-screen and the wash reaches the screen edges continuously.
+  const padLat = (lat1 - lat0) * 0.25;
+  const padLon = (lon1 - lon0) * 0.25;
+  const bounds = [[lat0 - padLat, lon0 - padLon], [lat1 + padLat, lon1 + padLon]];
   const ov = L.imageOverlay(surfaceDataUrl(surf), bounds, {
     opacity: 0, interactive: false, className: "surf-overlay",
   });
@@ -457,12 +468,58 @@ function wireCollapse() {
   });
 }
 
+// Draw the Massachusetts state boundary as an outline. Stays visible at all
+// zoom levels (it's vector, not tied to the gradient overlay).
+let stateOutline = null;
+async function drawStateOutline() {
+  try {
+    const res = await fetch("/ma_boundary.geojson");
+    const geo = await res.json();
+    stateOutline = L.geoJSON(geo, {
+      interactive: false,
+      style: {
+        color: "#eaf2ff",     // light border line
+        weight: 2,
+        opacity: 0.9,
+        fill: false,          // outline only, no fill tint
+        dashArray: "4 3",
+      },
+    }).addTo(map);
+    stateOutline.bringToFront();
+  } catch (e) {
+    console.warn("MA boundary unavailable", e);
+  }
+}
+
+// Lock the view to the gradient (surface) extent: fit it to fill the screen,
+// cap zoom-out at that fit, and stop panning into empty map around it.
+function lockViewToSurfaces() {
+  if (!SURF || !SURF.bbox) return;
+  const [lon0, lat0, lon1, lat1] = SURF.bbox;
+  const bounds = L.latLngBounds([lat0, lon0], [lat1, lon1]);
+
+  // Make sure Leaflet knows its real pixel size before measuring zoom.
+  map.invalidateSize();
+
+  // Zoom at which the whole data extent just fits the viewport. getBoundsZoom
+  // returns a fractional value; with the default zoomSnap of 1 that would still
+  // allow one level of zoom-out, so round UP to a hard integer floor.
+  const fitZoom = Math.ceil(map.getBoundsZoom(bounds, true));
+  map.setMinZoom(fitZoom);
+  map.setView(bounds.getCenter(), fitZoom, { animate: false });
+
+  // Can't pan into empty map around the region.
+  map.setMaxBounds(bounds);
+  map.options.maxBoundsViscosity = 1.0; // hard stop at the edges
+}
+
 async function loadLayers() {
   try {
     const res = await fetch("/api/surfaces");
     SURF = await res.json();
     buildLayerControl();
     wireCollapse();
+    lockViewToSurfaces();
   } catch (e) {
     console.warn("surfaces unavailable", e);
   }
@@ -486,6 +543,9 @@ async function init() {
   drawAllMarkers();
 
   await loadLayers();
+
+  // MA state outline, drawn above the gradient so the border stays crisp.
+  await drawStateOutline();
 
   map.on("click", (e) => selectLocation({ lat: e.latlng.lat, lng: e.latlng.lng }));
 
