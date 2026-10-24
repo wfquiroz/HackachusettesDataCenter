@@ -13,3 +13,10 @@ venv/
 # Large raw data (keep cleaned CSVs, ignore bulky raw pulls)
 data/raw/*
 !data/raw/.gitkeep
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store

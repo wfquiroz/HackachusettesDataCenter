@@ -1,0 +1,40 @@
+{
+  "note": "Emission values are illustrative estimates for the HourMatch demo (annual CO2e, metric tons). Town-level coordinates only. Replace with sourced data before publishing.",
+  "regions": [
+    { "id": "ma", "label": "Massachusetts", "center": { "lat": 42.2, "lng": -71.6 }, "zoom": 8 },
+    { "id": "west", "label": "West Coast", "center": { "lat": 40.5, "lng": -121.5 }, "zoom": 5 }
+  ],
+  "cities": [
+    { "name": "Lowell, MA", "region": "ma", "lat": 42.6334, "lng": -71.3162 },
+    { "name": "Westfield, MA", "region": "ma", "lat": 42.1251, "lng": -72.7495 },
+    { "name": "Boston, MA", "region": "ma", "lat": 42.3601, "lng": -71.0589 },
+    { "name": "Worcester, MA", "region": "ma", "lat": 42.2626, "lng": -71.8023 },
+    { "name": "Springfield, MA", "region": "ma", "lat": 42.1015, "lng": -72.5898 },
+    { "name": "San Jose, CA", "region": "west", "lat": 37.3382, "lng": -121.8863 },
+    { "name": "Los Angeles, CA", "region": "west", "lat": 34.0522, "lng": -118.2437 },
+    { "name": "Portland, OR", "region": "west", "lat": 45.5152, "lng": -122.6784 },
+    { "name": "Seattle, WA", "region": "west", "lat": 47.6062, "lng": -122.3321 },
+    { "name": "The Dalles, OR", "region": "west", "lat": 45.5946, "lng": -121.1787 }
+  ],
+  "facilities": [
+    { "name": "Markley Lowell Data Center", "type": "data_center", "city": "Lowell, MA", "lat": 42.6412, "lng": -71.3162, "emissions_tco2e": 48200, "status": "operating", "source": "Illustrative estimate", "source_url": "https://www.wbur.org/" },
+    { "name": "Westfield Data Center (proposed)", "type": "data_center", "city": "Westfield, MA", "lat": 42.1251, "lng": -72.7495, "emissions_tco2e": 310000, "status": "proposed", "source": "Illustrative estimate", "source_url": "https://www.bostonglobe.com/" },
+    { "name": "Mystic Generating (retired peaker site)", "type": "industry", "city": "Boston, MA", "lat": 42.3959, "lng": -71.0712, "emissions_tco2e": 95000, "status": "legacy", "source": "Illustrative estimate", "source_url": "https://campd.epa.gov" },
+    { "name": "Boston Logistics Park", "type": "industry", "city": "Boston, MA", "lat": 42.3656, "lng": -71.0096, "emissions_tco2e": 12400, "status": "operating", "source": "Illustrative estimate", "source_url": "" },
+    { "name": "Worcester Industrial Facility", "type": "industry", "city": "Worcester, MA", "lat": 42.2626, "lng": -71.8023, "emissions_tco2e": 27800, "status": "operating", "source": "Illustrative estimate", "source_url": "" },
+    { "name": "Springfield Energy Plant", "type": "industry", "city": "Springfield, MA", "lat": 42.1015, "lng": -72.5898, "emissions_tco2e": 164000, "status": "operating", "source": "Illustrative estimate", "source_url": "https://campd.epa.gov" },
+    { "name": "Santa Clara Data Center Cluster", "type": "data_center", "city": "San Jose, CA", "lat": 37.3541, "lng": -121.9552, "emissions_tco2e": 220000, "status": "operating", "source": "Illustrative estimate", "source_url": "" },
+    { "name": "San Jose Manufacturing", "type": "industry", "city": "San Jose, CA", "lat": 37.3382, "lng": -121.8863, "emissions_tco2e": 33500, "status": "operating", "source": "Illustrative estimate", "source_url": "" },
+    { "name": "LA Basin Refinery", "type": "industry", "city": "Los Angeles, CA", "lat": 33.8, "lng": -118.22, "emissions_tco2e": 540000, "status": "operating", "source": "Illustrative estimate", "source_url": "" },
+    { "name": "Downtown LA Data Center", "type": "data_center", "city": "Los Angeles, CA", "lat": 34.0407, "lng": -118.2468, "emissions_tco2e": 71000, "status": "operating", "source": "Illustrative estimate", "source_url": "" },
+    { "name": "Portland Data Center", "type": "data_center", "city": "Portland, OR", "lat": 45.5152, "lng": -122.6784, "emissions_tco2e": 9800, "status": "operating", "source": "Illustrative estimate", "source_url": "" },
+    { "name": "The Dalles Hyperscale Campus", "type": "data_center", "city": "The Dalles, OR", "lat": 45.5946, "lng": -121.1787, "emissions_tco2e": 15600, "status": "operating", "source": "Illustrative estimate", "source_url": "" },
+    { "name": "Seattle Data Center", "type": "data_center", "city": "Seattle, WA", "lat": 47.6062, "lng": -122.3321, "emissions_tco2e": 6400, "status": "operating", "source": "Illustrative estimate", "source_url": "" },
+    { "name": "Tacoma Industrial Port", "type": "industry", "city": "Seattle, WA", "lat": 47.26, "lng": -122.42, "emissions_tco2e": 128000, "status": "operating", "source": "Illustrative estimate", "source_url": "" }
+  ],
+  "thresholds": {
+    "note": "annual tCO2e cutoffs for the high/medium/low indicator",
+    "low_max": 50000,
+    "medium_max": 200000
+  }
+}

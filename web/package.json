@@ -1,0 +1,17 @@
+{
+  "name": "hourmatch-map",
+  "version": "1.0.0",
+  "description": "HourMatch emissions map — Leaflet + Express (no API key).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HourMatch — Emissions Map</title>
+
+  <!-- Leaflet (OpenStreetMap, no API key / no billing) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>HourMatch</h1>
+      <span class="tag">Data centers &amp; industry emissions</span>
+    </div>
+    <div class="controls">
+      <label for="region">Region</label>
+      <select id="region"></select>
+      <label for="city">Location</label>
+      <select id="city"></select>
+      <label for="radius">Radius: <span id="radiusLabel">50</span> km</label>
+      <input id="radius" type="range" min="5" max="300" step="5" value="50" />
+    </div>
+  </header>
+
+  <div class="layout">
+    <div id="map"></div>
+    <aside id="panel" class="panel">
+      <h2 id="panelTitle">Select a location</h2>
+      <p id="panelSub" class="muted">
+        Pick a city above, or click anywhere on the map, to see nearby facilities
+        and their emission level.
+      </p>
+      <ul id="results" class="results"></ul>
+    </aside>
+  </div>
+
+  <div class="legend">
+    <strong>Emission level (annual CO₂e)</strong>
+    <span class="dot high"></span> High
+    <span class="dot medium"></span> Medium
+    <span class="dot low"></span> Low
+    <span class="src">Values are illustrative estimates — see /api/facilities</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
