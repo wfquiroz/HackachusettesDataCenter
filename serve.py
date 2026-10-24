@@ -20,6 +20,49 @@ PUBLIC = ROOT / "public"
 FACILITIES = ROOT / "facilities.json"
 PORT = 5173
 
+_MA_POLYS_CACHE = None
+
+
+def _ma_polygons():
+    """Load the MA boundary as a list of outer rings [(lon,lat),...]. Cached."""
+    global _MA_POLYS_CACHE
+    if _MA_POLYS_CACHE is not None:
+        return _MA_POLYS_CACHE
+    f = ROOT / "public" / "ma_boundary.geojson"
+    polys = []
+    try:
+        d = json.loads(f.read_text())
+        feats = d.get("features") or ([d] if d.get("type") == "Feature" else [])
+        for feat in feats:
+            geom = feat.get("geometry") or {}
+            if geom.get("type") == "Polygon":
+                polys.append(geom["coordinates"][0])
+            elif geom.get("type") == "MultiPolygon":
+                for poly in geom["coordinates"]:
+                    polys.append(poly[0])
+    except Exception:
+        polys = []
+    _MA_POLYS_CACHE = polys
+    return polys
+
+
+def _point_in_ring(lat, lon, ring):
+    """Ray-casting point-in-polygon. ring = [(lon,lat),...]."""
+    inside = False
+    j = len(ring) - 1
+    for i in range(len(ring)):
+        xi, yi = ring[i][0], ring[i][1]
+        xj, yj = ring[j][0], ring[j][1]
+        if ((yi > lat) != (yj > lat)) and \
+           (lon < (xj - xi) * (lat - yi) / (yj - yi + 1e-12) + xi):
+            inside = not inside
+        j = i
+    return inside
+
+
+def _point_in_ma(lat, lon, polys):
+    return any(_point_in_ring(lat, lon, r) for r in polys)
+
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *a, **k):
@@ -82,21 +125,48 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         self._json(json.dumps(base).encode())
 
     def _bestsite(self):
-        """Return the top-scoring placement cell as a lat/lon + score."""
+        """Top-scoring placement cell(s). ?n=5 returns the N best sites spaced
+        at least ~50 miles apart, CLIPPED to the Massachusetts boundary."""
+        import math
+        import urllib.parse as up
         try:
+            q = up.parse_qs(up.urlparse(self.path).query)
+            n = int(q.get("n", ["1"])[0])
+            min_miles = float(q.get("spacing", ["50"])[0])
             p = json.loads((ROOT / "placement.json").read_text())
             s = p["surfaces"][0]
             nx, ny = p["nx"], p["ny"]
             lon0, lat0, lon1, lat1 = p["bbox"]
             grid = s["grid"]
-            best_i = max(range(len(grid)), key=lambda i: grid[i])
-            y, x = divmod(best_i, nx)
-            lat = lat0 + (lat1 - lat0) * y / (ny - 1)
-            lon = lon0 + (lon1 - lon0) * x / (nx - 1)
-            self._json(json.dumps({
-                "lat": round(lat, 4), "lon": round(lon, 4),
-                "score": round(grid[best_i] * 100, 1),
-            }).encode())
+            polys = _ma_polygons()
+
+            def cell_ll(i):
+                yy, xx = divmod(i, nx)
+                return (lat0 + (lat1 - lat0) * yy / (ny - 1),
+                        lon0 + (lon1 - lon0) * xx / (nx - 1))
+
+            def miles(a, b):
+                dlat = (a[0] - b[0]) * 69.0
+                dlon = (a[1] - b[1]) * 69.0 * math.cos(math.radians(a[0]))
+                return math.sqrt(dlat * dlat + dlon * dlon)
+
+            order = sorted(range(len(grid)), key=lambda i: grid[i], reverse=True)
+            picks = []
+            for i in order:
+                if len(picks) >= n:
+                    break
+                ll = cell_ll(i)
+                if polys and not _point_in_ma(ll[0], ll[1], polys):
+                    continue  # skip cells outside Massachusetts
+                if all(miles(ll, pk[0]) >= min_miles for pk in picks):
+                    picks.append((ll, grid[i]))
+            sites = [{"lat": round(ll[0], 4), "lon": round(ll[1], 4),
+                      "score": round(sc * 100, 1)} for ll, sc in picks]
+            if n == 1:
+                self._json(json.dumps(sites[0]).encode())
+            else:
+                self._json(json.dumps({"sites": sites,
+                                       "spacing_miles": min_miles}).encode())
         except Exception as e:
             self.send_response(500); self.send_header("Content-Type", "application/json")
             self.end_headers(); self.wfile.write(json.dumps({"error": str(e)}).encode())

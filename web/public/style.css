@@ -483,10 +483,10 @@ input[type="number"] { background: var(--panel); border: 1px solid var(--border)
 }
 .scale-legend { background: transparent; height: auto; }
 .legend { background: var(--panel); border-top: 1px solid var(--border); color: var(--text-dim); }
-.legend .dot { width: 6px; height: 6px; }
-.legend .dot.high { background: var(--bad); }
-.legend .dot.medium { background: var(--warn); }
-.legend .dot.low, .legend .dot.clean { background: var(--clean); }
+/* dot colors handled by .legend .dot::before above; keep palette in sync */
+.legend .dot.high::before { background: var(--bad); }
+.legend .dot.medium::before { background: var(--warn); }
+.legend .dot.low::before, .legend .dot.clean::before { background: var(--clean); }
 
 /* map: let the dark tiles show through */
 .leaflet-container { background: var(--bg); }
@@ -522,3 +522,19 @@ input[type="number"] { background: var(--panel); border: 1px solid var(--border)
 
 .drop-btn-remove { border-color: var(--bad); color: var(--bad); }
 .drop-btn-remove:hover { background: var(--bad); color: var(--bg); }
+
+/* Top-5 best-site markers + list */
+.best-pin {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--clean); color: var(--bg); font-weight: 700; font-size: 12px;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid var(--bg); box-shadow: 0 0 8px 2px var(--clean);
+  font-family: "IBM Plex Mono", monospace;
+}
+.best-list { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+.best-row { display: flex; align-items: center; gap: 10px; padding: 8px 10px;
+  background: var(--panel); border: 1px solid var(--border); border-radius: 4px; font-size: 13px; }
+.best-no { width: 20px; height: 20px; border-radius: 50%; background: var(--clean);
+  color: var(--bg); font-weight: 700; display: flex; align-items: center; justify-content: center;
+  font-family: "IBM Plex Mono", monospace; font-size: 11px; flex: none; }
+.best-score { margin-left: auto; color: var(--clean); font-family: "IBM Plex Mono", monospace; }

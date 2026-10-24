@@ -619,22 +619,47 @@ setTimeout(() => { try { if (window.lucide) lucide.createIcons(); } catch (e) {}
     });
 
     const bestBtn = document.getElementById("bestSiteBtn");
+    let top5Markers = [];
     if (bestBtn) bestBtn.addEventListener("click", async () => {
       bestBtn.textContent = "Finding…";
       try {
-        const res = await fetch("/api/bestsite");
-        const b = await res.json();
-        if (b.error) throw new Error(b.error);
-        placePin(b.lat, b.lng ?? b.lon);
-        controls.style.display = "block";
-        // turn on the placement layer so the user sees why it's the best spot
+        const res = await fetch("/api/bestsite?n=5&spacing=30");
+        const data = await res.json();
+        if (data.error) throw new Error(data.error);
+        const sites = data.sites || [];
+        // clear any previous top-5 markers
+        top5Markers.forEach((m) => map.removeLayer(m));
+        top5Markers = [];
+        // turn on the placement layer
         const pc = document.querySelector('.lc-row input[data-id="placement"]');
         if (pc && !pc.checked) { pc.checked = true; pc.dispatchEvent(new Event("change")); }
-        map.setView([b.lat, b.lon], Math.max(map.getZoom(), 8));
-        refreshImpact();
-        bestBtn.innerHTML = '<span data-lucide="target"></span> Best site (score ' + b.score + ')';
+        // drop a numbered marker for each spaced site
+        sites.forEach((st, idx) => {
+          const m = L.marker([st.lat, st.lon], {
+            icon: L.divIcon({ className: "", iconSize: [22, 22], iconAnchor: [11, 11],
+              html: `<div class="best-pin">${idx + 1}</div>` }),
+          }).addTo(map);
+          m.bindTooltip(`#${idx + 1} · score ${st.score}`, { direction: "top" });
+          top5Markers.push(m);
+        });
+        // fit the map to show all five
+        if (sites.length) {
+          map.fitBounds(L.latLngBounds(sites.map((s) => [s.lat, s.lon])).pad(0.3));
+        }
+        // list them in the Impact tab
+        const rows = sites.map((st, i) =>
+          `<div class="best-row"><span class="best-no">${i + 1}</span>
+             <span class="num">${st.lat.toFixed(2)}, ${st.lon.toFixed(2)}</span>
+             <span class="best-score">score ${st.score}</span></div>`).join("");
+        if (window.showImpact) window.showImpact(
+          "Top 5 sites · 30+ mi apart",
+          "Best places to build — fewest people, cleanest, most grid room.",
+          `<div class="best-list">${rows}</div>` +
+          `<p class="muted" style="margin-top:8px">Higher score = better. Spaced ≥30 mi so they're real alternatives, not one cluster.</p>`,
+          true);
+        bestBtn.innerHTML = '<span data-lucide="target"></span> Top 5 sites found';
         if (window.lucide) lucide.createIcons();
-      } catch (e) { bestBtn.textContent = "Error finding site"; }
+      } catch (e) { bestBtn.textContent = "Error finding sites"; }
     });
 
     const removeBtn = document.getElementById("removeDcBtn");
