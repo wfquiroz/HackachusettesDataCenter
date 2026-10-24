@@ -521,10 +521,59 @@ function wireCollapse() {
 // Draw the Massachusetts state boundary as an outline. Stays visible at all
 // zoom levels (it's vector, not tied to the gradient overlay).
 let stateOutline = null;
+let MA_GEOM = null;   // raw GeoJSON geometry, kept for point-in-polygon tests
+
+// Ray-casting point-in-polygon for one ring ([ [lng,lat], ... ]).
+function pointInRing(lng, lat, ring) {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const xi = ring[i][0], yi = ring[i][1];
+    const xj = ring[j][0], yj = ring[j][1];
+    const intersect = (yi > lat) !== (yj > lat) &&
+      lng < ((xj - xi) * (lat - yi)) / (yj - yi) + xi;
+    if (intersect) inside = !inside;
+  }
+  return inside;
+}
+
+// True if (lat,lng) is inside the MA boundary (handles MultiPolygon + holes).
+function pointInMA(lat, lng) {
+  if (!MA_GEOM) return true; // boundary not loaded yet — don't block
+  const polys = MA_GEOM.type === "MultiPolygon" ? MA_GEOM.coordinates
+    : MA_GEOM.type === "Polygon" ? [MA_GEOM.coordinates] : [];
+  for (const poly of polys) {
+    if (pointInRing(lng, lat, poly[0])) {
+      let inHole = false;
+      for (let h = 1; h < poly.length; h++) {
+        if (pointInRing(lng, lat, poly[h])) { inHole = true; break; }
+      }
+      if (!inHole) return true;
+    }
+  }
+  return false;
+}
+
+// Brief toast when a pin is rejected for being outside MA.
+let _outsideToastTimer = null;
+function showOutsideMaToast() {
+  let el = document.getElementById("outsideMaToast");
+  if (!el) {
+    el = document.createElement("div");
+    el.id = "outsideMaToast";
+    el.className = "outside-ma-toast";
+    el.textContent = "⚠ Pin must be inside Massachusetts";
+    document.getElementById("map").appendChild(el);
+  }
+  el.classList.add("show");
+  clearTimeout(_outsideToastTimer);
+  _outsideToastTimer = setTimeout(() => el.classList.remove("show"), 2200);
+}
+
 async function drawStateOutline() {
   try {
     const res = await fetch("/ma_boundary.geojson");
     const geo = await res.json();
+    MA_GEOM = geo.geometry || geo;   // keep geometry for pointInMA
     stateOutline = L.geoJSON(geo, {
       interactive: false,
       style: {
@@ -726,6 +775,7 @@ setTimeout(() => { try { if (window.lucide) lucide.createIcons(); } catch (e) {}
 
     map.on("click", (e) => {
       if (!dropMode) return;
+      if (!pointInMA(e.latlng.lat, e.latlng.lng)) { showOutsideMaToast(); return; }
       dropMode = false;
       dropBtn.classList.remove("armed");
       dropBtn.textContent = "Move the pin";
@@ -745,7 +795,16 @@ setTimeout(() => { try { if (window.lucide) lucide.createIcons(); } catch (e) {}
         const p = ev.target.getLatLng();
         dropMarker._ll = { lat: p.lat, lng: p.lng };
       });
-      dropMarker.on("dragend", () => refreshImpact()); // recompute at new spot
+      dropMarker.on("dragend", (ev) => {
+        const p = ev.target.getLatLng();
+        if (!pointInMA(p.lat, p.lng)) {
+          // snap back inside MA and warn
+          showOutsideMaToast();
+          dropMarker.setLatLng([lat, lng]);
+          dropMarker._ll = { lat, lng };
+        }
+        refreshImpact();
+      });
     }
 
     function clearRings() {
