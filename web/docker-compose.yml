@@ -6,4 +6,12 @@ services:
       - "5173:5173"
     environment:
       - PORT=5173
+    # Live-mount app files so edits to CSS/HTML/JS and data show on a browser
+    # refresh — no image rebuild, no restart. node_modules stays in the image.
+    volumes:
+      - ./public:/app/public
+      - ./facilities.json:/app/facilities.json
+      - ./layers.json:/app/layers.json
+      - ./surfaces.json:/app/surfaces.json
+      - ./server.js:/app/server.js
     restart: unless-stopped

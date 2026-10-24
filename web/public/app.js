@@ -157,6 +157,7 @@ function renderPanel(center, radiusKm) {
 
 function selectLocation(center) {
   selected = center;
+  renderHoverReadout(center.lat, center.lng);
   const radiusKm = Number(document.getElementById("radius").value);
   if (radiusCircle) map.removeLayer(radiusCircle);
   radiusCircle = L.circle([center.lat, center.lng], {
@@ -250,6 +251,77 @@ function rampColor(id, v) {
   return [a[0]+(b[0]-a[0])*f, a[1]+(b[1]-a[1])*f, a[2]+(b[2]-a[2])*f];
 }
 
+// CSS linear-gradient string for a surface's ramp — used in the scale legend.
+function rampGradientCss(id) {
+  const r = RAMPS[id] || [[40,40,60],[240,80,60]];
+  const stops = r.map((c, i) =>
+    `rgb(${c[0]},${c[1]},${c[2]}) ${Math.round((i / (r.length - 1)) * 100)}%`);
+  return `linear-gradient(90deg, ${stops.join(", ")})`;
+}
+
+// Sample a surface's normalized value (0..1) at a map lat/lng, or null if off-grid.
+function sampleSurface(surf, lat, lng) {
+  const [lon0, lat0, lon1, lat1] = SURF.bbox;
+  if (lat < lat0 || lat > lat1 || lng < lon0 || lng > lon1) return null;
+  const { nx, ny } = SURF;
+  const fx = (lng - lon0) / (lon1 - lon0);
+  const fy = (lat - lat0) / (lat1 - lat0);
+  const ix = Math.min(nx - 1, Math.max(0, Math.round(fx * (nx - 1))));
+  const iy = Math.min(ny - 1, Math.max(0, Math.round(fy * (ny - 1))));
+  return surf.grid[iy * nx + ix];
+}
+
+function valueBucket(v) {
+  if (v <= 0.33) return "Low";
+  if (v <= 0.66) return "Medium";
+  return "High";
+}
+
+// Render the color-scale legend for every active surface (Low -> High + unit).
+function renderScaleLegend() {
+  const box = document.getElementById("scaleLegend");
+  if (!box || !SURF) return;
+  const active = SURF.surfaces.filter((s) => surfOn[s.id]);
+  if (active.length === 0) { box.innerHTML = ""; box.style.display = "none"; return; }
+  box.style.display = "block";
+  box.innerHTML = `<div class="sl-head">What the colors mean</div>` +
+    active.map((s) => {
+      const meta = SURF_META[s.id] || { title: s.label };
+      return `
+        <div class="sl-item">
+          <div class="sl-top">
+            <span class="sl-name">${meta.title}</span>
+            <span class="sl-unit">${s.unit}</span>
+          </div>
+          <div class="sl-bar" style="background:${rampGradientCss(s.id)}"></div>
+          <div class="sl-ends"><span>Low</span><span>High</span></div>
+          <div class="sl-src">${s.source}</div>
+        </div>`;
+    }).join("");
+}
+
+// Live readout of surface values at the cursor position.
+function renderHoverReadout(lat, lng) {
+  const box = document.getElementById("hoverReadout");
+  if (!box || !SURF) return;
+  const active = SURF.surfaces.filter((s) => surfOn[s.id]);
+  if (active.length === 0) { box.style.display = "none"; return; }
+  const rows = active.map((s) => {
+    const v = sampleSurface(s, lat, lng);
+    const meta = SURF_META[s.id] || { title: s.label };
+    if (v == null) return `<div class="hr-row"><span>${meta.title}</span><span class="hr-muted">—</span></div>`;
+    const pct = Math.round(v * 100);
+    const [r, g, b] = rampColor(s.id, v);
+    return `<div class="hr-row">
+      <span class="hr-dot" style="background:rgb(${r},${g},${b})"></span>
+      <span class="hr-name">${meta.title}</span>
+      <span class="hr-val">${valueBucket(v)} · ${pct}%</span>
+    </div>`;
+  }).join("");
+  box.innerHTML = `<div class="hr-head">Intensity here</div>${rows}`;
+  box.style.display = "block";
+}
+
 // paint one surface grid to a data-URL canvas using the gradient ramp
 function surfaceDataUrl(surf) {
   const { nx, ny } = SURF;
@@ -290,14 +362,52 @@ function buildSurface(surf) {
 function toggleSurface(id, on) {
   surfOn[id] = on;
   const ov = surfOverlays[id];
-  if (!ov) return;
-  if (on) {
-    ov.addTo(map);
-    requestAnimationFrame(() => ov.setOpacity(0.82));
-  } else {
-    ov.setOpacity(0);
-    setTimeout(() => map.removeLayer(ov), 500);
+  if (ov) {
+    if (on) {
+      ov.addTo(map);
+      requestAnimationFrame(() => ov.setOpacity(0.82));
+    } else {
+      ov.setOpacity(0);
+      setTimeout(() => map.removeLayer(ov), 500);
+    }
   }
+  renderScaleLegend();
+}
+
+// Friendly metadata per surface: an icon + a plain-language one-liner.
+// Keyed by surface id so it survives label changes in the data.
+const SURF_META = {
+  ej_burden: {
+    icon: "👥",
+    title: "People",
+    desc: "Who lives nearby — environmental-justice population density.",
+  },
+  air_fossil: {
+    icon: "🏭",
+    title: "Air",
+    desc: "Fossil-plant intensity — dirtier air where plants run.",
+  },
+  energy_demand: {
+    icon: "⚡",
+    title: "Energy",
+    desc: "Grid demand pressure across the state.",
+  },
+  water_stress: {
+    icon: "💧",
+    title: "Water",
+    desc: "Cooling-water demand (modeled estimate).",
+  },
+  noise: {
+    icon: "🔊",
+    title: "Noise",
+    desc: "Generator & cooling noise (modeled estimate).",
+  },
+};
+
+function updateLayerCount() {
+  const n = Object.values(surfOn).filter(Boolean).length;
+  const el = document.getElementById("lcCount");
+  if (el) el.textContent = n ? `${n} on` : "none on";
 }
 
 function buildLayerControl() {
@@ -306,17 +416,44 @@ function buildLayerControl() {
   SURF.surfaces.forEach((surf, i) => {
     buildSurface(surf);
     const on = i === 0; // EJ wave on by default
+    const meta = SURF_META[surf.id] || { icon: "◆", title: surf.label, desc: "" };
+
     const row = document.createElement("label");
     row.className = "lc-row";
+    row.dataset.on = on ? "1" : "0";
+    row.style.setProperty("--swatch", surf.color);
     row.innerHTML = `
-      <input type="checkbox" ${on ? "checked" : ""} data-id="${surf.id}" />
-      <span class="lc-swatch" style="background:${surf.color}"></span>
-      <span class="lc-label">${surf.label}</span>
-      <span class="lc-tag ${surf.kind}">${surf.kind}</span>`;
-    row.querySelector("input").addEventListener("change", (e) =>
-      toggleSurface(surf.id, e.target.checked));
+      <span class="lc-icon" style="background:${surf.color}22;color:${surf.color}">${meta.icon}</span>
+      <span class="lc-text">
+        <span class="lc-title-row">
+          <span class="lc-label">${meta.title}</span>
+          <span class="lc-tag ${surf.kind}">${surf.kind}</span>
+        </span>
+        <span class="lc-desc">${meta.desc}</span>
+      </span>
+      <span class="lc-toggle" aria-hidden="true"><span class="lc-knob"></span></span>
+      <input type="checkbox" class="lc-check" ${on ? "checked" : ""} data-id="${surf.id}" />`;
+
+    const input = row.querySelector("input");
+    input.addEventListener("change", (e) => {
+      toggleSurface(surf.id, e.target.checked);
+      row.dataset.on = e.target.checked ? "1" : "0";
+      updateLayerCount();
+    });
+
     list.appendChild(row);
     if (on) toggleSurface(surf.id, true);
+  });
+  updateLayerCount();
+}
+
+function wireCollapse() {
+  const btn = document.getElementById("lcCollapse");
+  const control = document.getElementById("layerControl");
+  if (!btn || !control) return;
+  btn.addEventListener("click", () => {
+    const collapsed = control.classList.toggle("collapsed");
+    btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
   });
 }
 
@@ -325,6 +462,7 @@ async function loadLayers() {
     const res = await fetch("/api/surfaces");
     SURF = await res.json();
     buildLayerControl();
+    wireCollapse();
   } catch (e) {
     console.warn("surfaces unavailable", e);
   }
@@ -337,7 +475,7 @@ async function init() {
   DATA = await res.json();
 
   const r0 = DATA.regions[0];
-  map = L.map("map").setView([r0.center.lat, r0.center.lng], r0.zoom);
+  map = L.map("map", { zoomControl: false }).setView([r0.center.lat, r0.center.lng], r0.zoom);
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
@@ -350,6 +488,24 @@ async function init() {
   await loadLayers();
 
   map.on("click", (e) => selectLocation({ lat: e.latlng.lat, lng: e.latlng.lng }));
+
+  // Live value readout of active surfaces under the cursor. On mouse-out,
+  // fall back to the last selected location so the box stays populated.
+  map.on("mousemove", (e) => renderHoverReadout(e.latlng.lat, e.latlng.lng));
+  map.on("mouseout", () => {
+    if (selected) renderHoverReadout(selected.lat, selected.lng);
+  });
+
+  // Collapsible right panel
+  const panel = document.getElementById("panel");
+  const panelToggle = document.getElementById("panelToggle");
+  panelToggle.addEventListener("click", () => {
+    const collapsed = panel.classList.toggle("collapsed");
+    panelToggle.setAttribute("aria-expanded", collapsed ? "false" : "true");
+    panelToggle.title = collapsed ? "Open panel" : "Collapse panel";
+    // Let Leaflet re-measure after the width transition.
+    setTimeout(() => map.invalidateSize(), 280);
+  });
 
   populateControls();
 
