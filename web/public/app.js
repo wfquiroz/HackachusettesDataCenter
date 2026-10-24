@@ -515,3 +515,92 @@ async function init() {
 }
 
 init();
+
+// ---- Drop-a-data-center + play buildout timeline ---------------------------
+(function () {
+  let dropMode = false, dropMarker = null, ringLayers = [], playTimer = null;
+
+  function onReady(fn) {
+    if (typeof map !== "undefined" && map) fn();
+    else setTimeout(() => onReady(fn), 200);
+  }
+
+  onReady(() => {
+    const dropBtn = document.getElementById("dropBtn");
+    const controls = document.getElementById("dropControls");
+    const playBtn = document.getElementById("playBtn");
+    const readout = document.getElementById("playReadout");
+    if (!dropBtn) return;
+
+    dropBtn.addEventListener("click", () => {
+      dropMode = !dropMode;
+      dropBtn.classList.toggle("armed", dropMode);
+      dropBtn.textContent = dropMode ? "📍 Click the map…" : "📍 Drop a data center";
+    });
+
+    map.on("click", (e) => {
+      if (!dropMode) return;
+      dropMode = false;
+      dropBtn.classList.remove("armed");
+      dropBtn.textContent = "📍 Move the pin";
+      placePin(e.latlng.lat, e.latlng.lng);
+      controls.style.display = "block";
+    });
+
+    function placePin(lat, lng) {
+      if (dropMarker) map.removeLayer(dropMarker);
+      dropMarker = L.marker([lat, lng]).addTo(map);
+      dropMarker._ll = { lat, lng };
+    }
+
+    function clearRings() {
+      ringLayers.forEach((l) => map.removeLayer(l));
+      ringLayers = [];
+    }
+
+    function drawRings(ll, yearData) {
+      clearRings();
+      // outer -> inner so inner sits on top
+      [...yearData.rings].reverse().forEach((r) => {
+        const alpha = 0.08 + 0.5 * r.intensity;
+        const c = L.circle([ll.lat, ll.lng], {
+          radius: r.km * 1000, color: "#e4572e", weight: 1,
+          fillColor: "#e4572e", fillOpacity: alpha,
+        }).addTo(map);
+        ringLayers.push(c);
+      });
+    }
+
+    playBtn.addEventListener("click", async () => {
+      if (!dropMarker) { readout.textContent = "Drop a pin first."; return; }
+      if (playTimer) { clearInterval(playTimer); playTimer = null; playBtn.textContent = "▶ Play buildout"; return; }
+      const ll = dropMarker._ll;
+      const mw = Number(document.getElementById("dropMw").value) || 274;
+      const yrs = Number(document.getElementById("dropYears").value) || 5;
+      readout.textContent = "Computing…";
+      let data;
+      try {
+        const res = await fetch(`/api/timeline?lat=${ll.lat}&lon=${ll.lng}&mw=${mw}&years=${yrs}`);
+        data = await res.json();
+        if (data.error) throw new Error(data.error);
+      } catch (err) { readout.textContent = "Error: " + err.message; return; }
+
+      playBtn.textContent = "⏸ Stop";
+      let i = 0;
+      const step = () => {
+        const y = data.years[i];
+        const r25 = y.rings[y.rings.length - 1];
+        drawRings(ll, y);
+        readout.innerHTML =
+          `<b>Year ${y.year}</b> · ${y.mw_online} MW online<br>` +
+          `${r25.pop_within.toLocaleString()} people within 25 km<br>` +
+          `hidden CO₂ <b>${y.hidden_co2_t.toLocaleString()}</b> t/yr<br>` +
+          `<span class="muted">${r25.minority_pct}% minority in footprint · projected buildout</span>`;
+        i++;
+        if (i >= data.years.length) { clearInterval(playTimer); playTimer = null; playBtn.textContent = "▶ Replay"; }
+      };
+      step();
+      playTimer = setInterval(step, 1100);
+    });
+  });
+})();

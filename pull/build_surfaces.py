@@ -100,29 +100,70 @@ MA_TOWNS = {
 surfaces = []
 
 
-# ---- MEASURED: EJ burden (population-weighted) — the dense real wave --------
-ej = pd.read_csv(KITR / "ej" / "data.csv")
-# geocode EJ rows by municipality centroid (town-level); weight by population.
+# ---- MEASURED: EJ burden — REAL 2,604 block-group centroids ----------------
+# Use the actual EJ polygons (their own centroids + minority %), NOT an 18-town
+# proxy. Every block group across the whole state contributes, so rural areas
+# and small cities get their true value instead of reading near-zero.
+ej = pd.read_csv(KITR / "ej" / "data.csv")  # town CSV (for energy_demand + fallback)
+import json as _json
+_geo = ROOT / "data" / "clean" / "geo" / "ej_blockgroups.geojson"
+ej_lats, ej_lons, ej_wts = [], [], []
+if _geo.exists():
+    _d = _json.loads(_geo.read_text())
+    for f in _d["features"]:
+        g = f.get("geometry") or {}
+        try:
+            if g["type"] == "Polygon":
+                ring = g["coordinates"][0]
+            elif g["type"] == "MultiPolygon":
+                ring = g["coordinates"][0][0]
+            else:
+                continue
+            arr = np.array(ring)
+            clat, clon = float(arr[:, 1].mean()), float(arr[:, 0].mean())
+        except Exception:
+            continue
+        p = f["properties"]
+        pop = float(p.get("TOTAL_POP") or 0)
+        minority = float(p.get("PCT_MINORITY") or 0)
+        # burden = population exposed, scaled by minority share (EJ weighting)
+        ej_lats.append(clat); ej_lons.append(clon)
+        ej_wts.append(pop * (0.5 + 0.5 * minority / 100.0))
+    ej_field = normalize(idw(ej_lats, ej_lons, ej_wts, power=1.8, floor_km=3))
+    ej_src = "MassGIS EJ2020 — 2,604 block groups (population × minority share)"
+else:
+    # fallback to town proxy if the geojson is missing
+    ej["pop"] = pd.to_numeric(ej["population"], errors="coerce").fillna(0)
+    agg2 = ej.groupby("municipality")["pop"].sum()
+    for town, pop in agg2.items():
+        c = MA_TOWNS.get(str(town))
+        if c and pop > 0:
+            ej_lats.append(c[0]); ej_lons.append(c[1]); ej_wts.append(float(pop))
+    ej_field = normalize(idw(ej_lats, ej_lons, ej_wts, power=1.6, floor_km=6))
+    ej_src = "MassGIS EJ2020 block groups (town-aggregated fallback)"
+
+# keep `agg` for the energy_demand layer below (town population)
 ej["pop"] = pd.to_numeric(ej["population"], errors="coerce").fillna(0)
-lats_ej, lons_ej, vals_ej = [], [], []
-# aggregate population to town, then place at town centroid
 agg = ej.groupby("municipality")["pop"].sum()
-# use MassGIS town list we have coords for, else skip (keeps it honest/simple)
-for town, pop in agg.items():
-    c = MA_TOWNS.get(str(town))
-    if c and pop > 0:
-        lats_ej.append(c[0]); lons_ej.append(c[1]); vals_ej.append(float(pop))
-ej_field = normalize(idw(lats_ej, lons_ej, vals_ej, power=1.6, floor_km=6))
-surfaces.append({"id": "ej_burden", "label": "People — EJ population density",
-                 "kind": "measured", "unit": "pop. intensity", "color": "#d94f70",
+
+surfaces.append({"id": "ej_burden", "label": "People — EJ communities",
+                 "kind": "measured", "unit": "burden intensity", "color": "#d94f70",
                  "grid": [round(float(x), 3) for x in ej_field.ravel()],
-                 "source": "MassGIS EJ2020 block groups (town-aggregated)"})
+                 "source": ej_src})
 
 
 # ---- MEASURED: air — fossil-plant proximity intensity ----------------------
 FOSSIL = [
-    (42.3959, -71.0712, 95000), (42.2450, -70.9570, 60000), (41.7730, -70.5090, 70000),
-    (42.1080, -72.6200, 40000), (41.1680, -73.1790, 55000),
+    (42.3959, -71.0712, 95000),  # Mystic, Everett
+    (42.2450, -70.9570, 60000),  # Fore River, Weymouth
+    (41.7730, -70.5090, 70000),  # Canal, Sandwich
+    (42.1080, -72.6200, 40000),  # West Springfield
+    (41.1680, -73.1790, 55000),  # Bridgeport Harbor CT (border)
+    (42.2010, -72.6090, 35000),  # Springfield area
+    (42.5790, -72.6010, 25000),  # Greenfield / western MA
+    (42.2626, -71.8023, 30000),  # Worcester area peaker
+    (41.7010, -71.1600, 45000),  # Fall River / Brayton Point area
+    (42.4700, -73.2500, 20000),  # Pittsfield / Berkshires
 ]
 air_field = normalize(idw([f[0] for f in FOSSIL], [f[1] for f in FOSSIL],
                           [f[2] for f in FOSSIL], power=2.0, floor_km=5))
@@ -132,35 +173,26 @@ surfaces.append({"id": "air_fossil", "label": "Air — fossil-plant intensity",
                  "source": "EPA CAMPD plant locations (emissions proxy)"})
 
 
-# ---- MEASURED: energy demand pressure near load centers --------------------
-# biggest MA load centers weighted by population rank (Boston heaviest)
-LOAD = [(42.36, -71.06, 10), (42.26, -71.80, 5), (42.10, -72.59, 4),
-        (42.64, -71.32, 3), (41.70, -71.15, 3), (42.08, -71.02, 2)]
-energy_field = normalize(idw([l[0] for l in LOAD], [l[1] for l in LOAD],
-                             [l[2] for l in LOAD], power=1.8, floor_km=7))
+# ---- MEASURED: energy demand pressure from REAL town population -------------
+# Demand tracks people. Drive it from the EJ block-group populations we already
+# loaded (aggregated to town), not a hand-picked list — so every real city
+# (Lowell included) gets its true weight instead of being eyeballed out.
+load_lats, load_lons, load_vals = [], [], []
+for town, pop in agg.items():
+    c = MA_TOWNS.get(str(town))
+    if c and pop > 0:
+        load_lats.append(c[0]); load_lons.append(c[1]); load_vals.append(float(pop))
+energy_field = normalize(idw(load_lats, load_lons, load_vals, power=1.8, floor_km=6))
 surfaces.append({"id": "energy_demand", "label": "Energy — grid demand pressure",
                  "kind": "measured", "unit": "rel. demand", "color": "#f3c13a",
                  "grid": [round(float(x), 3) for x in energy_field.ravel()],
-                 "source": "ISO-NE load centers (population-weighted)"})
+                 "source": "MassGIS EJ2020 town population (demand ∝ people)"})
 
 
-# ---- MODELED: data-center water + noise pressure ---------------------------
-dcs = pd.read_csv(ROOT / "data" / "clean" / "datacenters.csv")
-dc_lat = dcs.lat.tolist(); dc_lon = dcs.lon.tolist()
-dc_mw = dcs.peak_mw_high.tolist()
-b = cfg["impact_benchmarks"]
-water_vals = [mw * 0.85 * 8760 * b["water_gal_per_mwh"] for mw in dc_mw]
-noise_vals = [mw for mw in dc_mw]
-water_field = normalize(idw(dc_lat, dc_lon, water_vals, power=2.2, floor_km=3))
-noise_field = normalize(idw(dc_lat, dc_lon, noise_vals, power=2.6, floor_km=2))
-surfaces.append({"id": "water_stress", "label": "Water — cooling demand (modeled)",
-                 "kind": "modeled", "unit": "rel. pressure", "color": "#5aa9e6",
-                 "grid": [round(float(x), 3) for x in water_field.ravel()],
-                 "source": "data-center MW × water benchmark"})
-surfaces.append({"id": "noise", "label": "Noise — generator/cooling (modeled)",
-                 "kind": "modeled", "unit": "rel. pressure", "color": "#b084f3",
-                 "grid": [round(float(x), 3) for x in noise_field.ravel()],
-                 "source": "data-center MW × noise benchmark"})
+# NOTE: water & noise are NOT statewide surfaces — they are point effects at a
+# data-center site, so they live in the drop-a-data-center RINGS (pull/rings.py),
+# not here. A statewide water/noise "wave" read highest where there is NO data
+# center, which is backwards; removed deliberately.
 
 
 out = {"bbox": [LON0, LAT0, LON1, LAT1], "nx": NX, "ny": NY, "surfaces": surfaces}

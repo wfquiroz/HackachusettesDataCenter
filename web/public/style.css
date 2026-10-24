@@ -333,3 +333,18 @@ body {
   .layout { flex-direction: column; }
   .panel { width: auto; max-height: 40vh; border-left: none; border-top: 1px solid var(--border); }
 }
+
+/* Drop-a-data-center + play */
+.drop-box { margin-top: 10px; padding-top: 9px; border-top: 1px solid #2a2f38; }
+.drop-btn, .play-btn {
+  width: 100%; padding: 7px; border-radius: 7px; border: 1px solid #3a4150;
+  background: #1b2029; color: #e8eaed; cursor: pointer; font-size: 12.5px; font-weight: 600;
+}
+.drop-btn { background: #1b2029; }
+.drop-btn.armed { background: #e4572e; border-color: #e4572e; color: #fff; }
+.drop-controls { margin-top: 8px; display: flex; flex-direction: column; gap: 6px; }
+.drop-controls label { font-size: 11.5px; color: #cfd3d8; display: flex; justify-content: space-between; align-items: center; }
+.drop-controls input { width: 80px; background: #0e1116; border: 1px solid #3a4150; color: #e8eaed; border-radius: 5px; padding: 3px 6px; }
+.play-btn { background: #2f6f3a; border-color: #2f6f3a; margin-top: 2px; }
+.play-readout { font-size: 12px; color: #e8eaed; margin-top: 6px; line-height: 1.5; min-height: 18px; }
+.play-readout .muted { color: #8a9199; font-size: 11px; }

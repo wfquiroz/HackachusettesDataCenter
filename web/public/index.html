@@ -53,6 +53,15 @@
             <span class="lc-tag modeled">modeled</span> from MW benchmark
           </div>
           <div id="scaleLegend" class="scale-legend"></div>
+          <div class="drop-box">
+            <button id="dropBtn" class="drop-btn" type="button">📍 Drop a data center</button>
+            <div id="dropControls" class="drop-controls" style="display:none">
+              <label>MW <input id="dropMw" type="number" value="274" min="10" max="600" step="10"></label>
+              <label>Buildout yrs <input id="dropYears" type="number" value="5" min="1" max="10"></label>
+              <button id="playBtn" class="play-btn" type="button">▶ Play buildout</button>
+              <div id="playReadout" class="play-readout"></div>
+            </div>
+          </div>
         </div>
       </div>
       <div id="hoverReadout" class="hover-readout" style="display:none"></div>

@@ -10,7 +10,9 @@ available, `node web/server.js` serves the exact same thing.
 Run:  /opt/anaconda3/bin/python3 serve.py   (then open http://127.0.0.1:5173)
 """
 import http.server
+import json
 import socketserver
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent / "web"
@@ -30,6 +32,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             return self._json((ROOT / "layers.json").read_bytes())
         if self.path.startswith("/api/surfaces"):
             return self._json((ROOT / "surfaces.json").read_bytes())
+        if self.path.startswith("/api/timeline"):
+            return self._timeline()
         if self.path.startswith("/healthz"):
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
@@ -44,6 +48,25 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
+
+    def _timeline(self):
+        import urllib.parse as up
+        q = up.parse_qs(up.urlparse(self.path).query)
+        try:
+            lat = float(q.get("lat", ["42.12"])[0])
+            lon = float(q.get("lon", ["-72.75"])[0])
+            mw = float(q.get("mw", ["274"])[0])
+            yrs = int(q.get("years", ["5"])[0])
+            sys.path.insert(0, str(ROOT.parent))
+            import importlib
+            rings = importlib.import_module("pull.rings")
+            body = json.dumps(rings.impact_timeline(lat, lon, mw, yrs)).encode()
+            self._json(body)
+        except Exception as e:
+            self.send_response(500)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps({"error": str(e)}).encode())
 
     def log_message(self, *a):
         pass
