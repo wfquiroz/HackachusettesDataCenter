@@ -556,21 +556,24 @@ function pointInMA(lat, lng) {
   return false;
 }
 
-// Brief toast shown when a pin is rejected for being outside MA.
+// Brief toast shown when a pin is rejected. Same style for every rejection
+// reason; pass a custom message, defaults to the outside-MA case.
 let _outsideToastTimer = null;
-function showOutsideMaToast() {
+function showPinRejectedToast(message = "⚠ Pin must be inside Massachusetts") {
   let el = document.getElementById("outsideMaToast");
   if (!el) {
     el = document.createElement("div");
     el.id = "outsideMaToast";
     el.className = "outside-ma-toast";
-    el.textContent = "⚠ Pin must be inside Massachusetts";
     document.getElementById("map").appendChild(el);
   }
+  el.textContent = message;
   el.classList.add("show");
   clearTimeout(_outsideToastTimer);
-  _outsideToastTimer = setTimeout(() => el.classList.remove("show"), 2200);
+  _outsideToastTimer = setTimeout(() => el.classList.remove("show"), 2600);
 }
+// Back-compat alias for existing call sites.
+const showOutsideMaToast = () => showPinRejectedToast();
 
 async function drawStateOutline() {
   try {
@@ -591,6 +594,46 @@ async function drawStateOutline() {
   } catch (e) {
     console.warn("MA boundary unavailable", e);
   }
+}
+
+// Reservoirs & major ponds (MassGIS Hydro_Major, Lakes & Ponds). Drawn as a
+// toggleable blue water layer with a name/size popup — the "reservoir indicator".
+let reservoirLayer = null;
+async function drawReservoirs() {
+  try {
+    const res = await fetch("/ma_reservoirs.geojson");
+    const geo = await res.json();
+    reservoirLayer = L.geoJSON(geo, {
+      style: {
+        color: "#2b6cff",      // crisp water-blue outline
+        weight: 1,
+        opacity: 0.9,
+        fillColor: "#3f8cff",
+        fillOpacity: 0.45,
+      },
+      onEachFeature: (feature, lyr) => {
+        const p = feature.properties || {};
+        const name = p.NAME || "Unnamed water body";
+        const km2 = p.SQ_METERS ? (p.SQ_METERS / 1e6).toFixed(1) : "?";
+        lyr.bindPopup(
+          `<div class="pop-title">💧 ${name}</div>` +
+          `<div class="pop-meta">Reservoir / major pond · ${km2} km²</div>` +
+          `<div class="pop-meta">Source: MassGIS Hydrography (Major)</div>`
+        );
+      },
+    }).addTo(map);
+    reservoirLayer.bringToFront();
+    if (stateOutline) stateOutline.bringToFront(); // keep border on top
+  } catch (e) {
+    console.warn("Reservoir data unavailable", e);
+  }
+}
+
+// Toggle the reservoir layer on/off (wired to a checkbox in the layer control).
+function setReservoirsVisible(on) {
+  if (!reservoirLayer) return;
+  if (on) { reservoirLayer.addTo(map); reservoirLayer.bringToFront(); if (stateOutline) stateOutline.bringToFront(); }
+  else map.removeLayer(reservoirLayer);
 }
 
 // Lock the view to the gradient (surface) extent: fit it to fill the screen,
@@ -650,6 +693,17 @@ async function init() {
 
   // MA state outline, drawn above the gradient so the border stays crisp.
   await drawStateOutline();
+
+  // Reservoirs & major ponds overlay (the water indicator).
+  await drawReservoirs();
+  const resToggle = document.getElementById("reservoirToggle");
+  if (resToggle) {
+    resToggle.addEventListener("change", (e) => {
+      setReservoirsVisible(e.target.checked);
+      const row = document.getElementById("reservoirRow");
+      if (row) row.dataset.on = e.target.checked ? "1" : "0";
+    });
+  }
 
   map.on("click", (e) => selectLocation({ lat: e.latlng.lat, lng: e.latlng.lng }));
 
@@ -784,7 +838,6 @@ setTimeout(() => { try { if (window.lucide) lucide.createIcons(); } catch (e) {}
       dropMarker = L.marker([lat, lng], { draggable: true }).addTo(map);
       dropMarker._ll = { lat, lng };
       dropMarker._lastValid = { lat, lng };   // last spot known to be inside MA
-      dropMarker.bindTooltip("Drag me — must stay in MA", { direction: "top" });
       const rm = document.getElementById("removeDcBtn");
       if (rm) rm.style.display = "block";   // show Remove once a pin exists
       dropMarker.on("drag", (ev) => {
