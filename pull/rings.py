@@ -91,6 +91,25 @@ def impact_timeline(lat, lon, target_mw, buildout_years=5):
     d = _km(lat, lon, _ej_lat, _ej_lon)
     grid = model.load_grid()          # load ONCE, not per year
     cfg = model.load_config()
+
+    # Sample the LOCAL impact surfaces so air & water vary by location.
+    # 0..1 surface value -> a multiplier centred on 1.0 (clean spot ~0.7x,
+    # dirty/stressed spot ~1.5x). Makes the same MW hurt more in a bad place.
+    def _surf_mult(sid, lo=0.7, hi=1.5):
+        try:
+            s = json.loads((ROOT / "web" / "surfaces.json").read_text())
+            nx, ny = s["nx"], s["ny"]; lon0, la0, lon1, la1 = s["bbox"]
+            g = next(x["grid"] for x in s["surfaces"] if x["id"] == sid)
+            fx = (lon - lon0) / (lon1 - lon0); fy = (lat - la0) / (la1 - la0)
+            if not (0 <= fx <= 1 and 0 <= fy <= 1):
+                return 1.0
+            v = g[min(ny - 1, int(fy * (ny - 1))) * nx + min(nx - 1, int(fx * (nx - 1)))]
+            return lo + (hi - lo) * v
+        except Exception:
+            return 1.0
+    carbon_mult = _surf_mult("air_fossil")
+    water_mult = _surf_mult("water_stress")
+
     years = []
     for yr in range(1, buildout_years + 1):
         # phased ramp: MW comes online over the buildout period (S-curve-ish)
@@ -119,7 +138,8 @@ def impact_timeline(lat, lon, target_mw, buildout_years=5):
             "year": yr, "mw_online": round(mw),
             "hidden_co2_t": round(res.hidden_co2_t),
             "hourly_match_pct": round(res.hourly_match_pct),
-            "factors": model.four_factor_impact(res, cfg, max(mw, 1)),
+            "factors": model.four_factor_impact(res, cfg, max(mw, 1),
+                        grid_carbon_mult=carbon_mult, water_stress_mult=water_mult),
             "rings": rings,
         })
     return {"lat": lat, "lon": lon, "target_mw": target_mw,

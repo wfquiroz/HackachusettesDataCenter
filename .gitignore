@@ -1,5 +1,6 @@
-# Kiro Crew local tooling — not part of the project
-.kiro/
+# Kiro: the .kiro/ directory MUST be committed (hackathon requirement).
+# Only exclude the machine-local lock file.
+.kiro/settings/.kirocrew-cli-settings.lock
 
 # Python
 __pycache__/

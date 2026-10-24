@@ -228,20 +228,24 @@ def impact_estimate(res: MatchResult, cfg: dict, aircooled=False) -> dict:
 
 def four_factor_impact(res: MatchResult, cfg: dict, peak_mw: float,
                        local_grid_mw: float = 2000.0,
-                       town_water_mgd: float = 10.0) -> dict:
+                       town_water_mgd: float = 10.0,
+                       grid_carbon_mult: float = 1.0,
+                       water_stress_mult: float = 1.0) -> dict:
     """Air / Energy / Water / Noise, each with its CORRECT scaling shape.
 
-    Per factor: absolute value, a % impact, and the scaling law used — so the UI
-    shows 'not just +X carbon'. Coefficients are benchmarks (modeled); the
-    SHAPES (log, sqrt, super-linear, %-of-grid) are real physics/engineering.
+    Per factor: absolute value, a % impact, and the scaling law used.
+    grid_carbon_mult / water_stress_mult (default 1.0) make AIR and WATER
+    vary BY LOCATION: a dirtier local grid raises hidden CO2, a more
+    water-stressed basin raises the effective water burden. Shapes are real
+    physics; coefficients + these multipliers are modeled.
     """
     import math
     b = cfg["impact_benchmarks"]
     mwh = res.energy_mwh
 
-    # AIR: real hourly CO2; super-linear because peak hours burn dirtier peakers
-    co2 = res.hidden_co2_t
-    co2_proxy = res.hidden_co2_t_peaker_proxy
+    # AIR: real hourly CO2, super-linear at peak; scaled by LOCAL grid carbon
+    co2 = res.hidden_co2_t * grid_carbon_mult
+    co2_proxy = res.hidden_co2_t_peaker_proxy * grid_carbon_mult
     superlinear = (co2_proxy - co2) / co2 * 100 if co2 > 0 else 0
 
     # ENERGY: real electricity consumed per year (GWh), the concrete measure.
@@ -251,9 +255,11 @@ def four_factor_impact(res: MatchResult, cfg: dict, peak_mw: float,
 
     # WATER: ~linear with energy, shown as M gal/day
     water_gal_yr = mwh * b["water_gal_per_mwh"]
+    # effective water burden scaled by LOCAL basin stress
+    water_gal_eff = water_gal_yr * water_stress_mult
     town_gal_yr = town_water_mgd * 1e6 * 365
-    water_pct = 100.0 * water_gal_yr / max(town_gal_yr, 1)
-    water_mgd = water_gal_yr / 365 / 1e6
+    water_pct = 100.0 * water_gal_eff / max(town_gal_yr, 1)
+    water_mgd = water_gal_eff / 365 / 1e6
 
     # NOISE: logarithmic dB, audible radius grows ~sqrt(MW)
     noise_db = 55.0 + 10.0 * math.log10(max(peak_mw, 1) / 10.0)
@@ -268,7 +274,7 @@ def four_factor_impact(res: MatchResult, cfg: dict, peak_mw: float,
                    "note": f"\u2248 {homes_equiv:,} homes \u00b7 {round(energy_pct,1)}% of a local grid node"},
         "water": {"value": round(water_mgd, 1), "unit": "M gal/day",
                   "pct": round(water_pct, 1), "scaling": "cooling water",
-                  "note": f"{round(water_gal_yr/1e6):,} M gal/yr"},
+                  "note": f"{round(water_gal_eff/1e6):,} M gal/yr"},
         "noise": {"value": round(noise_db), "unit": "dB at source",
                   "pct": round(noise_radius_m), "scaling": "logarithmic",
                   "note": f"audible to ~{round(noise_radius_m):,} m"},

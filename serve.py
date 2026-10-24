@@ -77,6 +77,11 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             return self._surfaces_with_placement()
         if self.path.startswith("/api/bestsite"):
             return self._bestsite()
+        if self.path.startswith("/api/townrules"):
+            return self._townrules()
+        if self.path.startswith("/api/model"):
+            mf = ROOT.parent / "us_model" / "importances.json"
+            return self._json(mf.read_bytes() if mf.exists() else b'{}')
         if self.path.startswith("/api/timeline"):
             return self._timeline()
         if self.path.startswith("/healthz"):
@@ -112,6 +117,19 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             self.send_header("Content-Type", "application/json")
             self.end_headers()
             self.wfile.write(json.dumps({"error": str(e)}).encode())
+
+    def _townrules(self):
+        """Serve the MA town ban/moratorium list as JSON (for pin lookups)."""
+        import csv
+        f = ROOT.parent / "data" / "ma_datacenter_town_rules.csv"
+        try:
+            rows = list(csv.DictReader(f.open()))
+            for r in rows:
+                r["lat"] = float(r["lat"]); r["lon"] = float(r["lon"])
+            self._json(json.dumps({"towns": rows}).encode())
+        except Exception as e:
+            self.send_response(500); self.send_header("Content-Type", "application/json")
+            self.end_headers(); self.wfile.write(json.dumps({"error": str(e)}).encode())
 
     def _surfaces_with_placement(self):
         """Serve the impact surfaces PLUS the placement-optimizer surface."""

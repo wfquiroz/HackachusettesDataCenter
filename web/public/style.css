@@ -573,3 +573,28 @@ input[type="number"] { background: var(--panel); border: 1px solid var(--border)
   opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease;
 }
 .outside-ma-toast.show { opacity: 1; transform: translateX(-50%) translateY(2px); }
+
+/* town ban/moratorium note at the bottom of the impact card */
+.town-rule-note {
+  margin-top: 10px; padding: 9px 11px; border-radius: 6px;
+  background: rgba(255,77,61,.10); border: 1px solid rgba(255,77,61,.45);
+  font-size: 12.5px; color: var(--text); line-height: 1.45;
+}
+.town-rule-note [data-lucide] { vertical-align: -3px; margin-right: 4px; }
+.town-rule-note [data-lucide] svg { stroke: var(--bad); color: var(--bad); }
+.town-rule-note b { color: var(--bad); }
+.trn-detail { color: var(--text-dim); margin-top: 3px; }
+.trn-src { color: var(--text-dim); font-size: 10.5px; margin-top: 3px; }
+
+/* Model tab evidence block */
+.model-evidence { background: var(--panel); border: 1px solid var(--border); border-radius: 6px; padding: 10px 12px; }
+.me-row { display: flex; justify-content: space-between; font-size: 12.5px; padding: 3px 0; }
+.me-row span { color: var(--text-dim); }
+.me-row b { font-family: "IBM Plex Mono", monospace; }
+.me-note { font-size: 10.5px; color: var(--text-dim); margin-top: 6px; line-height: 1.4; }
+
+/* reservoir layer toggle */
+.reservoir-toggle { display: flex; align-items: center; gap: 7px; font-size: 12px;
+  color: var(--text-dim); margin: 8px 0 2px; cursor: pointer; }
+.reservoir-toggle input { accent-color: #3f8cff; }
+.rt-swatch { width: 11px; height: 11px; border-radius: 3px; background: #3f8cff; flex: none; }

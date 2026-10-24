@@ -188,6 +188,31 @@ function populateControls() {
 // that fades in/out on toggle. This is the continuous wave, not markers.
 
 let SURF = null;                 // from /api/surfaces
+let TOWN_RULES = [];             // from /api/townrules
+fetch("/api/townrules").then(r => r.json())
+  .then(d => { TOWN_RULES = d.towns || []; }).catch(() => {});
+
+// Nearest town with a ban/moratorium within `maxMi`, or null.
+function townRuleNear(lat, lng, maxMi) {
+  maxMi = maxMi || 12;
+  let best = null, bestD = Infinity;
+  for (const t of TOWN_RULES) {
+    const dlat = (t.lat - lat) * 69;
+    const dlon = (t.lon - lng) * 69 * Math.cos(lat * Math.PI / 180);
+    const d = Math.sqrt(dlat * dlat + dlon * dlon);
+    if (d < bestD) { bestD = d; best = t; }
+  }
+  return best && bestD <= maxMi ? { ...best, dist: bestD } : null;
+}
+
+const RULE_LABEL = {
+  full_ban: "bans data centers outright",
+  near_total_ban: "near-total ban (small facilities only)",
+  full_ban_plus_moratorium: "banned data centers + 1-year moratorium",
+  moratorium: "has a data-center moratorium",
+  proposed_restriction: "is pursuing restrictions",
+  weighing_ban: "is weighing a ban",
+};
 const surfOverlays = {};         // id -> L.imageOverlay
 const surfOn = {};
 const surfBase = {};             // id -> pristine grid (Array) before any DC bloom
@@ -590,6 +615,38 @@ async function drawStateOutline() {
   }
 }
 
+// Reservoirs & major ponds (MassGIS Hydro). Toggleable blue water layer — the
+// "reservoir indicator" so a town can see water bodies a data center sits near.
+let reservoirLayer = null;
+async function drawReservoirs() {
+  try {
+    const res = await fetch("/ma_reservoirs.geojson");
+    const geo = await res.json();
+    reservoirLayer = L.geoJSON(geo, {
+      style: { color: "#2b6cff", weight: 1, opacity: 0.9,
+               fillColor: "#3f8cff", fillOpacity: 0.45 },
+      onEachFeature: (feature, lyr) => {
+        const p = feature.properties || {};
+        const name = p.NAME || "Unnamed water body";
+        const km2 = p.SQ_METERS ? (p.SQ_METERS / 1e6).toFixed(1) : "?";
+        lyr.bindPopup(
+          `<div class="pop-title">${name}</div>` +
+          `<div class="pop-meta">Reservoir / major pond · ${km2} km²</div>` +
+          `<div class="pop-meta">Source: MassGIS Hydrography (Major)</div>`);
+      },
+    }).addTo(map);
+    reservoirLayer.bringToFront();
+    if (stateOutline) stateOutline.bringToFront();
+  } catch (e) {
+    console.warn("Reservoir data unavailable", e);
+  }
+}
+function setReservoirsVisible(on) {
+  if (!reservoirLayer) return;
+  if (on) { reservoirLayer.addTo(map); reservoirLayer.bringToFront(); if (stateOutline) stateOutline.bringToFront(); }
+  else map.removeLayer(reservoirLayer);
+}
+
 // Lock the view to the gradient (surface) extent: fit it to fill the screen,
 // cap zoom-out at that fit, and stop panning into empty map around it.
 function lockViewToSurfaces() {
@@ -659,6 +716,9 @@ async function init() {
 
   // MA state outline, drawn above the gradient so the border stays crisp.
   await drawStateOutline();
+  drawReservoirs();
+  const rT = document.getElementById("reservoirToggle");
+  if (rT) rT.addEventListener("change", () => setReservoirsVisible(rT.checked));
 
   map.on("click", (e) => selectLocation({ lat: e.latlng.lat, lng: e.latlng.lng }));
 
@@ -884,6 +944,16 @@ setTimeout(() => { try { if (window.lucide) lucide.createIcons(); } catch (e) {}
         F("<span data-lucide=\"droplet\"></span>", "Water", "water", f.water, fin.water) +
         F("<span data-lucide=\"volume-2\"></span>", "Noise", "noise", f.noise, fin.noise) +
         `<div class="impact-stat" style="margin-top:8px"><span data-lucide="users"></span> <b>${r25.pop_within.toLocaleString()}</b> people within 25 km · ${r25.minority_pct}% minority</div>` +
+        (function () {
+          const ll = (typeof dropMarker !== "undefined" && dropMarker && dropMarker._ll) ? dropMarker._ll : null;
+          if (!ll) return "";
+          const t = townRuleNear(ll.lat, ll.lng, 12);
+          if (!t) return "";
+          const label = RULE_LABEL[t.rule_type] || "has a data-center rule";
+          return `<div class="town-rule-note"><span data-lucide="alert-triangle"></span>
+             <b>${t.town}</b> ${label}.<div class="trn-detail">${t.detail}</div>
+             <div class="trn-src">${t.source}</div></div>`;
+        })() +
         `<p class="muted" style="margin-top:6px">Predicted — shapes are real physics, coefficients modeled. Not measured.</p>`
       );
     }
@@ -977,14 +1047,42 @@ setTimeout(() => { try { if (window.lucide) lucide.createIcons(); } catch (e) {}
     // Fill the Model tab from /api/... importances baked into the page.
     const mb = document.getElementById("modelBody");
     if (mb) {
-      const fi = [["Cheap electricity",46,"#e4572e"],["Cool climate",34,"#f0a202"],
-                  ["Grid carbon",9,"#5aa9e6"],["Near a city",9,"#5aa9e6"],["People nearby",2,"#868e96"]];
-      mb.innerHTML = fi.map(([k,v,c]) =>
-        `<div class="fi-row"><span class="fi-label">${k}</span>
-           <span class="fi-bar"><span style="width:${v}%;background:${c}"></span></span>
-           <b>${v}%</b></div>`).join("") +
-        `<p class="muted" style="margin-top:8px">Data centers chase cheap power & cool air —
-         not carbon or people. That's the gap a town's approval has to fill.</p>`; _lucide();
+      const LABELS = {
+        elec_price_cents_kwh: ["Cheap electricity", "#FF4D3D"],
+        cooling_proxy: ["Cool climate", "#FFB020"],
+        grid_co2_lb_mwh: ["Grid carbon", "#2EF2C4"],
+        nearest_city_km: ["Near a city", "#2EF2C4"],
+        pop_proxy: ["People nearby", "#7D8A99"],
+      };
+      fetch("/api/model").then(r => r.json()).then(m => {
+        const imp = m.importances || {};
+        const bars = Object.entries(imp)
+          .sort((a, b) => b[1] - a[1])
+          .map(([k, v]) => {
+            const [lab, col] = LABELS[k] || [k, "#7D8A99"];
+            const pct = Math.round(v * 100);
+            return `<div class="fi-row"><span class="fi-label">${lab}</span>
+               <span class="fi-bar"><span style="width:${pct}%;background:${col}"></span></span>
+               <b>${pct}%</b></div>`;
+          }).join("");
+        const signalReal = (m.cv_r2 - m.placebo_r2) > 0.1;
+        mb.innerHTML =
+          `<div class="model-evidence">
+             <div class="me-row"><span>Trained on</span><b>${(m.n_rows||0).toLocaleString()} real US data centers</b></div>
+             <div class="me-row"><span>Accuracy (5-fold CV R²)</span><b>${m.cv_r2 ?? "–"}</b></div>
+             <div class="me-row"><span>Placebo test (R²)</span><b style="color:${signalReal?'var(--clean)':'var(--bad)'}">${m.placebo_r2 ?? "–"}</b></div>
+             <div class="me-note">Placebo ≈ 0 means the model isn't fooling itself —
+               a real signal, not noise. ${signalReal ? "✓ signal is real" : ""}</div>
+           </div>
+           <div class="factor-head" style="margin-top:12px">What drives where they cluster</div>` +
+          bars +
+          `<p class="muted" style="margin-top:8px">Data centers chase cheap power & cool air —
+           grid carbon and people barely matter. That's the gap a town's approval has to fill.</p>
+           <p class="muted" style="margin-top:6px;font-size:10.5px">Target: data-center density within 25 km.
+           Validation: 5-fold cross-validation + label-shuffle placebo. Source: 1,839 US sites (OSM) enriched with
+           EIA price, climate, grid carbon.</p>`;
+        _lucide();
+      }).catch(() => { mb.innerHTML = '<p class="muted">Model summary unavailable.</p>'; });
     }
   });
 
