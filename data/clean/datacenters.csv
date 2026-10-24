@@ -1,0 +1,3 @@
+name,town,lat,lon,status,peak_mw_low,peak_mw_high,utility,source_url
+Markley Lowell,Lowell,42.6412,-71.3162,operating,40,60,National Grid,https://www.wbur.org/
+Westfield Campus,Westfield,42.1251,-72.7495,proposed,150,274,Westfield Gas & Electric,https://www.bostonglobe.com/

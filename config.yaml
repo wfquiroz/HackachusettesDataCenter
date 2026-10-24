@@ -1,0 +1,54 @@
+# config.yaml — HourMatch assumptions, factors, defaults.
+# EVERYTHING the model treats as a constant lives here and is shown on the
+# Methodology screen. Never hardcode a factor silently in model.py.
+
+# ---- Emission factors: tonnes CO2 per MWh of generation, by fuel ----
+# Direct-combustion factors. Sources (cite on methodology screen):
+#   EPA eGRID NEWE subregion + EIA fuel-specific CO2 rates.
+# These are ESTIMATES of average output rates, not marginal.
+emission_factors_t_per_mwh:
+  gen_coal:  0.95
+  gen_ng:    0.41     # combined-cycle gas, typical
+  gen_oil:   0.75     # distillate/residual peakers
+  gen_nuc:   0.0
+  gen_hydro: 0.0
+  gen_solar: 0.0
+  gen_wind:  0.0
+  gen_other: 0.30     # mixed (refuse, landfill gas, misc) — rough
+# Peaker proxy: when the grid is at its top 5% demand hours, uncovered load is
+# assumed served by a gas/oil peaker. LABEL AS A PROXY on screen.
+peaker_factor_t_per_mwh: 0.65
+
+# ---- Model defaults (sliders in the app) ----
+defaults:
+  load_factor: 0.85
+  procurement_ratio: 1.0      # 1.0 = EO 658 annual match
+  battery_roundtrip_eff: 0.88
+  peak_hours_window: 100      # "peak contribution" = DC MW during top-N demand hours
+  peaker_percentile: 0.95     # top 5% demand hours use the peaker proxy
+
+# ---- Impact benchmarks (per the broader map idea) ----
+# All ESTIMATES from published figures on existing data centers. Driven by the
+# MW slider, shown labeled "estimate" on screen. Tune freely.
+impact_benchmarks:
+  # Water for cooling. Hyperscale varies hugely with cooling type.
+  water_gal_per_mwh: 1800         # ~ gallons per MWh of IT load (evaporative)
+  water_gal_per_mwh_aircooled: 50 # air/closed-loop alternative
+  # Noise: audible radius from a large cooling plant / generator yard.
+  noise_audible_radius_m_per_100mw: 300
+  # Diesel backup: typical nameplate backup as a share of IT load.
+  backup_diesel_share_of_peak: 1.0
+  diesel_ef_t_per_mwh: 0.75       # same as oil peaker, label as scenario
+
+# ---- Comparison anchors (filled from real kit data at runtime) ----
+# Boston BERDO: use median large-building annual CO2 for "= N buildings".
+# Landfill solar: total operating MW for the opening slide.
+
+# ---- Placement score weights (stage 3: OPTIMIZE) ----
+# Higher score = better place to put a data center. Each sub-score 0..1.
+# We weight them, sum, normalize. Tune in the app.
+placement_weights:
+  grid_cleanliness: 0.35   # how clean is that utility/region's hourly grid
+  people_distance:  0.30   # fewer people / lower EJ burden nearby = better
+  grid_headroom:    0.20   # transmission presence (proxy; NOT capacity)
+  water_stress:     0.15   # lower local water stress = better

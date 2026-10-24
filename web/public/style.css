@@ -105,6 +105,39 @@ body {
 .pill.high { background: var(--high); color: #fff; }
 .pill.medium { background: var(--medium); }
 .pill.low { background: var(--low); color: #06230f; }
+.pill.clean { background: #2f9e44; color: #fff; }
+
+/* HourMatch meter block */
+.meter { margin: 8px 0; padding: 8px; border-radius: 8px; background: rgba(228,87,46,.08); border: 1px solid rgba(228,87,46,.25); }
+.meter-head { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.meter-row { display: flex; align-items: baseline; gap: 8px; margin: 2px 0; font-weight: 700; }
+.meter-annual { color: #2f9e44; }
+.meter-hourly { color: #e4572e; }
+.meter-arrow { color: var(--muted); }
+.meter-bar { height: 7px; border-radius: 4px; background: rgba(255,255,255,.12); overflow: hidden; }
+.meter-fill { height: 100%; background: #e4572e; }
+.meter-sub { font-size: 11px; color: var(--muted); margin-top: 3px; }
+.meter-inline { font-size: 12.5px; margin: 2px 0; }
+
+/* Layer control — floating over the map */
+.layer-control {
+  position: absolute; top: 12px; left: 12px; z-index: 1000;
+  background: rgba(16,19,24,.92); border: 1px solid #2a2f38; border-radius: 10px;
+  padding: 10px 12px; width: 268px; backdrop-filter: blur(6px);
+  box-shadow: 0 4px 18px rgba(0,0,0,.35);
+}
+.lc-head { font-weight: 700; font-size: 13px; margin-bottom: 7px; color: #e8eaed; }
+.lc-row { display: flex; align-items: center; gap: 7px; padding: 4px 0; cursor: pointer; font-size: 12.5px; color: #cfd3d8; }
+.lc-row input { accent-color: #5aa9e6; }
+.lc-swatch { width: 11px; height: 11px; border-radius: 50%; flex: none; }
+.lc-label { flex: 1; }
+.lc-tag { font-size: 9.5px; text-transform: uppercase; letter-spacing: .04em; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
+.lc-tag.measured { background: #1f6f3a; color: #d7ffe3; }
+.lc-tag.modeled { background: #6a4b16; color: #ffe9c2; }
+.lc-foot { margin-top: 8px; padding-top: 7px; border-top: 1px solid #2a2f38; font-size: 10.5px; color: #8a9199; }
+#map { position: relative; }
+.surf-overlay { transition: opacity .5s ease; }
+.leaflet-container { background: #0b0e13; }
 
 .badge-type {
   font-size: 11px;
@@ -135,6 +168,7 @@ body {
 .legend .dot.high { background: var(--high); }
 .legend .dot.medium { background: var(--medium); }
 .legend .dot.low { background: var(--low); }
+.legend .dot.clean { background: #2f9e44; }
 .legend .src { color: var(--muted); margin-left: auto; }
 
 /* colored circle markers */

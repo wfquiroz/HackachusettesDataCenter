@@ -1,0 +1,213 @@
+{
+  "layers": [
+    {
+      "id": "energy_output",
+      "label": "Energy output \u2014 clean supply",
+      "variable": "energy_output",
+      "kind": "measured",
+      "unit": "MW",
+      "color": "#2f9e44",
+      "points": [
+        {
+          "lat": 42.21,
+          "lng": -72.1,
+          "name": "Brookfield LF",
+          "value": 0.575,
+          "meta": "operating landfill solar"
+        },
+        {
+          "lat": 42.59,
+          "lng": -72.6,
+          "name": "Widsom Way Sanitary LF",
+          "value": 2.0,
+          "meta": "operating landfill solar"
+        },
+        {
+          "lat": 42.26,
+          "lng": -71.8,
+          "name": "Greenwood Street LF",
+          "value": 8.1,
+          "meta": "operating landfill solar"
+        },
+        {
+          "lat": 42.15,
+          "lng": -72.61,
+          "name": "Chicopee Elks LF",
+          "value": 2.3,
+          "meta": "operating landfill solar"
+        },
+        {
+          "lat": 42.45,
+          "lng": -73.25,
+          "name": "Pittsfield Municipal LF",
+          "value": 2.91,
+          "meta": "operating landfill solar"
+        },
+        {
+          "lat": 42.13,
+          "lng": -72.75,
+          "name": "Twiss Street LF",
+          "value": 2.3,
+          "meta": "operating landfill solar"
+        },
+        {
+          "lat": 42.1,
+          "lng": -72.59,
+          "name": "Delta Hills LF",
+          "value": 2.6,
+          "meta": "operating landfill solar"
+        },
+        {
+          "lat": 42.64,
+          "lng": -71.32,
+          "name": "Westford Street LF",
+          "value": 1.5,
+          "meta": "operating landfill solar"
+        },
+        {
+          "lat": 42.1,
+          "lng": -72.59,
+          "name": "Cottage Street LF",
+          "value": 3.9,
+          "meta": "operating landfill solar"
+        },
+        {
+          "lat": 42.27,
+          "lng": -72.67,
+          "name": "Oliver Street LF",
+          "value": 2.3,
+          "meta": "operating landfill solar"
+        }
+      ],
+      "source": "MA DEP Renewables at Landfills"
+    },
+    {
+      "id": "air",
+      "label": "Air pollution \u2014 fossil plants",
+      "variable": "air",
+      "kind": "measured",
+      "unit": "tCO\u2082/yr",
+      "color": "#e4572e",
+      "points": [
+        {
+          "lat": 42.3959,
+          "lng": -71.0712,
+          "name": "Mystic Generating (gas, retired 2024)",
+          "value": null,
+          "meta": "fuel: gas \u00b7 emissions pending CAMPD key"
+        },
+        {
+          "lat": 42.245,
+          "lng": -70.957,
+          "name": "Fore River (gas)",
+          "value": null,
+          "meta": "fuel: gas \u00b7 emissions pending CAMPD key"
+        },
+        {
+          "lat": 41.773,
+          "lng": -70.509,
+          "name": "Canal Station (oil/gas, Sandwich)",
+          "value": null,
+          "meta": "fuel: oil/gas \u00b7 emissions pending CAMPD key"
+        },
+        {
+          "lat": 42.108,
+          "lng": -72.62,
+          "name": "West Springfield (gas/oil)",
+          "value": null,
+          "meta": "fuel: gas/oil \u00b7 emissions pending CAMPD key"
+        },
+        {
+          "lat": 43.756,
+          "lng": -70.193,
+          "name": "Wyman (oil, ME)",
+          "value": null,
+          "meta": "fuel: oil \u00b7 emissions pending CAMPD key"
+        },
+        {
+          "lat": 41.168,
+          "lng": -73.179,
+          "name": "Bridgeport Harbor (gas, CT)",
+          "value": null,
+          "meta": "fuel: gas \u00b7 emissions pending CAMPD key"
+        }
+      ],
+      "source": "EPA CAMPD (locations; emissions need api.data.gov key)"
+    },
+    {
+      "id": "energy_usage",
+      "label": "Energy usage \u2014 grid pull (uncovered)",
+      "variable": "energy_usage",
+      "kind": "measured",
+      "unit": "MWh/yr",
+      "color": "#f3c13a",
+      "points": [
+        {
+          "lat": 42.6412,
+          "lng": -71.3162,
+          "name": "Markley Lowell",
+          "value": 345637,
+          "meta": "23% hourly-clean \u00b7 345,637 MWh from grid"
+        },
+        {
+          "lat": 42.1251,
+          "lng": -72.7495,
+          "name": "Westfield Campus",
+          "value": 1578411,
+          "meta": "23% hourly-clean \u00b7 1,578,411 MWh from grid"
+        }
+      ],
+      "source": "HourMatch model \u00b7 EIA-930 ISO-NE 2024"
+    },
+    {
+      "id": "water",
+      "label": "Water use \u2014 cooling (modeled)",
+      "variable": "water",
+      "kind": "modeled",
+      "unit": "M gal/yr",
+      "color": "#5aa9e6",
+      "points": [
+        {
+          "lat": 42.6412,
+          "lng": -71.3162,
+          "name": "Markley Lowell",
+          "value": 806.4,
+          "meta": "806.4M gal/yr (modeled)"
+        },
+        {
+          "lat": 42.1251,
+          "lng": -72.7495,
+          "name": "Westfield Campus",
+          "value": 3682.4,
+          "meta": "3682.4M gal/yr (modeled)"
+        }
+      ],
+      "source": "benchmark \u00d7 MW \u2014 replace with learned US relationship"
+    },
+    {
+      "id": "noise",
+      "label": "Noise \u2014 audible radius (modeled)",
+      "variable": "noise",
+      "kind": "modeled",
+      "unit": "m",
+      "color": "#b084f3",
+      "points": [
+        {
+          "lat": 42.6412,
+          "lng": -71.3162,
+          "name": "Markley Lowell",
+          "value": 153,
+          "meta": "~153 m audible radius (modeled)"
+        },
+        {
+          "lat": 42.1251,
+          "lng": -72.7495,
+          "name": "Westfield Campus",
+          "value": 699,
+          "meta": "~699 m audible radius (modeled)"
+        }
+      ],
+      "source": "benchmark \u00d7 MW \u2014 replace with learned US relationship"
+    }
+  ]
+}

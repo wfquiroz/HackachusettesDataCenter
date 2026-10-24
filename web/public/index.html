@@ -17,6 +17,8 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""
   ></script>
+  <!-- Leaflet.heat — smooth heat surfaces (Apple-Maps-style wash) -->
+  <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -37,23 +39,33 @@
   </header>
 
   <div class="layout">
-    <div id="map"></div>
+    <div id="map">
+      <div id="layerControl" class="layer-control">
+        <div class="lc-head">Impact layers</div>
+        <div id="layerList"></div>
+        <div class="lc-foot">
+          <span class="lc-tag measured">measured</span> real data &nbsp;
+          <span class="lc-tag modeled">modeled</span> from MW benchmark
+        </div>
+      </div>
+    </div>
     <aside id="panel" class="panel">
       <h2 id="panelTitle">Select a location</h2>
       <p id="panelSub" class="muted">
-        Pick a city above, or click anywhere on the map, to see nearby facilities
-        and their emission level.
+        Toggle impact layers at left. Pick a city above, or click anywhere on the
+        map, to see nearby facilities and their hourly-clean gap.
       </p>
       <ul id="results" class="results"></ul>
     </aside>
   </div>
 
   <div class="legend">
-    <strong>Emission level (annual CO₂e)</strong>
-    <span class="dot high"></span> High
+    <strong>HourMatch</strong>
+    <span class="dot high"></span> High CO₂
     <span class="dot medium"></span> Medium
     <span class="dot low"></span> Low
-    <span class="src">Values are illustrative estimates — see /api/facilities</span>
+    <span class="dot clean"></span> Clean supply
+    <span class="src">Energy &amp; CO₂: real ISO-NE 2024. Noise/water: modeled, labeled.</span>
   </div>
 
   <script src="app.js"></script>
