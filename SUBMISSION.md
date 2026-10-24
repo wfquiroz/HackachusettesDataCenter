@@ -144,8 +144,8 @@ to help a *good* project prove itself — it is not anti-data-center.
 - **Kiro Crew agent orchestration** — a conductor/PM pattern coordinating parallel
   workers, each on its own branch and files, reconciling through PRs, never
   auto-merging the trunk.
-- **Kiro CLI + dashboard** — heavy clone/branch/push/test in the CLI; live
-  hand-edits and status from the dashboard.
+- **Kiro CLI** — heavy clone/branch/push/test work; **Kiro IDE** — human
+  hand-edits and close reading of agent diffs.
 - **MCP** — Lovable MCP server configured in `/.kiro/settings/mcp.json`.
 
 ---

@@ -61,7 +61,7 @@ agency embeds it in the EO-658 review workflow.
 We treated Kiro not as autocomplete but as a **team of agents under house rules**,
 which is what let a small team move fast without stepping on each other.
 
-**Tools used — IDE, CLI, Web, and Crew, each for what it's best at.**
+**Tools used — Crew, CLI, and IDE, each for what it's best at.**
 - **Kiro Crew (the core of our strategy)** — a conductor/PM pattern: a lead agent
   coordinated parallel worker agents, each owning its own files and its own feature
   branch, reconciling through pull requests. This is why multiple features (US ML
@@ -70,8 +70,6 @@ which is what let a small team move fast without stepping on each other.
 - **Kiro CLI** — the heavy lifting: clone, branch, push, run the model tests,
   reproduce the notebook. Fast, scriptable, close to git.
 - **Kiro IDE** — human hand-edits and close reading of agent diffs.
-- **Kiro Web/dashboard** — status and steering from anywhere, including quick
-  "that looks off" corrections mid-build.
 
 **Spec-driven development vs vibe coding.** Before building, we committed a spec
 set to the repo — `docs/MODEL_SPEC.md` (exactly what `model.py` computes),
