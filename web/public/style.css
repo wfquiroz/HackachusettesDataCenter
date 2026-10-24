@@ -70,12 +70,46 @@ body {
 }
 
 .panel {
+  position: relative;
   width: 340px;
   background: var(--panel);
   border-left: 1px solid var(--border);
+  overflow: visible;
+  transition: width .25s ease;
+  flex: none;
+}
+.panel-body {
+  height: 100%;
   padding: 16px;
   overflow-y: auto;
+  transition: opacity .18s ease;
 }
+/* collapsed: panel shrinks to a thin strip, body hidden */
+.panel.collapsed { width: 0; border-left: none; }
+.panel.collapsed .panel-body { opacity: 0; pointer-events: none; }
+
+/* floating toggle tab on the panel's left edge */
+.panel-toggle {
+  position: absolute;
+  top: 14px;
+  left: -16px;
+  width: 24px; height: 44px;
+  display: grid; place-items: center;
+  background: var(--panel);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+  z-index: 500;
+  box-shadow: -3px 0 10px rgba(0,0,0,.25);
+}
+.panel-toggle:hover { color: var(--text); }
+.pt-chev { font-size: 18px; line-height: 1; transition: transform .25s ease; }
+/* collapsed: chevron flips to point left (reopen) and tab hugs screen edge */
+.panel.collapsed .panel-toggle { left: -24px; }
+.panel.collapsed .pt-chev { transform: rotate(180deg); }
+
 .panel h2 { margin: 0 0 4px; font-size: 16px; }
 .muted { color: var(--muted); font-size: 13px; }
 
@@ -218,6 +252,31 @@ body {
   border-top: 1px solid #2a3340; font-size: 10.5px; color: #8a9199;
   display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
 }
+
+/* color-scale legend — what the colors mean, with units */
+.scale-legend { margin-top: 8px; padding-top: 8px; border-top: 1px solid #2a3340; }
+.sl-head { font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; color: #8a9199; margin-bottom: 7px; font-weight: 700; }
+.sl-item { margin-bottom: 11px; }
+.sl-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.sl-name { font-size: 12px; font-weight: 600; color: #eef2f6; }
+.sl-unit { font-size: 10px; color: #93a1b0; }
+.sl-bar { height: 9px; border-radius: 5px; margin: 4px 0 2px; box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
+.sl-ends { display: flex; justify-content: space-between; font-size: 9.5px; color: #93a1b0; }
+.sl-src { font-size: 9px; color: #6f7a86; margin-top: 2px; }
+
+/* live value readout under the cursor — floats bottom-left of the map */
+.hover-readout {
+  position: absolute; bottom: 30px; right: 14px; z-index: 900;
+  background: rgba(14,18,25,.94); border: 1px solid #2a3340; border-radius: 10px;
+  padding: 9px 11px; min-width: 160px; backdrop-filter: blur(8px);
+  box-shadow: 0 8px 22px rgba(0,0,0,.4); pointer-events: none;
+}
+.hr-head { font-size: 10px; text-transform: uppercase; letter-spacing: .05em; color: #8a9199; margin-bottom: 6px; font-weight: 700; }
+.hr-row { display: flex; align-items: center; gap: 7px; font-size: 12px; color: #dfe5ec; padding: 2px 0; }
+.hr-dot { width: 10px; height: 10px; border-radius: 50%; flex: none; box-shadow: inset 0 0 0 1px rgba(255,255,255,.2); }
+.hr-name { flex: 1; }
+.hr-val { font-weight: 700; font-variant-numeric: tabular-nums; }
+.hr-muted { color: #6f7a86; }
 #map { position: relative; }
 .surf-overlay { transition: opacity .5s ease; }
 .leaflet-container { background: #0b0e13; }

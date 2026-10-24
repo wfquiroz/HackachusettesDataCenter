@@ -52,16 +52,24 @@
             <span class="lc-tag measured">measured</span> real data
             <span class="lc-tag modeled">modeled</span> from MW benchmark
           </div>
+          <div id="scaleLegend" class="scale-legend"></div>
         </div>
       </div>
+      <div id="hoverReadout" class="hover-readout" style="display:none"></div>
     </div>
     <aside id="panel" class="panel">
-      <h2 id="panelTitle">Select a location</h2>
-      <p id="panelSub" class="muted">
-        Toggle impact layers at left. Pick a city above, or click anywhere on the
-        map, to see nearby facilities and their hourly-clean gap.
-      </p>
-      <ul id="results" class="results"></ul>
+      <button id="panelToggle" class="panel-toggle" type="button"
+              aria-expanded="true" aria-controls="panelBody" title="Collapse panel">
+        <span class="pt-chev">›</span>
+      </button>
+      <div id="panelBody" class="panel-body">
+        <h2 id="panelTitle">Select a location</h2>
+        <p id="panelSub" class="muted">
+          Toggle impact layers at left. Pick a city above, or click anywhere on the
+          map, to see nearby facilities and their hourly-clean gap.
+        </p>
+        <ul id="results" class="results"></ul>
+      </div>
     </aside>
   </div>
 
