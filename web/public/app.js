@@ -300,23 +300,86 @@ function toggleSurface(id, on) {
   }
 }
 
+// Friendly metadata per surface: an icon + a plain-language one-liner.
+// Keyed by surface id so it survives label changes in the data.
+const SURF_META = {
+  ej_burden: {
+    icon: "👥",
+    title: "People",
+    desc: "Who lives nearby — environmental-justice population density.",
+  },
+  air_fossil: {
+    icon: "🏭",
+    title: "Air",
+    desc: "Fossil-plant intensity — dirtier air where plants run.",
+  },
+  energy_demand: {
+    icon: "⚡",
+    title: "Energy",
+    desc: "Grid demand pressure across the state.",
+  },
+  water_stress: {
+    icon: "💧",
+    title: "Water",
+    desc: "Cooling-water demand (modeled estimate).",
+  },
+  noise: {
+    icon: "🔊",
+    title: "Noise",
+    desc: "Generator & cooling noise (modeled estimate).",
+  },
+};
+
+function updateLayerCount() {
+  const n = Object.values(surfOn).filter(Boolean).length;
+  const el = document.getElementById("lcCount");
+  if (el) el.textContent = n ? `${n} on` : "none on";
+}
+
 function buildLayerControl() {
   const list = document.getElementById("layerList");
   list.innerHTML = "";
   SURF.surfaces.forEach((surf, i) => {
     buildSurface(surf);
     const on = i === 0; // EJ wave on by default
+    const meta = SURF_META[surf.id] || { icon: "◆", title: surf.label, desc: "" };
+
     const row = document.createElement("label");
     row.className = "lc-row";
+    row.dataset.on = on ? "1" : "0";
+    row.style.setProperty("--swatch", surf.color);
     row.innerHTML = `
-      <input type="checkbox" ${on ? "checked" : ""} data-id="${surf.id}" />
-      <span class="lc-swatch" style="background:${surf.color}"></span>
-      <span class="lc-label">${surf.label}</span>
-      <span class="lc-tag ${surf.kind}">${surf.kind}</span>`;
-    row.querySelector("input").addEventListener("change", (e) =>
-      toggleSurface(surf.id, e.target.checked));
+      <span class="lc-icon" style="background:${surf.color}22;color:${surf.color}">${meta.icon}</span>
+      <span class="lc-text">
+        <span class="lc-title-row">
+          <span class="lc-label">${meta.title}</span>
+          <span class="lc-tag ${surf.kind}">${surf.kind}</span>
+        </span>
+        <span class="lc-desc">${meta.desc}</span>
+      </span>
+      <span class="lc-toggle" aria-hidden="true"><span class="lc-knob"></span></span>
+      <input type="checkbox" class="lc-check" ${on ? "checked" : ""} data-id="${surf.id}" />`;
+
+    const input = row.querySelector("input");
+    input.addEventListener("change", (e) => {
+      toggleSurface(surf.id, e.target.checked);
+      row.dataset.on = e.target.checked ? "1" : "0";
+      updateLayerCount();
+    });
+
     list.appendChild(row);
     if (on) toggleSurface(surf.id, true);
+  });
+  updateLayerCount();
+}
+
+function wireCollapse() {
+  const btn = document.getElementById("lcCollapse");
+  const control = document.getElementById("layerControl");
+  if (!btn || !control) return;
+  btn.addEventListener("click", () => {
+    const collapsed = control.classList.toggle("collapsed");
+    btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
   });
 }
 
@@ -325,6 +388,7 @@ async function loadLayers() {
     const res = await fetch("/api/surfaces");
     SURF = await res.json();
     buildLayerControl();
+    wireCollapse();
   } catch (e) {
     console.warn("surfaces unavailable", e);
   }

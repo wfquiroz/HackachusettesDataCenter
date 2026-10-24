@@ -41,11 +41,17 @@
   <div class="layout">
     <div id="map">
       <div id="layerControl" class="layer-control">
-        <div class="lc-head">Impact layers</div>
-        <div id="layerList"></div>
-        <div class="lc-foot">
-          <span class="lc-tag measured">measured</span> real data &nbsp;
-          <span class="lc-tag modeled">modeled</span> from MW benchmark
+        <button id="lcCollapse" class="lc-collapse" type="button" aria-expanded="true" title="Collapse">
+          <span class="lc-head-text">Impact layers</span>
+          <span id="lcCount" class="lc-count">none on</span>
+          <span class="lc-chev">▾</span>
+        </button>
+        <div id="lcBody" class="lc-body">
+          <div id="layerList"></div>
+          <div class="lc-foot">
+            <span class="lc-tag measured">measured</span> real data
+            <span class="lc-tag modeled">modeled</span> from MW benchmark
+          </div>
         </div>
       </div>
     </div>
@@ -61,10 +67,10 @@
 
   <div class="legend">
     <strong>HourMatch</strong>
-    <span class="dot high"></span> High CO₂
-    <span class="dot medium"></span> Medium
-    <span class="dot low"></span> Low
-    <span class="dot clean"></span> Clean supply
+    <span class="dot high">High CO₂</span>
+    <span class="dot medium">Medium</span>
+    <span class="dot low">Low</span>
+    <span class="dot clean">Clean supply</span>
     <span class="src">Energy &amp; CO₂: real ISO-NE 2024. Noise/water: modeled, labeled.</span>
   </div>
 

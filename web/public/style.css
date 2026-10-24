@@ -122,19 +122,102 @@ body {
 /* Layer control — floating over the map */
 .layer-control {
   position: absolute; top: 12px; left: 12px; z-index: 1000;
-  background: rgba(16,19,24,.92); border: 1px solid #2a2f38; border-radius: 10px;
-  padding: 10px 12px; width: 268px; backdrop-filter: blur(6px);
-  box-shadow: 0 4px 18px rgba(0,0,0,.35);
+  background: rgba(14,18,25,.94); border: 1px solid #2a3340; border-radius: 14px;
+  width: 300px; backdrop-filter: blur(10px);
+  box-shadow: 0 10px 34px rgba(0,0,0,.45);
+  overflow: hidden;
+  font-feature-settings: "tnum";
 }
-.lc-head { font-weight: 700; font-size: 13px; margin-bottom: 7px; color: #e8eaed; }
-.lc-row { display: flex; align-items: center; gap: 7px; padding: 4px 0; cursor: pointer; font-size: 12.5px; color: #cfd3d8; }
-.lc-row input { accent-color: #5aa9e6; }
-.lc-swatch { width: 11px; height: 11px; border-radius: 50%; flex: none; }
-.lc-label { flex: 1; }
-.lc-tag { font-size: 9.5px; text-transform: uppercase; letter-spacing: .04em; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
-.lc-tag.measured { background: #1f6f3a; color: #d7ffe3; }
-.lc-tag.modeled { background: #6a4b16; color: #ffe9c2; }
-.lc-foot { margin-top: 8px; padding-top: 7px; border-top: 1px solid #2a2f38; font-size: 10.5px; color: #8a9199; }
+
+/* collapsible header button */
+.lc-collapse {
+  display: flex; align-items: center; gap: 8px; width: 100%;
+  background: none; border: none; cursor: pointer;
+  padding: 12px 14px; color: #eef2f6;
+}
+.lc-head-text {
+  /* center the title in the free space; count + chevron stay grouped right */
+  margin: 0 auto;
+  font-weight: 700; font-size: 13.5px; letter-spacing: .2px;
+}
+.lc-count {
+  font-size: 10.5px; font-weight: 700;
+  color: #9fb3c8; background: rgba(90,169,230,.14);
+  border: 1px solid rgba(90,169,230,.3);
+  padding: 2px 8px; border-radius: 999px; text-transform: uppercase; letter-spacing: .05em;
+}
+.lc-chev { color: #8a9199; transition: transform .2s ease; font-size: 12px; }
+.layer-control.collapsed .lc-chev { transform: rotate(-90deg); }
+
+.lc-body {
+  padding: 4px 10px 10px;
+  max-height: 440px; overflow-y: auto;
+  transition: max-height .25s ease, opacity .2s ease, padding .25s ease;
+}
+.layer-control.collapsed .lc-body {
+  max-height: 0; opacity: 0; padding-top: 0; padding-bottom: 0; overflow: hidden;
+}
+
+/* each key as a card row */
+.lc-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 10px; margin: 5px 0;
+  border-radius: 10px; cursor: pointer;
+  border: 1px solid transparent;
+  transition: background .15s ease, border-color .15s ease, transform .1s ease;
+  position: relative;
+}
+.lc-row:hover { background: rgba(255,255,255,.04); border-color: #31404f; }
+.lc-row:active { transform: scale(.995); }
+.lc-row[data-on="1"] {
+  background: rgba(90,169,230,.07);
+  border-color: color-mix(in srgb, var(--swatch) 45%, transparent);
+}
+
+/* colored icon chip */
+.lc-icon {
+  width: 30px; height: 30px; flex: none;
+  display: grid; place-items: center;
+  border-radius: 9px; font-size: 15px; line-height: 1;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+}
+
+.lc-text { flex: 1; min-width: 0; }
+.lc-title-row { display: flex; align-items: center; gap: 6px; }
+.lc-label { font-size: 13px; font-weight: 600; color: #eef2f6; }
+.lc-desc {
+  display: block; font-size: 11px; color: #93a1b0;
+  margin-top: 2px; line-height: 1.35;
+  overflow: hidden; text-overflow: ellipsis;
+}
+
+.lc-tag {
+  font-size: 9px; text-transform: uppercase; letter-spacing: .05em;
+  padding: 1px 6px; border-radius: 999px; font-weight: 800; flex: none;
+}
+.lc-tag.measured { background: rgba(47,158,68,.18); color: #7ee2a0; border: 1px solid rgba(47,158,68,.4); }
+.lc-tag.modeled  { background: rgba(214,158,46,.16); color: #ffd98a; border: 1px solid rgba(214,158,46,.4); }
+
+/* iOS-style toggle (native checkbox hidden) */
+.lc-check { position: absolute; opacity: 0; pointer-events: none; }
+.lc-toggle {
+  flex: none; width: 36px; height: 20px; border-radius: 999px;
+  background: #2b3542; position: relative; transition: background .2s ease;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+}
+.lc-knob {
+  position: absolute; top: 2px; left: 2px; width: 16px; height: 16px;
+  border-radius: 50%; background: #c6ced8; transition: transform .2s ease, background .2s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,.4);
+}
+.lc-row[data-on="1"] .lc-toggle { background: var(--swatch); }
+.lc-row[data-on="1"] .lc-knob { transform: translateX(16px); background: #fff; }
+
+.lc-foot {
+  margin-top: 6px; padding: 9px 10px 2px;
+  border-top: 1px solid #2a3340; font-size: 10.5px; color: #8a9199;
+  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+}
 #map { position: relative; }
 .surf-overlay { transition: opacity .5s ease; }
 .leaflet-container { background: #0b0e13; }
@@ -151,25 +234,30 @@ body {
 .legend {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 16px;
+  gap: 8px;
+  padding: 9px 16px;
   background: var(--panel);
   border-top: 1px solid var(--border);
   font-size: 12px;
   color: var(--text);
   flex-wrap: wrap;
 }
+.legend > strong { font-size: 12.5px; margin-right: 2px; }
+/* each swatch+label reads as a chip */
 .legend .dot {
-  display: inline-block;
-  width: 12px; height: 12px;
-  border-radius: 50%;
-  margin-left: 6px;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 3px 9px 3px 7px; border-radius: 999px;
+  background: rgba(255,255,255,.04); border: 1px solid var(--border);
+  font-size: 11.5px; color: var(--text); margin: 0;
 }
-.legend .dot.high { background: var(--high); }
-.legend .dot.medium { background: var(--medium); }
-.legend .dot.low { background: var(--low); }
-.legend .dot.clean { background: #2f9e44; }
-.legend .src { color: var(--muted); margin-left: auto; }
+.legend .dot::before {
+  content: ""; width: 10px; height: 10px; border-radius: 50%; flex: none;
+}
+.legend .dot.high::before { background: var(--high); }
+.legend .dot.medium::before { background: var(--medium); }
+.legend .dot.low::before { background: var(--low); }
+.legend .dot.clean::before { background: #2f9e44; }
+.legend .src { color: var(--muted); margin-left: auto; font-size: 11px; }
 
 /* colored circle markers */
 .marker-emission {
