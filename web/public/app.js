@@ -594,6 +594,18 @@ async function init() {
   facilityLayer = L.layerGroup().addTo(map);
   drawAllMarkers();
 
+  // Nearby tab: toggle facility markers (and the radius circle) on/off the map
+  const showFac = document.getElementById("showFacilities");
+  if (showFac) showFac.addEventListener("change", () => {
+    if (showFac.checked) {
+      facilityLayer.addTo(map);
+      if (radiusCircle) radiusCircle.addTo(map);
+    } else {
+      map.removeLayer(facilityLayer);
+      if (radiusCircle) map.removeLayer(radiusCircle);
+    }
+  });
+
   await loadLayers();
 
   // MA state outline, drawn above the gradient so the border stays crisp.

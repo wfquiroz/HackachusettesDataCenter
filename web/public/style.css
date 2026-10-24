@@ -560,3 +560,7 @@ input[type="number"] { background: var(--panel); border: 1px solid var(--border)
 }
 .cross-chip.cross-warn { background: var(--warn); color: #1a1a1a; }
 .cross-chip.cross-bad  { background: var(--bad);  color: #fff; }
+
+.nearby-toggle { display: flex; align-items: center; gap: 7px; font-size: 12.5px;
+  color: var(--text-dim); margin: 4px 0 10px; cursor: pointer; }
+.nearby-toggle input { accent-color: var(--clean); }
