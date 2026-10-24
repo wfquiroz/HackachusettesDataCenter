@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HourMatch — Emissions Map</title>
 
+  <!-- IBM Plex Sans + Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <!-- Leaflet (OpenStreetMap, no API key / no billing) -->
   <link
     rel="stylesheet"
@@ -17,23 +22,21 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""
   ></script>
-  <!-- Leaflet.heat — smooth heat surfaces (Apple-Maps-style wash) -->
+  <!-- Leaflet.heat — smooth heat surfaces -->
   <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+  <!-- lucide line icons (vanilla, no React) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="topbar">
     <div class="brand">
-      <h1>HourMatch</h1>
-      <span class="tag">Data centers &amp; industry emissions</span>
+      <h1 class="wordmark">HOURMATCH</h1>
+      <span class="tag">data center impact · Massachusetts</span>
     </div>
     <div class="controls">
-      <label for="region">Region</label>
-      <select id="region"></select>
-      <label for="city">Location</label>
-      <select id="city"></select>
-      <label for="radius">Radius: <span id="radiusLabel">50</span> km</label>
+      <label for="radius">Nearby radius: <span id="radiusLabel" class="num">50</span> km</label>
       <input id="radius" type="range" min="5" max="300" step="5" value="50" />
     </div>
   </header>
@@ -44,7 +47,7 @@
         <button id="lcCollapse" class="lc-collapse" type="button" aria-expanded="true" title="Collapse">
           <span class="lc-head-text">Impact layers</span>
           <span id="lcCount" class="lc-count">none on</span>
-          <span class="lc-chev">▾</span>
+          <span class="lc-chev" data-lucide="chevron-down"></span>
         </button>
         <div id="lcBody" class="lc-body">
           <div id="layerList"></div>
@@ -54,13 +57,10 @@
           </div>
           <div id="scaleLegend" class="scale-legend"></div>
           <div class="drop-box">
-            <button id="dropBtn" class="drop-btn" type="button">📍 Drop a data center</button>
-            <div id="dropControls" class="drop-controls" style="display:none">
-              <label>MW <input id="dropMw" type="number" value="274" min="10" max="600" step="10"></label>
-              <label>Buildout yrs <input id="dropYears" type="number" value="5" min="1" max="10"></label>
-              <button id="playBtn" class="play-btn" type="button">▶ Play buildout</button>
-              <div id="playReadout" class="play-readout"></div>
-            </div>
+            <button id="dropBtn" class="drop-btn" type="button"><span data-lucide="map-pin"></span> Drop a data center</button>
+            <button id="bestSiteBtn" class="drop-btn" type="button" style="margin-top:6px"><span data-lucide="target"></span> Find best site</button>
+            <button id="removeDcBtn" class="drop-btn drop-btn-remove" type="button" style="margin-top:6px;display:none"><span data-lucide="trash-2"></span> Remove data center</button>
+            <div class="drop-hint muted">Then set its size in the Impact tab and press play.</div>
           </div>
         </div>
       </div>
@@ -72,12 +72,39 @@
         <span class="pt-chev">›</span>
       </button>
       <div id="panelBody" class="panel-body">
-        <h2 id="panelTitle">Select a location</h2>
-        <p id="panelSub" class="muted">
-          Toggle impact layers at left. Pick a city above, or click anywhere on the
-          map, to see nearby facilities and their hourly-clean gap.
-        </p>
-        <ul id="results" class="results"></ul>
+        <div class="tab-bar" role="tablist">
+          <button class="tab-btn active" data-tab="impact" role="tab">Impact</button>
+          <button class="tab-btn" data-tab="nearby" role="tab">Nearby</button>
+          <button class="tab-btn" data-tab="model" role="tab">Model</button>
+        </div>
+
+        <section class="tab-pane active" data-pane="impact">
+          <h2 id="impactTitle">Drop or click a site</h2>
+          <p class="muted" id="impactSub">Pick a preset, drop a data center, or click the map to see its predicted impact.</p>
+          <div id="dropControls" class="drop-controls" style="display:none">
+            <label>Size (MW) <input id="dropMw" type="number" value="274" min="10" max="600" step="10"></label>
+            <label>Buildout yrs <input id="dropYears" type="number" value="5" min="1" max="10"></label>
+            <div class="drop-hint muted">MW = megawatts of power the data center draws. Bigger = more impact. (Westfield ≈ 274 MW.)</div>
+            <button id="playBtn" class="play-btn" type="button"><span data-lucide="play"></span> Play buildout</button>
+            <div id="playReadout" class="play-readout"></div>
+          </div>
+          <div id="impactBody"></div>
+        </section>
+
+        <section class="tab-pane" data-pane="nearby" hidden>
+          <h2 id="panelTitle">Select a location</h2>
+          <p id="panelSub" class="muted">
+            Pick a city above, or click anywhere on the map, to see nearby
+            facilities and their hourly-clean gap.
+          </p>
+          <ul id="results" class="results"></ul>
+        </section>
+
+        <section class="tab-pane" data-pane="model" hidden>
+          <h2>Why data centers cluster</h2>
+          <p class="muted">Learned from 1,839 real US data centers · CV R² 0.97</p>
+          <div id="modelBody"></div>
+        </section>
       </div>
     </aside>
   </div>

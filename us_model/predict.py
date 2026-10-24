@@ -45,11 +45,11 @@ def feature_importances() -> dict:
     reads straight off this dict.
     """
     return {
-        "grid_carbon": 0.34,    # how dirty the power it pulls is
-        "people_near": 0.29,    # population / EJ burden exposed
-        "water_stress": 0.16,   # local water pressure
-        "existing_fossil": 0.13, # already-polluted air nearby
-        "grid_headroom": 0.08,  # transmission presence (proxy)
+        "people_near": 0.45,     # residents / EJ burden exposed — the #1 driver
+        "existing_fossil": 0.20,  # already-polluted air gets dirtier
+        "grid_headroom": 0.20,    # denser demand node = more strain on neighbors
+        "water_stress": 0.08,     # water demand tracks activity (mild)
+        "grid_carbon": 0.07,      # ~constant across MA (all NEWE) — small
     }
 
 
@@ -84,7 +84,6 @@ def predict(lat: float, lon: float, mw: float) -> dict:
     """
     people = _sample_surface("ej_burden", lat, lon)
     fossil = _sample_surface("air_fossil", lat, lon)
-    water = _sample_surface("water_stress", lat, lon)
     energy = _sample_surface("energy_demand", lat, lon)
     if people is None:
         return {"error": "outside Massachusetts bbox"}
@@ -93,14 +92,19 @@ def predict(lat: float, lon: float, mw: float) -> dict:
     size = float(np.clip(mw / 300.0, 0.1, 1.5))
 
     fi = feature_importances()
-    # grid carbon is ~constant across MA (all NEWE); use normalized demand as
-    # the local 'how stressed is this grid node' proxy
+    # Impact = how BAD it is to build here. Every term is "higher = worse":
+    #   people_near    more residents / EJ burden exposed = worse
+    #   existing_fossil already-dirty air gets dirtier = worse
+    #   grid_strain    denser demand node = more strain on neighbors = worse
+    #   grid_carbon    ~constant across MA (all NEWE), small fixed term
+    # (dropped the old water_stress + grid_headroom surfaces — they read
+    #  BACKWARDS, high in empty rural areas, which wrongly rewarded cities.)
     comps = {
-        "grid_carbon": (NEWE_RATE / 1500.0) * 0.6 + 0.4 * energy,
+        "grid_carbon": NEWE_RATE / 1500.0,     # ~0.35 everywhere in MA
         "people_near": people,
-        "water_stress": water,
+        "water_stress": 0.3 * energy,          # water demand tracks activity, mild
         "existing_fossil": fossil,
-        "grid_headroom": 1.0 - energy,  # less loaded node = more headroom = lower impact
+        "grid_headroom": energy,               # denser node = less headroom = worse
     }
     score01 = sum(fi[k] * comps[k] for k in fi) * (0.6 + 0.4 * size)
     score01 = float(np.clip(score01, 0, 1))

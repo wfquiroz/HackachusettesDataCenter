@@ -31,7 +31,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         if self.path.startswith("/api/layers"):
             return self._json((ROOT / "layers.json").read_bytes())
         if self.path.startswith("/api/surfaces"):
-            return self._json((ROOT / "surfaces.json").read_bytes())
+            return self._surfaces_with_placement()
+        if self.path.startswith("/api/bestsite"):
+            return self._bestsite()
         if self.path.startswith("/api/timeline"):
             return self._timeline()
         if self.path.startswith("/healthz"):
@@ -68,11 +70,43 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(json.dumps({"error": str(e)}).encode())
 
+    def _surfaces_with_placement(self):
+        """Serve the impact surfaces PLUS the placement-optimizer surface."""
+        base = json.loads((ROOT / "surfaces.json").read_text())
+        pfile = ROOT / "placement.json"
+        if pfile.exists():
+            p = json.loads(pfile.read_text())
+            for s in p.get("surfaces", []):
+                s["kind"] = "modeled"
+                base["surfaces"].append(s)
+        self._json(json.dumps(base).encode())
+
+    def _bestsite(self):
+        """Return the top-scoring placement cell as a lat/lon + score."""
+        try:
+            p = json.loads((ROOT / "placement.json").read_text())
+            s = p["surfaces"][0]
+            nx, ny = p["nx"], p["ny"]
+            lon0, lat0, lon1, lat1 = p["bbox"]
+            grid = s["grid"]
+            best_i = max(range(len(grid)), key=lambda i: grid[i])
+            y, x = divmod(best_i, nx)
+            lat = lat0 + (lat1 - lat0) * y / (ny - 1)
+            lon = lon0 + (lon1 - lon0) * x / (nx - 1)
+            self._json(json.dumps({
+                "lat": round(lat, 4), "lon": round(lon, 4),
+                "score": round(grid[best_i] * 100, 1),
+            }).encode())
+        except Exception as e:
+            self.send_response(500); self.send_header("Content-Type", "application/json")
+            self.end_headers(); self.wfile.write(json.dumps({"error": str(e)}).encode())
+
     def log_message(self, *a):
         pass
 
 
 if __name__ == "__main__":
+    socketserver.TCPServer.allow_reuse_address = True
     with socketserver.TCPServer(("127.0.0.1", PORT), Handler) as httpd:
         print(f"HourMatch map (Python shim for Shiva's web/) at http://127.0.0.1:{PORT}")
         httpd.serve_forever()

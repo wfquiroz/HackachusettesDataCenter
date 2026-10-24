@@ -226,6 +226,52 @@ def impact_estimate(res: MatchResult, cfg: dict, aircooled=False) -> dict:
         "peak_contrib_mw": res.peak_contrib_mw,
     }
 
+def four_factor_impact(res: MatchResult, cfg: dict, peak_mw: float,
+                       local_grid_mw: float = 2000.0,
+                       town_water_mgd: float = 10.0) -> dict:
+    """Air / Energy / Water / Noise, each with its CORRECT scaling shape.
+
+    Per factor: absolute value, a % impact, and the scaling law used — so the UI
+    shows 'not just +X carbon'. Coefficients are benchmarks (modeled); the
+    SHAPES (log, sqrt, super-linear, %-of-grid) are real physics/engineering.
+    """
+    import math
+    b = cfg["impact_benchmarks"]
+    mwh = res.energy_mwh
+
+    # AIR: real hourly CO2; super-linear because peak hours burn dirtier peakers
+    co2 = res.hidden_co2_t
+    co2_proxy = res.hidden_co2_t_peaker_proxy
+    superlinear = (co2_proxy - co2) / co2 * 100 if co2 > 0 else 0
+
+    # ENERGY: % of the LOCAL grid node (what actually strains a grid), not MW
+    energy_pct = 100.0 * peak_mw / max(local_grid_mw, 1)
+
+    # WATER: ~linear with energy, shown as % of town supply
+    water_gal_yr = mwh * b["water_gal_per_mwh"]
+    town_gal_yr = town_water_mgd * 1e6 * 365
+    water_pct = 100.0 * water_gal_yr / max(town_gal_yr, 1)
+
+    # NOISE: logarithmic dB, audible radius grows ~sqrt(MW)
+    noise_db = 55.0 + 10.0 * math.log10(max(peak_mw, 1) / 10.0)
+    noise_radius_m = b["noise_audible_radius_m_per_100mw"] * math.sqrt(peak_mw / 100.0) * 10
+
+    return {
+        "air": {"value": round(co2), "unit": "t CO\u2082/yr", "pct": 100,
+                "scaling": "super-linear (peak hours dirtier)",
+                "note": f"+{round(superlinear)}% worse at peak vs average"},
+        "energy": {"value": round(energy_pct, 1), "unit": "% of local grid",
+                   "pct": round(energy_pct, 1), "scaling": "% of local capacity",
+                   "note": f"{peak_mw:.0f} MW on a ~{local_grid_mw:.0f} MW node"},
+        "water": {"value": round(water_gal_yr / 1e6, 1), "unit": "M gal/yr",
+                  "pct": round(water_pct, 1), "scaling": "linear with energy",
+                  "note": f"{round(water_pct,1)}% of a {town_water_mgd:.0f} MGD town supply"},
+        "noise": {"value": round(noise_db), "unit": "dB at source",
+                  "pct": round(noise_radius_m), "scaling": "logarithmic dB, radius \u221d \u221aMW",
+                  "note": f"~{round(noise_radius_m)} m audible radius"},
+    }
+
+
 
 def berdo_equivalent(hidden_co2_t: float, berdo_df: pd.DataFrame) -> float:
     """= N Boston BERDO buildings, by median building annual CO2."""

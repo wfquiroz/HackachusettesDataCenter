@@ -119,6 +119,7 @@ def impact_timeline(lat, lon, target_mw, buildout_years=5):
             "year": yr, "mw_online": round(mw),
             "hidden_co2_t": round(res.hidden_co2_t),
             "hourly_match_pct": round(res.hourly_match_pct),
+            "factors": model.four_factor_impact(res, cfg, max(mw, 1)),
             "rings": rings,
         })
     return {"lat": lat, "lon": lon, "target_mw": target_mw,

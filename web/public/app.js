@@ -1,10 +1,12 @@
+
+function _lucide(){ try{ if(window.lucide) lucide.createIcons(); }catch(e){} }
 // HourMatch — emissions map (Leaflet + OpenStreetMap, no API key)
 
 const EMISSION_COLORS = {
-  high: "#e4572e",
-  medium: "#f3c13a",
-  low: "#3cb371",
-  clean: "#2f9e44",
+  high: "#FF4D3D",
+  medium: "#FFB020",
+  low: "#2EF2C4",
+  clean: "#2EF2C4",
 };
 
 let DATA = null;          // loaded from /api/facilities
@@ -65,9 +67,9 @@ function markerIcon(level) {
   const color = EMISSION_COLORS[level];
   return L.divIcon({
     className: "",
-    html: `<div class="marker-emission" style="width:18px;height:18px;background:${color}"></div>`,
-    iconSize: [18, 18],
-    iconAnchor: [9, 9],
+    html: `<div class="marker-emission" style="width:16px;height:16px;background:${color};color:${color};animation:dcpulse 2.4s ease-in-out infinite"></div>`,
+    iconSize: [16, 16],
+    iconAnchor: [8, 8],
     popupAnchor: [0, -10],
   });
 }
@@ -159,63 +161,25 @@ function selectLocation(center) {
   selected = center;
   renderHoverReadout(center.lat, center.lng);
   const radiusKm = Number(document.getElementById("radius").value);
-  if (radiusCircle) map.removeLayer(radiusCircle);
-  radiusCircle = L.circle([center.lat, center.lng], {
-    radius: radiusKm * 1000,
-    color: "#5aa9e6",
-    weight: 1,
-    fillColor: "#5aa9e6",
-    fillOpacity: 0.08,
-  }).addTo(map);
+  // NOTE: the radius circle is drawn ONLY for a dropped data center (see the
+  // drop module), not on every map click — a plain click just reads nearby
+  // facilities, it does not place a site.
   renderPanel(center, radiusKm);
 }
 
 // ---- controls --------------------------------------------------------------
 
 function populateControls() {
-  const regionSel = document.getElementById("region");
-  const citySel = document.getElementById("city");
-
-  DATA.regions.forEach((r) => {
-    const opt = document.createElement("option");
-    opt.value = r.id;
-    opt.textContent = r.label;
-    regionSel.appendChild(opt);
-  });
-
-  function fillCities(regionId) {
-    citySel.innerHTML = "";
-    DATA.cities
-      .filter((c) => c.region === regionId)
-      .forEach((c) => {
-        const opt = document.createElement("option");
-        opt.value = c.name;
-        opt.textContent = c.name;
-        citySel.appendChild(opt);
-      });
-  }
-
-  regionSel.addEventListener("change", () => {
-    const region = DATA.regions.find((r) => r.id === regionSel.value);
-    fillCities(region.id);
-    map.setView([region.center.lat, region.center.lng], region.zoom);
-    citySel.dispatchEvent(new Event("change"));
-  });
-
-  citySel.addEventListener("change", () => {
-    const city = DATA.cities.find((c) => c.name === citySel.value);
-    if (!city) return;
-    map.setView([city.lat, city.lng], 10);
-    selectLocation({ lat: city.lat, lng: city.lng });
-  });
-
+  // Region/Location selectors were removed — the drop-a-data-center tool and
+  // map clicks replaced them. Only the Nearby-radius slider remains.
   const radius = document.getElementById("radius");
-  radius.addEventListener("input", () => {
-    document.getElementById("radiusLabel").textContent = radius.value;
-    if (selected) selectLocation(selected);
-  });
-
-  fillCities(DATA.regions[0].id);
+  if (radius) {
+    radius.addEventListener("input", () => {
+      const lbl = document.getElementById("radiusLabel");
+      if (lbl) lbl.textContent = radius.value;
+      if (selected) selectLocation(selected);
+    });
+  }
 }
 
 // ---- impact SURFACES — statewide smooth "pollution wave" -------------------
@@ -226,6 +190,53 @@ function populateControls() {
 let SURF = null;                 // from /api/surfaces
 const surfOverlays = {};         // id -> L.imageOverlay
 const surfOn = {};
+const surfBase = {};             // id -> pristine grid (Array) before any DC bloom
+
+// Add a dropped data center's contribution as a growing bloom into the surface
+// grids, so the MAP ITSELF darkens around the site (no radius circles). `frac`
+// 0..1 is how much of the data center's load is online (ramps during play).
+window.applyDataCenterBloom = function (lat, lng, frac) {
+  if (!SURF) return;
+  const { nx, ny, bbox } = SURF;
+  const [lon0, lat0, lon1, lat1] = bbox;
+  // which surfaces a data center actually pushes on, and how hard
+  const push = { air_fossil: 1.6, energy_demand: 1.8, water_stress: 1.6, noise: 1.6, ej_burden: 0 };
+  // site position in grid coords
+  const gx = ((lng - lon0) / (lon1 - lon0)) * (nx - 1);
+  const gy = ((lat - lat0) / (lat1 - lat0)) * (ny - 1);
+  const sigma = 3 + 7 * frac;          // tighter, punchier bloom that widens as it ramps
+  SURF.surfaces.forEach((s) => {
+    if (!surfBase[s.id]) surfBase[s.id] = s.grid.slice();
+    const base = surfBase[s.id];
+    const amp = (push[s.id] ?? 0) * frac;
+    const g = base.slice();
+    if (amp > 0) {
+      for (let y = 0; y < ny; y++) {
+        for (let x = 0; x < nx; x++) {
+          const d2 = (x - gx) ** 2 + (y - gy) ** 2;
+          const add = amp * Math.exp(-d2 / (2 * sigma * sigma));
+          const i = y * nx + x;
+          g[i] = Math.min(1, g[i] + add);
+        }
+      }
+    }
+    s.grid = g;
+    if (surfOn[s.id] && surfOverlays[s.id]) {
+      surfOverlays[s.id].setUrl(surfaceDataUrl(s));
+    }
+  });
+};
+
+// Reset surfaces to their pristine state (remove any data-center bloom).
+window.clearDataCenterBloom = function () {
+  if (!SURF) return;
+  SURF.surfaces.forEach((s) => {
+    if (surfBase[s.id]) {
+      s.grid = surfBase[s.id].slice();
+      if (surfOn[s.id] && surfOverlays[s.id]) surfOverlays[s.id].setUrl(surfaceDataUrl(s));
+    }
+  });
+};
 
 function hexRGB(hex) {
   const n = parseInt(hex.slice(1), 16);
@@ -234,12 +245,12 @@ function hexRGB(hex) {
 
 // Per-surface gradient ramps: low -> high. Gives real color separation across
 // small value differences instead of one flat tint fading only in opacity.
+const RAMP = [[18,34,38],[46,242,196],[255,176,32],[255,77,61]]; // clean->warn->bad
 const RAMPS = {
-  ej_burden:     [[59,76,192],[120,180,120],[240,220,90],[217,79,112]],
-  air_fossil:    [[40,60,120],[90,180,160],[245,200,70],[228,70,46]],
-  energy_demand: [[35,40,90],[70,160,200],[243,193,58],[233,120,40]],
-  water_stress:  [[10,30,70],[40,120,200],[90,200,230],[180,240,255]],
-  noise:         [[30,20,60],[120,80,200],[176,132,243],[240,210,255]],
+  ej_burden: RAMP, air_fossil: RAMP, energy_demand: RAMP,
+  water_stress: RAMP, noise: RAMP,
+  // placement: high = GOOD, so flip — red(bad)->amber->green(good)
+  placement: [[255,77,61],[255,176,32],[46,242,196],[46,242,196]],
 };
 
 function rampColor(id, v) {
@@ -376,7 +387,7 @@ function toggleSurface(id, on) {
   if (ov) {
     if (on) {
       ov.addTo(map);
-      requestAnimationFrame(() => ov.setOpacity(0.82));
+      requestAnimationFrame(() => ov.setOpacity(0.7));
     } else {
       ov.setOpacity(0);
       setTimeout(() => map.removeLayer(ov), 500);
@@ -389,27 +400,27 @@ function toggleSurface(id, on) {
 // Keyed by surface id so it survives label changes in the data.
 const SURF_META = {
   ej_burden: {
-    icon: "👥",
+    icon: '<span data-lucide="users"></span>',
     title: "People",
     desc: "Who lives nearby — environmental-justice population density.",
   },
   air_fossil: {
-    icon: "🏭",
+    icon: '<span data-lucide="factory"></span>',
     title: "Air",
     desc: "Fossil-plant intensity — dirtier air where plants run.",
   },
   energy_demand: {
-    icon: "⚡",
+    icon: '<span data-lucide="zap"></span>',
     title: "Energy",
     desc: "Grid demand pressure across the state.",
   },
   water_stress: {
-    icon: "💧",
+    icon: '<span data-lucide="droplet"></span>',
     title: "Water",
     desc: "Cooling-water demand (modeled estimate).",
   },
   noise: {
-    icon: "🔊",
+    icon: '<span data-lucide="volume-2"></span>',
     title: "Noise",
     desc: "Generator & cooling noise (modeled estimate).",
   },
@@ -456,6 +467,7 @@ function buildLayerControl() {
     if (on) toggleSurface(surf.id, true);
   });
   updateLayerCount();
+  _lucide();
 }
 
 function wireCollapse() {
@@ -506,15 +518,15 @@ function lockViewToSurfaces() {
   // Make sure Leaflet knows its real pixel size before measuring zoom.
   map.invalidateSize();
 
-  // Zoom at which the whole data extent just fits the viewport. getBoundsZoom
-  // returns a fractional value; with the default zoomSnap of 1 that would still
-  // allow one level of zoom-out, so round UP to a hard integer floor.
-  const fitZoom = Math.ceil(map.getBoundsZoom(bounds, true));
+  // Fit the whole state with generous margin. Round DOWN and then subtract one
+  // more level so Massachusetts never sits flush against the frame.
+  const padded = bounds.pad(0.18);
+  const fitZoom = Math.max(1, Math.floor(map.getBoundsZoom(padded, true)) - 1);
   map.setMinZoom(fitZoom);
   map.setView(bounds.getCenter(), fitZoom, { animate: false });
 
   // Can't pan into empty map around the region.
-  map.setMaxBounds(bounds);
+  map.setMaxBounds(padded.pad(0.4));
   map.options.maxBoundsViscosity = 1.0; // hard stop at the edges
 }
 
@@ -539,10 +551,12 @@ async function init() {
   const r0 = DATA.regions[0];
   map = L.map("map", { zoomControl: false }).setView([r0.center.lat, r0.center.lng], r0.zoom);
 
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  const cartoTiles = L.tileLayer(
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: "&copy; OpenStreetMap contributors",
-  }).addTo(map);
+  });
+  cartoTiles.addTo(map);
 
   facilityLayer = L.layerGroup().addTo(map);
   drawAllMarkers();
@@ -580,6 +594,7 @@ async function init() {
 }
 
 init();
+setTimeout(() => { try { if (window.lucide) lucide.createIcons(); } catch (e) {} }, 300);
 
 // ---- Drop-a-data-center + play buildout timeline ---------------------------
 (function () {
@@ -600,86 +615,248 @@ init();
     dropBtn.addEventListener("click", () => {
       dropMode = !dropMode;
       dropBtn.classList.toggle("armed", dropMode);
-      dropBtn.textContent = dropMode ? "📍 Click the map…" : "📍 Drop a data center";
+      dropBtn.textContent = dropMode ? "Click the map…" : "Drop a data center";
+    });
+
+    const bestBtn = document.getElementById("bestSiteBtn");
+    if (bestBtn) bestBtn.addEventListener("click", async () => {
+      bestBtn.textContent = "Finding…";
+      try {
+        const res = await fetch("/api/bestsite");
+        const b = await res.json();
+        if (b.error) throw new Error(b.error);
+        placePin(b.lat, b.lng ?? b.lon);
+        controls.style.display = "block";
+        // turn on the placement layer so the user sees why it's the best spot
+        const pc = document.querySelector('.lc-row input[data-id="placement"]');
+        if (pc && !pc.checked) { pc.checked = true; pc.dispatchEvent(new Event("change")); }
+        map.setView([b.lat, b.lon], Math.max(map.getZoom(), 8));
+        refreshImpact();
+        bestBtn.innerHTML = '<span data-lucide="target"></span> Best site (score ' + b.score + ')';
+        if (window.lucide) lucide.createIcons();
+      } catch (e) { bestBtn.textContent = "Error finding site"; }
+    });
+
+    const removeBtn = document.getElementById("removeDcBtn");
+    if (removeBtn) removeBtn.addEventListener("click", () => {
+      if (playTimer) { clearInterval(playTimer); playTimer = null; }
+      if (dropMarker) { map.removeLayer(dropMarker); dropMarker = null; }
+      clearRings();                                  // removes bloom + any rings
+      lastData = null; lastPlayed = false;
+      controls.style.display = "none";
+      removeBtn.style.display = "none";
+      if (readout) readout.innerHTML = "";
+      if (playBtn) playBtn.textContent = "Play buildout";
+      if (window.showImpact) window.showImpact(
+        "Drop or click a site",
+        "Pick a preset, drop a data center, or find the best site.",
+        "", false);
     });
 
     map.on("click", (e) => {
       if (!dropMode) return;
       dropMode = false;
       dropBtn.classList.remove("armed");
-      dropBtn.textContent = "📍 Move the pin";
+      dropBtn.textContent = "Move the pin";
       placePin(e.latlng.lat, e.latlng.lng);
       controls.style.display = "block";
+      refreshImpact();           // show impact immediately on drop
     });
 
     function placePin(lat, lng) {
       if (dropMarker) map.removeLayer(dropMarker);
       dropMarker = L.marker([lat, lng], { draggable: true }).addTo(map);
       dropMarker._ll = { lat, lng };
-      dropMarker.bindTooltip("Drag me anywhere", { permanent: false, direction: "top" });
-      // live update while dragging; recompute rings when the drag ends
+      dropMarker.bindTooltip("Drag me anywhere", { direction: "top" });
+      const rm = document.getElementById("removeDcBtn");
+      if (rm) rm.style.display = "block";   // show Remove once a pin exists
       dropMarker.on("drag", (ev) => {
         const p = ev.target.getLatLng();
         dropMarker._ll = { lat: p.lat, lng: p.lng };
-        // rings follow the pin live
-        ringLayers.forEach((c) => c.setLatLng(p));
       });
-      dropMarker.on("dragend", () => {
-        const readout = document.getElementById("playReadout");
-        if (readout) readout.innerHTML = '<span class="muted">Moved — press ▶ to replay here.</span>';
-        // if a run already happened, auto-replay at the new spot
-        if (lastPlayed) document.getElementById("playBtn").click();
-      });
+      dropMarker.on("dragend", () => refreshImpact()); // recompute at new spot
     }
 
     function clearRings() {
       ringLayers.forEach((l) => map.removeLayer(l));
       ringLayers = [];
+      if (window.clearDataCenterBloom) window.clearDataCenterBloom();
     }
 
+    // The MAP itself darkens around the site (surface layers bloom), no circles.
     function drawRings(ll, yearData) {
-      clearRings();
-      // outer -> inner so inner sits on top
-      [...yearData.rings].reverse().forEach((r) => {
-        const alpha = 0.08 + 0.5 * r.intensity;
-        const c = L.circle([ll.lat, ll.lng], {
-          radius: r.km * 1000, color: "#e4572e", weight: 1,
-          fillColor: "#e4572e", fillOpacity: alpha,
-        }).addTo(map);
-        ringLayers.push(c);
-      });
+      // make sure an impact layer is ON so the change is visible
+      ensureImpactLayerVisible();
+      const frac = (yearData.mw_online / (lastData ? lastData.target_mw : yearData.mw_online)) || 1;
+      if (window.applyDataCenterBloom) window.applyDataCenterBloom(ll.lat, ll.lng, frac);
     }
 
-    playBtn.addEventListener("click", async () => {
-      if (!dropMarker) { readout.textContent = "Drop a pin first."; return; }
-      if (playTimer) { clearInterval(playTimer); playTimer = null; playBtn.textContent = "▶ Play buildout"; return; }
+    // Turn on at least one impact surface so the bloom is visible when playing.
+    function ensureImpactLayerVisible() {
+      if (typeof surfOn === "undefined") return;
+      // a data center only blooms air/energy/water/noise — NOT people.
+      // If none of those bloomable layers is on, turn Air on so play is visible.
+      const bloomable = ["air_fossil", "energy_demand", "water_stress", "noise"];
+      const anyBloomOn = bloomable.some((id) => surfOn[id]);
+      if (!anyBloomOn) {
+        const cb = document.querySelector('.lc-row input[data-id="air_fossil"]');
+        if (cb && !cb.checked) { cb.checked = true; cb.dispatchEvent(new Event("change")); }
+      }
+    }
+
+    function cardHtml(y) {
+      const r25 = y.rings[y.rings.length - 1];
+      const f = y.factors || {};
+      const maxY = lastData ? lastData.years[lastData.years.length - 1] : y;
+      const fin = maxY.factors || {};
+      // scale each factor's bar vs its own full-buildout value
+      const bar = (cur, max, color) => {
+        const pct = max ? Math.min(100, Math.round(100 * cur / max)) : 0;
+        return pct;
+      };
+      // severity color on OUR palette only (teal ok, amber watch, red high)
+      const sev = (p) => p >= 66 ? "var(--bad)" : p >= 33 ? "var(--warn)" : "var(--clean)";
+      const F = (icon, label, fac, finFac) => {
+        if (!fac) return "";
+        const p = bar(fac.value, finFac ? finFac.value : fac.value);
+        const c = sev(p);
+        const [num, ...rest] = String(fac.value.toLocaleString()).split(" ");
+        return `<div class="factor-card">
+           <div class="factor-row">
+             <span class="factor-ico">${icon}</span>
+             <span class="factor-name">${label}</span>
+             <span class="factor-val"><b style="color:${c}">${fac.value.toLocaleString()}</b> <span class="factor-unit">${fac.unit}</span></span>
+           </div>
+           <div class="grow-bar"><div style="width:${Math.max(4,p)}%;background:${c}"></div></div>
+           <div class="factor-note">${fac.note}</div>
+         </div>`;
+      };
+      return (
+        `<div class="year-badge">Year ${y.year} of ${lastData ? lastData.buildout_years : "?"}</div>` +
+        `<div class="meter"><div class="meter-head">On paper vs by the hour</div>` +
+        `<div class="meter-row"><span class="meter-annual">100%<small>annual</small></span>` +
+        `<span class="meter-arrow">→</span><span class="meter-hourly">${y.hourly_match_pct}%<small>hourly</small></span></div>` +
+        `<div class="meter-bar"><div class="meter-fill" style="width:${y.hourly_match_pct}%"></div></div></div>` +
+        `<div class="factor-head">Impact by factor</div>` +
+        F("<span data-lucide=\"factory\"></span>", "Air · CO₂", f.air, fin.air) +
+        F("<span data-lucide=\"zap\"></span>", "Energy", f.energy, fin.energy) +
+        F("<span data-lucide=\"droplet\"></span>", "Water", f.water, fin.water) +
+        F("<span data-lucide=\"volume-2\"></span>", "Noise", f.noise, fin.noise) +
+        `<div class="impact-stat" style="margin-top:8px"><span data-lucide="users"></span> <b>${r25.pop_within.toLocaleString()}</b> people within 25 km · ${r25.minority_pct}% minority</div>` +
+        `<p class="muted" style="margin-top:6px">Predicted — shapes are real physics, coefficients modeled. Not measured.</p>`
+      );
+    }
+
+    // Fetch the timeline once and show the FINAL-year impact card + rings.
+    // Called on drop and on drag-end so the card always reflects the pin.
+    let lastData = null;
+    async function refreshImpact() {
+      if (!dropMarker) return;
       const ll = dropMarker._ll;
       const mw = Number(document.getElementById("dropMw").value) || 274;
       const yrs = Number(document.getElementById("dropYears").value) || 5;
-      readout.textContent = "Computing…";
-      let data;
+      if (readout) readout.innerHTML = '<span class="muted">Computing…</span>';
       try {
         const res = await fetch(`/api/timeline?lat=${ll.lat}&lon=${ll.lng}&mw=${mw}&years=${yrs}`);
-        data = await res.json();
-        if (data.error) throw new Error(data.error);
-      } catch (err) { readout.textContent = "Error: " + err.message; return; }
+        lastData = await res.json();
+        if (lastData.error) throw new Error(lastData.error);
+      } catch (err) { if (readout) readout.textContent = "Error: " + err.message; return; }
+      const finalY = lastData.years[lastData.years.length - 1];
+      drawRings(ll, finalY);
+      const html = cardHtml(finalY);
+      // left panel shows only a short pointer; the full card lives in Impact tab
+      if (readout) readout.innerHTML = '<span class="muted">See the Impact tab →</span>';
+      if (window.showImpact) window.showImpact(
+        `Dropped site · ${finalY.mw_online} MW`, "Predicted impact at full buildout", html, true);
+    }
+    window._refreshImpact = refreshImpact;  // expose for preset buttons
 
-      playBtn.textContent = "⏸ Stop";
+    playBtn.addEventListener("click", async () => {
+      if (!dropMarker) { if (readout) readout.textContent = "Drop a pin first."; return; }
+      if (playTimer) { clearInterval(playTimer); playTimer = null; playBtn.textContent = "Play buildout"; return; }
+      const ll = dropMarker._ll;
+      const mw = Number(document.getElementById("dropMw").value) || 274;
+      const yrs = Number(document.getElementById("dropYears").value) || 5;
+      let data = lastData;
+      // re-fetch if inputs changed or nothing cached yet
+      if (!data || data.target_mw !== mw || data.buildout_years !== yrs) {
+        if (readout) readout.textContent = "Computing…";
+        try {
+          const res = await fetch(`/api/timeline?lat=${ll.lat}&lon=${ll.lng}&mw=${mw}&years=${yrs}`);
+          data = await res.json();
+          if (data.error) throw new Error(data.error);
+          lastData = data;
+        } catch (err) { if (readout) readout.textContent = "Error: " + err.message; return; }
+      }
+
+      const impBtn = document.querySelector('.tab-btn[data-tab="impact"]');
+      if (impBtn) impBtn.click();
+      playBtn.textContent = "Stop";
       let i = 0;
       const step = () => {
         const y = data.years[i];
-        const r25 = y.rings[y.rings.length - 1];
         drawRings(ll, y);
-        readout.innerHTML =
-          `<b>Year ${y.year}</b> · ${y.mw_online} MW online<br>` +
-          `${r25.pop_within.toLocaleString()} people within 25 km<br>` +
-          `hidden CO₂ <b>${y.hidden_co2_t.toLocaleString()}</b> t/yr<br>` +
-          `<span class="muted">${r25.minority_pct}% minority in footprint · projected buildout</span>`;
+        const html = cardHtml(y);
+        if (readout) readout.innerHTML = `<span class="muted">Year ${y.year} — see Impact tab →</span>`;
+        if (window.showImpact) window.showImpact(
+          `Dropped site · ${y.mw_online} MW (year ${y.year})`,
+          "Predicted — projected buildout", html, false);
         i++;
-        if (i >= data.years.length) { clearInterval(playTimer); playTimer = null; playBtn.textContent = "▶ Replay"; lastPlayed = true; }
+        if (i >= data.years.length) { clearInterval(playTimer); playTimer = null; playBtn.textContent = "Replay"; lastPlayed = true; }
       };
       step();
-      playTimer = setInterval(step, 1100);
+      playTimer = setInterval(step, 1400);
+    });
+
+    // changing MW or years re-computes the card immediately
+    ["dropMw", "dropYears"].forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener("change", () => { if (dropMarker) refreshImpact(); });
     });
   });
+})();
+
+// ---- Right-panel tabs: Impact | Nearby | Model -----------------------------
+(function () {
+  function ready(fn){ if (document.querySelector(".tab-bar")) fn(); else setTimeout(()=>ready(fn),150); }
+  ready(() => {
+    const btns = [...document.querySelectorAll(".tab-btn")];
+    const panes = [...document.querySelectorAll(".tab-pane")];
+    btns.forEach((b) => b.addEventListener("click", () => {
+      const t = b.dataset.tab;
+      btns.forEach((x) => x.classList.toggle("active", x === b));
+      panes.forEach((p) => {
+        const on = p.dataset.pane === t;
+        p.classList.toggle("active", on);
+        p.hidden = !on;
+      });
+    }));
+
+    // Fill the Model tab from /api/... importances baked into the page.
+    const mb = document.getElementById("modelBody");
+    if (mb) {
+      const fi = [["Cheap electricity",46,"#e4572e"],["Cool climate",34,"#f0a202"],
+                  ["Grid carbon",9,"#5aa9e6"],["Near a city",9,"#5aa9e6"],["People nearby",2,"#868e96"]];
+      mb.innerHTML = fi.map(([k,v,c]) =>
+        `<div class="fi-row"><span class="fi-label">${k}</span>
+           <span class="fi-bar"><span style="width:${v}%;background:${c}"></span></span>
+           <b>${v}%</b></div>`).join("") +
+        `<p class="muted" style="margin-top:8px">Data centers chase cheap power & cool air —
+         not carbon or people. That's the gap a town's approval has to fill.</p>`; _lucide();
+    }
+  });
+
+  // Expose a helper the drop/click code can call to fill the Impact tab.
+  window.showImpact = function (title, sub, html, openTab) {
+    const t = document.getElementById("impactTitle");
+    const s = document.getElementById("impactSub");
+    const b = document.getElementById("impactBody");
+    if (t) t.textContent = title;
+    if (s) s.textContent = sub;
+    if (b) b.innerHTML = html; _lucide();
+    if (openTab) {
+      const btn = document.querySelector('.tab-btn[data-tab="impact"]');
+      if (btn) btn.click();
+    }
+  };
 })();
