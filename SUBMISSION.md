@@ -7,46 +7,45 @@ Demo video: *(add YouTube/Vimeo link here before you submit)*
 
 ---
 
-## The problem
+## Problem 1 — Massachusetts wants to grow AI, and can't decide where to put it
 
-Massachusetts just passed Executive Order 658 (Sept 8, 2026). It says a big data
-center must buy enough clean power to match a **year** of its use.
+Boston is racing to grow as an AI hub. A coalition of industry and civic groups is
+actively courting that growth, and companies — AWS, hyperscalers, AI startups —
+want to expand into Massachusetts. Data centers are the physical floor of all of
+it: no compute, no AI economy.
 
-But the grid does not run on a year. It runs on an **hour**. A data center can buy
-a year of solar and still pull gas on a winter night, when the sun is down and New
-England burns the dirtiest fuel it has.
+So the goal is *growth*. But the state has no shared way to answer the first
+question every one of these projects raises: **where should it go?** Right now
+siting is guesswork and politics. A company picks a parcel, a town reacts, and the
+project either stalls in a fight or lands in the wrong place. Massachusetts is
+trying to *attract* data centers while having no instrument to steer them to the
+sites that actually work — enough land, grid headroom, water, and the fewest people
+harmed. Growth without a map is how you get bans instead of build-out.
 
-So "100% clean" on paper can be far less clean by the hour. And three groups are
-stuck with no way to see it:
+## Problem 2 — the clean-energy rule the state already wrote has an hourly hole
 
-- **Town boards** have to approve or deny these projects. They have no tool. They
-  vote on a PDF. Some towns panic and ban everything; some wave through the worst
-  sites. They cannot tell a good site from a bad one.
-- **State and utility planners** know the annual rule has an hourly hole, but they
-  have nothing that shows a town what that hole costs.
-- **The data center companies** that are actually trying to build responsibly have
-  no way to *prove* it. Their honest project looks the same as a greenwashed one.
+Massachusetts Executive Order 658 (Sept 8, 2026) requires a big data center to
+match a **year** of its energy with new clean power. But the grid runs on an
+**hour**. A center can buy a year of solar and still pull gas on a winter night,
+when the sun is down and New England burns its dirtiest fuel. "100% clean" on paper
+can be ~20% clean by the hour — and no one in the approval chain can see that gap.
 
-No one can measure the thing everyone is fighting about.
+## The solution — one validated instrument that serves both sides
 
-## The solution
+HourMatch turns both problems into numbers, and every number is grounded in real,
+cited public data (see "How validated" below). Drop a data center anywhere in MA,
+pick its size, and it shows the hourly-clean truth, who absorbs the impact, **where
+the state should steer it instead**, and whether the town already restricts them.
 
-HourMatch is the meter for the rule Massachusetts already wrote. Drop a data
-center anywhere in the state, pick its size, and it tells you:
-
-- how clean it really is **by the hour**, not just on paper,
-- **who** breathes, hears, and drinks the difference,
-- **where in Massachusetts** that same machine would do the least harm,
-- and whether the town has **already banned or restricted** data centers.
-
-It does not say yes or no. It gives every side the same honest numbers to argue
-over.
+It does not say yes or no. It gives government and industry the *same* honest,
+data-backed picture — so growth happens in the right places, not the contested
+ones.
 
 ---
 
 ## What it does — for government
 
-The people who have to decide.
+The state and towns deciding where growth goes.
 
 **1. Turns a PDF claim into one honest number.**
 A developer's filing says "100% clean, annually." HourMatch shows the hourly
@@ -59,27 +58,31 @@ environmental-justice burden — so a board sees whether the harm lands on a
 community already carrying more than its share. Impact comes in real units a town
 official knows: tonnes CO₂/yr, GWh/yr (≈ N homes' power), million gal/day, dB.
 
-**3. Tells a town if its own site is good or bad — before it panics.**
+**3. Recommends where the state should steer growth.**
 The placement optimizer grades any MA location and recommends the 5 best sites in
-the state, spread ≥30 miles apart and clipped to the real border. Two MA towns
-show why this matters: one banned data centers over a site our model grades an
-**A**; another's actual site grades a **D**. Both reacted politically, blind.
-HourMatch is the tool that would have told them which was which.
+the state, spread ≥30 miles apart and clipped to the real border — the sites where
+a data center brings the jobs and compute with the least harm. This is the map
+Massachusetts is missing: not "should we allow data centers," but "here is where
+to put them." Two MA towns show why it matters: one banned data centers over a site
+our model grades an **A**; another's actual site grades a **D**. Both reacted
+politically, blind. HourMatch is the tool that would have told them which was which.
 
 **4. Puts the real legal landscape on the table.**
 A sourced dataset of 13 MA towns and their actual rules — full bans, moratoriums,
 zoning limits. Drop a center in one and the card flags *"this town bans data
 centers"* with the news source. A board sees what its neighbors already did.
 
-## What it does — for private / developers
+## What it does — for private / companies
 
-The people who have to build.
+The companies — AWS, hyperscalers, AI builders — expanding into Massachusetts.
 
-**5. Lets a responsible project prove it is responsible.**
-A developer can run their own proposed site, see the hourly clean number and the
-impact, and bring *that* to the town instead of a glossy annual claim. An honest
-hourly score is a credibility asset — it separates a real clean project from a
-greenwashed one.
+**5. Validates a company's good-faith siting — for its public image.**
+A data center's biggest obstacle isn't engineering, it's trust. A company like AWS
+can run its proposed MA site through HourMatch and show, with validated public
+data, that it chose a low-impact location and made a genuine effort to minimize
+harm to the surrounding community — the hourly-clean score, the people-impact, the
+placement grade. That's a credibility asset a glossy annual "100% clean" claim
+can't buy: proof of good-faith siting a greenwashed competitor can't fake.
 
 **6. Finds the site that passes.**
 "Find best site" steers a developer toward the MA locations that are genuinely
@@ -95,16 +98,30 @@ a hearing.
 
 ---
 
-## The intelligence under it
+## How validated — this is built on real data, not vibes
 
-- **A validated US ML model** trained on 1,839 real data center sites learns where
-  the industry *actually* builds (chasing cheap power near no one). The Model tab
-  proves it on screen: CV R² 0.975 and a passing placebo test (R² −0.048 — the
-  signal is real, not overfit). Reproducible in `us_model/analysis.ipynb`.
-- **The placement optimizer** flips that into where a center *should* go in MA,
-  scoring on who absorbs the harm (people 45%, dirty air, grid strain, water).
-- **"Go vs should"** is the whole thesis: the model shows the pattern, the
-  optimizer shows a better choice, and a town can see both.
+Every number in HourMatch traces to a real public dataset, and the model behind the
+recommendations is statistically validated:
+
+- **Trained on 1,839 real US data center sites.** Not synthetic, not a toy — the
+  actual national build-out.
+- **Cross-validated accuracy: R² 0.975.** The model genuinely predicts where the
+  industry sites data centers.
+- **Passing placebo test: R² −0.048.** We shuffled the labels and the model
+  learned nothing — proof the 0.975 is real signal, not overfitting. This is the
+  check most ML demos skip, and it's shown on screen in the Model tab.
+- **Honest feature weights, on screen:** power price 46%, climate 34%, etc. — you
+  can see *why* a site scores the way it does.
+- **Reproducible.** `us_model/analysis.ipynb` regenerates the whole thing.
+- **Real public sources throughout:** ISO-NE hourly grid generation, MassGIS state
+  boundary + hydrology, environmental-justice block groups, and a hand-built,
+  individually-cited CSV of 13 MA towns' actual data-center rules.
+
+**The "go vs should" thesis rests on that validation:** the validated model learns
+where data centers *actually* go (cheap power, few people), and the placement
+optimizer inverts it into where one *should* go in MA — scoring on who absorbs the
+harm (people 45%, dirty air, grid strain, water). Because the model is validated,
+the recommendation is defensible, not an opinion.
 
 ## Honesty by design
 

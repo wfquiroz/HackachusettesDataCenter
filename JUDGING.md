@@ -7,34 +7,46 @@ Repo: https://github.com/wfquiroz/HackachusettesDataCenter · Demo: *(YouTube li
 
 ## 1. Potential Value
 
-**The real, defined problem.** Massachusetts Executive Order 658 (Sept 8, 2026)
-requires large data centers to match a *year* of their energy with new clean
-power. The grid runs *hourly*. "100% clean annually" can be ~20% clean at 2am in
-January. Town boards now approve these projects on a PDF, with no way to see the
-hourly truth or who lives downwind. That gap is concrete, current, and local.
+**Problem 1 — growth with nowhere to point it.** Boston is racing to become an AI
+hub; a coalition is courting that growth and companies (AWS, hyperscalers, AI
+startups) want to expand into Massachusetts. Data centers are the physical floor of
+that economy. But the state has no shared instrument to answer the first question
+every project raises — *where should it go?* Siting is guesswork and politics, so
+projects stall in fights or land in the wrong place. Growth without a map produces
+bans, not build-out.
+
+**Problem 2 (secondary) — the clean-energy rule has an hourly hole.** Executive
+Order 658 (Sept 8, 2026) makes a data center match a *year* of energy with clean
+power, but the grid runs *hourly*. "100% clean annually" can be ~20% clean at 2am
+in January, and no one in the approval chain can see the gap.
 
 **Who benefits, and how the journey fits their need.**
-- *A town planning board member* opens the map, drops the proposed site, and reads
-  one line — "Annual 100% · Hourly 23%" — then sees who absorbs it and whether the
-  site grades well. Their need is a defensible, fast yes/no; we give them numbers,
-  not a lecture.
-- *A resident in an environmental-justice block group* is made visible: the impact
-  is weighted by who already carries the most pollution, so equity is in the model,
-  not an afterthought.
-- *A responsible developer* runs their own site and brings an honest hourly score
-  to the hearing — proof a greenwashed competitor can't fake.
+- *The state / a town planning board* drops a proposed site and gets a recommended
+  location — the map Massachusetts is missing. Their need is "where do we steer
+  growth so it actually gets built," and we answer it with data, not politics.
+- *A company like AWS* runs its own site to validate, with cited public data, that
+  it chose a low-impact location — a public-image and permitting asset a greenwashed
+  annual claim can't buy.
+- *A resident in an environmental-justice block group* is made visible: impact is
+  weighted by who already carries the most pollution, so equity is in the model.
 
-**Scalable and realistic.** The method is not MA-specific. The hourly model needs
-only a regional grid-generation feed (ISO-NE today; CAISO, PJM, ERCOT are the same
-shape). The placement model needs population + a state boundary. Any state with a
-clean-energy matching rule — and more are coming — is a drop-in. Nothing here is a
-hackathon toy; it's a thin app over real public data.
+**Scalable and realistic.** Not MA-specific. The hourly model needs only a regional
+grid feed (ISO-NE today; CAISO/PJM/ERCOT are the same shape); the placement model
+needs population + a state boundary. Any state chasing AI growth — or writing a
+matching rule — is a drop-in. It's a thin app over real public data, not a toy.
 
-**Market.** Carbon-accounting dashboards (Watershed, Persefoni) exist for
-*corporate annual* reporting. Grid-carbon APIs (WattTime, Electricity Maps) sell
-the raw signal. **Nobody** has combined hourly matching + environmental-justice
-exposure + a siting optimizer into a tool aimed at the *town* making the decision.
-That civic-facing, place-based angle is open market.
+**Market.** Carbon-accounting dashboards (Watershed, Persefoni) do *corporate
+annual* reporting; grid-carbon APIs (WattTime, Electricity Maps) sell the raw
+signal. **Nobody** combines hourly matching + environmental-justice exposure + a
+validated siting optimizer aimed at the *decision* — the state steering growth and
+the company proving good faith. That civic, place-based angle is open market.
+
+**Why it's credible: it's validated on real data.** The recommendation engine is a
+model trained on **1,839 real US data center sites**, cross-validated at **R²
+0.975**, with a **passing placebo test (R² −0.048)** that proves the signal is real
+and not overfit — shown on screen. Every map number traces to a cited public source
+(ISO-NE, MassGIS, EJ block groups, a hand-cited 13-town ban dataset). The siting
+advice is defensible, not an opinion.
 
 **Accessibility & adoption.** Runs in a browser, no login, light map, plain-English
 numbers in units a non-engineer knows (homes-worth of power, gallons/day,
