@@ -34,6 +34,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             return self._json((ROOT / "surfaces.json").read_bytes())
         if self.path.startswith("/api/timeline"):
             return self._timeline()
+        if self.path.startswith("/api/openspace"):
+            return self._openspace()
         if self.path.startswith("/healthz"):
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
@@ -48,6 +50,54 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
+
+    # Proxy MassGIS Protected & Recreational OpenSpace (ArcGIS REST) so the
+    # browser can read it without cross-origin issues. Two modes:
+    #   /api/openspace?bbox=minLon,minLat,maxLon,maxLat   -> GeoJSON polygons to draw
+    #   /api/openspace?point=lon,lat                      -> {on_protected, sites[]}
+    # This only fetches public state data; it changes no model logic.
+    def _openspace(self):
+        import urllib.parse as up
+        import urllib.request as ur
+        BASE = ("https://gis.eea.mass.gov/server/rest/services/"
+                "Protected_and_Recreational_OpenSpace_Polygons/MapServer/0/query")
+        q = up.parse_qs(up.urlparse(self.path).query)
+        try:
+            if "point" in q:
+                lon, lat = [float(x) for x in q["point"][0].split(",")]
+                params = {
+                    "geometry": f"{lon},{lat}", "geometryType": "esriGeometryPoint",
+                    "inSR": "4326", "spatialRel": "esriSpatialRelIntersects",
+                    "outFields": "SITE_NAME,PRIM_PURP,OWNER_TYPE,LEV_PROT",
+                    "returnGeometry": "false", "f": "json",
+                }
+                url = BASE + "?" + up.urlencode(params)
+                with ur.urlopen(url, timeout=30) as r:
+                    data = json.load(r)
+                feats = data.get("features", [])
+                out = {
+                    "on_protected": len(feats) > 0,
+                    "sites": [f.get("attributes", {}) for f in feats[:5]],
+                }
+                return self._json(json.dumps(out).encode())
+            else:
+                bbox = q.get("bbox", ["-73.51,41.18,-69.90,42.89"])[0]  # all MA
+                params = {
+                    "geometry": bbox, "geometryType": "esriGeometryEnvelope",
+                    "inSR": "4326", "spatialRel": "esriSpatialRelIntersects",
+                    "outFields": "SITE_NAME,PRIM_PURP,LEV_PROT",
+                    "returnGeometry": "true", "outSR": "4326",
+                    "resultRecordCount": "2000", "f": "geojson",
+                }
+                url = BASE + "?" + up.urlencode(params)
+                with ur.urlopen(url, timeout=45) as r:
+                    body = r.read()
+                return self._json(body)
+        except Exception as e:
+            self.send_response(502)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps({"error": str(e)}).encode())
 
     def _timeline(self):
         import urllib.parse as up

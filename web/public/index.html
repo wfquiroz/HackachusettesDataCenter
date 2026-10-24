@@ -20,6 +20,16 @@
   <!-- Leaflet.heat — smooth heat surfaces (Apple-Maps-style wash) -->
   <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
 
+  <!-- IBM Plex Sans + Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- lucide line icons (plain web build; this app is vanilla JS, not React) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -29,11 +39,11 @@
       <span class="tag">Data centers &amp; industry emissions</span>
     </div>
     <div class="controls">
-      <label for="region">Region</label>
+      <label for="region"><i data-lucide="map-pin"></i> Region</label>
       <select id="region"></select>
-      <label for="city">Location</label>
+      <label for="city"><i data-lucide="map-pin"></i> Location</label>
       <select id="city"></select>
-      <label for="radius">Radius: <span id="radiusLabel">50</span> km</label>
+      <label for="radius">Radius: <span id="radiusLabel" class="num">50</span> km</label>
       <input id="radius" type="range" min="5" max="300" step="5" value="50" />
     </div>
   </header>
@@ -53,12 +63,27 @@
             <span class="lc-tag modeled">modeled</span> from MW benchmark
           </div>
           <div id="scaleLegend" class="scale-legend"></div>
+          <div class="openspace-box">
+            <label class="lc-row" data-kind="measured" data-on="0" id="osRow" style="--swatch:#2EF2C4">
+              <span class="lc-icon"><i data-lucide="trees"></i></span>
+              <span class="lc-text">
+                <span class="lc-title-row">
+                  <span class="lc-label">Protected open space</span>
+                  <span class="lc-tag measured">measured</span>
+                </span>
+                <span class="lc-desc">MassGIS conservation &amp; recreation land. Flags any site that sits on it.</span>
+              </span>
+              <span class="lc-toggle" aria-hidden="true"><span class="lc-knob"></span></span>
+              <input type="checkbox" class="lc-check" id="osToggle" />
+            </label>
+            <div id="osStatus" class="os-status"></div>
+          </div>
           <div class="drop-box">
-            <button id="dropBtn" class="drop-btn" type="button">📍 Drop a data center</button>
+            <button id="dropBtn" class="drop-btn" type="button"><i data-lucide="map-pin"></i> Drop a data center</button>
             <div id="dropControls" class="drop-controls" style="display:none">
               <label>MW <input id="dropMw" type="number" value="274" min="10" max="600" step="10"></label>
               <label>Buildout yrs <input id="dropYears" type="number" value="5" min="1" max="10"></label>
-              <button id="playBtn" class="play-btn" type="button">▶ Play buildout</button>
+              <button id="playBtn" class="play-btn" type="button"><i data-lucide="play"></i> Play buildout</button>
               <div id="playReadout" class="play-readout"></div>
             </div>
           </div>
@@ -77,6 +102,11 @@
           Toggle impact layers at left. Pick a city above, or click anywhere on the
           map, to see nearby facilities and their hourly-clean gap.
         </p>
+        <div id="statusTabs" class="status-tabs" role="tablist">
+          <button class="status-tab active" data-filter="all" type="button">All</button>
+          <button class="status-tab" data-filter="operating" type="button">Operating</button>
+          <button class="status-tab" data-filter="proposed" type="button">Proposed</button>
+        </div>
         <ul id="results" class="results"></ul>
       </div>
     </aside>
@@ -92,5 +122,14 @@
   </div>
 
   <script src="app.js"></script>
+  <script>
+    // Render any lucide icons present in the static markup, and re-render
+    // after the app injects dynamic rows. Visual only.
+    function hmIcons() { if (window.lucide) window.lucide.createIcons(); }
+    document.addEventListener("DOMContentLoaded", hmIcons);
+    // app.js builds the layer list and buttons asynchronously; re-scan shortly after.
+    window.addEventListener("load", () => setTimeout(hmIcons, 400));
+    setInterval(hmIcons, 1500);
+  </script>
 </body>
 </html>

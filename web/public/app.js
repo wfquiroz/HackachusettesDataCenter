@@ -1,16 +1,17 @@
 // HourMatch — emissions map (Leaflet + OpenStreetMap, no API key)
 
 const EMISSION_COLORS = {
-  high: "#e4572e",
-  medium: "#f3c13a",
-  low: "#3cb371",
-  clean: "#2f9e44",
+  high: "#FF4D3D",
+  medium: "#FFB020",
+  low: "#2EF2C4",
+  clean: "#2EF2C4",
 };
 
 let DATA = null;          // loaded from /api/facilities
 let map, radiusCircle;
 let facilityLayer;        // LayerGroup of all facility markers
 let selected = null;      // { lat, lng }
+let statusFilter = "all"; // display-only: "all" | "operating" | "proposed"
 
 // ---- helpers ---------------------------------------------------------------
 
@@ -61,13 +62,14 @@ function fmt(n) {
   return n.toLocaleString("en-US");
 }
 
-function markerIcon(level) {
+function markerIcon(level, isDataCenter) {
   const color = EMISSION_COLORS[level];
+  const dc = isDataCenter ? "marker-dc" : "";
   return L.divIcon({
     className: "",
-    html: `<div class="marker-emission" style="width:18px;height:18px;background:${color}"></div>`,
-    iconSize: [18, 18],
-    iconAnchor: [9, 9],
+    html: `<div class="marker-emission ${dc}" style="width:16px;height:16px;background:${color};box-shadow:0 0 8px 2px ${color}99;--glow:${color}88"></div>`,
+    iconSize: [16, 16],
+    iconAnchor: [8, 8],
     popupAnchor: [0, -10],
   });
 }
@@ -95,8 +97,10 @@ function popupHtml(f, level) {
 function drawAllMarkers() {
   facilityLayer.clearLayers();
   DATA.facilities.forEach((f) => {
+    // display-only status filter; does not alter any data or calculation
+    if (statusFilter !== "all" && f.status !== statusFilter) return;
     const level = levelFor(f);
-    const m = L.marker([f.lat, f.lng], { icon: markerIcon(level) });
+    const m = L.marker([f.lat, f.lng], { icon: markerIcon(level, f.type === "data_center") });
     m.bindPopup(popupHtml(f, level));
     m._facility = f;
     facilityLayer.addLayer(m);
@@ -110,6 +114,7 @@ function renderPanel(center, radiusKm) {
   list.innerHTML = "";
 
   const nearby = DATA.facilities
+    .filter((f) => statusFilter === "all" || f.status === statusFilter)
     .map((f) => ({ f, d: distanceKm(center, { lat: f.lat, lng: f.lng }) }))
     .filter((x) => x.d <= radiusKm)
     .sort((a, b) => b.f.emissions_tco2e - a.f.emissions_tco2e);
@@ -133,7 +138,10 @@ function renderPanel(center, radiusKm) {
       ? `<div class="value"><b>${f.mw_operating ?? "?"}</b> MW operating solar</div>`
       : `<div class="value"><b>${fmt(f.emissions_tco2e)}</b> tCO₂e / year</div>`;
     const meterLine = (f.type === "data_center" && f.hourly_match_pct != null)
-      ? `<div class="meter-inline">Annual <b>${f.annual_match_pct}%</b> → Hourly <b style="color:#e4572e">${f.hourly_match_pct}%</b></div>`
+      ? `<div class="meter-inline">Annual <b>${f.annual_match_pct}%</b> → Hourly <b style="color:#FF4D3D">${f.hourly_match_pct}%</b></div>`
+      : "";
+    const confLine = f.confidence
+      ? `<div class="conf-note"><span class="conf-dot conf-${f.confidence}"></span>${f.confidence} confidence · ${f.confidence_note || ""}</div>`
       : "";
     li.innerHTML = `
       <div class="row">
@@ -144,6 +152,7 @@ function renderPanel(center, radiusKm) {
       <div class="meta">${f.city} · ${d.toFixed(1)} km away · ${f.status}</div>
       ${meterLine}
       ${valueLine}
+      ${confLine}
     `;
     li.addEventListener("click", () => {
       map.setView([f.lat, f.lng], Math.max(map.getZoom(), 10));
@@ -162,10 +171,10 @@ function selectLocation(center) {
   if (radiusCircle) map.removeLayer(radiusCircle);
   radiusCircle = L.circle([center.lat, center.lng], {
     radius: radiusKm * 1000,
-    color: "#5aa9e6",
+    color: "#2EF2C4",
     weight: 1,
-    fillColor: "#5aa9e6",
-    fillOpacity: 0.08,
+    fillColor: "#2EF2C4",
+    fillOpacity: 0.06,
   }).addTo(map);
   renderPanel(center, radiusKm);
 }
@@ -232,14 +241,16 @@ function hexRGB(hex) {
   return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
 }
 
-// Per-surface gradient ramps: low -> high. Gives real color separation across
-// small value differences instead of one flat tint fading only in opacity.
+// Per-surface gradient ramps: low -> high. Spec palette only — a single
+// clean -> warn -> bad ramp (teal -> amber -> red), no rainbow/purple/pink.
+// Water & Noise (modeled) use the same ramp so the whole map speaks one scale.
+const SPEC_RAMP = [[46,242,196],[46,242,196],[255,176,32],[255,77,61]];
 const RAMPS = {
-  ej_burden:     [[59,76,192],[120,180,120],[240,220,90],[217,79,112]],
-  air_fossil:    [[40,60,120],[90,180,160],[245,200,70],[228,70,46]],
-  energy_demand: [[35,40,90],[70,160,200],[243,193,58],[233,120,40]],
-  water_stress:  [[10,30,70],[40,120,200],[90,200,230],[180,240,255]],
-  noise:         [[30,20,60],[120,80,200],[176,132,243],[240,210,255]],
+  ej_burden:     SPEC_RAMP,
+  air_fossil:    SPEC_RAMP,
+  energy_demand: SPEC_RAMP,
+  water_stress:  SPEC_RAMP,
+  noise:         SPEC_RAMP,
 };
 
 function rampColor(id, v) {
@@ -376,7 +387,7 @@ function toggleSurface(id, on) {
   if (ov) {
     if (on) {
       ov.addTo(map);
-      requestAnimationFrame(() => ov.setOpacity(0.82));
+      requestAnimationFrame(() => ov.setOpacity(0.45));
     } else {
       ov.setOpacity(0);
       setTimeout(() => map.removeLayer(ov), 500);
@@ -389,27 +400,27 @@ function toggleSurface(id, on) {
 // Keyed by surface id so it survives label changes in the data.
 const SURF_META = {
   ej_burden: {
-    icon: "👥",
+    icon: "users",
     title: "People",
     desc: "Who lives nearby — environmental-justice population density.",
   },
   air_fossil: {
-    icon: "🏭",
+    icon: "factory",
     title: "Air",
     desc: "Fossil-plant intensity — dirtier air where plants run.",
   },
   energy_demand: {
-    icon: "⚡",
+    icon: "zap",
     title: "Energy",
     desc: "Grid demand pressure across the state.",
   },
   water_stress: {
-    icon: "💧",
+    icon: "droplet",
     title: "Water",
     desc: "Cooling-water demand (modeled estimate).",
   },
   noise: {
-    icon: "🔊",
+    icon: "volume-2",
     title: "Noise",
     desc: "Generator & cooling noise (modeled estimate).",
   },
@@ -427,14 +438,15 @@ function buildLayerControl() {
   SURF.surfaces.forEach((surf, i) => {
     buildSurface(surf);
     const on = i === 0; // EJ wave on by default
-    const meta = SURF_META[surf.id] || { icon: "◆", title: surf.label, desc: "" };
+    const meta = SURF_META[surf.id] || { icon: "layers", title: surf.label, desc: "" };
 
     const row = document.createElement("label");
     row.className = "lc-row";
     row.dataset.on = on ? "1" : "0";
+    row.dataset.kind = surf.kind; // "measured" | "modeled" -> dashed border for modeled
     row.style.setProperty("--swatch", surf.color);
     row.innerHTML = `
-      <span class="lc-icon" style="background:${surf.color}22;color:${surf.color}">${meta.icon}</span>
+      <span class="lc-icon"><i data-lucide="${meta.icon}"></i></span>
       <span class="lc-text">
         <span class="lc-title-row">
           <span class="lc-label">${meta.title}</span>
@@ -478,8 +490,8 @@ async function drawStateOutline() {
     stateOutline = L.geoJSON(geo, {
       interactive: false,
       style: {
-        color: "#eaf2ff",     // light border line
-        weight: 2,
+        color: "#7D8A99",     // dim border line (spec --text-dim)
+        weight: 1,
         opacity: 0.9,
         fill: false,          // outline only, no fill tint
         dashArray: "4 3",
@@ -525,6 +537,20 @@ async function loadLayers() {
   }
 }
 
+// Status filter tabs — display-only. Redraws markers and re-renders the panel
+// for the chosen status. No data, thresholds, or calculations are changed.
+function wireStatusTabs() {
+  const tabs = document.querySelectorAll(".status-tab");
+  tabs.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      statusFilter = btn.dataset.filter;
+      tabs.forEach((b) => b.classList.toggle("active", b === btn));
+      drawAllMarkers();
+      if (selected) renderPanel(selected, Number(document.getElementById("radius").value));
+    });
+  });
+}
+
 // ---- init ------------------------------------------------------------------
 
 async function init() {
@@ -534,9 +560,9 @@ async function init() {
   const r0 = DATA.regions[0];
   map = L.map("map", { zoomControl: false }).setView([r0.center.lat, r0.center.lng], r0.zoom);
 
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
     maxZoom: 19,
-    attribution: "&copy; OpenStreetMap contributors",
+    attribution: "&copy; OpenStreetMap contributors &copy; CARTO",
   }).addTo(map);
 
   facilityLayer = L.layerGroup().addTo(map);
@@ -569,12 +595,95 @@ async function init() {
 
   populateControls();
 
+  // Status filter tabs (All / Operating / Proposed) — display only.
+  wireStatusTabs();
+
   // Select the first city by default so the user sees the indicator immediately.
   const firstCity = DATA.cities.find((c) => c.region === r0.id);
   if (firstCity) selectLocation({ lat: firstCity.lat, lng: firstCity.lng });
 }
 
 init();
+
+// ---- Protected & Recreational OpenSpace (MassGIS) — optional overlay -------
+// Fetches real polygons from MassGIS (proxied by the server) and draws them as
+// a toggleable green layer. Also checks each facility for intersection and
+// flags the ones on protected land. Self-contained; no existing logic touched.
+(function () {
+  let osLayer = null;
+  let osLoaded = false;
+
+  function onReady(fn) {
+    if (typeof map !== "undefined" && map) fn();
+    else setTimeout(() => onReady(fn), 200);
+  }
+
+  async function loadOverlay() {
+    const status = document.getElementById("osStatus");
+    status.textContent = "Loading MassGIS open space…";
+    try {
+      const res = await fetch("/api/openspace"); // all-MA bbox default
+      const geo = await res.json();
+      if (geo.error) throw new Error(geo.error);
+      osLayer = L.geoJSON(geo, {
+        interactive: true,
+        style: {
+          color: "#2EF2C4", weight: 1, opacity: 0.8,
+          fillColor: "#2EF2C4", fillOpacity: 0.14,
+        },
+        onEachFeature: (f, lyr) => {
+          const p = f.properties || {};
+          lyr.bindPopup(
+            `<div class="pop-title">${p.SITE_NAME || "Open space"}</div>` +
+            `<div class="pop-meta">${p.PRIM_PURP || ""}${p.LEV_PROT ? " · " + p.LEV_PROT : ""}</div>`
+          );
+        },
+      }).addTo(map);
+      osLoaded = true;
+      status.innerHTML = `<span class="os-ok">${(geo.features || []).length} open-space areas shown</span>`;
+      checkFacilities();
+    } catch (e) {
+      status.innerHTML = `<span class="os-err">Could not load open space: ${e.message}</span>`;
+    }
+  }
+
+  // Flag facilities whose coordinate sits on protected land.
+  async function checkFacilities() {
+    if (!window.DATA || !DATA.facilities) return;
+    const status = document.getElementById("osStatus");
+    const hits = [];
+    for (const f of DATA.facilities) {
+      try {
+        const r = await fetch(`/api/openspace?point=${f.lng},${f.lat}`);
+        const j = await r.json();
+        if (j.on_protected) {
+          hits.push(`${f.name} — ${j.sites[0]?.SITE_NAME || "protected land"}`);
+        }
+      } catch (_) { /* skip a failed point, keep going */ }
+    }
+    const base = status.querySelector(".os-ok")?.outerHTML || status.innerHTML;
+    status.innerHTML = base + (hits.length
+      ? `<div class="os-flag"><b>${hits.length}</b> site(s) on protected land:<br>${hits.join("<br>")}</div>`
+      : `<div class="os-clear">No facilities sit on protected open space.</div>`);
+  }
+
+  onReady(() => {
+    const toggle = document.getElementById("osToggle");
+    const row = document.getElementById("osRow");
+    if (!toggle) return;
+    toggle.addEventListener("change", (e) => {
+      const on = e.target.checked;
+      row.dataset.on = on ? "1" : "0";
+      if (on) {
+        if (!osLoaded) loadOverlay();
+        else { osLayer.addTo(map); document.getElementById("osStatus").style.display = "block"; }
+      } else {
+        if (osLayer) map.removeLayer(osLayer);
+        document.getElementById("osStatus").style.display = "none";
+      }
+    });
+  });
+})();
 
 // ---- Drop-a-data-center + play buildout timeline ---------------------------
 (function () {
@@ -595,14 +704,18 @@ init();
     dropBtn.addEventListener("click", () => {
       dropMode = !dropMode;
       dropBtn.classList.toggle("armed", dropMode);
-      dropBtn.textContent = dropMode ? "📍 Click the map…" : "📍 Drop a data center";
+      dropBtn.innerHTML = dropMode
+        ? '<i data-lucide="map-pin"></i> Click the map…'
+        : '<i data-lucide="map-pin"></i> Drop a data center';
+      if (window.lucide) window.lucide.createIcons();
     });
 
     map.on("click", (e) => {
       if (!dropMode) return;
       dropMode = false;
       dropBtn.classList.remove("armed");
-      dropBtn.textContent = "📍 Move the pin";
+      dropBtn.innerHTML = '<i data-lucide="map-pin"></i> Move the pin';
+      if (window.lucide) window.lucide.createIcons();
       placePin(e.latlng.lat, e.latlng.lng);
       controls.style.display = "block";
     });
@@ -624,8 +737,8 @@ init();
       [...yearData.rings].reverse().forEach((r) => {
         const alpha = 0.08 + 0.5 * r.intensity;
         const c = L.circle([ll.lat, ll.lng], {
-          radius: r.km * 1000, color: "#e4572e", weight: 1,
-          fillColor: "#e4572e", fillOpacity: alpha,
+          radius: r.km * 1000, color: "#FF4D3D", weight: 1,
+          fillColor: "#FF4D3D", fillOpacity: alpha,
         }).addTo(map);
         ringLayers.push(c);
       });
@@ -633,7 +746,7 @@ init();
 
     playBtn.addEventListener("click", async () => {
       if (!dropMarker) { readout.textContent = "Drop a pin first."; return; }
-      if (playTimer) { clearInterval(playTimer); playTimer = null; playBtn.textContent = "▶ Play buildout"; return; }
+      if (playTimer) { clearInterval(playTimer); playTimer = null; playBtn.innerHTML = '<i data-lucide="play"></i> Play buildout'; if (window.lucide) window.lucide.createIcons(); return; }
       const ll = dropMarker._ll;
       const mw = Number(document.getElementById("dropMw").value) || 274;
       const yrs = Number(document.getElementById("dropYears").value) || 5;
@@ -645,7 +758,8 @@ init();
         if (data.error) throw new Error(data.error);
       } catch (err) { readout.textContent = "Error: " + err.message; return; }
 
-      playBtn.textContent = "⏸ Stop";
+      playBtn.innerHTML = '<i data-lucide="pause"></i> Stop';
+      if (window.lucide) window.lucide.createIcons();
       let i = 0;
       const step = () => {
         const y = data.years[i];
@@ -657,7 +771,7 @@ init();
           `hidden CO₂ <b>${y.hidden_co2_t.toLocaleString()}</b> t/yr<br>` +
           `<span class="muted">${r25.minority_pct}% minority in footprint · projected buildout</span>`;
         i++;
-        if (i >= data.years.length) { clearInterval(playTimer); playTimer = null; playBtn.textContent = "▶ Replay"; }
+        if (i >= data.years.length) { clearInterval(playTimer); playTimer = null; playBtn.innerHTML = '<i data-lucide="rotate-ccw"></i> Replay'; if (window.lucide) window.lucide.createIcons(); }
       };
       step();
       playTimer = setInterval(step, 1100);

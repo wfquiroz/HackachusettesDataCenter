@@ -40,6 +40,38 @@ app.get("/api/surfaces", (req, res) => {
   });
 });
 
+// API: MassGIS Protected & Recreational OpenSpace proxy (public state data).
+// bbox=minLon,minLat,maxLon,maxLat -> GeoJSON polygons; point=lon,lat -> on_protected check.
+app.get("/api/openspace", async (req, res) => {
+  const BASE = "https://gis.eea.mass.gov/server/rest/services/" +
+    "Protected_and_Recreational_OpenSpace_Polygons/MapServer/0/query";
+  try {
+    let url;
+    if (req.query.point) {
+      const [lon, lat] = String(req.query.point).split(",");
+      url = `${BASE}?geometry=${lon},${lat}&geometryType=esriGeometryPoint&inSR=4326` +
+        `&spatialRel=esriSpatialRelIntersects&outFields=SITE_NAME,PRIM_PURP,OWNER_TYPE,LEV_PROT` +
+        `&returnGeometry=false&f=json`;
+      const r = await fetch(url);
+      const data = await r.json();
+      const feats = data.features || [];
+      return res.json({
+        on_protected: feats.length > 0,
+        sites: feats.slice(0, 5).map((f) => f.attributes || {}),
+      });
+    }
+    const bbox = req.query.bbox || "-73.51,41.18,-69.90,42.89";
+    url = `${BASE}?geometry=${bbox}&geometryType=esriGeometryEnvelope&inSR=4326` +
+      `&spatialRel=esriSpatialRelIntersects&outFields=SITE_NAME,PRIM_PURP,LEV_PROT` +
+      `&returnGeometry=true&outSR=4326&resultRecordCount=2000&f=geojson`;
+    const r = await fetch(url);
+    const body = await r.text();
+    res.type("application/json").send(body);
+  } catch (e) {
+    res.status(502).json({ error: String(e) });
+  }
+});
+
 // Simple health check (handy for Docker)
 app.get("/healthz", (req, res) => res.json({ ok: true }));
 

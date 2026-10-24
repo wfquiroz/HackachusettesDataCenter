@@ -52,7 +52,7 @@
       "lng": -71.3162,
       "emissions_tco2e": 96464,
       "status": "operating",
-      "source": "HourMatch model \u2014 ISO-NE 2024 hourly (all-solar EO658 scenario)",
+      "source": "HourMatch model — ISO-NE 2024 hourly (all-solar EO658 scenario)",
       "source_url": "https://www.wbur.org/",
       "annual_match_pct": 100,
       "hourly_match_pct": 23,
@@ -67,7 +67,7 @@
       "lng": -72.7495,
       "emissions_tco2e": 440518,
       "status": "proposed",
-      "source": "HourMatch model \u2014 ISO-NE 2024 hourly (all-solar EO658 scenario)",
+      "source": "HourMatch model — ISO-NE 2024 hourly (all-solar EO658 scenario)",
       "source_url": "https://www.bostonglobe.com/",
       "annual_match_pct": 100,
       "hourly_match_pct": 23,
@@ -193,6 +193,32 @@
       "source": "MA DEP Renewables at Landfills",
       "source_url": "https://www.mass.gov/",
       "mw_operating": 2.3
+    },
+    {
+      "name": "Holyoke proposed data center",
+      "type": "data_center",
+      "city": "Holyoke, MA",
+      "lat": 42.2042,
+      "lng": -72.6162,
+      "emissions_tco2e": 0,
+      "status": "proposed",
+      "source": "Boston.com — plans for data centers in Holyoke and Westfield raised local questions (Aug 2026)",
+      "source_url": "https://www.boston.com/news/local-news/2026/08/26/a-new-ballot-initiative-takes-aim-at-massachusetts-data-centers/",
+      "confidence": "medium",
+      "confidence_note": "Named in reporting; no public street address. Coordinates = Holyoke town center."
+    },
+    {
+      "name": "Taunton industrial-park proposal",
+      "type": "data_center",
+      "city": "Taunton, MA",
+      "lat": 41.9001,
+      "lng": -71.0898,
+      "emissions_tco2e": 0,
+      "status": "proposed",
+      "source": "NBC10/WJAR — proposed facility at an industrial park; city council voted to ban data centers (Oct 2026)",
+      "source_url": "https://turnto10.com/news/local/taunton-city-council-unanimously-approves-data-center-ban-october-20-2026",
+      "confidence": "medium",
+      "confidence_note": "Reported as an industrial-park site, park not named. Coordinates = Taunton city center."
     }
   ],
   "thresholds": {
