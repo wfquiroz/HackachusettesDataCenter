@@ -1,0 +1,4 @@
+name,city,state,lat,lon,status,confidence,coordinate_basis,source
+Westfield Campus (~274 MW),Westfield,MA,42.1251,-72.7495,proposed,high,town/site area (exact parcel not public),"Boston Globe / The Cooldown — ~274 MW, 10 buildings, largest proposed in New England; town later passed moratorium"
+Holyoke proposed data center,Holyoke,MA,42.2042,-72.6162,proposed,medium,town center (no public address),"Boston.com (Aug 2026) — plans for data centers in Holyoke and Westfield raised local questions"
+Taunton industrial-park proposal,Taunton,MA,41.9001,-71.0898,proposed,medium,city center (industrial park unnamed),"NBC10/WJAR (Oct 2026) — proposed facility at an industrial park; city council voted to ban data centers"
